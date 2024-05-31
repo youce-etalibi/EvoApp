@@ -1,0 +1,393 @@
+.wdt-button-holder { display: inline-flex; position: relative; -webkit-transition: var(--wdt-elementor-base-transition); transition: var(--wdt-elementor-base-transition); }
+.wdt-button { border: 1px solid transparent; display: inline-flex; align-items: stretch; font-size: calc(var(--wdtFontSize_Ext) - 4px); letter-spacing: 1px; line-height: normal; margin: 0; overflow: visible; position: relative; z-index: 0; text-decoration: none; text-transform: uppercase; -webkit-transition: var(--wdt-elementor-base-transition); transition: var(--wdt-elementor-base-transition);font-family: var(--wdtFontTypo_Alt);}
+
+.wdt-button, .wdt-button-holder .wdt-button { background-color: var(--wdt-elementor-color-accent); color: var(--wdt-elementor-color-white); justify-content: center; text-align: center; }
+
+.wdt-button:focus, .wdt-button-holder .wdt-button:focus,
+.wdt-button:hover, .wdt-button-holder .wdt-button:hover { background-color:var(--wdt-elementor-color-custom-1); color: var(--wdt-elementor-color-white); }
+
+.wdt-button .wdt-button-text, 
+.wdt-button .wdt-button-icon { vertical-align: top; }
+
+.wdt-button .wdt-button-text { display: inline-grid; align-content: center; }
+.wdt-button .wdt-button-icon { display: inline-flex; line-height: 0; transition: var(--wdt-elementor-base-transition) }
+.wdt-button .wdt-button-icon span { display: inherit; align-items: center; position: relative; }
+/* .wdt-button .wdt-button-icon span, .wdt-button .wdt-button-icon span i { -webkit-transition: inherit; transition: inherit; } */
+
+.wdt-button .wdt-button-text .wdt-button-subtext { display: block; font-size: 0.75em; margin-top: -2px; }
+
+.wdt-button-holder.wdt-button-size-sm .wdt-button { font-size: 14px; padding: 0.7em 1.5em;  }
+.wdt-button-holder.wdt-button-size-nm .wdt-button { font-size: var(--wdtFontSize_Ext); padding: var(--wdtPadding_Btn); line-height: 1;}
+.wdt-button-holder.wdt-button-size-lg .wdt-button { font-size: 18px; padding: 0.9em 2em; }
+
+.elementor-align-justify .wdt-button-holder, .elementor-align-justify .wdt-button-holder .wdt-button { width: 100%; }
+
+.wdt-button-holder.wdt-button-icon-before .wdt-button .wdt-button-icon { margin-right: 8px; }
+.wdt-button-holder.wdt-button-icon-after .wdt-button .wdt-button-icon { margin-left: 8px; }
+
+
+/* Styles */
+.wdt-button-holder.wdt-button-style-underline:before, 
+.wdt-button-holder.wdt-button-style-overline:before,
+.wdt-button-holder.wdt-button-style-line-through .wdt-button .wdt-button-text > span:before { content: ""; display: inline !important; height: 2px; pointer-events: none; position: absolute; bottom: 0; left: 0; right: 0; top: 0; width: auto; -webkit-transition: inherit; transition: inherit; }
+
+.wdt-button-holder.wdt-button-style-underline .wdt-button { margin-bottom: 3px; }
+.wdt-button-holder.wdt-button-style-underline:before { bottom: 0; top: auto; }
+
+.wdt-button-holder.wdt-button-style-overline .wdt-button { margin-top: 3px; }
+.wdt-button-holder.wdt-button-style-overline:before { bottom: auto; top: 0; }
+
+.wdt-button-holder.wdt-button-style-underline:before, .wdt-button-holder.wdt-button-style-overline:before { color: var(--wdt-elementor-color-accent); background-color: currentColor; background-image: inherit; }
+
+.wdt-button-holder.wdt-button-style-underline:focus:before,
+.wdt-button-holder.wdt-button-style-underline:hover:before, 
+.wdt-button-holder.wdt-button-style-overline:focus:before,
+.wdt-button-holder.wdt-button-style-overline:hover:before { color: var(--wdt-elementor-color-primary); background-color: currentColor; background-image: inherit; }
+
+.wdt-button-holder.wdt-button-style-line-through .wdt-button .wdt-button-text > span { position: relative; }
+.wdt-button-holder.wdt-button-style-line-through .wdt-button .wdt-button-text > span:before { background-color: currentColor; margin: auto; -webkit-transform: translateY(100%); transform: translateY(100%); }
+
+
+/* Template - Bordered */
+.wdt-button-holder.wdt-template-bordered .wdt-button { background: none !important; border-color: currentColor; border-width: 1px; }
+
+.wdt-button-holder.wdt-template-bordered .wdt-button:not(:focus), 
+.wdt-button-holder.wdt-template-bordered .wdt-button:not(:hover) { color: var(--wdt-elementor-color-accent); }
+
+.wdt-button-holder.wdt-template-bordered .wdt-button:focus, 
+.wdt-button-holder.wdt-template-bordered .wdt-button:hover { color: var(--wdt-elementor-color-primary); }
+
+
+/* Template - Textual */
+.wdt-button-holder.wdt-template-textual .wdt-button { border-width: 0; padding: 0; }
+
+.wdt-button-holder.wdt-template-textual .wdt-button:not(:focus), 
+.wdt-button-holder.wdt-template-textual .wdt-button:not(:hover) { background: none !important; border-width: 0; color: var(--wdt-elementor-color-accent); }
+
+.wdt-button-holder.wdt-template-textual .wdt-button:focus, 
+.wdt-button-holder.wdt-template-textual .wdt-button:hover { background: none; border-width: 0; color: var(--wdt-elementor-color-primary); }
+
+
+/* Template - Icon-Highlighted */
+.wdt-button-holder.wdt-template-icon-highlighted .wdt-button { padding: 0; }
+
+.wdt-button-holder.wdt-template-icon-highlighted.wdt-button-size-sm .wdt-button .wdt-button-text { padding: 0.7em 1.5em; }
+.wdt-button-holder.wdt-template-icon-highlighted.wdt-button-size-nm .wdt-button .wdt-button-text { padding: 0.8em 1.75em; }
+.wdt-button-holder.wdt-template-icon-highlighted.wdt-button-size-lg .wdt-button .wdt-button-text { padding: 0.9em 2em; }
+
+.wdt-button-holder.wdt-template-icon-highlighted .wdt-button .wdt-button-icon { margin-left: 0; margin-right: 0; }
+.wdt-button-holder.wdt-template-icon-highlighted .wdt-button .wdt-button-icon span { background-color: rgba(var(--wdt-elementor-color-secondary-rgb),0.05); padding: 1em; }
+
+
+/* Template - Icon-Separated */
+.wdt-button-holder.wdt-template-icon-separated .wdt-button .wdt-button-icon:after { background-color: currentColor; color: rgba(var(--wdt-elementor-color-secondary-rgb),0.15); content: ""; display: inline-flex; height: 100%; width: 1px; z-index: -1; -webkit-transition: inherit; transition: inherit; }
+
+.wdt-button-holder.wdt-template-icon-separated .wdt-button .wdt-button-icon span { padding: 0.5em 1em; }
+
+.wdt-button-holder.wdt-template-icon-separated.wdt-button-icon-before .wdt-button .wdt-button-icon { margin-left: -1em; margin-right: 1em; }
+.wdt-button-holder.wdt-template-icon-separated.wdt-button-icon-after .wdt-button .wdt-button-icon { margin-left: 1em; margin-right: -1em; }
+
+.wdt-button-holder.wdt-template-icon-separated.wdt-button-icon-after .wdt-button .wdt-button-icon:after { order: -1; -webkit-transform: translateX(100%); transform: translateX(100%); }
+.wdt-button-holder.wdt-template-icon-separated.wdt-button-icon-before .wdt-button .wdt-button-icon:after { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+
+
+/* Hover Animations */
+.wdt-button-holder[class*="wdt-animation"] .wdt-button:before, 
+.wdt-button-holder[class*="wdt-animation"] .wdt-button:after, 
+.wdt-button-holder[class*="wdt-animation-linethrough"] .wdt-button .wdt-button-text > span:after { content: ""; display: inline !important; height: auto; pointer-events: none; position: absolute; bottom: 0; left: 0; right: 0; top: 0; width: auto; z-index: -1; -webkit-transition: inherit; transition: inherit; }
+
+.wdt-button-holder[class*="wdt-animation-sweep"] .wdt-button:after,
+.wdt-button-holder[class*="wdt-animation-bounce"] .wdt-button:after,
+.wdt-button-holder[class*="wdt-animation-shutter-out"] .wdt-button:after,
+.wdt-button-holder[class*="wdt-animation-shutter-cross-forward-out"] .wdt-button:after,
+.wdt-button-holder[class*="wdt-animation-shutter-cross-backward-out"] .wdt-button:after,
+.wdt-button-holder[class*="wdt-animation-radial-in"] .wdt-button:hover:after,
+.wdt-button-holder[class*="wdt-animation-radial-out"] .wdt-button:after,
+
+.wdt-button-holder[class*="wdt-animation-shutter-in"] .wdt-button:focus:after, 
+.wdt-button-holder[class*="wdt-animation-shutter-in"] .wdt-button:hover:after,
+.wdt-button-holder[class*="wdt-animation-shutter-cross-forward-in"] .wdt-button:focus:after,
+.wdt-button-holder[class*="wdt-animation-shutter-cross-forward-in"] .wdt-button:hover:after,
+.wdt-button-holder[class*="wdt-animation-shutter-cross-backward-in"] .wdt-button:focus:after,
+.wdt-button-holder[class*="wdt-animation-shutter-cross-backward-in"] .wdt-button:hover:after { background-color: currentColor; color: rgba(var(--wdt-elementor-color-secondary-rgb),0.05); }
+
+.wdt-button-holder[class*="wdt-animation-underline"] .wdt-button:after,
+.wdt-button-holder[class*="wdt-animation-overline"] .wdt-button:after { background-color: currentColor; color: inherit; }
+
+
+/* Hover - Sweep */
+.wdt-button-holder[class*="wdt-animation-sweep"], 
+.wdt-button-holder[class*="wdt-animation-sweep"] .wdt-button { overflow: hidden; }
+
+/* Hover - Sweep-to-Top */
+.wdt-button-holder.wdt-animation-sweep-to-top .wdt-button:after { height: 0; bottom: auto; top: 0; }
+.wdt-button-holder.wdt-animation-sweep-to-top .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-sweep-to-top .wdt-button:hover:after { height: 100%; bottom: 0; top: auto; }
+
+/* Hover - Sweep-to-Bottom */
+.wdt-button-holder.wdt-animation-sweep-to-bottom .wdt-button:after { height: 0; bottom: 0; top: auto; }
+.wdt-button-holder.wdt-animation-sweep-to-bottom .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-sweep-to-bottom .wdt-button:hover:after { height: 100%; bottom: auto; top: 0; }
+
+/* Hover - Sweep-to-Left */
+.wdt-button-holder.wdt-animation-sweep-to-left .wdt-button:after { width: 0; left: 0; right: auto; }
+.wdt-button-holder.wdt-animation-sweep-to-left .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-sweep-to-left .wdt-button:hover:after { width: 100%; left: auto; right: 0; }
+
+/* Hover - Sweep-to-Right */
+.wdt-button-holder.wdt-animation-sweep-to-right .wdt-button:after { width: 0; left: auto; right: 0; }
+.wdt-button-holder.wdt-animation-sweep-to-right .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-sweep-to-right .wdt-button:hover:after { width: 100%; left: 0; right: auto; }
+
+
+/* Hover - Bounce */
+.wdt-button-holder[class*="wdt-animation-bounce"], 
+.wdt-button-holder[class*="wdt-animation-bounce"] .wdt-button { overflow: hidden; }
+
+.wdt-button-holder[class*="wdt-animation-bounce"] .wdt-button:focus:after,
+.wdt-button-holder[class*="wdt-animation-bounce"] .wdt-button:hover:after { -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66); transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66); }
+
+/* Hover - Bounce-to-Top */
+.wdt-button-holder.wdt-animation-bounce-to-top .wdt-button:after { height: 0; bottom: auto; top: 0; }
+.wdt-button-holder.wdt-animation-bounce-to-top .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-bounce-to-top .wdt-button:hover:after { height: 100%; bottom: 0; top: auto; }
+
+/* Hover - Bounce-to-Bottom */
+.wdt-button-holder.wdt-animation-bounce-to-bottom .wdt-button:after { height: 0; bottom: 0; top: auto; }
+.wdt-button-holder.wdt-animation-bounce-to-bottom .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-bounce-to-bottom .wdt-button:hover:after { height: 100%; bottom: auto; top: 0; }
+
+/* Hover - Bounce-to-Left */
+.wdt-button-holder.wdt-animation-bounce-to-left .wdt-button:after { width: 0; left: 0; right: auto; }
+.wdt-button-holder.wdt-animation-bounce-to-left .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-bounce-to-left .wdt-button:hover:after { width: 100%; left: auto; right: 0; }
+
+/* Hover - Bounce-to-Right */
+.wdt-button-holder.wdt-animation-bounce-to-right .wdt-button:after { width: 0; left: auto; right: 0; }
+.wdt-button-holder.wdt-animation-bounce-to-right .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-bounce-to-right .wdt-button:hover:after { width: 100%; left: 0; right: auto; }
+
+
+/* Hover - Shutter-In-Horizontal */
+.wdt-button-holder.wdt-animation-shutter-in-horizontal,
+.wdt-button-holder.wdt-animation-shutter-in-horizontal .wdt-button { overflow: hidden; }
+.wdt-button-holder.wdt-animation-shutter-in-horizontal .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-shutter-in-horizontal .wdt-button:hover:after { -webkit-transform: scaleX(0); transform: scaleX(0); }
+
+/* Hover - Shutter-Out-Horizontal */
+.wdt-button-holder.wdt-animation-shutter-out-horizontal,
+.wdt-button-holder.wdt-animation-shutter-out-horizontal .wdt-button { overflow: hidden; }
+.wdt-button-holder.wdt-animation-shutter-out-horizontal .wdt-button:after { -webkit-transform: scaleX(0); transform: scaleX(0); }
+.wdt-button-holder.wdt-animation-shutter-out-horizontal .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-shutter-out-horizontal .wdt-button:hover:after { -webkit-transform: scaleX(1); transform: scaleX(1); }
+
+/* Hover - Shutter-In-Vertical */
+.wdt-button-holder.wdt-animation-shutter-in-vertical,
+.wdt-button-holder.wdt-animation-shutter-in-vertical .wdt-button { overflow: hidden; }
+.wdt-button-holder.wdt-animation-shutter-in-vertical .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-shutter-in-vertical .wdt-button:hover:after { -webkit-transform: scaleY(0); transform: scaleY(0); }
+
+/* Hover - Shutter-Out-Vertical */
+.wdt-button-holder.wdt-animation-shutter-out-vertical,
+.wdt-button-holder.wdt-animation-shutter-out-vertical .wdt-button { overflow: hidden; }
+.wdt-button-holder.wdt-animation-shutter-out-vertical .wdt-button:after { -webkit-transform: scaleY(0); transform: scaleY(0); }
+.wdt-button-holder.wdt-animation-shutter-out-vertical .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-shutter-out-vertical .wdt-button:hover:after { -webkit-transform: scaleY(1); transform: scaleY(1); }
+
+
+/* Hover - Shutter-Cross */
+.wdt-button-holder[class*="wdt-animation-shutter-cross"],
+.wdt-button-holder[class*="wdt-animation-shutter-cross"] .wdt-button { overflow: hidden; }
+
+/* Hover - Shutter-Cross-Forward-In */
+.wdt-button-holder.wdt-animation-shutter-cross-forward-in .wdt-button:after { height: auto; padding-top: 100%; bottom: auto; top: 50%; -webkit-transform: rotate(-45deg) scale(1.25) translate(0,-50%); transform: rotate(-45deg) scale(1.25) translate(0,-50%); -webkit-transform-origin: center top; transform-origin: center top; }
+.wdt-button-holder.wdt-animation-shutter-cross-forward-in .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-shutter-cross-forward-in .wdt-button:hover:after { height: auto; padding-top: 0; }
+
+/* Hover - Shutter-Cross-Backward-In */
+.wdt-button-holder.wdt-animation-shutter-cross-backward-in .wdt-button:after { height: auto; padding-top: 100%; bottom: auto; top: 50%; -webkit-transform: rotate(45deg) scale(1.25) translate(0,-50%); transform: rotate(45deg) scale(1.25) translate(0,-50%); -webkit-transform-origin: center top; transform-origin: center top; }
+.wdt-button-holder.wdt-animation-shutter-cross-backward-in .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-shutter-cross-backward-in .wdt-button:hover:after { height: auto; padding-top: 0; }
+
+/* Hover - Shutter-Cross-Forward-Out */
+.wdt-button-holder.wdt-animation-shutter-cross-forward-out .wdt-button:after { height: auto; padding-top: 0; bottom: auto; top: 50%; -webkit-transform: rotate(-45deg) scale(1.25) translate(0,-50%); transform: rotate(-45deg) scale(1.25) translate(0,-50%); -webkit-transform-origin: center top; transform-origin: center top; }
+.wdt-button-holder.wdt-animation-shutter-cross-forward-out .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-shutter-cross-forward-out .wdt-button:hover:after { height: auto; padding-top: 100%; }
+
+/* Hover - Shutter-Cross-Backward-Out */
+.wdt-button-holder.wdt-animation-shutter-cross-backward-out .wdt-button:after { height: auto; padding-top: 0; bottom: auto; top: 50%; -webkit-transform: rotate(45deg) scale(1.25) translate(0,-50%); transform: rotate(45deg) scale(1.25) translate(0,-50%); -webkit-transform-origin: center top; transform-origin: center top; }
+.wdt-button-holder.wdt-animation-shutter-cross-backward-out .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-shutter-cross-backward-out .wdt-button:hover:after { height: auto; padding-top: 100%; }
+
+
+/* Hover - Radial */
+.wdt-button-holder[class*="wdt-animation-radial"],
+.wdt-button-holder[class*="wdt-animation-radial"] .wdt-button { overflow: hidden; }
+
+.wdt-button-holder[class*="wdt-animation-radial"] .wdt-button:after { height: auto; bottom: auto; right: auto; left: 50%; top: 50%; -webkit-border-radius: 50%; border-radius: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
+/* Hover - Radial-In */
+.wdt-button-holder.wdt-animation-radial-in .wdt-button:after { padding-top: 120%; width: 120%; }
+
+.wdt-button-holder.wdt-animation-radial-in .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-radial-in .wdt-button:hover:after { padding-top: 0; width: 0; }
+
+/* Hover - Radial-Out */
+.wdt-button-holder.wdt-animation-radial-out .wdt-button:after { padding-top: 0; width: 0; }
+
+.wdt-button-holder.wdt-animation-radial-out .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-radial-out .wdt-button:hover:after { padding-top: 120%; width: 120%; }
+
+
+/* Hover - Ripple-In */
+.wdt-button-holder.wdt-animation-ripple-in, .wdt-button-holder.wdt-animation-ripple-in .wdt-button { overflow: visible; }
+.wdt-button-holder.wdt-animation-ripple-in .wdt-button:after { border-color: transparent; border-style: solid; background: transparent; margin: -1.2em; -webkit-border-radius: inherit; border-radius: inherit; transition: all 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0.3s; }
+
+.wdt-button-holder.wdt-animation-ripple-in .wdt-button:focus:after, 
+.wdt-button-holder.wdt-animation-ripple-in .wdt-button:hover:after { border-color: inherit; background: inherit; margin: -0.2em; opacity: 0; }
+
+/* Hover - Ripple-Out */
+.wdt-button-holder.wdt-animation-ripple-out, .wdt-button-holder.wdt-animation-ripple-out .wdt-button { overflow: visible; }
+.wdt-button-holder.wdt-animation-ripple-out .wdt-button:after { border-color: inherit; border-style: solid; background: inherit; margin: -0.2em; opacity: 0; -webkit-border-radius: inherit; border-radius: inherit; transition: all 0.4s ease-in-out 0.15s, opacity 0.4s ease-in-out 0s; }
+
+.wdt-button-holder.wdt-animation-ripple-out .wdt-button:focus:after, 
+.wdt-button-holder.wdt-animation-ripple-out .wdt-button:hover:after { border-color: transparent; background: transparent; margin: -1.2em; opacity: 1; }
+
+
+/* Hover - Outline */
+.wdt-button-holder[class*="wdt-animation-outline"] .wdt-button:after { background-color: inherit; background-image: inherit; 
+    padding: 2px;
+    -webkit-mask: linear-gradient(var(--wdt-elementor-color-white) 0 0) content-box, linear-gradient(var(--wdt-elementor-color-white) 0 0);
+    mask: linear-gradient(var(--wdt-elementor-color-white) 0 0) content-box, linear-gradient(var(--wdt-elementor-color-white) 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+/* Hover - Outline-In */
+.wdt-button-holder.wdt-animation-outline-in .wdt-button:after { color: inherit; background-color: currentColor; margin: 0; opacity: 0; -webkit-border-radius: inherit; border-radius: inherit; }
+
+.wdt-button-holder.wdt-animation-outline-in .wdt-button:focus:after, 
+.wdt-button-holder.wdt-animation-outline-in .wdt-button:hover:after { margin: 2px; opacity: 1; }
+
+.wdt-button-holder.wdt-template-textual.wdt-animation-outline-in .wdt-button:after { margin: -6px; }
+.wdt-button-holder.wdt-template-textual.wdt-animation-outline-in .wdt-button:focus:after, 
+.wdt-button-holder.wdt-template-textual.wdt-animation-outline-in .wdt-button:hover:after { margin: -3px; }
+
+
+/* Hover - Outline-Out */
+.wdt-button-holder.wdt-animation-outline-out .wdt-button:after { color: rgba(var(--wdt-elementor-color-secondary-rgb),0.5); background-color: currentColor; margin: 0; opacity: 0; -webkit-border-radius: inherit; border-radius: inherit; }
+
+.wdt-button-holder.wdt-animation-outline-out .wdt-button:focus:after, 
+.wdt-button-holder.wdt-animation-outline-out .wdt-button:hover:after { margin: -5px; opacity: 1; }
+
+
+/* Hover - Overline & Underline */
+.wdt-button-holder[class*="wdt-animation-overline"],
+.wdt-button-holder[class*="wdt-animation-overline"] .wdt-button { overflow: hidden; }
+.wdt-button-holder[class*="wdt-animation-overline"] .wdt-button:after { bottom: auto; top: 0; }
+
+.wdt-button-holder[class*="wdt-animation-underline"],
+.wdt-button-holder[class*="wdt-animation-underline"] .wdt-button { overflow: hidden; }
+.wdt-button-holder[class*="wdt-animation-underline"] .wdt-button:after { bottom: 0; top: auto; }
+
+.wdt-button-holder.wdt-animation-overline-left .wdt-button:after,
+.wdt-button-holder.wdt-animation-underline-left .wdt-button:after { height: 2px; left: auto; right: 0; width: 0; }
+
+.wdt-button-holder.wdt-animation-overline-left .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-overline-left .wdt-button:hover:after,
+.wdt-button-holder.wdt-animation-underline-left .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-underline-left .wdt-button:hover:after { left: 0; right: auto; width: 100%; }
+
+
+.wdt-button-holder.wdt-animation-overline-right .wdt-button:after,
+.wdt-button-holder.wdt-animation-underline-right .wdt-button:after { height: 2px; left: 0; right: auto; width: 0; }
+
+.wdt-button-holder.wdt-animation-overline-right .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-overline-right .wdt-button:hover:after,
+.wdt-button-holder.wdt-animation-underline-right .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-underline-right .wdt-button:hover:after { left: auto; right: 0; width: 100%; }
+
+
+.wdt-button-holder.wdt-animation-overline-middle .wdt-button:after,
+.wdt-button-holder.wdt-animation-underline-middle .wdt-button:after { height: 2px; margin-left: auto; margin-right: auto; width: 0; }
+
+.wdt-button-holder.wdt-animation-overline-middle .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-overline-middle .wdt-button:hover:after,
+.wdt-button-holder.wdt-animation-underline-middle .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-underline-middle .wdt-button:hover:after { width: 100%; }
+
+
+.wdt-button-holder.wdt-animation-overline-reveal .wdt-button:after { height: 3px; opacity: 0; bottom: auto; top: 0; transform: translateY(-100%); transition: all 0.5s ease; }
+.wdt-button-holder.wdt-animation-overline-reveal .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-overline-reveal .wdt-button:hover:after { opacity: 1; transform: translateY(0); }
+
+.wdt-button-holder.wdt-animation-underline-reveal .wdt-button:after { height: 3px; opacity: 0; bottom: 0; top: auto; transform: translateY(100%); transition: all 0.5s ease; }
+.wdt-button-holder.wdt-animation-underline-reveal .wdt-button:focus:after, 
+.wdt-button-holder.wdt-animation-underline-reveal .wdt-button:hover:after { opacity: 1; transform: translateY(0); }
+
+
+/* Hover - UpDownLine */
+.wdt-button-holder[class*="wdt-animation-updownline"],
+.wdt-button-holder[class*="wdt-animation-updownline"] .wdt-button { overflow: hidden; }
+.wdt-button-holder[class*="wdt-animation-updownline"] .wdt-button:after { background: none; border-color: currentColor; color: inherit; border-style: solid; border-width: 2px 0; bottom: 0; top: 0; }
+
+/* Hover - UpDownline-Left */
+.wdt-button-holder.wdt-animation-updownline-left .wdt-button:after { left: auto; right: 0; width: 0 }
+.wdt-button-holder.wdt-animation-updownline-left .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-updownline-left .wdt-button:hover:after { left: 0; right: auto; width: 100%; }
+
+/* Hover - UpDownline-Right */
+.wdt-button-holder.wdt-animation-updownline-right .wdt-button:after { left: 0; right: auto; width: 0; }
+.wdt-button-holder.wdt-animation-updownline-right .wdt-button:focus:after,
+.wdt-button-holder.wdt-animation-updownline-right .wdt-button:hover:after { left: auto; right: 0; width: 100%; }
+
+/* Hover - UpDownline-Middle */
+.wdt-button-holder.wdt-animation-updownline-middle .wdt-button:after { margin-left: auto; margin-right: auto; width: 0; }
+.wdt-button-holder.wdt-animation-updownline-middle .wdt-button:focus:after, 
+.wdt-button-holder.wdt-animation-updownline-middle .wdt-button:hover:after { width: 100%; }
+
+/* Hover - UpDownline-Reveal */
+.wdt-button-holder.wdt-animation-updownline-reveal .wdt-button:after { opacity: 0; bottom: -3px; top: -3px; }
+.wdt-button-holder.wdt-animation-updownline-reveal .wdt-button:focus:after, 
+.wdt-button-holder.wdt-animation-updownline-reveal .wdt-button:hover:after { opacity: 1; bottom: 0; top: 0; }
+
+
+/* Hover - Line-Through */
+.wdt-button-holder[class*="wdt-animation-linethrough"] .wdt-button .wdt-button-text > span { position: relative; transition: var(--wdt-elementor-base-transition); }
+.wdt-button-holder[class*="wdt-animation-linethrough"] .wdt-button .wdt-button-text > span:after { background-color: currentColor; height: 2px; margin-top: auto; margin-bottom: auto; -webkit-transform: translateY(100%); transform: translateY(100%); }
+
+/* Hover - Line-Through-Left */
+.wdt-button-holder.wdt-animation-linethrough-left .wdt-button .wdt-button-text > span:after { left: auto; right: 0; width: 0 }
+.wdt-button-holder.wdt-animation-linethrough-left .wdt-button:focus .wdt-button-text > span:after,
+.wdt-button-holder.wdt-animation-linethrough-left .wdt-button:hover .wdt-button-text > span:after { left: 0; right: auto; width: 100%; }
+
+/* Hover - Line-Through-Right */
+.wdt-button-holder.wdt-animation-linethrough-right .wdt-button .wdt-button-text > span:after { left: 0; right: auto; width: 0; }
+.wdt-button-holder.wdt-animation-linethrough-right .wdt-button:focus .wdt-button-text > span:after,
+.wdt-button-holder.wdt-animation-linethrough-right .wdt-button:hover .wdt-button-text > span:after { left: auto; right: 0; width: 100%; }
+
+/* Hover - Line-Through-Middle */
+.wdt-button-holder.wdt-animation-linethrough-middle .wdt-button .wdt-button-text > span:after { margin-left: auto; margin-right: auto; width: 0; }
+.wdt-button-holder.wdt-animation-linethrough-middle .wdt-button:focus .wdt-button-text > span:after, 
+.wdt-button-holder.wdt-animation-linethrough-middle .wdt-button:hover .wdt-button-text > span:after { width: 100%; }
+
+/* Hover - Line-Through-Reveal */
+.wdt-button-holder.wdt-animation-linethrough-reveal .wdt-button .wdt-button-text > span { perspective: 100px; }
+.wdt-button-holder.wdt-animation-linethrough-reveal .wdt-button .wdt-button-text > span:after { opacity: 0; transform: translateZ(25px); }
+
+.wdt-button-holder.wdt-animation-linethrough-reveal .wdt-button:focus .wdt-button-text > span:after, 
+.wdt-button-holder.wdt-animation-linethrough-reveal .wdt-button:hover .wdt-button-text > span:after { opacity: 1; transform: translateZ(0); }
+
+
+/* wdt-button-text-with-line */
+
+.wdt-button-text-with-line .wdt-button-holder.wdt-template-textual .wdt-button .wdt-button-text:after {content: '';position: absolute;width: 50px;height: 1px;left: 100%;top: 0;bottom: 0;margin: auto;background: rgba(var(--wdtBorderColorRgb), 0.4);margin-left: 10px;transition: var(--wdtBaseTransition);}
+.wdt-button-text-with-line .wdt-button-holder.wdt-template-textual .wdt-button:hover .wdt-button-text:after {width: 100px;}
+
+@media only screen and (max-width:480px)
+{
+    .wdt-button-holder.wdt-button-size-nm .wdt-button{padding: 17px 35px 14px;}
+    .wdt-button-text-with-line .wdt-button-holder.wdt-template-textual .wdt-button .wdt-button-text:after{display: none;}
+    .wdt-button-holder.wdt-template-textual .wdt-button{padding: 0;}
+}
+

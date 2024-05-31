@@ -1,0 +1,171 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+
+.dataProfile {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--blueCity);
+    border-radius: 5px;
+}
+
+.headerDataProfile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+}
+
+.headerDataProfile div { 
+    display: flex;
+    padding-left: 0.2rem;
+ }
+ 
+ .headerDataProfile div h5{ 
+    display: block;
+    font-size: 1.2rem;
+ }
+ .headerDataProfile div p{
+     display: block;
+     font-size: 0.8rem;
+    color: rgb(190, 213, 227);
+    margin-top: -0.2rem;
+    margin-left: 0.2rem;
+ }
+ 
+ .headerDataProfile img{
+     width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.1rem solid white;
+}
+
+.headerDataProfile button {
+    background: none;
+    outline: none;
+    border: none;
+    color: white;   
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.namesProfile {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+}
+
+.bodyDataProfile {
+    width: 100%;
+}
+
+.bodyDataProfile ul {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 0.5rem;
+    width: 90%;
+    margin: auto;
+    padding: 0.6rem 0.1rem;
+    padding-bottom: 1.5rem;
+}
+
+.bodyDataProfile ul li {
+    padding: 0.2rem 0.1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.09rem solid rgba(255, 255, 255, 0.792);
+    border-radius: 5px 5px 0 0 ;
+    transition: all .2 ease-in-out;
+    cursor: pointer;
+}
+.bodyDataProfile ul li span:first-child {
+    font-weight: 600    ;
+}
+
+.bodyDataProfile ul li:hover{ 
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.064), rgba(150, 215, 255, 0.308));
+}
+
+
+.SendEmailForTeam {
+    width: 100%;
+    height: 190px;
+    margin-top: 1rem;
+    background-color: var(--blueCity);
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.SendEmailForTeam h4{
+    color: white;
+}
+.SendEmailForTeam p{
+    color: rgb(190, 213, 227);   
+    font-size: 0.9rem; 
+    padding: 0.3rem;
+}
+
+.parentInputParent {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 0.12rem solid white;
+    width: 80%;
+    margin: auto;
+    padding: 0.3rem ;
+    border-radius: 5px;
+}
+
+.parentInputParent i{
+    color: white;
+    font-size: 1.5rem;
+}
+.parentInputParent input{
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    font-weight: 600;
+}
+
+.parentInputParent input::placeholder {
+    color: white;
+}
+
+.parentbtnSubscribe {
+    display: flex;
+    justify-content: center;
+}
+
+.SendEmailForTeam button {
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    padding: 0.2rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin-top: 0.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.SendEmailForTeam button:hover {
+    background-color: rgb(247, 247, 247);
+}

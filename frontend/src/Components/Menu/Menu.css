@@ -1,0 +1,10 @@
+.listIcons{
+    margin-left:1.3rem;
+    margin-top: 3rem;
+    list-style-type: none;
+}
+.listIcons li img{
+   width: 45px;
+   margin-top: 1rem;
+   height: 45px;
+}

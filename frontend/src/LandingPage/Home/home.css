@@ -1,0 +1,375 @@
+:root {
+    --orangeTouil : #E8451E;
+    --blueTouil : #1B67B0;
+    --blueTouilShadow : #7116e057;
+    --blueBTouilShadow : #1b68b057;
+    --orangeTouilShadow : #e8461e72;
+    --cremaTouil : #F2F2F2;
+}
+
+
+.parentHomev2 {
+    width: 84%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 100vh;
+    margin-top: -2rem;
+}
+
+/* ARABIC STYLE */
+.reverseContent{
+    flex-direction: row-reverse;
+}
+
+.reverseContent .parentText h1{
+ width: 55rem;
+}
+
+.reverseContent .illustrator3{
+ left: 30rem;
+}
+
+.reverseContent .illustrator2{
+ left: 40rem;
+}
+
+.reverseContent .illustrator4{
+ left: 30rem;
+}
+
+.reverseContent .illustrator5{
+ left: 24rem;
+}
+.reverseContent .vector1{
+display: none;
+}
+.reverseContent .vector2{
+display: none;
+}
+.reverseContent .parentText p{
+width: 42rem;
+    
+}
+.reverseContent .parentText h3{
+    margin-left: 31rem;
+    width: 8rem;
+}
+.reverseContent .parentBtnsV2{
+   flex-direction: row-reverse;
+}
+.reverseContent .btnSeeMoreServices{
+ margin-left: 1rem;
+ padding: 0.3rem;
+ width: 8rem;
+}
+
+.reverseContent .parentBtnsV2{
+   flex-direction: row-reverse;
+   /* button {
+    margin-left: 1rem;
+   } */
+}
+
+
+.parentText {
+    width: 60%;
+    margin-top: -3rem;
+   
+}
+
+.parentText h6 {
+    width: 85%;
+    text-align: start;
+    background-image: linear-gradient(224deg, rgb(115, 171, 255),rgb(27,103,176));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 0.8rem; 
+    font-weight: 500;
+    padding-bottom: 1rem;
+
+}
+
+.vector1 {
+    position: absolute;
+    width: 10.5rem;
+    margin-left: -1rem;
+    margin-top: 1.7rem;
+}
+.vector2 {
+    position: absolute;
+    width: 160px;
+    margin-left: 25.3rem;
+    margin-top: 6.1rem;
+
+}
+
+.parentText h1 {
+    font-size: 3.3rem; 
+    font-weight: 700;
+    line-height: 4rem;
+    margin-top: 1rem;
+}
+.parentText p {
+    width: 82%;
+    margin: 0.3rem;
+    font-size:  1rem;
+    color: rgb(135, 135, 135);
+}
+
+.btnSeeMoreServices {
+    background-image: linear-gradient(224deg, rgb(78,148,252),rgb(27,103,176));
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 0.7rem;
+    outline: none;
+    font-family: "Raleway", "Noto Kufi Arabic",  sans-serif;
+    border-radius: 0.3rem;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all .1s;
+}
+
+.btnSeeMoreServices:hover {
+    animation: anim 1.2s infinite ease-in-out;
+}
+
+.btnSeeMoreServices:active { 
+    background-image: linear-gradient(14deg, rgb(232,69,30),rgb(232,69,30),rgb(251,145,37));
+    transform: scale(0.95);
+}
+.parentBtnsV2 {
+    display: flex;
+    margin-top: 1.3rem;
+    align-items: center;
+}
+
+.btnScrollV2 {
+    margin-top:0rem;
+    margin-left: 0.5rem;
+    text-align: center;
+    background: none;
+    padding: 0.2rem 0.55rem;
+    border-radius: 20px ;
+    border: 0.12rem solid var(--blueTouil);
+    cursor: pointer;
+    transition: all .1s;
+}
+
+.btnScrollV2:hover {
+    border: 0.1rem solid var(--blueTouil);
+}
+
+.btnScrollV2:active {
+    border: 0.12rem solid var(--orangeTouil);
+}
+
+.pointV2 {
+    color: var(--blueTouil);
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin: 0;
+    animation: jump 1s infinite alternate;
+}
+
+
+.parentimg {
+    width:33%;
+   
+}
+
+.illustatorHome {
+    width: 350px;
+    margin: 0;
+    filter: drop-shadow(0 0 30px var(--blueBTouilShadow));
+}
+.illustatorArabe{
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+
+}
+
+
+.illustrator1 {
+    position: absolute;
+    width: 45px;
+    top: 25rem;
+    filter: drop-shadow(0 0 25px var(--orangeTouil));
+    animation: rotateAnimation 30s infinite alternate;
+
+}
+.illustrator2 {
+    position: absolute;
+    width: 45px;
+    top: 25rem;
+    right: 30rem;
+    transform: rotate(-20deg);
+    filter: drop-shadow(0 0 25px var(--orangeTouil));
+}
+.illustrator5 {
+    position: absolute;
+    width: 45px;
+    top: 7rem;
+    right: 7rem;
+    transform: rotate(15deg);
+    filter: drop-shadow(0 0 20px var(--orangeTouil));
+}
+.illustrator3 {
+    position: absolute;
+    width: 95px;
+    top: 28rem;
+    right: 35rem;
+    filter: drop-shadow(0 0 30px var(--blueTouilShadow));
+    transform: rotate(10deg);
+}
+.illustrator4 {
+    filter: drop-shadow(0 0 30px var(--blueTouil));
+    position: absolute;
+    width: 45px;
+    top: 12rem;
+    right: 28rem;
+}
+
+@keyframes anim {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+
+
+@keyframes jump {
+    0% {
+        transform: translateY(-60%);
+    }
+    100% {
+        transform: translateY(-40%);
+    }
+}
+
+
+@media (max-width : 1025px){
+    .parentHomev2 {
+        width: 100%;
+        flex-direction:column;
+    }
+
+    .parentText {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+   
+    .parentText h3 {
+       display: none;
+    }
+   
+
+    .illustatorHome {
+        width: 24rem;
+        margin-right: -8.4rem;
+        margin-top: -1rem;
+    }
+    .vector1  {
+        margin-left: -27rem;
+    }
+    .illustrator4 {
+        width: 50px;
+        left: 4rem;
+    }
+    .illustrator5 {
+        width: 60px;
+    }
+}
+
+@media (max-width : 767px){
+    
+    .illustrator4 {
+        width: 50px;
+        left: 1rem;
+    }
+    .illustrator5 {
+        width: 60px;
+        right: 1rem;
+    }
+}
+@media (max-width : 585px){
+    .illustrator4 {
+        width: 50px;
+        left: 3rem;
+        top: 15rem;
+        position: absolute;
+
+    }
+    .illustrator5 {
+        width: 60px;
+        right: 1rem;
+    }
+    .vector1  {
+        display: none;
+    }
+    .vector2  {
+    display: none;
+    }
+    .illustatorHome {
+        position: absolute;
+        right: 8.5rem;
+        top: 31rem;
+     }
+}
+@media (max-width : 426px){
+    .parentText h1{
+        font-size: 2.3rem;
+        line-height: 3rem;
+    }
+   
+    .vector1  {
+        width: 100px;
+        margin-left: -18rem;
+    }
+    .vector2  {
+        width: 100px;
+       margin-top: 4.3rem;
+       margin-left: 17rem;
+    }
+    .illustatorHome {
+       position: absolute;
+       right: 8.5rem;
+       top: 29rem;
+    }
+}
+@media (max-width : 418px){
+    .parentText h1{
+        font-size: 2.3rem;
+    }
+    .parentText h6{
+        margin-bottom: -0.5rem;
+    }
+    .vector1  {
+        display: none;
+        width: 100px;
+        margin-left: -11rem;
+    }
+    .vector2  {
+        width: 100px;
+       margin-top: 7rem;
+       margin-left: 1rem;
+    }
+    .illustatorHome {
+        width: 23rem;
+        margin-left: -5rem;
+    }
+}
+

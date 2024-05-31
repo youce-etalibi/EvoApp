@@ -1,0 +1,87 @@
+/* .homeseller{
+    background: #0153DF;
+    width: 100%;
+    padding: 4rem;
+   display: flex;
+   justify-content: center;
+   height: 100vh;
+   flex-direction: row;
+   align-items: center;
+}
+.sellerhomeright{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+}
+.contentseller {
+ width: 90%;
+ position: relative;
+ color: white;
+
+}
+.contentseller h1{
+    width: 560px;
+    line-height: 77px;
+    font-size: 4.3rem;
+    color: white;
+
+}
+.contentseller span{
+    width: 330px;
+    font-size: 0.9rem;
+   position: absolute;
+   right: -1rem;
+  color: white;
+
+   margin-top: -4rem;
+}
+.sellerhomebtns{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    gap: 20px;
+  color: white;
+
+
+}
+.sellerhomebtns button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 47%;
+    border: none;
+    font-size: 0.9rem;
+    outline: none;
+  background: black;
+    color: white;
+    margin-top: 3rem;
+    padding: 8px 17px;
+    font-weight: 400;
+    border-radius: 7px;
+    box-shadow: 0 2px 3px hsla(0, 0%, 0%, 0.2);
+    transition: 0.25s ease;
+}
+.sellerhomeimage{
+    width: 33%;
+    
+}
+.sellerhomeimage div{
+    height: 330px;
+    width: 330px;
+    position: relative;
+    background-color: black;
+    border-radius: 2px;
+}
+.cartimgseller{
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    position: absolute;
+    top: 3rem;
+    left: 2rem;
+} */
+
+.homeseller{
+    margin-top: 7rem;
+}

@@ -1,0 +1,86 @@
+
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+.linksidebar{
+    text-decoration: none;
+    width: auto;
+}
+.parentSideBar {
+    width: 22%;
+    margin-top: 4rem;
+}
+
+.parentSideBar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.parentSideBar ul li button {
+    color: black;
+    background-color: white;
+    border: 0.08rem solid rgba(0, 0, 0, 0.281);
+    width: 68%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem 0 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 3rem;
+    cursor: pointer;
+    border-radius: 22px;
+    transition: all 0.4s ease-in-out;
+}
+
+.parentSideBar ul li button:hover {
+    background-color: rgb(243, 243, 243);
+}
+
+.parentSideBar ul li button i {
+    color: black;
+    border-radius: 5px;
+    font-size: 2rem;
+    display: none;
+}
+
+#arrowSideBarSeller {
+    background: none;
+    border: none;
+    outline: none;
+    color: black;
+}
+
+#btnSideBarActive {
+    background-color: black;
+    padding: 0.6rem 0 0.6rem 1rem;
+    gap: 3rem;
+
+    color: white;
+}
+#btnSideBarActive #arrowSideBarSeller{
+    display: none;
+}
+
+
+@media (max-width : 767px){
+   
+    .profiletext{
+        display: none;
+    }
+    #arrowSideBarSeller{
+        display: none;
+    }
+    #btnSideBarActive i{
+  color: white;
+  padding-left: 0.6rem;
+    }
+    
+.parentSideBar ul li button i {
+  display: block;
+}
+ }

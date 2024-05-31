@@ -1,0 +1,26 @@
+#searchform ul.quick_search_results { position: absolute; padding: 0 15px !important; 
+    background-color: var(--wdtSecondaryColor); text-align: left; width: 100%; max-width: 300px;  margin-right: auto; margin: 16px 0 0;
+    transition: all .4s ease; z-index: 99; font-size: 0.9rem; transform: translateY(10px);display: flex;flex-wrap: wrap;}
+
+#searchform ul.quick_search_results p,
+#searchform ul.quick_search_results li.quick_search_data_item { list-style-type: none; text-align: inherit; line-height: var(--wdtLineHeight_Base); 
+    padding: 15px 5px; font-size: 0.9rem; width: 100%; margin: 0;flex: 1 1 50%;max-width: 100%;}
+
+#searchform ul.quick_search_results li.quick_search_data_item a { width: 100%; font-size:var(--wdtFontSize_Base); display: grid; gap: 10px; grid-template-columns: 70px 1fr; align-items: center;color: var(--wdtBodyTxtColor);}
+#searchform ul.quick_search_results li.quick_search_data_item a:hover {color: var(--wdtPrimaryColor);}
+#searchform ul.quick_search_results li.quick_search_data_item a > img { -webkit-border-radius: var(--wdtRadius_Full); border-radius: var(--wdtRadius_Full);}
+
+#searchform ul.quick_search_results:not(.active):before,
+#searchform ul.quick_search_results:not(.active) { font-size: inherit; opacity: 0; transform: translateY(10px); transition: all .4s ease; }
+#searchform ul.quick_search_results.active { opacity: 1; transform: translateY(0); padding-top: 10px; padding-bottom: 10px; 
+    -webkit-box-shadow: 0 -1px 8px 3px rgba(var(--wdtHeadAltColorRgb),0.08); box-shadow: 0 -1px 8px 3px rgba(var(--wdtHeadAltColorRgb),0.08); }
+
+#searchform input.text_input ~ ul.quick_search_results { opacity: 0; transform: translateY(10px); transition: all .4s ease;display: none;}
+#searchform input.text_input:focus ~ ul.quick_search_results { opacity: 1; transform: translateY(0);display: block; }
+
+#searchform ul.quick_search_results.active:before { content: ""; position: absolute; width: 16px; height: 16px; background: inherit; -webkit-transform: rotate(45deg); transform: rotate(45deg); top: -7px; left: 20px; }
+
+
+.wdt-search-form-container #searchform ul.quick_search_results{max-width: 100%;display: flex;}
+
+.wdt-search-form-container #searchform ul.quick_search_results.active{display: flex !important;}

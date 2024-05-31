@@ -1,0 +1,130 @@
+#productStoreseller{
+    width: 98%;
+}
+   .addproducts{
+    justify-content: center;
+    
+   }
+   
+   .sidebarseller2{
+    width: 66%;
+   }
+   .leftsideseller{
+    width: 33%;
+   }
+   .addproducts .addproductsbtn{
+    padding: 6px 20px;
+    border: none;
+    font-size: 0.9rem;
+    outline: none;
+    width: 150px;
+    transition: all 0.5s;
+    background-color: #1e0825;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 33px;
+    box-shadow: 0 2px 3px hsla(0, 0%, 0%, 0.2);
+
+   }
+   
+   
+  .itemseller {
+    display: flex;
+  
+    padding-left: 2rem;
+    padding-right: 1rem;
+    margin-top: 2rem;
+    border-bottom:  1px solid #ddd;
+}
+.infoprodseller{
+    margin: 0.8rem 1.5rem;
+   display: flex;
+   flex-direction: column;
+   gap: 3px;
+}
+.infoprodseller h3{
+    font-size: 1.5rem;
+}
+.tdimage{
+border-radius: 7px;
+ flex-direction: row;
+ gap: 3px;
+
+  display: flex;
+  
+}
+.infoprodseller {
+  flex-direction: column;
+  gap: 1px;
+   display: flex;
+}
+.tdimage img{
+  object-fit: cover;
+  width: 80px;
+  height: 80px;
+}
+.theadseller{
+  border-bottom: 3px solid #ddd;
+}
+.tablecrudseller{
+  margin-top: 4rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 14px;
+  border: 1px dashed #ddd;
+}
+.tablecrudseller tr{
+  border-bottom: 1px dashed #ddd;
+
+}
+
+
+
+  .imgprodseller{
+    width: 80px;
+    height: 70px;
+   object-fit: cover;
+  }
+
+  .rightprodseller{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+}
+.contentinfoprod{
+      display: flex;
+      flex-direction: row;
+      width: 76%;
+      justify-content: space-between;
+
+  }
+  .priceseller{
+    color: black;
+    font-weight: 600;
+    font-size: 1.4rem;
+
+  }
+  .quantityseller{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    
+}
+.quantityseller button{
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0153DF;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    outline: none;
+  }
+   
+
+ 

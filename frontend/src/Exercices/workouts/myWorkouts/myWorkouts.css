@@ -1,0 +1,187 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+.headerMyWorkoutsCategories {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#ulHeaderWorkoutsCategories  {
+    display: block;
+}
+
+.headerMyWorkoutsCategories button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0.2rem;
+    padding-top: 0.4rem;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+
+.headerMyWorkoutsCategories button:hover {
+    background-color: rgb(243, 243, 243);
+}
+.headerMyWorkoutsCategories button:active {
+    background-color: rgb(170, 170, 170);
+}
+
+.headerMyWorkoutsCategories button i {
+    color: var(--blueChelsea);
+    font-size: 1.4rem;
+}
+
+.parentMappingWorkouts {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.rowWorkouts {
+    /* background-color: aqua; */
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.rowWorkouts header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.rowWorkouts header span {
+    font-size: 0.6rem;
+}
+
+
+.rowWorkouts header span:first-child {
+    font-weight: 500;
+}
+.rowWorkouts header span:last-child {
+    font-weight: 400;
+    color: rgb(137, 137, 137);
+}
+
+.workoutGroup .workout div {
+    justify-content: space-between;
+    padding: 0.2rem;
+    border-radius: 5px;
+}
+
+.parentImgInfoWorkout {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.parentImgInfoWorkout h4 {
+    color: white;
+}
+
+.workoutGroup .workout img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.workoutGroup .workout {
+    margin-top: -0.7rem;
+}
+
+.workoutGroup .workout div {
+    background-color: var(--blueCity);
+    margin-bottom: 0.5rem;
+    display: flex;
+}
+
+.parentCheckRadioWorkout {
+    width: 13%;
+    display: grid;
+    place-items: center;
+}
+
+.circleRadioLabelWorkout {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+
+#checkRadioIcon {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.2rem;
+    margin-top: -0.4rem;
+    margin-left: -0.3rem;
+}
+
+
+#activeBtnPersonalTraining {
+    background-color: var(--blueCity);
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    border: none;
+    font-size: 0.7rem;
+    outline: none;
+    padding: 0.1rem 0.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+
+.addWorkoutIfheDidntHaveBtn {
+    width: 100%;
+    height: 400px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: rgb(244, 244, 244);
+    transition: all .15s ease-in-out;
+}
+
+.addWorkoutIfheDidntHaveBtn:hover {
+    background-color: rgb(209, 209, 209);
+    color: var(--blueChelsea);
+}
+
+.addWorkoutIfheDidntHaveBtn i{
+    font-size: 5rem;
+    display: block;
+    color: var(--blueChelsea);
+}
+
+
+.pagination {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.pagination button{
+    background-color: rgb(230, 230, 230);
+    color: var(--blueChelsea);
+    border: none;
+    font-weight: 600;
+    outline: none;
+    width: 25px;
+    height: 25px;
+    padding: 0.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}

@@ -1,0 +1,27 @@
+(function ($) {
+
+    const wdtHeadingWidgetHandler = function($scope, $) {
+
+        const $heading_holder = $scope.find('.wdt-heading-holder');
+        const $heading_title  = $heading_holder.find('.wdt-heading-title');
+        const $heading_wrapper = $heading_title.find('.wdt-stroke-heading-elements');
+
+        $.each( $heading_wrapper, function($svg){
+            $this_element = $(this);
+            var text = this.querySelector('svg');
+            var svgtext = text.querySelector('text');
+            var svgbox = svgtext.getBBox();
+            var width = svgbox.width;
+
+            const $svgs = $this_element.find('svg');
+
+            $svgs.css({ "width":width + 10 +'px' });
+        } );
+
+    };
+
+    $(window).on('elementor/frontend/init', function () {
+		elementorFrontend.hooks.addAction('frontend/element_ready/wdt-heading.default', wdtHeadingWidgetHandler);
+    });
+
+})(jQuery);

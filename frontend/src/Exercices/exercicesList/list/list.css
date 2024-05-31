@@ -1,0 +1,109 @@
+:root {
+    --blueChelsea: #0153DF;
+    --blueCity: #3F85FF;
+    --blackNewcastle: #000000;
+}
+
+.parentListExercices {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+}
+
+.exercises-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    width: 100%;
+}
+
+.exercise-item {
+    border-radius: 5px;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 10px); 
+    box-sizing: border-box;
+    max-width: calc(33.333% - 10px);
+    padding: 0.2rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    padding-bottom: 1rem;
+}
+
+.parentImageExerciceThu {
+    position: relative; 
+    display: grid;
+    place-items: center;
+    height: 130px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-image: linear-gradient(37deg, rgb(0,0,0),rgb(1,83,223));
+}
+
+.parentImageExerciceThu img {
+    position: relative;
+    z-index: 1; 
+}
+
+.parentImageExerciceThu i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.parentImageExerciceThu:hover i {
+    opacity: 1; 
+}
+
+
+.exercise-item:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.exercise-item img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: all .2s ease-in ;
+}
+
+.exercise-item img:hover {
+    transform: scale(1.1);
+    opacity: 0.6;
+}
+
+.exercise-item h4 {
+    text-overflow: ellipsis;
+    width: 100%;
+    font-size: 0.9rem;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: start;
+}
+
+.exercise-item p {
+    color: var(--blueChelsea);
+    font-size: 0.8rem;
+    text-align: start;
+    text-transform: capitalize;
+}
+
+.exercise-item p span {
+    color: grey;
+}
+
+
+
+.parentPaginationExercices {
+    margin-top: 1rem;
+    display: flex;
+    width: 90%;
+    justify-content: end;
+}

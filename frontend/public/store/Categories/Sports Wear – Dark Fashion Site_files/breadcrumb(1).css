@@ -1,0 +1,218 @@
+/*--------------------------------------------------------------
+    Title & Breadcrumb
+--------------------------------------------------------------*/
+
+.main-title-section-wrapper {
+  clear: both;
+  float: left;
+  margin: 0;
+  width: 100%;
+}
+
+#header-wrapper .main-title-section-wrapper {
+  position: relative;
+}
+
+#header-wrapper.header-top-absolute .main-title-section-wrapper {
+  position: static;
+}
+
+.main-title-section-container {
+  clear: both;
+  float: left;
+  margin: 0;
+  padding: 75px 0 90px;
+  width: 100%;
+}
+
+.main-title-section {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.main-title-section h1 {
+  font-size: var(--wdtFontSize_H3);
+  font-weight: calc(var(--wdtFontWeight_Alt) + 100);
+  text-transform: capitalize;
+  margin: 0 0 5px;
+  word-break: break-all;
+}
+
+.breadcrumb {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: 500;
+}
+
+.breadcrumb a:not(:focus) {
+  text-decoration: none;
+}
+
+.breadcrumb span:not(.current) {
+  display: inline-block;
+  margin: 0px 12px;
+  padding: 0;
+}
+
+.breadcrumb .breadcrumb-default-delimiter:last-child {
+  display: none;
+}
+
+.main-title-section-wrapper .breadcrumb-default-delimiter:before {
+  content: "/";
+  color: var(--wdtAccentTxtColor);
+  display: inline-block;
+  opacity: 1;
+  position: relative;
+  vertical-align: middle;
+}
+
+.main-title-section h1,
+.breadcrumb {
+  hyphens: auto;
+  word-break: break-word;
+  word-wrap: break-word;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+.main-title-section-wrapper > .main-title-section-bg,
+.main-title-section-wrapper > .main-title-section-bg:after {
+  content: "";
+  height: 100% !important;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+.main-title-section-wrapper > .main-title-section-bg
+{
+  background-color: var(--wdtSecondaryColor);
+}
+
+.home #header-wrapper .main-title-section-wrapper .main-title-section-container {
+    display: none;
+}
+
+
+/*--------------------------------------------------------------
+    Default Colors
+--------------------------------------------------------------*/
+
+.breadcrumb {
+  color: var(--wdtBodyTxtColor);
+}
+
+.main-title-section h1 {
+  color: var(--wdtAccentTxtColor);
+}
+
+.breadcrumb a {
+  color: var(--wdtAccentTxtColor);
+}
+
+.breadcrumb span.current {
+  color: var(--wdtAccentTxtColor);
+}
+
+.main-title-section-wrapper.overlay-wrapper > .main-title-section-bg:after {
+  opacity: 0.5;
+}
+
+.main-title-section-wrapper.overlay-wrapper > .main-title-section-bg:after
+{
+    background-color: var(--wdtHeadAltColor);
+}
+
+.main-title-section-wrapper.overlay-wrapper.dark-bg-breadcrumb > .main-title-section-bg:after
+{
+    background-color: var(--wdtHeadAltColor);
+}
+
+.main-title-section-wrapper > .main-title-section-bg:after {
+  background-color: rgba(var(--wdtHeadAltColorRgb), 0.5);
+}
+
+.main-title-section-wrapper.dark-bg-breadcrumb > .main-title-section-bg {
+  background-color: var(--wdtHeadAltColor);
+}
+
+.dark-bg-breadcrumb .main-title-section h1,
+.dark-bg-breadcrumb .breadcrumb a,
+.dark-bg-breadcrumb .breadcrumb span.current,
+.dark-bg-breadcrumb .breadcrumb span:not(.current) {
+  color: var(--wdtAccentTxtColor);
+}
+
+.breadcrumb a:hover,
+.dark-bg-breadcrumb .breadcrumb a:hover {
+  color: var(--wdtHeadAltColor);
+}
+
+/*--------------------------------------------------------------
+    Accents
+--------------------------------------------------------------*/
+
+/* Primary Color */
+.breadcrumb a:hover {
+  color: var(--wdtPrimaryColor);
+}
+
+/*--------------------------------------------------------------
+	Responsive
+--------------------------------------------------------------*/
+
+@media only screen and (min-width: 1281px) {
+  .main-title-section-wrapper .main-title-section-container {
+    padding: 75px 0 90px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .main-title-section-wrapper .main-title-section-container {
+    padding: 45px 0 60px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  
+  .main-title-section-wrapper.hide-content .main-title-section, .main-title-section-wrapper.hide-content .breadcrumb { display: none; }
+  .main-title-section-wrapper.hide-content .main-title-section-container { min-height: 300px; }  
+
+}
+
+/*----*****---- << Mobile (Landscape) >> ----*****----*/
+
+/* Common Styles for the devices below 767px width */
+
+@media only screen and (max-width: 767px) {
+  .main-title-section h1 {
+    font-size: var(--wdtFontSize_H4);
+  }
+
+  .main-title-section,
+  .main-title-section h1,
+  .breadcrumb {
+    text-align: center;
+  }
+  
+}
+
+/* Common Styles for the devices below 479px width */
+
+@media only screen and (max-width: 479px) {
+  /* .main-title-section h1 {
+    font-size: var(--wdtFontSize_H3);
+  } */
+}

@@ -1,0 +1,75 @@
+jQuery("document").ready(function($){
+	$("#loading").hide();
+
+	if( $(".wdt-sc-bmi-calc").length ) {
+		$(".wdt-sc-bmi-form").each(function(index, element) {
+			$(this).submit(function(event) {
+
+				var $This = $(this);
+				var $h = $This.find('input[name="height"]').val(), $w = $This.find('input[name="weight"]').val(), $age = $This.find('input[name="age"]').val(),
+				$s = $This.find('select[name="sex"]').val();
+                
+				$.ajax({
+					type: "post",
+					url:  darkfashion_urls.ajaxurl,
+					data: {
+						action: 'wdt_ajax_bmi_calc_fun',
+						height: $h, 
+                        weight: $w, 
+                        age: $age, 
+                        sex: $s,
+					},
+					beforeSend: function(){
+						$("#loading").show();
+					},
+					complete: function(){
+						$("#loading").hide();
+					},
+					success: function(data, textStatus, XMLHttpRequest){
+						$This.parents('.wdt-sc-bmi-calc').find('.wdt-sc-bmi-notify').html(data);
+					},
+					error: function(MLHttpRequest, textStatus, errorThrown){
+					}
+				});
+				
+				return false;
+			}); 
+
+			$('#bmi-reset-button').on('click', function(e) {
+				$("#bmiselect").val('').trigger('change');
+				$('.wdt-sc-bmi-notify').html('');
+				$('#frmbmicalc').trigger('reset');
+            });
+			
+        });
+	}
+
+	if( $(".wdt-sc-lbs-calc").length ) {
+		$(".wdt-sc-lbs-frm").each(function(index, element) {
+			$(this).submit(function(event) {
+
+				var $This = $(this);
+				var $feet = $This.find('input[name="txtfeet"]').val(), $inches = $This.find('input[name="txtinches"]').val(), $lbs = $This.find('input[name="txtlbs"]').val();
+                
+				$.ajax({
+					type: "post",
+					url:  darkfashion_urls.ajaxurl,
+					data: {
+						action: 'wdt_ajax_lbs_calc_fun',
+						feet: $feet, 
+                        inches: $inches, 
+                        lbs: $lbs,
+					},
+					success: function(data, textStatus, XMLHttpRequest){
+						$This.parents('.wdt-sc-lbs-calc').find('.wdt-sc-lbs-notify').html(data);
+					},
+					error: function(MLHttpRequest, textStatus, errorThrown){
+					}
+				});
+				
+				return false;
+			}); 
+        });
+	}
+
+});

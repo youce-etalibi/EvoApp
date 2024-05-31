@@ -1,0 +1,190 @@
+#collectionStore{
+width: 100%;
+
+margin-top: 9rem;
+}
+.collection-title{
+    text-align: center;
+    filter: drop-shadow(0 0 68px  #0153DF);
+
+}
+.collection-title h1{
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    position: absolute;
+    left: 29.6rem;
+    
+}
+.collection-title .rectangle{
+    width: 60px;
+    margin-top: -3rem;
+    margin-right: -8rem;
+}
+
+.collection-product .infoProduct{
+    display: flex;
+    filter: drop-shadow(0 0 78px  #0153DF);
+   width: 80%;
+   padding: 0.7rem 0;
+ margin: 0 auto;
+   border-bottom: 0.4rem solid #1e0825;
+   justify-content: space-between;
+}
+
+.collection-product{
+    background-color: #f4f4f4;
+    width: 220px;
+    height: 230px;
+    border-radius: 7px;
+    position: relative;
+}
+.collection-product .Heart{
+    position: absolute;
+    right: 1rem;
+    top: 0.8rem;
+}
+#addedtowishlist{
+   color: red;
+}
+.Heart i{
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+.collection-product .buttonsHover{
+    display: none;
+}
+.buttonsHover button:first-child{
+    border: none;
+    font-size: 0.8rem;
+    outline: none;
+    padding: 0.4rem 0.5rem;
+    width: 110px;
+  background: #0153DF;
+    color: white;
+    font-weight: 500;
+    transition: all 0.5s;
+    cursor: pointer;
+
+}
+.buttonsHover button:last-child{
+    border: none;
+    font-size: 0.8rem;
+    outline: none;
+    padding: 0.4rem 0.5rem;
+    width: 110px;
+  background: #1e0825;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.5s;
+
+}
+.collection-product:hover{
+    opacity: 0.8;
+  transition: all 0.5s;
+ position: relative;
+    .buttonsHover{
+        width: 100%;
+        top: 12.4rem;
+        position: absolute;
+        display: flex;
+  transition: all 0.5s;
+  cursor: pointer;
+    }
+}
+
+.detail-prod{
+    display: flex;
+    width: 98%;
+    padding: 0.5rem 0;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+.detail-prod h5{
+    color: #0153DF;
+}
+.detail-prod h4{
+   font-size: 0.9rem;
+   width: 140px;
+}
+.detail-prod p{
+ opacity: 0.8;
+ align-items: center;
+
+}
+.parentProducts img{
+    width: 180px;
+    height: 200px;
+    position: absolute;
+    top: 1rem;
+    left: -1rem;
+    object-fit: cover;
+  margin-left: 2.5rem;
+}
+
+.parentProducts{
+    margin-bottom: 2rem;
+
+}
+.parentProducts .imageshoes{
+  width: 160px;
+  height: 190px;
+  object-fit: cover;
+}
+.typename{
+    opacity: 0.8;
+}
+#productParent{
+    display: flex;
+    justify-content: space-evenly;
+    width: 85%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 3rem auto;
+}
+
+.collectionloader {
+    width: 215px;
+    height: 220px;
+    background:
+        linear-gradient(0.25turn, transparent, #FFF, transparent),
+        linear-gradient(#DDD, #DDD),
+        linear-gradient(#DDD, #DDD),
+        linear-gradient(#DDD, #DDD);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 215px 220px, 215px 130px, 100px 15px, 150px 15px;
+    background-position: -215px 0, 0 0, 15px 150px, 15px 180px;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  to {
+    background-position: 215px 0, 0 0, 15px 150px, 15px 180px;
+  }
+}
+
+@media (max-width : 767px){
+        .collection-title{
+            width: auto;
+            text-align: center;
+        }
+        .collection-title h1{
+          left: 2rem;
+    }
+    #collectionStore{
+        margin-top: 4rem;
+    }
+    #productParent{
+        gap: 16px;
+    }
+}
+
+@media (max-width : 1025px){
+    .collection-title h1{
+         left: 4rem;
+        }
+    
+    }

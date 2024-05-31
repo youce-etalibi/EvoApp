@@ -1,0 +1,65 @@
+var dtStoreLocatorFeaturedComments = {
+
+	dtInit : function() {
+
+		// Comment gallery prettyphoto
+
+			jQuery('.dtsl_comment_gallery_item').each(function() {
+				var attr = jQuery(this).attr('rel');
+				if (jQuery('a[rel^="'+attr+'"]').length) {
+					jQuery('a[rel^="'+attr+'"]').prettyPhoto({
+						hook: 'rel',
+						show_title: false,
+						deeplinking: false,
+						social_tools: false,
+				});
+				}
+			});
+
+		// File Upload
+
+			jQuery('body').on('change', '.dtsl-comment-media-upload', function() {
+				var input = jQuery(this),
+				inputFiles = input.get(0).files,
+				selectedFiles = '';
+
+				selectedFiles = inputFiles[0]['name'];
+				if(inputFiles.length > 1) {
+					selectedFiles = selectedFiles + ' + ' + (inputFiles.length-1);
+				}
+
+				jQuery('.dtsl-comment-media-label').html(selectedFiles);
+
+			});
+
+	}
+
+};
+
+
+jQuery(document).ready(function() {
+
+	"use strict";
+
+	if(!dtslfrontendobject.elementorPreviewMode) {
+		dtStoreLocatorFeaturedComments.dtInit();
+	}
+
+});
+
+
+( function( $ ) {
+
+	"use strict";
+
+	var dtStoreLocatorFeaturedCommentsJs = function($scope, $){
+		dtStoreLocatorFeaturedComments.dtInit();
+	};
+
+    $(window).on('elementor/frontend/init', function(){
+		if(dtslfrontendobject.elementorPreviewMode) {
+			elementorFrontend.hooks.addAction('frontend/element_ready/dtsl-widget-sp-featured-comments.default', dtStoreLocatorFeaturedCommentsJs);
+		}
+	});
+
+} )( jQuery );

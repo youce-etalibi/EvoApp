@@ -1,0 +1,208 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+
+
+.parentComposantPersonalTraining {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 34%;
+    height: 570px;
+    padding: 0 0.5rem;
+    border: 0.07rem solid rgba(0, 0, 0, 0.856);
+    border-radius: 5px;
+    padding-bottom: 0.7rem;
+}
+
+.parentComposantPersonalTraining h3 {
+    padding: 0.5rem 0.4rem;
+    font-weight: 600;
+}
+
+.parentComposantPersonalTraining ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 0.3rem;
+    margin: auto;
+}
+
+.parentComposantPersonalTraining ul li button {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: 400;
+    border: none;
+    font-size: 0.7rem;
+    outline: none;
+    padding: 0.1rem 0.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 0.05rem solid var(--blueCity);
+    box-sizing: border-box;
+}
+
+#clearAllBtn {
+    background-color: rgb(240, 240, 240);
+    color: black;
+    font-weight: 400;
+    border: none;
+    font-size: 0.7rem;
+    outline: none;
+    padding: 0.1rem 0.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#activeBtnPersonalTraining {
+    background-color: var(--blueCity);
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    border: none;
+    font-size: 0.7rem;
+    outline: none;
+    padding: 0.1rem 0.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.parentImageExercicesPersonalT {
+    overflow: hidden;
+    border-radius: 5px;
+    border: 0.01rem solid rgba(0, 0, 0, 0.532);
+}
+
+.imgThubmnailExercicesPT {
+    width: 100%;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+
+.imgThubmnailExercicesPT:hover {
+    transform: scale(1.2);
+ }
+
+.parentExercicesPersonalTrainngMap table tbody tr{
+    display: flex;
+    align-items: start;
+    gap: 0.5rem;
+
+}
+
+.parentExercicesPersonalTrainngMap table tbody td {
+    width: 50%;
+    margin-bottom: 0.3rem;
+}
+
+.parentExercicesPersonalTrainngMap table tbody td div {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;    
+}
+
+
+.parentExercicesPersonalTrainngMap table tbody td h6 {
+    white-space: pre-wrap;
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+    font-size: 0.6rem;
+    margin-top: 0.2rem;
+}
+
+.parentExercicesPersonalTrainngMap table {
+    width: 100%;
+}
+
+.parentExercicesPersonalTrainngMap table tbody td p {
+    font-size: 0.6rem;
+    margin-top: -0.1rem;
+    color: grey;
+}
+.parentExercicesPersonalTrainngMap table tbody td span {
+    color: var(--blueChelsea);
+}
+
+.paginationPersonalTraining {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#btnPaginate {
+    background-color: var(--blueChelsea);
+    color: white;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+.btnFavoriteEx {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    margin-top: 2rem;
+    position: absolute;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+
+.btnFavoriteEx:hover {
+    font-size: 1.5rem;
+    color: var(--blueCity);
+}
+.btnFavoriteEx:active {
+    font-size: 1.5rem;
+    color: var(--blackNewcastle);
+}
+
+.parentFavoriteNotExiste {
+    width: 200%;
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.parentFavoriteNotExiste i {
+    font-size: 10rem;
+    color: rgb(199, 199, 199);
+}
+.parentFavoriteNotExiste h6 {
+    color: rgb(199, 199, 199);
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width:1045px){
+    .parentComposantPersonalTraining {
+        height: 100%;
+    }
+    .imgThubmnailExercicesPT {
+        height: 150px;
+    }
+}
+
+@media (max-width:775px){
+    .parentComposantPersonalTraining {
+        width: 150%;
+        height: 100%;
+        position: relative;
+        margin: auto;
+        margin-bottom: 5rem;
+    }
+
+}

@@ -1,0 +1,1739 @@
+/*----*****---- << Transition >> ----*****----*/
+
+.dt-sc-sociable li a,
+.dt-sc-sociable li a span,
+.dt-sc-sociable li a span:before,
+.dt-sc-sociable li a span:after,
+.dtsl-listings-social-share-container .dtsl-listings-social-share-list,
+.dtsl-listings-post-dates-container .dtsl-listings-post-date-container,
+.dtsl-listings-post-dates-container .dtsl-listings-post-date-container span,
+.dtsl-listings-author-container>.dtsl-listings-author-details-holder,
+.dtsl-listings-author-container[class*=swiper-container-] .dtsl-listings-author-details-holder,
+.dtsl-listings-author-container[class*=swiper-container-] .dtsl-listings-swiper-pagination-holder .dtsl-swiper-bullet-pagination .swiper-pagination-bullet,
+.dtsl-listings-taxonomy-container.type5 li a span,
+.dtsl-listings-taxonomy-container.type6 li a span,
+.dtsl-listings-taxonomy-container.type6 li a span:before,
+.dtsl-listings-taxonomy-container.type6 li a span:after,
+.dtsl-listings-utils-container .dtsl-listings-utils-item span:before,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-contactdetails-list li span,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-utils-favourite-item span,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-utils-pageview-item span,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-utils-print-item:hover span,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-social-share-item-icon span,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-average-rating-container:hover .dtsl-listings-average-rating-overall span,
+.dtsl-listings-utils-item .dtsl-listings-contactdetails-container .dtsl-listings-contactdetails-list>li>span,
+.dtsl-listings-utils-item .dtsl-listings-contactdetails-container .dtsl-listings-contactdetails-list>li .dtsl-listings-address-directions:hover>span,
+.dtsl-listings-social-share-container.type2 .dtsl-listings-social-share-item-icon>span,
+.dtsl-listings-taxonomy-container li a:before,
+.dtsl-listings-taxonomy-container.type7 li a span:before,
+.dtsl-listings-taxonomy-container.type7 li a span:after,
+.dtsl-listings-taxonomy-container li a span.dtsl-listings-taxonomy-image:before,
+.dtsl-listings-taxonomy-container.type8 li a:before,
+.dtsl-listings-taxonomy-container.type8 li a:after,
+.dtsl-listings-taxonomy-container.type7 li a span,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-date-container>span {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+
+/*----*****---- << Social Links >> ----*****----*/
+
+.dtsl-listings-sociallinks-container .dtsl-listings-sociallinks-list {
+    display: block;
+    clear: both;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.dtsl-listings-sociallinks-container .dtsl-listings-sociallinks-list li {
+    display: inline-block;
+    margin: 2px 5px 2px 0;
+    padding: 0;
+    position: relative;
+}
+
+.dtsl-listings-sociallinks-container .dtsl-listings-sociallinks-list li a {
+    font-size: 16px;
+    height: 36px;
+    line-height: 38px;
+    width: 36px;
+    float: left;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Type1 */
+
+.dtsl-listings-sociallinks-container.type1 .dtsl-listings-sociallinks-list li a {
+    color: #fff;
+}
+
+
+/* Type2 */
+
+.dtsl-listings-sociallinks-container.type2 .dtsl-listings-sociallinks-list li a {
+    color: #fff;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+/* Type3 */
+
+.dtsl-listings-sociallinks-container.type3 .dtsl-listings-sociallinks-list li a {
+    color: #fff;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+
+/* Type4 */
+
+.dtsl-listings-sociallinks-container.type4 .dtsl-listings-sociallinks-list li a {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.dtsl-listings-sociallinks-container.type4 .dtsl-listings-sociallinks-list li a:hover {
+    color: #fff;
+}
+
+
+/* Type5 */
+
+.dtsl-listings-sociallinks-container.type5 .dtsl-listings-sociallinks-list li a {
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.dtsl-listings-sociallinks-container.type5 .dtsl-listings-sociallinks-list li a:hover {
+    color: #fff;
+}
+
+
+/* Type6 */
+
+.dtsl-listings-sociallinks-container.type6 .dtsl-listings-sociallinks-list li a {
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.dtsl-listings-sociallinks-container.type6 .dtsl-listings-sociallinks-list li a:hover {
+    color: #fff;
+}
+
+
+/* Type7 */
+
+.dtsl-listings-sociallinks-container.type7 .dtsl-listings-sociallinks-list li {
+    margin: 0;
+}
+
+.dtsl-listings-sociallinks-container.type7 .dtsl-listings-sociallinks-list li a {
+    color: #fff;
+}
+
+
+/* Type8 */
+
+.dtsl-listings-sociallinks-container.type8 .dtsl-listings-sociallinks-list li {
+    margin: 0;
+}
+
+.dtsl-listings-sociallinks-container.type8 .dtsl-listings-sociallinks-list li a {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.dtsl-listings-sociallinks-container.type8 .dtsl-listings-sociallinks-list li:not(:last-child) a {
+    border-width: 1px 0px 1px 1px;
+}
+
+.dtsl-listings-sociallinks-container.type8 .dtsl-listings-sociallinks-list li a:hover {
+    color: #fff;
+}
+
+
+/*----*****---- << MLS Number >> ----*****----*/
+
+.dtsl-listings-mls-number-container {
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+.dtsl-listings-mls-number-container {
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+
+/* Type 1 */
+
+.dtsl-listings-mls-number-container.type1>span {
+    background: none;
+}
+
+
+/* Type 2 */
+
+.dtsl-listings-mls-number-container.type2>span {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 20px;
+    line-height: normal;
+    color: #fff;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+
+
+/* Type 3 */
+
+.dtsl-listings-mls-number-container.type3>span {
+    display: inline-flex;
+    padding: 13px 30px 13px 40px;
+    font-weight: 500;
+    border-radius: 30px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.dtsl-listings-mls-number-container.type3>span:before {
+    content: "\f029";
+    position: relative;
+    height: 49px;
+    width: 49px;
+    line-height: 50px;
+    border-radius: 100%;
+    text-align: center;
+    margin: -9px 15px -15px -35px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+
+/*----*****---- << Featured Style >> ----*****----*/
+
+.dtsl-listings-featured-item-container {
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+
+/* Type 1 */
+
+.dtsl-listings-featured-item-container.type1>span {
+    background: none;
+}
+
+
+/* Type 2 */
+
+.dtsl-listings-featured-item-container.type2>span {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 20px;
+    line-height: normal;
+    color: #fff;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+
+
+/* Type 3 */
+
+.dtsl-listings-featured-item-container.type3>span {
+    display: inline-flex;
+    padding: 13px 30px 13px 40px;
+    font-weight: 500;
+    border-radius: 30px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.dtsl-listings-featured-item-container.type3>span:before {
+    content: "\f005";
+    position: relative;
+    height: 49px;
+    width: 49px;
+    line-height: 50px;
+    border-radius: 100%;
+    text-align: center;
+    margin: -9px 15px -15px -35px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+}
+
+
+/*----*****---- << Price Style >> ----*****----*/
+
+.dtsl-listings-price-container {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.dtsl-listings-price-container .dtsl-listings-price-label-holder {
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    line-height: normal;
+    flex-wrap: wrap;
+}
+
+.dtsl-listings-price-container .dtsl-listings-price-label-holder>*:not(:last-child) {
+    margin-right: 15px;
+}
+
+.dtsl-listings-price-container .dtsl-listings-price-label-holder del:not(:last-child) {
+    margin-right: 15px;
+}
+
+.dtsl-listings-price-container .dtsl-price-amount .dtsl-price-currency-symbol {
+    margin-right: 5px;
+}
+
+
+/* Type 1 */
+
+.dtsl-listings-price-container.type1>span {
+    background: none;
+}
+
+.dtsl-listings-price-container.type1 .dtsl-listings-price-label-holder del {
+    font-size: 16px;
+    color: #8a8a8a;
+}
+
+.dtsl-listings-price-container.type1 .dtsl-listings-price-label-holder ins {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* Type 2 */
+
+.dtsl-listings-price-container.type2 .dtsl-listings-price-label-holder .dtsl-listings-price-item {
+    padding: 10px 20px;
+    line-height: normal;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+
+.dtsl-listings-price-container.type2 .dtsl-listings-price-label-holder del {
+    font-weight: 300;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.dtsl-listings-price-container.type2 .dtsl-listings-price-label-holder del .dtsl-price-amount {
+    padding: 0;
+}
+
+
+/* Type 3 */
+
+.dtsl-listings-price-container.type3 .dtsl-price-currency-symbol {
+    border-radius: 100%;
+    text-align: center;
+}
+
+.dtsl-listings-price-container.type3 .dtsl-listings-price-label-holder .dtsl-listings-price-item {
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: 500;
+    border-radius: 30px;
+}
+
+.dtsl-listings-price-container.type3 .dtsl-listings-price-label-holder del {
+    font-weight: 300;
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+.dtsl-listings-price-container.type2 .dtsl-listings-price-label-holder .dtsl-listings-price-item,
+.dtsl-listings-price-container.type3 .dtsl-listings-price-label-holder ins,
+.dtsl-listings-price-container.type3 .dtsl-listings-price-label-holder del,
+.dtsl-listings-price-container.type3 .dtsl-price-currency-symbol {
+    color: #fff;
+}
+
+
+/*----*****---- << Post Date >> ----*****----*/
+
+.dtsl-listings-post-dates-container .dtsl-listings-date-container {
+    display: flex;
+    align-items: center;
+}
+
+.dtsl-listings-post-dates-container .dtsl-listings-post-date-container>[class*="dtsl-listings-post-"]:not(:last-child),
+.dtsl-listings-post-dates-container .dtsl-listings-post-date-container>[class*="dtsl-listings-post-"]>div:not(:last-child) {
+    position: relative;
+    margin: 0 10px 0 0;
+}
+
+.dtsl-listings-post-dates-container .dtsl-listings-post-date-container .dtsl-listings-post-date-icon:before {
+    content: "\f073";
+    font-family: "Font Awesome 5 Free";
+    position: relative;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+}
+
+.dtsl-listings-post-dates-container .dtsl-listings-post-date-container,
+.dtsl-listings-post-dates-container .dtsl-listings-post-date-container>[class*="dtsl-listings-post-"] {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/* Type 1 */
+
+.dtsl-listings-post-dates-container.type1 {
+    margin-bottom: 10px;
+}
+
+
+/* Type 2 */
+
+.dtsl-listings-post-dates-container.type2 {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column-gap: 25px;
+    grid-row-gap: 15px;
+    margin-bottom: 10px;
+}
+
+.dtsl-listings-post-dates-container.type2 .dtsl-listings-post-date-container span {
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Type 3 */
+
+.dtsl-listings-post-dates-container.type3 {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column-gap: 35px;
+    grid-row-gap: 15px;
+    margin-bottom: 10px;
+}
+
+.dtsl-listings-post-dates-container.type3 .dtsl-listings-post-date-container {
+    /* line-height: normal; */
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 10em;
+    border: 2px solid;
+    flex-wrap: wrap;
+}
+
+.dtsl-listings-post-dates-container.type3 .dtsl-listings-post-date-container span {
+    position: relative;
+    margin-right: 10px;
+}
+
+.dtsl-listings-post-dates-container.type2 .dtsl-listings-post-date-container span
+{
+    color: #fff;
+}
+
+
+/* Type 4 */
+
+.dtsl-listings-post-dates-container.type4 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.dtsl-listings-post-dates-container.type4 .dtsl-listings-post-date-container {
+    padding: 15px 30px;
+    border-radius: 10em;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+.dtsl-listings-post-dates-container.type4 .dtsl-listings-post-date-container span {
+    position: relative;
+    margin-right: 10px;
+}
+
+
+/*----*****---- << Features Style >> ----*****----*/
+
+.dtsl-listings-features-box-container:not(.listing).dtsl-no-column {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: inherit;
+}
+
+.dtsl-listings-features-box-container:not(.listing).dtsl-no-column .dtsl-listings-features-box-item:not(:last-child) {
+    margin-right: 25px;
+}
+
+.dtsl-listings-features-box-container:not(.listing) .dtsl-listings-features-box-item>div.dtsl-listings-features-box-item-value span {
+    margin: 0 0 0 5px;
+}
+
+.dtsl-listings-features-box-container:not(.listing) .dtsl-listings-features-box-item {
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.dtsl-listings-features-box-container:not(.listing) .dtsl-listings-features-box-item>div {
+    display: inline-block;
+    margin-right: 10px;
+    line-height: normal;
+    font-weight: 400;
+}
+
+.dtsl-listings-features-box-container:not(.listing) .dtsl-listings-features-box-item>div.dtsl-listings-features-box-item-value {
+    margin-right: 0;
+}
+
+.dtsl-listings-features-box-container:not(.listing) .dtsl-listings-features-box-item .dtsl-listings-features-box-item-title {
+    position: relative;
+    line-height: normal;
+    font-weight: 700;
+}
+
+.dtsl-listings-features-box-container:not(.listing) .dtsl-listings-features-box-item>div {
+    color: inherit;
+}
+
+.dtsl-listings-features-box-container:not(.listing) .dtsl-listings-features-box-item .dtsl-listings-features-box-item-title:after {
+    content: ":";
+    display: inline;
+    position: relative;
+    right: 0;
+    top: 0;
+    font-weight: 500;
+}
+
+.dtsl-listings-features-box-container:not(.listing) .dtsl-listings-features-box-item .dtsl-listings-features-box-item-img {
+    width: 30px;
+    height: 30px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+
+
+/* Feature Type 1 */
+
+.dtsl-listings-features-box-container:not(.listing).type1 .dtsl-listings-features-box-item .dtsl-listings-features-box-item-title:first-child:before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.dtsl-listings-features-box-container:not(.listing).type1 .dtsl-listings-features-box-item .dtsl-listings-features-box-item-title:first-child {
+    padding-left: 20px;
+}
+
+
+/* Feature Type 2 */
+
+.dtsl-listings-features-box-container:not(.listing).type2 .dtsl-listings-features-box-item .dtsl-listings-features-box-item-img .dtsl-listings-features-box-item-title:first-child {
+    margin-left: 30px;
+    padding-left: 0;
+}
+
+.dtsl-listings-features-box-container:not(.listing).type2 .dtsl-listings-features-box-item .dtsl-listings-features-box-item-img .dtsl-listings-features-box-item-title:first-child:before {
+    content: none;
+}
+
+
+/* Feature Type 3 */
+
+.dtsl-listings-features-box-container:not(.listing).type3 .dtsl-listings-features-box-item .dtsl-listings-features-box-item-icon {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+
+/* Feature Type 4 */
+
+.dtsl-listings-features-box-container:not(.listing).type4 .dtsl-listings-features-box-item .dtsl-listings-features-box-item-title:first-child {
+    padding: 0;
+}
+
+.dtsl-listings-features-box-container:not(.listing).type4 .dtsl-listings-features-box-item:not(:last-child) {
+    border-right-style: solid;
+    border-right-width: 1px;
+    padding-right: 15px;
+}
+
+
+/* Feature Type 5 */
+
+.dtsl-listings-features-box-container:not(.listing).type5 .dtsl-listings-features-box-item {
+    padding: 15px 22px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    justify-content: center;
+}
+
+
+/* Feature Type 6 */
+
+.dtsl-listings-features-box-container:not(.listing).type6 .dtsl-listings-features-box-item .dtsl-listings-features-box-item-details {
+    margin-right: 0;
+}
+
+.dtsl-listings-features-box-container:not(.listing).type6 .dtsl-listings-features-box-item .dtsl-listings-features-box-item-value span {
+    margin-left: 5px;
+}
+
+
+/* Feature Type 7 */
+
+.dtsl-listings-features-box-container:not(.listing).type7 .dtsl-listings-features-box-item {
+    border: 1px solid;
+    padding: 15px;
+    justify-content: center;
+}
+
+
+/*----*****---- << Request button Style >> ----*****----*/
+
+.dtsl-listings-contactdetails-request-container {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+.dtsl-listings-contactdetails-request-container>a {
+    display: inline-block;
+    text-align: center;
+    line-height: normal;
+    padding: 15px 30px;
+}
+
+
+/* Request Button type 2 */
+
+.dtsl-listings-contactdetails-request-container.type2>a {
+    border: 2px solid;
+}
+
+
+/* Request Button type 3 */
+
+.dtsl-listings-contactdetails-request-container.type3>a {
+    border-radius: 30px;
+    border: 2px solid;
+}
+
+.dtsl-listings-contactdetails-request-container.type1>a,
+.dtsl-listings-contactdetails-request-container.type2>a:hover,
+.dtsl-listings-contactdetails-request-container.type3>a:hover {
+    color: #fff;
+}
+
+
+/* Request Notification Box */
+
+.dtsl-listings-contactdetails-request-container .dtsl-contactdetails-request-notification-box {
+    clear: both;
+    padding: 20px 30px;
+    margin: 15px 0 0 0;
+    position: relative;
+}
+
+.dtsl-listings-contactdetails-request-container>a>span {
+    position: relative;
+    margin: 0 10px 0 0;
+}
+
+.dtsl-listings-contactdetails-request-container .dtsl-contactdetails-request-notification-box {
+    background: #2a2a2a;
+    color: #fff;
+    position: absolute;
+    z-index: 1;
+}
+
+.dtsl-listings-contactdetails-request-container .dtsl-contactdetails-request-notification-box:before {
+    position: absolute;
+    content: '';
+    width: 14px;
+    height: 14px;
+    top: -7px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: #2a2a2a;
+    left: 20px;
+    margin: auto;
+}
+
+
+/*----*****---- << Author Details Style >> ----*****----*/
+
+.dtsl-listings-author-container .dtsl-listings-author-details-holder {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    background: #fff;
+    border-style: solid;
+    border-width: 1px;
+    align-items: center;
+}
+
+.dtsl-listings-author-container .dtsl-one-column:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.dtsl-listings-author-container .dtsl-listings-author-details-holder>[class*="dtsl-listings-author-"] {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.dtsl-listings-author-container .dtsl-listings-author-details-holder>.dtsl-listings-author-details {
+    padding: 25px 35px;
+}
+
+.dtsl-listings-author-container .dtsl-listings-author-details-holder>.dtsl-listings-author-image {
+    height: 100%;
+}
+
+.dtsl-listings-author-container .dtsl-listings-author-details-holder>.dtsl-listings-author-image img {
+    height: 100%;
+    object-fit: cover;
+    float: left;
+    width: 100%;
+}
+
+.dtsl-listings-author-container .dtsl-listings-author-details-holder>.dtsl-listings-author-details>div {
+    line-height: normal;
+}
+
+.dtsl-listings-author-container .dtsl-listings-author-details-holder>.dtsl-listings-author-details .dtsl-listings-author-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.dtsl-listings-author-container .dtsl-listings-author-details-holder>.dtsl-listings-author-details .dtsl-listings-author-specialization {
+    font-size: 16px;
+    color: #333;
+    font-weight: normal;
+}
+
+.dtsl-listings-author-container .dtsl-listings-author-details-holder>.dtsl-listings-author-details .dtsl-listings-sociallinks-list {
+    display: flex;
+    grid-column-gap: 10px;
+    line-height: normal;
+    margin-top: 20px;
+}
+
+.dtsl-listings-author-container .dtsl-listings-author-details-holder>.dtsl-listings-author-details .dtsl-listings-sociallinks-list li {
+    margin-bottom: 0;
+}
+
+.dtsl-listings-author-container .dtsl-listings-author-details-holder>.dtsl-listings-author-details .dtsl-listings-sociallinks-list li:not(:last-child) {
+    margin: 0 8px 0 0;
+}
+
+.dtsl-listings-author-container .dtsl-listings-author-details-holder>.dtsl-listings-author-details .dtsl-listings-contactdetails-list {
+    margin-top: 30px;
+}
+
+.dtsl-listings-author-container .dtsl-listings-author-details-holder>.dtsl-listings-author-details .dtsl-listings-contactdetails-list li span {
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.dtsl-listings-author-container .dtsl-listings-author-details-holder>.dtsl-listings-author-details .dtsl-listings-sociallinks-list li>a {
+    color: #2a2a2a;
+}
+
+.dtsl-listings-author-container .dtsl-listings-author-details-holder>.dtsl-listings-author-details .dtsl-listings-contactdetails-list>li:not(:last-child) {
+    margin: 0 0 10px 0;
+}
+
+
+/* Author Carousel */
+
+.dtsl-listings-author-container[class*=swiper-container-] .swiper-slide:hover {
+    box-shadow: 0 0 0 0 transparent;
+    -moz-box-shadow: 0 0 0 0 transparent;
+    -webkit-box-shadow: 0 0 0 0 transparent;
+}
+
+.dtsl-listings-author-container[class*=swiper-container-] .dtsl-listings-swiper-pagination-holder {
+    margin: 30px auto 0;
+    float: left;
+    width: 100%;
+}
+
+.dtsl-listings-author-container[class*=swiper-container-] .dtsl-listings-swiper-pagination-holder:empty {
+    display: none;
+}
+
+.dtsl-listings-author-container[class*=swiper-container-] .dtsl-listings-author-details-holder.swiper-slide-active {
+    margin-right: 20px;
+}
+
+.dtsl-listings-author-container[class*=swiper-container-] .dtsl-listings-swiper-pagination-holder.type1 a[class*="dtsl-swiper-arrow-"] {
+    border: none;
+}
+
+.dtsl-listings-author-container[class*=swiper-container-] .dtsl-listings-swiper-pagination-holder.type1 a[class*="dtsl-swiper-arrow-"]:last-child::before {
+    right: 0;
+}
+
+.dtsl-listings-author-container[class*=swiper-container-] .dtsl-listings-swiper-pagination-holder.type1 a[class*="dtsl-swiper-arrow-"]:last-child::before,
+.dtsl-listings-author-container[class*=swiper-container-] .dtsl-listings-swiper-pagination-holder.type2 a[class*="dtsl-swiper-arrow-"]:before {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.dtsl-listings-author-container[class*=swiper-container-] .dtsl-listings-swiper-pagination-holder.type2 a[class*="dtsl-swiper-arrow-"] {
+    width: 60px;
+}
+
+
+/* Author Bullet Carousel */
+
+.dtsl-listings-author-container[class*=swiper-container-] .dtsl-listings-swiper-pagination-holder .dtsl-swiper-bullet-pagination {
+    position: static;
+    cursor: auto;
+    text-align: center;
+}
+
+.dtsl-listings-author-container[class*=swiper-container-] .dtsl-listings-swiper-pagination-holder .dtsl-swiper-bullet-pagination .swiper-pagination-bullet {
+    height: 10px;
+    width: 10px;
+    margin: 0 4px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.dtsl-listings-author-container[class*=swiper-container-] .dtsl-listings-swiper-pagination-holder .dtsl-swiper-bullet-pagination .swiper-pagination-bullet-active {
+    width: 25px;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+}
+
+
+/* Author Arrow Pagination */
+
+.dtsl-swiper-arrow-pagination {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dtsl-listings-swiper-pagination-holder.type1 a[class*="dtsl-swiper-arrow-"] {
+    border-width: 1px;
+    border-style: solid;
+    font-size: 0;
+    margin: 0 2px;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+}
+
+.dtsl-listings-swiper-pagination-holder.type1 a[class*="dtsl-swiper-arrow-"]:before {
+    position: relative;
+    content: "\f2ea";
+    display: block;
+    font-family: Material-Design-Iconic-Font;
+    font-size: 24px;
+}
+
+.dtsl-listings-swiper-pagination-holder.type1 a[class*="dtsl-swiper-arrow-"]:last-child:before {
+    transform: scaleX(-1);
+}
+
+
+/* Type 2 */
+
+.dtsl-listings-swiper-pagination-holder.type2 a[class*="dtsl-swiper-arrow-"] {
+    border: none;
+    font-size: 0;
+    height: 80px;
+    line-height: 80px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    visibility: hidden;
+    width: 40px;
+    z-index: 2;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.dtsl-listings-swiper-pagination-holder.type2 a[class*="dtsl-swiper-arrow"] {
+    color: #fff;
+}
+
+.dtsl-listings-swiper-pagination-holder.type2 a[class$="dtsl-swiper-arrow-prev"] {
+    margin-left: -40px;
+    left: 0;
+}
+
+.dtsl-listings-swiper-pagination-holder.type2 a[class$="dtsl-swiper-arrow-next"] {
+    margin-right: -40px;
+    right: 0;
+}
+
+.dtsl-listings-author-container.swiper-container:hover .dtsl-listings-swiper-pagination-holder.type2 a[class*="dtsl-swiper-arrow-"] {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dtsl-listings-author-container.swiper-container:hover .dtsl-listings-swiper-pagination-holder.type2 a[class*="dtsl-swiper-arrow-prev"] {
+    margin-left: 0;
+}
+
+.dtsl-listings-author-container.swiper-container:hover .dtsl-listings-swiper-pagination-holder.type2 a[class*="dtsl-swiper-arrow-next"] {
+    margin-right: 0;
+}
+
+.dtsl-listings-swiper-pagination-holder.type2 a[class*="dtsl-swiper-arrow"]:before {
+    display: block;
+    font-family: 'IcoMoon-Ultimate' !important;
+    font-size: 24px;
+    line-height: inherit;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+}
+
+.dtsl-listings-swiper-pagination-holder.type2 a[class*="dtsl-swiper-arrow-prev"]:before {
+    content: "\edc6";
+}
+
+.dtsl-listings-swiper-pagination-holder.type2 a[class*="dtsl-swiper-arrow-next"]:before {
+    content: "\edbe";
+}
+
+.dtsl-listings-swiper-pagination-holder.type2 a[class*="dtsl-swiper-arrow"] {
+    background-color: rgba(30, 48, 110, 0.15);
+}
+
+.dtsl-listings-swiper-pagination-holder.type2 a[class*="dtsl-swiper-arrow"]:hover {
+    background-color: rgba(30, 48, 110, 0.6);
+}
+
+
+/*----*****---- << Taxonomy Style >> ----*****----*/
+
+.dtsl-listings-taxonomy-container,
+.dtsl-listings-taxonomy-container ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dtsl-listings-taxonomy-container li {
+    display: flex;
+    margin: 0 10px 10px 0;
+}
+
+.dtsl-listings-taxonomy-container li:last-child {
+    margin-right: 0;
+}
+
+.dtsl-listings-taxonomy-container.type1 li a,
+.dtsl-listings-taxonomy-container.type3 li a span.dtsl-listings-taxonomy-image,
+.dtsl-listings-taxonomy-container.type4 li a,
+.dtsl-listings-taxonomy-container.type6 li a,
+.dtsl-listings-taxonomy-container.type8 li a {
+    position: relative;
+    z-index: 1;
+}
+
+.dtsl-listings-taxonomy-container.type1 li a:before,
+.dtsl-listings-taxonomy-container.type3 li a span.dtsl-listings-taxonomy-image:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.3) 10%, rgba(143, 143, 143, 0.15) 50%, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.3) 10%, rgba(143, 143, 143, 0.15) 50%, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 10%, rgba(143, 143, 143, 0.15) 50%, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#ffffff", GradientType=1);
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.dtsl-listings-taxonomy-container.type1 li a:hover:before,
+.dtsl-listings-taxonomy-container.type3 li a:hover span.dtsl-listings-taxonomy-image:before,
+.dtsl-listings-taxonomy-container.type5 .dtsl-listings-taxonomy-list li a:hover:before {
+    opacity: 1;
+}
+
+.dtsl-listings-taxonomy-container.type1 li a,
+.dtsl-listings-taxonomy-container.type2 li a,
+.dtsl-listings-taxonomy-container.type4 li a,
+.dtsl-listings-taxonomy-container.type5 li a,
+.dtsl-listings-taxonomy-container.type7 li a,
+.dtsl-listings-taxonomy-container.type8 li a {
+    color: #fff;
+}
+
+.dtsl-listings-taxonomy-container.type2 li a:hover span:first-child:not(:only-child),
+.dtsl-listings-taxonomy-container.type3 li a:hover img,
+.dtsl-listings-taxonomy-container.type4 li a:hover span:first-child:not(:only-child),
+.dtsl-listings-taxonomy-container.type5 li a:hover span:first-child:not(:only-child) {
+    -webkit-animation: toRightFromLeft 0.3s forwards;
+    -moz-animation: toRightFromLeft 0.3s forwards;
+    animation: toRightFromLeft 0.3s forwards;
+}
+
+@-webkit-keyframes toRightFromLeft {
+    49% {
+        -webkit-transform: translate(100%);
+    }
+    50% {
+        opacity: 0;
+        -webkit-transform: translate(-100%);
+    }
+    51% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes toRightFromLeft {
+    49% {
+        -moz-transform: translate(100%);
+    }
+    50% {
+        opacity: 0;
+        -moz-transform: translate(-100%);
+    }
+    51% {
+        opacity: 1;
+    }
+}
+
+@keyframes toRightFromLeft {
+    49% {
+        transform: translate(100%);
+    }
+    50% {
+        opacity: 0;
+        transform: translate(-100%);
+    }
+    51% {
+        opacity: 1;
+    }
+}
+
+
+/* Type 1 */
+
+.dtsl-listings-taxonomy-container.type1 li a {
+    font-size: 14px;
+    line-height: normal;
+    padding: 5px 10px;
+}
+
+
+/* Type 2 */
+
+.dtsl-listings-taxonomy-container.type2 li a {
+    font-size: 14px;
+    line-height: normal;
+    padding: 5px 10px;
+}
+
+.dtsl-listings-taxonomy-container.type2 li a span:first-child:not(:only-child) {
+    margin-right: 5px;
+}
+
+
+/* Type 3 */
+
+.dtsl-listings-taxonomy-container.type3 li a {
+    line-height: normal;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.dtsl-listings-taxonomy-container.type3 li a span.dtsl-listings-taxonomy-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.dtsl-listings-taxonomy-container.type3 li a img {
+    width: 20px;
+    height: auto;
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+}
+
+
+/* Type 4 */
+
+.dtsl-listings-taxonomy-container.type4 li a {
+    line-height: normal;
+    padding: 5px 20px;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.dtsl-listings-taxonomy-container.type4 li a span:first-child:not(:only-child) {
+    margin-right: 5px;
+}
+
+
+/* Type 5 */
+
+.dtsl-listings-taxonomy-container.type5 li {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dtsl-listings-taxonomy-container.type5 li a {
+    padding: 8px 15px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.dtsl-listings-taxonomy-container.type5 li a span {
+    line-height: normal;
+}
+
+.dtsl-listings-taxonomy-container.type5 li a span.dtsl-listings-taxonomy-image img {
+    width: 22px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+    height: 100%;
+    object-fit: cover;
+}
+
+.dtsl-listings-taxonomy-container.type5 .dtsl-listings-taxonomy-list li a span:first-child:not(:only-child) {
+    margin-right: 10px;
+}
+
+.dtsl-listings-taxonomy-container.type5 .dtsl-listings-taxonomy-list li a:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    background: none;
+}
+
+
+/* Type 6 */
+
+.dtsl-listings-taxonomy-container.type6 .dtsl-listings-taxonomy-list li a span {
+    border: 1px solid;
+    padding: 5px 10px;
+    font-size: 14px;
+    position: relative;
+}
+
+.dtsl-listings-taxonomy-container.type6 .dtsl-listings-taxonomy-list li a:hover span {
+    border-color: transparent;
+}
+
+.dtsl-listings-taxonomy-container.type6 .dtsl-listings-taxonomy-list li a:hover span:before,
+.dtsl-listings-taxonomy-container.type6 .dtsl-listings-taxonomy-list li a:hover span:after {
+    opacity: 1;
+    width: 100%;
+}
+
+.dtsl-listings-taxonomy-container.type6 .dtsl-listings-taxonomy-list li a span:before {
+    left: 0;
+    top: -2px;
+}
+
+.dtsl-listings-taxonomy-container.type6 .dtsl-listings-taxonomy-list li a span:after {
+    right: 0;
+    bottom: -2px;
+}
+
+.dtsl-listings-taxonomy-container.type6 .dtsl-listings-taxonomy-list li a span:before,
+.dtsl-listings-taxonomy-container.type6 .dtsl-listings-taxonomy-list li a span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 2px;
+    pointer-events: none;
+    background: currentColor;
+    opacity: 0;
+}
+
+
+/* Type 7 */
+
+.dtsl-listings-taxonomy-container.type7 li a {
+    position: relative;
+}
+
+.dtsl-listings-taxonomy-container.type7 li a:before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: currentColor;
+    opacity: 0;
+}
+
+.dtsl-listings-taxonomy-container.type7 li a:hover:before {
+    opacity: .25;
+    height: 100%;
+}
+
+.dtsl-listings-taxonomy-container.type7 li a span {
+    font-size: 14px;
+    line-height: normal;
+    padding: 5px 10px;
+    position: relative;
+    float: left;
+}
+
+
+/* Type 8 */
+
+.dtsl-listings-taxonomy-container.type8 li a {
+    border-radius: 3px;
+    font-size: 12px;
+    line-height: normal;
+    padding: 8px 15px;
+    position: relative;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.dtsl-listings-taxonomy-container.type8 li a:before {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+    content: '';
+    height: 6px;
+    position: relative;
+    width: 6px;
+    float: left;
+    margin-right: 10px;
+    z-index: 1;
+}
+
+.dtsl-listings-taxonomy-container.type8 li a:hover:after {
+    opacity: 0;
+}
+
+.dtsl-listings-taxonomy-container.type8 li a:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#ffffff", GradientType=1);
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+
+/*----*****---- << Utils Style >> ----*****----*/
+
+.dtsl-listings-utils-container p {
+    margin-bottom: 0;
+}
+
+.dtsl-listings-utils-container {
+    float: left;
+    position: relative;
+    width: 100%;
+    line-height: normal;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.dtsl-listings-utils-container .dtsl-listings-utils-item.dtsl-listings-utils-print .dtsl-listings-utils-print-item {
+    cursor: pointer;
+}
+
+.dtsl-listings-utils-container .dtsl-listings-utils-item.dtsl-listings-utils-print .dtsl-listings-utils-print-item span {
+    margin-right: 0;
+}
+
+.dtsl-listings-utils-container .dtsl-listings-utils-item {
+    float: left;
+    position: relative;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    line-height: normal;
+}
+
+.dtsl-listings-utils-container .dtsl-listings-utils-item:empty {
+    display: none;
+}
+
+.dtsl-listings-utils-container .dtsl-listings-utils-item.dtsl-listings-utils-title:only-child {
+    margin-bottom: 0;
+}
+
+.dtsl-listings-utils-container .dtsl-listings-utils-item h3.dtsl-listings-utils-title-item {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.dtsl-listings-utils-container .dtsl-listings-utils-item h3.dtsl-listings-utils-title-item a {
+    font-weight: 400;
+    margin-bottom: 0;
+    line-height: 30px;
+    color: var(--wdtHeadAltColor) !important;
+}
+
+.dtsl-listings-utils-container .dtsl-listings-utils-item.dtsl-listings-utils-price .dtsl-listings-price-label-holder>* {
+    margin-right: 8px;
+}
+
+.dtsl-listings-utils-container .dtsl-listings-utils-item:last-child {
+    margin-right: 0;
+}
+
+.dtsl-listings-utils-container .dtsl-listings-utils-item>* {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    line-height: 24px;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-taxonomy-list {
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-contactdetails-list>li {
+    margin-bottom: 0;
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-utils-item .dtsl-listings-contactdetails-list>li:not(:last-child),
+*[class*="dtsl-listings-utils-"] .dtsl-listings-utils-item .dtsl-listings-social-share-list>li:not(:last-child) {
+    margin-right: 10px;
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-taxonomy-container .dtsl-listings-taxonomy-list li:not(:last-child) {
+    margin-right: 20px;
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-taxonomy-container .dtsl-listings-taxonomy-list li {
+    margin-bottom: 0;
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-contactdetails-list>li>span,
+*[class*="dtsl-listings-utils-"]>span,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-social-share-item-icon span,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-average-rating-overall span,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-featured-item-container>span:before,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-post-dates-container span:before,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-taxonomy-container .dtsl-listings-taxonomy-list li a span {
+    min-width: 40px;
+    min-height: 40px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-price-container .dtsl-listings-price-item {
+    align-items: center;
+    padding: 10px 20px;
+    background: #f2f2f2;
+    border-radius: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-price-container .dtsl-listings-price-item del {
+    /* font-size: 16px;
+    color: #8a8a8a; */
+    margin-right: 10px;
+    opacity: .35;
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-price-container .dtsl-listings-price-item .dtsl-price-amount {
+    align-items: flex-start;
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-price-container .dtsl-listings-price-item .dtsl-price-currency-symbol {
+    font-size: 60%;
+    line-height: normal;
+    margin-right: 2px;
+}
+
+*[class*="dtsl-listings-utils-"].dtsl-listings-utils-favourite>span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+*[class*="dtsl-listings-utils-"] a.dtsl-listings-utils-favourite-item span {
+    margin-right: 0;
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-average-rating-holder span {
+    font-size: 0;
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-average-rating-holder span:before {
+    font-size: initial;
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-average-rating-holder span:not(:last-child):before {
+    margin: 0 5px 0 0;
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-featured-item-container>span:before {
+    content: "\f024";
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-post-dates-container .dtsl-listings-start-date-container span:before {
+    content: "\f251"
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-post-dates-container .dtsl-listings-end-date-container span:before {
+    content: "\f253";
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-post-dates-container .dtsl-listings-post-date-container span:before {
+    content: "\f073";
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-post-dates-container [class*="-date-container"]:not(:last-child) {
+    margin: 0 20px 0 0;
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-featured-item-container>span:before,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-post-dates-container span:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-utils-item .dtsl-listings-social-share-list>li {
+    margin-bottom: 0;
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-price-container .dtsl-listings-price-label-holder del {
+    display: inline-flex;
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-taxonomy-container .dtsl-listings-taxonomy-list li a span.dtsl-listings-taxonomy-name:last-child {
+    width: auto;
+    height: auto;
+    background: none;
+    margin: 0;
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-contactdetails-list>li>span,
+*[class*="dtsl-listings-utils-"]>span,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-social-share-item-icon span,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-utils-item .dtsl-listings-social-share-list>li a,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-average-rating-holder span,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-average-rating-overall span,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-price-container .dtsl-listings-price-label-holder>*,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-featured-item-container,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-taxonomy-container .dtsl-listings-taxonomy-list li a span,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-post-dates-container span,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-post-dates-container .dtsl-listings-date-holder,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-contactdetails-list>li,
+.dtsl-listings-social-share-container.type2 .dtsl-listings-social-share-item-icon>span {
+    color: #2a2a2a;
+}
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-contactdetails-list>li>span,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-utils-pageview-item>span,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-social-share-item-icon span,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-average-rating-overall span,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-featured-item,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-price-container .dtsl-price-before-label,
+
+*[class*="dtsl-listings-utils-"] .dtsl-listings-price-container .dtsl-listings-price-label-holder> :not(*:last-child),
+*[class*="dtsl-listings-utils-"] .dtsl-listings-featured-item-container>span:before,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-post-dates-container span:before,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-taxonomy-container .dtsl-listings-taxonomy-list li a span:first-child,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-taxonomy-container .dtsl-listings-taxonomy-list li:not(:last-child) {
+    margin-right: 15px;
+}
+
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-date-container:hover span:before,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-contactdetails-list li:hover span,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-utils-favourite-item:hover span,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-utils-pageview-item:hover span,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-utils-print-item:hover span,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-social-share-item-icon:hover span,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-social-share-container.active .dtsl-listings-social-share-item-icon span,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-average-rating-container:hover .dtsl-listings-average-rating-overall span,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-featured-item-container:hover span:before,
+*[class*="dtsl-listings-utils-"] .dtsl-listings-post-dates-container [class*="-date-container"]:hover span:before {
+    color: #fff;
+}
+
+
+/*----*****---- << Contact Details Style >> ----*****----*/
+
+.dtsl-listings-utils-item .dtsl-listings-contactdetails-container,
+.dtsl-listings-contactdetails-container[class*="type"] {
+    float: left;
+    position: relative;
+    width: 100%;
+    line-height: normal;
+}
+
+.dtsl-listings-utils-item .dtsl-listings-contactdetails-container .dtsl-listings-contactdetails-list,
+.dtsl-listings-contactdetails-container[class*="type"] .dtsl-listings-contactdetails-list {
+    float: left;
+    position: relative;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.dtsl-listings-utils-item .dtsl-listings-contactdetails-container .dtsl-listings-contactdetails-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dtsl-listings-utils-item .dtsl-listings-contactdetails-container .dtsl-listings-contactdetails-list>li,
+.dtsl-listings-contactdetails-container[class*="type"] .dtsl-listings-contactdetails-list>li,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-date-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    align-items: baseline;
+}
+
+.dtsl-listings-contactdetails-container[class*="type"] .dtsl-listings-contactdetails-list>li {
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+.dtsl-listings-utils-item .dtsl-listings-contactdetails-container .dtsl-listings-contactdetails-list>li:last-child,
+.dtsl-listings-contactdetails-container[class*="type"] .dtsl-listings-contactdetails-list>li:last-child {
+    margin-bottom: 0;
+}
+
+.dtsl-listings-utils-item .dtsl-listings-contactdetails-container .dtsl-listings-contactdetails-list>li>span,
+.dtsl-listings-contactdetails-container[class*="type"] .dtsl-listings-contactdetails-list>li>span,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-date-container>span {
+    min-width: 40px;
+    min-height: 40px;
+    background-color: #f2f2f2;
+    color: #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    position: relative;
+    display: inline-block;
+    margin: 0 15px 0 0;
+}
+
+.dtsl-listings-utils-item .dtsl-listings-contactdetails-container .dtsl-listings-contactdetails-list>li p,
+.dtsl-listings-contactdetails-container[class*="type"] .dtsl-listings-contactdetails-list>li p {
+    display: inline-block;
+    margin: 0;
+    line-height: 30px;
+}
+
+.dtsl-listings-utils-item .dtsl-listings-contactdetails-container .dtsl-listings-contactdetails-list>li .dtsl-listings-address-directions,
+.dtsl-listings-contactdetails-container[class*="type"] .dtsl-listings-contactdetails-list>li .dtsl-listings-address-directions {
+    float: left;
+}
+
+.dtsl-listings-utils-item .dtsl-listings-contactdetails-container .dtsl-listings-contactdetails-list>li .dtsl-listings-address-directions>span,
+.dtsl-listings-contactdetails-container[class*="type"] .dtsl-listings-contactdetails-list>li .dtsl-listings-address-directions>span {
+    display: inline-block;
+    margin: 0 0 0 10px;
+    vertical-align: middle;
+}
+
+.dtsl-listings-utils-item .dtsl-listings-contactdetails-container .dtsl-listings-contactdetails-list>li:hover>span,
+.dtsl-listings-contactdetails-container[class*="type"] .dtsl-listings-contactdetails-list>li:hover>span,
+.dtsl-listings-contactdetails-container[class*="type2"] .dtsl-listings-contactdetails-list>li:hover>span,
+.dtsl-listings-utils-container .dtsl-listings-utils-item .dtsl-listings-date-container:hover>span {
+    color: #ffffff;
+}
+
+.dtsl-listings-contactdetails-container[class*="type"] .dtsl-listings-contactdetails-list>li:hover .dtsl-listings-address-directions>span,
+.dtsl-listings-contactdetails-container[class*="type2"] .dtsl-listings-contactdetails-list>li .dtsl-listings-address-directions>span,
+.dtsl-listings-contactdetails-container[class*="type2"] .dtsl-listings-contactdetails-list>li:hover .dtsl-listings-address-directions>span {
+    background: none;
+}
+
+
+/* Default Template */
+
+.dtsl-single-header-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.dtsl-content-area {
+    padding-left: 20px;
+}
+
+
+/*----*****---- << Small Monitor >> ----*****----*/
+
+
+/* Note: Design for a width of 1440px */
+
+@media only screen and (min-width:1281px) and (max-width:1440px) {
+    .dtsl-one-half.dtsl-image-area {
+        width: 40%;
+        margin: 0;
+    }
+    .dtsl-one-half.dtsl-content-area {
+        width: 55%;
+    }
+}
+
+
+/*----*****---- << Tablet (Portrait) >> ----*****----*/
+
+
+/* Note: Design for a width of 1024px */
+
+@media only screen and (max-width:1024px) {
+    .dtsl-one-half.dtsl-image-area,
+    .dtsl-one-half.dtsl-content-area {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .dtsl-content-area .dtsl-column {
+        margin: 0;
+    }
+}
+
+
+/*----*****---- << Mobile (Landscape) >> ----*****----*/
+
+
+/* Note: Design for a width of 767px */
+
+@media only screen and (max-width: 767px) {
+    *[class*="dtsl-listings-utils-"] .dtsl-listings-utils-item .dtsl-listings-contactdetails-list>li:not(:last-child)
+    {
+        margin-bottom: 10px;
+    }
+
+    .dtsl-listings-utils-container .dtsl-listings-utils-item h3.dtsl-listings-utils-title-item { margin-bottom: 20px; }
+}
+
+
+/*----*****---- << Mobile (Portrait) >> ----*****----*/
+
+
+/* Note: Design for a width of 479px */
+
+@media only screen and (max-width: 479px) {
+    [class*="dtsl-listings-utils-"] .dtsl-listings-price-container .dtsl-listings-price-item {
+        font-size: 16px;
+        font-weight: bold;
+    }
+}

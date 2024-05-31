@@ -1,0 +1,104 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+.parentSideBarExercices {
+    width: 20%;
+}
+
+.parentSideBarExercices ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.parentSideBarExercices ul li button {
+    background-color: white;
+    color: black;
+    border: 0.08rem solid rgba(0, 0, 0, 0.281);
+    width: 100%;
+    text-align: start;
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    gap: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+
+.parentSideBarExercices ul li button:hover {
+    background-color: rgb(243, 243, 243);
+}
+
+.parentSideBarExercices ul li button i {
+    background-color: var(--blueChelsea);
+    color: white;
+    padding: 0.6rem;
+    border-radius: 5px;
+}
+
+#arrowSideBarExercices {
+    background: none;
+    border: none;
+    outline: none;
+    color: black;
+}
+
+#btnSideBarActive {
+    background-color: var(--blueChelsea) ;
+    color: white;
+}
+#btnSideBarActive #arrowSideBarExercices{
+    display: none;
+}
+
+
+
+@media (max-width:775px){
+    .parentSideBarExercices {
+        background-color: var(--blueChelsea);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        width: 100vw;
+        padding: .7rem;
+    }
+    .parentSideBarExercices ul{
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        margin: auto;
+    }
+
+    .parentSideBarExercices ul li{
+        width: 25%;
+    }
+
+    .parentSideBarExercices ul li button {
+        border: none;
+    }
+
+    .parentSideBarExercices ul li button span { 
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .parentSideBarExercices ul li button #arrowSideBarExercices{
+        display: none;
+    }
+
+    .parentSideBarExercices ul li #btnSideBarActive{
+        font-size: 1.3rem;
+    }
+}

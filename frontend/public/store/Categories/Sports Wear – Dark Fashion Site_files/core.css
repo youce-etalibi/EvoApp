@@ -1,0 +1,22 @@
+
+:root {
+    --wdt-elementor-color-black: #000;
+    --wdt-elementor-color-white: #fff;
+
+    --wdt-elementor-base-transition: all 0.3s linear 0s;
+}
+
+
+/* Common Styles */
+
+    svg { height: 1em; width: 1em; }
+
+    /**
+    * Change the fill color to match the text color in all browsers (opinionated).
+    */
+    svg:not([fill]) { fill: currentColor; }
+
+    /**
+    * Hide the overflow in IE.
+    */
+    svg:not(:root) { overflow: hidden; }

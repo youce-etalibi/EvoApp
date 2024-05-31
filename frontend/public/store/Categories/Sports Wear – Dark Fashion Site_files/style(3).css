@@ -1,0 +1,451 @@
+/* Registration Form */
+
+.wdt-registration-form{
+    padding: 80px;
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    box-shadow: 0px 0px 10px #0000001A;
+    background: var(--wdtHeadAltColor);
+    color: var(--wdtSecondaryColor);
+}
+.page-template-tpl-registration {
+    background-image: url(https://darkfashion.wpengine.com/wp-content/uploads/2023/08/blog-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.page-template-tpl-registration:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--wdtBodyBGColor);
+    opacity: 0.95;
+    z-index: -1;
+}
+/* .wdt-registration-form:after {
+    content: '';
+    position: absolute;
+    width: 750px;
+    height: 100%;
+    background-image: url(https://darkfashion.wpengine.com/wp-content/uploads/2023/07/login-image.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 66%;
+    bottom: -120px;
+} */
+.wdt-registration-form form{
+    margin-top: 50px;
+}
+.wdt-registration-form .ai-max-custom-auth-sc-border-title h2{
+    text-align: center;
+}
+.wdt-registration-form p{
+    text-align: center;
+}
+.wdt-registration-form p strong{
+    font-weight: var(--wdtFontWeight_Base);
+}
+.wdt-registration-form form p{
+    text-align: left;
+}
+
+.wdt-registration-form form p a.darkfashion-pro-login-link{
+    color: var(--wdtLinkHoverColor);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+}
+.wdt-registration-form form p a.darkfashion-pro-login-link:hover{
+    text-decoration-color: currentColor;
+}
+.wdt-registration-form form#loginform{
+    display: block;
+}
+
+.wdt-registration-form input[type="submit"]{
+    width: 100%;
+    padding: var(--wdtPadding_Btn);
+}
+
+.wdt-registration-form form p{
+    margin-bottom: 20px;
+}
+.wdt-registration-form p.submit{
+    margin-bottom: 50px;
+}
+.wdt-registration-form form p:last-child{
+    text-align: center;
+    margin-bottom: 0 !important;
+}
+.darkfashion-custom-auth-sc-border-title h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 0;
+    color: var(--wdtPrimaryColor);
+}
+
+@media screen and (max-width:767px){
+    .wdt-registration-form{
+        padding: 30px;
+    }
+    .wdt-registration-form .ai-max-custom-auth-sc-border-title h2{
+        font-size: var(--wdtFontSize_H3);
+    }
+    .darkfashion-custom-auth-sc-border-title h2
+    {
+        font-size: var(--wdtFontSize_H3);
+    line-height: normal;
+    }
+    .wdt-registration-form form {
+        margin-top: 30px;
+    }
+    
+}
+@media screen and (max-width: 479px){
+    .wdt-registration-form .ai-max-custom-auth-sc-border-title h2{
+        font-size: var(--wdtFontSize_H4);
+    }
+}
+
+
+/* Login form */
+
+.darkfashion-pro-login-form-container{
+    display: block;
+    height: 100% !important;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    width: 100%;
+    z-index: 10000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.darkfashion-pro-login-form-overlay{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,.8);
+}
+.darkfashion-pro-login-form-container .darkfashion-pro-login-form{
+    display: block;
+    pointer-events: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 40px 80px 60px;
+    background-color:var(--wdtHeadAltColor);
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    border-radius: 0;
+}
+.darkfashion-pro-login-form-container .darkfashion-pro-login-form .darkfashion-pro-title.darkfashion-pro-login-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    color: var(--wdtSecondaryColor);
+}
+.darkfashion-pro-login-form-container .darkfashion-pro-login-form .darkfashion-pro-title.darkfashion-pro-login-title span.darkfashion-pro-login-description {text-align: center;}
+.darkfashion-pro-login-form-container #loginform .login-username, 
+.darkfashion-pro-login-form-container #loginform .login-password{
+    width: 100%;
+}
+.darkfashion-pro-login-form-container #loginform p{
+    margin-bottom: 10px;
+}
+.darkfashion-pro-login-form-container #loginform .login-remember{
+    text-align: left;
+}
+.darkfashion-pro-login-form-container #loginform p.login-remember input[type="checkbox"]{
+    opacity: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0.85em;
+    height: 0.85em;
+    border: 1px solid var(--wdtBorderColor);
+    transform: translateY(-0.075em);
+    display: inline-grid;
+    place-content: center;
+	box-shadow:none;
+    -webkit-box-shadow:none;
+    background: rgba(var(--wdtTertiaryColorRgb),.5);
+    border-radius: 0;
+    padding: 0 0;
+    margin-bottom: 1px;
+    background: transparent;
+}
+#loginform p.login-remember input[type="checkbox"]:after{
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--wdtPrimaryColor);
+}
+#loginform p.login-remember input[type="checkbox"]:checked:after {
+	transform: scale(1);
+}
+
+p.tpl-forget-pwd {
+    text-align: center;
+}
+
+#loginform p.login-remember{
+    margin: 0 0 20px;
+    color: var(--wdtSecondaryColor);
+}
+/* #loginform input[type="text"],
+#loginform input[type="password"]{
+    background-color: var(--wdtBodyBGColor);
+    box-shadow: 0 0;
+    -webkit-box-shadow: 0 0;
+    border: 1px solid var(--wdtBodyBGColor);
+    padding-top: 13px;
+    padding-bottom: 13px;
+} */
+#loginform input[type="text"]:focus,
+#loginform input[type="password"]:focus{
+    border-color:var(--wdtPrimaryColor);
+}
+#loginform .login-submit{
+    margin-bottom: 30px;
+}
+#loginform .login-submit input[type="submit"]{
+    width: 100%;
+    background-color: var(--wdtPrimaryColor);
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+#loginform .login-submit input[type="submit"]:hover {
+    background: var(--wdtSecondaryColor);
+}
+#loginform p.lost_password {
+    margin-bottom: 10px;
+    display: none;
+}
+.darkfashion-pro-social-logins-divider{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--wdtSecondaryColor);
+}
+.darkfashion-pro-title.darkfashion-pro-login-title h2{
+    text-align: center;
+    color: var(--wdtPrimaryColor);
+    margin-bottom: 0;
+}
+
+.darkfashion-pro-login-form-container .darkfashion-pro-login-form .darkfashion-pro-login-form-holder p.tpl-forget-pwd a{
+    color: var(--wdtLinkHoverColor);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.3s linear;
+}
+.darkfashion-pro-login-form-container .darkfashion-pro-login-form .darkfashion-pro-login-form-holder p.tpl-forget-pwd a:hover{
+    text-decoration-color: var(--wdtLinkHoverColor);
+}
+.darkfashion-pro-social-logins-container {
+    text-align: center;
+}
+a.darkfashion-pro-social-facebook-connect,
+a.darkfashion-pro-social-google-connect{
+    width: 45%;
+    padding: 10px 40px;
+    display: inline-block;
+    text-align: center;
+    color: var(--wdtAccentTxtColor);
+    border-radius: 5px;
+    box-shadow:0 0 10px #0000000d;
+    margin: 10px;
+    font-size: 14px;
+    font-weight: var(--wdtFontWeight_Ext);
+}
+.darkfashion-pro-login-form-container #loginform .login-username input, 
+.darkfashion-pro-login-form-container #loginform .login-password input {
+    color: var(--wdtSecondaryColor);
+}
+a.darkfashion-pro-social-facebook-connect
+{
+    background-color: #1574EA;
+}
+a.darkfashion-pro-social-google-connect
+{
+    background-color: #E94235;
+}
+
+a.darkfashion-pro-social-facebook-connect i,
+a.darkfashion-pro-social-google-connect i{
+    margin-right: 10px;
+}
+.darkfashion-pro-login-form-container{
+    max-width: 1640px;
+    margin: auto;
+}
+a.darkfashion-pro-social-facebook-connect:hover, a.darkfashion-pro-social-google-connect:hover {
+    background: var(--wdtPrimaryColor);
+    color: var(--wdtAccentTxtColor);
+}
+.woocommerce form .form-row-first{float: unset;}
+.woocommerce-error li, .woocommerce-info li, .woocommerce-message li{margin-bottom: 0;}
+
+
+@media screen and (min-width:1540px)
+{
+    .page-template-tpl-registration {
+        background-image: url(https://darkfashion.wpengine.com/wp-content/uploads/2023/08/blog-1.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .page-template-tpl-registration:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background: var(--wdtBodyBGColor);
+        opacity: 0.95;
+        z-index: -1;
+    }
+}
+@media screen and (min-width:1281px) and (max-width: 1540px){
+    .darkfashion-pro-login-form-container{
+        max-width: 1080px;
+        margin: auto;
+    }  
+    .wdt-registration-form:after
+    {
+        width: 550px;
+        bottom: -250px;
+    }  
+}
+@media screen and (min-width:1025px) and (max-width: 1280px){
+    .darkfashion-pro-login-form-container{
+        max-width: 900px;
+        margin: auto;
+    }  
+    .wdt-registration-form:after
+    {
+        width: 450px;   
+        left: 72%;
+        bottom: -35%;
+    }  
+}
+@media screen and (min-width:768px) and (max-width: 1024px){
+    .darkfashion-pro-login-form-container{
+        max-width: 710px;
+        margin: auto;
+    }    
+    .wdt-registration-form:after
+    {
+       display: none;
+    } 
+}
+@media screen and (max-width: 767px){
+    #loginform .login-username, 
+    #loginform .login-password{
+        margin-bottom: 20px;
+    }
+    .darkfashion-pro-login-form-container {overflow: scroll;}
+    .darkfashion-pro-login-form-container .darkfashion-pro-login-form{
+        padding: 30px;
+        max-width: 420px;
+        
+    }
+    .darkfashion-pro-title.darkfashion-pro-login-title h2{
+        font-size: var(--wdtFontSize_H3);
+    }
+    a.darkfashion-pro-social-facebook-connect, a.darkfashion-pro-social-google-connect{
+        width: 44%;
+    }
+    .wdt-registration-form:after
+    {
+       display: none;
+    } 
+}
+@media screen and (min-width:480px) and (max-width: 767px){
+    .darkfashion-pro-login-form-container{
+        max-width: 420px;
+        margin: auto;
+    }    
+}
+@media screen and (max-width: 479px){
+    .darkfashion-pro-login-form-container{
+        max-width: 290px;
+        margin: auto;
+    }    
+    .darkfashion-pro-title.darkfashion-pro-login-title h2{
+        font-size: var(--wdtFontSize_H4);
+    }
+    a.darkfashion-pro-social-facebook-connect, a.darkfashion-pro-social-google-connect{
+        width: 100%;
+    }
+    .darkfashion-pro-login-form-container .darkfashion-pro-login-form
+    {
+        padding: 20px;
+    }
+}
+
+.wdt-custom-auth-form section.elementor-element .elementor-container {
+    max-width: 1640px;
+}
+
+/* After Registration */
+.mu_register{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 50px;
+    background: var(--wdtSecondaryColor);
+    box-shadow: rgba(0,0,0,.8) 0 0 40px;
+    border-radius: var(--wdtRadius_3X);
+}
+.mu_register h2{
+    font-size: var(--wdtFontSize_H4);
+    text-align: center;
+}
+.mu_register form input{
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border: 1px solid transparent;
+}
+.mu_register form input:focus{
+    border-color: var(--wdtPrimaryColor);
+}
+.mu_register form .wp-signup-username-description,
+.mu_register form .wp-signup-email-description{
+    margin-bottom: 15px;
+}
+.mu_register p.submit{
+
+    margin-top: 20px;
+}
+.mu_register form p.submit input[type="submit"]{
+    font-size: var(--wdtFontSize_Base);
+}
+@media screen and (max-width: 479px){
+    .mu_register{
+        padding: 30px;
+    }
+}

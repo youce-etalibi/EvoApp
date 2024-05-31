@@ -1,0 +1,26 @@
+.bx-wrapper
+{
+    padding: 0;
+    position: relative;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+}.bx-wrapper img
+{
+    display: block;
+    max-width: 100%;
+}.bxslider
+{
+    margin: 0;
+    padding: 0;
+
+    -webkit-perspective: 1000;
+}ul.bxslider
+{
+    list-style: none;
+}.bx-viewport
+{
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -o-transform: translateZ(0);
+}

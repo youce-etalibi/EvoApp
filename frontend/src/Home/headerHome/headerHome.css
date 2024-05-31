@@ -1,0 +1,119 @@
+
+
+.profileHome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+}   
+.profileHome span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    color: white;
+    text-decoration: underline #0152df00;
+}   
+
+.profileHome img {
+    width: 35px;
+    border-radius: 50%;
+    border: 0.1rem solid white;
+}
+
+.parentCircleHome {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.circleHome {
+    position: absolute;
+    right: -10%;
+    top: -40%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    }
+.profileHome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+}   
+.profileHome span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    color: white;
+    text-decoration: underline #0152df00;
+}   
+
+.profileHome img {
+    width: 35px;
+    border-radius: 50%;
+    border: 0.1rem solid white;
+}
+
+.parentCircleHome {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.circleHome {
+    position: absolute;
+    right: -10%;
+    top: -40%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: var(--blueChelsea);
+}
+
+
+@media (max-width:790px){
+    .circleHome {
+        top: -30%;
+        right: -25%;
+    }
+}
+@media (max-width:530px){
+    .circleHome {
+        top: -30%;
+        right: -55%;
+    }
+}
+@media (max-width:420px){
+    .circleHome {
+        top: -30%;
+        right: -75%;
+    }
+}
+@media (max-width:375px){
+    .circleHome {
+        top: -30%;
+        right: -95%;
+    }
+}

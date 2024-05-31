@@ -1,0 +1,216 @@
+
+.storehome{
+   height: 90vh;
+}
+.homecontent{
+    width: 70%;
+   padding-top:10rem;
+   padding-left: 4rem;
+}
+.homecontent h1{
+line-height: 70px;
+    font-size: 53px;
+   text-align: left;
+    width: 55%;
+    filter: drop-shadow(0 0 228px  #0153DF);
+
+}
+.homecontent p{
+     margin-top: 0.6rem;
+   text-align: left;
+    width: 56%;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 28px  #0153DF);
+
+
+}
+
+.btnStorehome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    border: none;
+    font-size: 0.9rem;
+    outline: none;
+  background: #0153DF;
+    color: white;
+    margin-top: 2rem;
+    padding: 8px 17px;
+    font-weight: 500;
+    border-radius: 7px;
+    box-shadow: 0 2px 3px hsla(0, 0%, 0%, 0.2);
+    transition: 0.25s ease;
+}
+
+.unionimage {
+    position: absolute;
+ right: 5rem;
+ top: 10rem;
+ opacity: 0.1;
+
+ width: 340px;
+}
+.rightHome img{
+    position: absolute;
+ right: 3rem;
+ top: 6rem;
+ transform: scaleX(-1);
+object-fit: cover;
+ width: 500px;
+}
+.services{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    gap: 5px;
+    margin: 6rem 0 0 3.3rem;
+    font-size: 12px;
+    filter: drop-shadow(0 0 78px  #0153DF);
+
+}
+.Storeservice{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    gap: 10px;
+}
+.Storeservice div p{
+   width: 200px;
+   max-width: 300px;
+}
+.imgservice{
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 70px;
+    background-color: #F6F9FC;
+}
+.css-e68rmb{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 1.3em;
+    height: 1.3em;
+    display: inline-block;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-size: 1.25rem;
+}
+
+
+
+@media (max-width : 767px){
+    .storehome{
+        height: 60vh;
+        margin-top: 2.4rem;
+    }
+    .rightHome img{
+    width: 100px;
+    right: 1rem;
+    top: 14rem;
+    }
+    .homecontent h1{
+        line-height: 47px;
+            font-size: 43px;
+            width: 200px;
+        }
+        .homecontent {
+            padding: 1.6rem;
+            margin-top: 7rem;
+        }
+        .homecontent p{
+            width: auto;
+        }
+        .btnStorehome{
+            width: 100%;
+            font-size: 0.9rem;
+            padding: 0.2rem;
+        }
+        .services{
+            flex-direction: column;
+            gap: 40px;
+        }
+}
+
+@media (max-width : 567px){
+    .storehome{
+        height: 60vh;
+        margin-top: 2.4rem;
+    }
+    .rightHome img{
+    width: 200px;
+    right: 1rem;
+    top: 14rem;
+    }
+    .homecontent h1{
+        line-height: 47px;
+            font-size: 43px;
+            width: 200px;
+        }
+        .homecontent {
+            padding: 1.6rem;
+            margin-top: 7rem;
+        }
+        .homecontent p{
+            width: auto;
+        }
+        .btnStorehome{
+            width: 100%;
+            font-size: 0.9rem;
+            padding: 0.2rem;
+        }
+        .services{
+            flex-direction: column;
+            gap: 40px;
+        }
+}
+
+@media (max-width : 1025px){
+    .storehome{
+        height: 45vh;
+        margin-top: 7.4rem;
+    }
+    .rightHome img{
+    width: 230px;
+    right: 1rem;
+    top: 8rem;
+    }
+    .homecontent h1{
+        line-height: 47px;
+            font-size: 43px;
+            width: 300px;
+        }
+        .homecontent {
+            padding: 1.6rem;
+            margin-top: 7rem;
+        }
+        .homecontent p{
+            width: 300px;
+        }
+        .btnStorehome{
+            width: 49%;
+            font-size: 0.9rem;
+            padding: 0.2rem;
+        }
+        .services{
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 40px;
+            width: 70%;
+        }
+        .section1-title h1{
+            left: 4rem;
+        }
+}

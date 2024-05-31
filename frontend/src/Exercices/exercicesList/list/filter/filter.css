@@ -1,0 +1,81 @@
+:root {
+    --blueChelsea: #0153DF;
+    --blueCity: #3F85FF;
+    --blackNewcastle: #000000;
+}
+
+
+
+
+.parentFilterExercicesSection {
+    width: 40%;
+    border: 0.05rem solid black;
+    padding: 0.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.parentFilterExercicesSection  label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--blueChelsea);
+}
+
+.parentFilterExercicesSection  button {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: 400;
+    border: none;
+    font-size: 0.7rem;
+    outline: none;
+    padding: 0.1rem 0.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 0.05rem solid var(--blueCity);
+    box-sizing: border-box;
+    margin: 0.2rem;
+}
+
+
+.parentButtonsFilter {
+    display: flex;
+    justify-content: center;
+
+}
+
+#ResetFilters {
+    font-size: 0.8rem;
+    background-color: white;
+    border: 0.1rem solid black;
+    transition: all .2s ease-in-out;
+}
+
+#ResetFilters:hover {
+    background-color: rgb(244, 244, 244);
+}
+#ResetFilters:active {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+#ApplyFilters {
+    font-size: 0.8rem;
+    background-color: white;
+    color: white;
+    border: 0.1rem solid var(--blueChelsea);
+    background-color: var(--blueChelsea);
+    transition: all .2s ease-in-out;
+}
+
+#ApplyFilters:hover {
+    background-color: #0041b1;
+}
+#ApplyFilters:active {
+    background-color: white;
+    color: var(--blueChelsea);
+}

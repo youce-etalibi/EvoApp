@@ -1,0 +1,217 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+.parentHomeSection .sectionHomeRow1 {
+    width: 75vw;
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+}
+
+.parentHomeSection .leftTopHomeSection {
+    width: 50%;
+}
+
+.parentHomeSection .leftTopHomeSection div h1 {
+    padding-top: 2rem;
+    font-size: 2.3rem;
+    line-height: 2.5rem;
+    text-align: start;
+}
+
+.parentHomeSection .RightTopHomeSection {
+    width: 50%;
+}
+.parentHomeSection .RightTopHomeSection img{
+    width: 100px;
+}
+.parentHomeSection .RightTopHomeSection .patternPNG {
+    position: absolute;
+    top: 15%;
+    right: 25%;
+    width: 150px;
+    animation: effect 240s linear infinite;
+}
+.parentHomeSection .RightTopHomeSection .dumblePNG {
+    width: 450px;
+    position: absolute;
+    top: 0%;
+    right: 5%;
+}
+
+.sectionHomeRow2 {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    align-items: start ;
+    justify-content: center;
+    margin-top: 7rem;
+}
+
+
+.leftSectionImages {
+    display: flex;
+    flex-direction: column;
+}
+
+.leftSectionImages .fitguysPNG {
+    width: 85%;
+    object-fit: cover;
+    height: 260px;
+    border-radius: 20px;
+}
+
+.leftSectionImages p {
+    width: 80%;
+    font-size: 0.8rem;
+    text-align: start;
+    font-weight: 500;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+}
+
+.rightSectionImages {
+    display: flex;
+    justify-content: center;
+}
+
+.rightSectionImages .fitbodyPNG {
+    width: 500px;
+}
+
+.lgatePNG {
+    width: 200px;
+    position: fixed;
+    left: -5rem;
+    transform: rotate(45deg);
+    display: none;
+}
+
+.parentCicle {
+    background: transparent;
+    overflow: hidden;
+    width: 110px;
+    height: 110px;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    z-index: 1;
+    margin-left: 11.8rem;
+    margin-top: -4rem;
+    margin-left: -10rem;
+    border-radius: 50%;
+    background-color: white;
+    border: 0.05rem solid var(--cityE);
+}
+.parentCicle i {
+    position: absolute;
+    font-size: 4.3rem;
+    background: var(--blueChelsea);
+    border-radius: 50%;
+}
+.textCicle {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: effect 10s linear infinite;
+    background: var(--blueChelsea) ;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.textCicle p span {
+    position: absolute;
+    left: 50%;
+    top: 7.5%;
+    transform-origin: 0 3rem;
+    font-size: 0.6rem;
+    font-weight: 900;
+    color: var(--blueChelsea);
+}
+
+#arrowSectionHome {
+    transform: rotate(-45deg);
+    background-color: var(--blueChelsea);
+    color: white;
+}
+
+@keyframes effect {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+
+@media (max-width:915px){
+    .sectionHomeRow2 {
+        flex-direction: column;
+        margin: auto;
+        margin-top: 2rem;
+        gap: 1rem;
+    }
+    .leftSectionImages img {
+        width: 100%;
+        margin: auto;
+    }
+    .leftSectionImages p {
+        width: 80%;
+        margin: auto;
+    }
+    .rightSectionImages .fitbodyPNG {
+        width: 82%;
+        margin: auto;
+    }
+
+    .parentCicle {
+        margin: 0;
+        margin-top: -15rem;
+    }
+}
+
+@media (max-width:805px){
+    .parentHomeSection .sectionHomeRow1 {
+        flex-direction: column;
+    }
+    .parentHomeSection .leftTopHomeSection {
+        width: 100%;
+        margin: auto;
+    }
+
+    .parentHomeSection .leftTopHomeSection div h1 {
+        display: block;
+        width: 90%;
+        margin: auto;
+    }
+    .RightTopHomeSection {
+        position: absolute;
+        right: -5rem;
+    }
+    .parentHomeSection .RightTopHomeSection {
+        overflow: hidden;
+    }
+    .parentHomeSection .RightTopHomeSection .patternPNG {
+        width: 100px;
+        position: sticky;   
+        display: none;
+    }
+    .parentHomeSection .RightTopHomeSection .dumblePNG {
+        /* position: relative; */
+        /* width: 200px; */
+        /* top: 6rem; */
+        /* right: -3rem; */
+        /* display: none; */
+    }
+    .lgatePNG {
+        display: grid;
+        position: relative;   
+        display: none;
+    }
+}
+

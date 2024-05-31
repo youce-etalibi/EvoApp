@@ -1,0 +1,60 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+.parentModalCreateWO {
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 30;
+    padding: 3rem;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    animation: 1.5s cubic-bezier(.25, 1, .30, 1) square-in-hesitate both;
+
+}
+
+.parentModalCreateWO .modalContent {
+    display: flex;
+    flex-direction: column;
+    margin-top: -2.5rem;
+}
+
+.parentModalCreateWO .modalContent .ContentCW {
+    display: flex;
+    gap: 1rem;
+}
+
+
+@keyframes square-in-hesitate {
+    0% {
+      clip-path: inset(100% 100% 100% 100%);
+    }
+    40% {
+      clip-path: inset(33% 33% 33% 33%);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  [transition-style="in:square:hesitate"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-in-hesitate both;
+  }
+
+#btnCloseCWO{
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: start;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

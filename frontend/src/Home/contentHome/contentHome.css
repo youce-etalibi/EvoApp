@@ -1,0 +1,187 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+.parentContentHome {
+    width: 80vw;
+    overflow: visible;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.rightParent {
+    overflow: hidden;
+}
+
+.leftContent {
+    width: 60%;
+    position: relative;
+    z-index: 30;
+}
+
+
+.textContentHome h1{
+    font-size: 1.5rem;
+    text-align: start;
+    padding-left: 1rem;
+    mix-blend-mode: difference;
+}
+.textContentHome p{
+    font-size: 0.7rem;
+    color: rgb(118, 118, 118);
+    text-align: start;
+    padding: 0.5rem;
+    padding-left: 1.5rem;
+    mix-blend-mode: difference;
+}
+
+.linkContentHome {
+    margin: 1rem;
+}
+
+.rowHome {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.colHome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.colHome {
+    width: 250px;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    color: white;
+    border: 0.05rem solid var(--blueChelsea);
+    background-image: linear-gradient(37deg, rgb(63,133,255),rgb(1,83,223));
+    transition: all .3s ease-in-out;
+}
+
+.colHome div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.colHome:hover {
+    transform: scale(1.05);
+}
+
+.colHome div button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+}
+
+.colHome div button span{
+    transition: all .15s ease-in-out;
+}
+
+.colHome div button span:hover {
+    text-decoration: underline;
+}
+
+
+.colHome div button i {
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+.colHome div i {
+    font-size: 2rem;
+    color: white;
+}
+
+.rightParent img {
+    width: 310px;
+    position: relative;
+}
+
+.handHi {
+    width: 30px;
+}
+
+.LinkComposant {
+    text-decoration: none;
+    color: white;
+}
+
+
+@media (max-width:920px){
+    .parentContentHome {
+        flex-direction: column;
+        margin-top: 7rem;
+    }
+    .leftContent {
+        width: 100%;
+        backdrop-filter: blur(70px);
+        border-radius: 10px;
+        padding: 3rem 1rem;
+        box-shadow: 0 0 40px 20px rgba(121, 121, 121, 0.089);
+    }
+    .rightParent {
+        width: 100%;
+    }
+    .rightParent {
+        display: none;
+    }
+    .rowHome {
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width:580px){
+    .colHome {
+        overflow: hidden;
+    }
+    .colHome div i {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.21);
+        font-size: 7rem;
+        margin-left: 4rem;
+    }
+}
+
+@media (max-width:460px){
+    .colHome {
+        padding: 1rem 0.5rem;
+    }
+    .colHome div h3{
+        font-size: 1rem;
+    }
+    .colHome div i {
+        display: none;
+    }
+}
+@media (max-width:385px){
+    .colHome div h3{
+        font-size: 0.8rem;
+    }
+    .colHome div button span {
+        font-size: 0.7rem;
+        text-decoration: underline;
+    }
+    .colHome div button i {
+        display: none;
+    }
+}
+
+
+

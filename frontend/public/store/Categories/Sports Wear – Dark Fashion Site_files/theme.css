@@ -1,0 +1,125 @@
+/* Variables */
+
+:root {
+
+    /* Radius Variables */
+    --wdtRadius_Zero: 0;
+    --wdtRadius_Part: 2.5em;
+    --wdtRadius_Full: 50%;
+
+    --wdtRadius_1X: 3px;
+    --wdtRadius_2X: 5px;
+    --wdtRadius_3X: 10px;
+
+
+    /* Padding Variables */
+    --wdtInputPadding: 15px 0px;
+
+    --wdtPadding_Btn: 15px 35px 13px;
+    --wdtPadding_MiniBtn: 12px 20px;
+    --wdtPadding_MaxiBtn: 18px 40px;
+
+
+    --wdtBaseTransition: all 0.3s linear 0s;
+    --wdtAltTransition: all 0.35s ease-in-out 0s;
+
+}
+
+/* Typography - Defaults */
+
+    /* Base */
+    body, button, input, textarea, select, optgroup { font-family: var(--wdtFontTypo_Base); font-size: var(--wdtFontSize_Base); font-weight: var(--wdtFontWeight_Base); letter-spacing: 0; line-height: var(--wdtLineHeight_Base); text-transform: none; }
+
+    input[type="submit"], input[type="reset"], input[type="button"], button[type="button"], [role="button"], button, .button, a.button, .wdt-button, .elementor-button.wdt-elementor-button, .yith-wcwl-add-to-wishlist a, .yith-wcqv-button, .wdt-wcsg-button { line-height: 1; }
+
+
+    /* Headings */
+    h1 { font-size: var(--wdtFontSize_H1); }
+    h2 { font-size: var(--wdtFontSize_H2); }
+    h3 { font-size: var(--wdtFontSize_H3); }
+    h4 { font-size: var(--wdtFontSize_H4); }
+    h5 { font-size: var(--wdtFontSize_H5); }
+    h6 { font-size: var(--wdtFontSize_H6); }
+
+    h1, h2, h3, h4, h5, h6 { font-family: var(--wdtFontTypo_Alt); font-weight: var(--wdtFontWeight_Alt); letter-spacing: 0; line-height: var(--wdtLineHeight_Alt); text-transform: none; }
+
+
+    /* Menu */
+    .wdt-header-menu li a { font-family: var(--wdtFontTypo_Alt); font-weight: var(--wdtFontWeight_Ext);text-transform: uppercase;letter-spacing: .15px; }
+    .wdt-header-menu ul li ul li>a { font-size: var(--wdtFontSize_Base); font-weight: var(--wdtFontWeight_Base); }
+
+
+    /* Breadcrumb */
+    .main-title-section h1 { font-family: var(--wdtFontTypo_Alt);}
+    .breadcrumb { font-family: var(--wdtFontTypo_Base); }
+    .main-title-section-wrapper>.main-title-section-bg:after { background-color: rgba(var(--wdtBodyBGColorRgb),0.8); }
+
+
+    /* Footer */
+    div.footer-widgets .widgettitle, #footer .widgettitle { font-family: var(--wdtFontTypo_Alt); }
+    #footer, .footer-copyright, div.footer-widgets .widget { font-family: var(--wdtFontTypo_Base); }
+
+
+
+/* Base Colors - Defaults */
+
+    body, .layout-boxed .inner-wrapper { background-color: var(--wdtBodyBGColor); }
+
+
+    /* Base */
+    body { color: var(--wdtBodyTxtColor); }
+
+
+    /* Links */
+    a { color: var(--wdtLinkColor); }
+    a:hover { color: var(--wdtLinkHoverColor); }
+
+
+    /* Headings */
+    h1, h2, h3, h4, h5, h6 { color: var(--wdtHeadAltColor); }
+
+    h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
+    h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover { color: var(--wdtLinkHoverColor); }
+
+
+    /* Menu */
+    .no-header-menu ul li a, .wdt-header-menu .wdt-primary-nav li a { color: var(--wdtAccentTxtColor); }
+
+    .no-header-menu.wdt-header-menu > .menu-container > .wdt-primary-nav > li > a:hover{color: var(--wdtLinkHoverColor);}
+
+
+    /* Footer */
+    .wdt-no-footer-builder-content.footer-copyright:before, .footer-copyright:before { background-color: var(--wdtSecondaryColor); }
+
+    #footer .widgettitle, div.footer-widgets .widgettitle { color: var(--wdtHeadAltColor); }
+
+    #footer, div.footer-widgets .widget, .footer-copyright { color: var(--wdtBodyTxtColor); }
+
+    #footer a:not(.button):not(.elementor-button), .footer-widgets a:not(.button):not(.elementor-button) { color: var(--wdtLinkColor); }
+
+    #footer a:not(.button):not(.elementor-button):hover, .footer-widgets a:not(.button):not(.elementor-button):hover { color: var(--wdtLinkHoverColor); }
+
+    #footer .wdt-dark-bg a, #footer .wdt-dark-bg .footer-widgets a:not(.button):not(.elementor-button), #footer .wdt-dark-bg a:not(.button):not(.elementor-button) { color: var(--wdtAccentTxtColor); }
+
+    #footer .wdt-dark-bg a:hover, #footer .wdt-dark-bg .footer-widgets a:not(.button):not(.elementor-button):hover, #footer .wdt-dark-bg a:not(.button):not(.elementor-button):hover { color: var(--wdtSecondaryColor); }
+
+    /*Font size*/
+
+    .elementor-widget-text-editor .elementor-widget-container h1, div h1, .wdt-heading-holder h1.wdt-heading-title-wrapper .wdt-heading-title {
+        font-size: clamp(2.8125rem, 2.5962rem + 0.9615vw, 3.75rem);
+    }
+    .elementor-widget-text-editor .elementor-widget-container h2, div h2, .wdt-heading-holder h2.wdt-heading-title-wrapper .wdt-heading-title {
+        font-size: clamp(2.5rem, 2.3558rem + 0.641vw, 3.125rem);
+    }
+    .elementor-widget-text-editor .elementor-widget-container h3, div h3, .wdt-heading-holder h3.wdt-heading-title-wrapper .wdt-heading-title {
+        font-size: clamp(2rem, 1.8846rem + 0.5128vw, 2.5rem);
+    }
+    .elementor-widget-text-editor .elementor-widget-container h4, div h4, .wdt-heading-holder h4.wdt-heading-title-wrapper .wdt-heading-title {
+        font-size: clamp(1.625rem, 1.5385rem + 0.3846vw, 2rem);
+    }
+    .elementor-widget-text-editor .elementor-widget-container h5, div h5, .wdt-heading-holder h5.wdt-heading-title-wrapper .wdt-heading-title {
+        font-size: clamp(1.375rem, 1.3173rem + 0.2564vw, 1.625rem);
+    }
+    .elementor-widget-text-editor .elementor-widget-container h6, div h6, .wdt-heading-holder h6.wdt-heading-title-wrapper .wdt-heading-title {
+        font-size: clamp(1.125rem, 1.0962rem + 0.1282vw, 1.25rem);
+    }

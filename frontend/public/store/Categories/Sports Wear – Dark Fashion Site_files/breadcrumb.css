@@ -1,0 +1,132 @@
+
+/*--------------------------------------------------------------
+    Breadcrumb Styles
+--------------------------------------------------------------*/
+
+    .main-title-section.aligncenter {
+        text-align: center;
+    }
+
+    .main-title-section.alignright {
+        text-align: right;
+    }
+
+    .main-title-section-wrapper.breadcrumb-left .breadcrumb {
+        clear: none;
+        float: left;
+        width: 35%;
+        padding-right: 20px;
+        margin-top: 13px;
+    }
+
+    .main-title-section-wrapper.breadcrumb-left .main-title-section {
+        float: right;
+        width: 65%;
+        text-align: right;
+    }
+
+    .main-title-section-wrapper.breadcrumb-right .breadcrumb {
+        clear: none;
+        float: right;
+        text-align: right;
+        width: 35%;
+        padding-left: 20px;
+        margin-top: 13px;
+    }
+
+    .main-title-section-wrapper.breadcrumb-right .main-title-section {
+        float: left;
+        width: 65%;
+    }
+
+    .main-title-section-wrapper.breadcrumb-top-left-title-center .main-title-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-title-section-wrapper.breadcrumb-top-left-title-center .breadcrumb {
+        margin-top: -70px;
+        width: 100%;
+        float: left;
+    }
+
+    .main-title-section-wrapper.breadcrumb-top-right-title-center .main-title-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-title-section-wrapper.breadcrumb-top-right-title-center .breadcrumb {
+        margin-top: -70px;
+        width: 100%;
+        float: right;
+        text-align: right;
+    }
+
+
+    .wdt-dark-bg .breadcrumb,
+    .wdt-dark-bg .breadcrumb a:hover,
+    .wdt-dark-bg .breadcrumb span.current {
+        color: rgba(var(--wdtAccentTxtColorRgb),0.6);
+    }
+
+    .wdt-dark-bg .breadcrumb a {
+        color: var(--wdtAccentTxtColor);
+    }
+
+    .wdt-dark-bg .breadcrumb .fa.default {
+        background: var(--wdtAccentTxtColor);
+    }
+
+
+/*--------------------------------------------------------------
+	Responsive
+--------------------------------------------------------------*/
+
+    /* Note: Design for a width of 960px */
+
+    @media only screen and (min-width:1025px) and (max-width:1280px) {
+
+        /*----*****---- << Breadcrumb >> ----*****----*/
+        .main-title-section-wrapper.breadcrumb-right .main-title-section h1 {
+            font-size: 26px;
+        }
+        .main-title-section-wrapper.breadcrumb-right .main-title-section {
+            width: 58%;
+        }
+        .main-title-section-wrapper.breadcrumb-right .breadcrumb {
+            width: 42%;
+        }
+
+    }
+
+    /* Note: Design for a width of 768px */
+
+    @media only screen and (min-width:768px) and (max-width:1024px) {
+
+        .main-title-section-wrapper.breadcrumb-right .main-title-section h1 {
+            font-size: 24px;
+            margin-top: 11px;
+        }
+
+    }
+
+
+    /*----*****---- << Mobile (Landscape) >> ----*****----*/
+
+    /* Common Styles for the devices below 767px width */
+
+    @media only screen and (max-width: 767px) {
+
+        .main-title-section-wrapper.breadcrumb-right .main-title-section,
+        .main-title-section-wrapper.breadcrumb-right .breadcrumb,
+        .main-title-section-wrapper.breadcrumb-left .main-title-section,
+        .main-title-section-wrapper.breadcrumb-left .breadcrumb {
+            width: 100%;
+            padding: 0;
+            text-align: center;
+        }
+        .no-breadcrumb.page-with-slider #header-wrapper.header-top-absolute #header {
+            position: static;
+        }
+
+    }

@@ -1,0 +1,111 @@
+/*--------------------------------------------------------------
+    Loader
+--------------------------------------------------------------*/
+
+    .pre-loader {
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999991;
+        background-color: #fff;
+    }
+
+    .loader-inner {
+        padding: 25px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        text-align: center;
+        width: 100%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .loader-text {
+        display: inline-block;
+        font-family: var(--wdtFontTypo_Alt);
+        font-size: 3.75rem;
+        font-weight: bold !important;
+        letter-spacing: 1px;
+        line-height: normal;
+        text-transform: uppercase;
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        -webkit-animation: textclip 1.5s linear infinite;
+        animation: textclip 1.5s linear infinite;
+    }
+
+
+    .loader-circle {
+        aspect-ratio: 1;
+        position: absolute;
+        border-radius: 50%;
+        border: 5px solid var(--wdtPrimaryColor);
+        border-bottom: 4px solid transparent;
+        animation: load 4s ease-in-out infinite;
+        transform: translate(-50%, -50%);
+        left: 50%;
+      }
+      .loader-circle:nth-child(1) {
+        animation-direction: forwards;
+        width: 120px;
+      }
+      .loader-circle:nth-child(2) {
+        animation-direction: reverse;
+        width: 80px;
+      }
+      .loader-circle:nth-child(3) {
+        animation-direction: forwards;
+        width: 40px;
+      }
+      /* .loader-circle:nth-child(4) {
+        animation-direction: reverse;
+        width: 100px;
+      }
+      .loader-circle:nth-child(5) {
+        animation-direction: forwards;
+        width: 50px;
+      } */
+      
+      @keyframes load {
+        0% {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(720deg);
+        }
+      }
+      
+
+
+/*--------------------------------------------------------------
+    Accents
+--------------------------------------------------------------*/
+
+    .pre-loader { background-color: var(--wdtBodyBGColor); }
+    .loader-text { background-image: linear-gradient(to right, var(--wdtPrimaryColor) 10%, var(--wdtHeadAltColor) 50%, var(--wdtPrimaryColor) 60%); }
+
+
+/*--------------------------------------------------------------
+    Responsive
+--------------------------------------------------------------*/
+
+    /*----*****---- << Mobile (Landscape) >> ----*****----*/
+
+    /* Note: Design for a width of 480px */
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+
+    }
+
+
+    /* Common Styles for the devices below 479px width */
+
+    @media only screen and (max-width: 479px) {
+
+    }

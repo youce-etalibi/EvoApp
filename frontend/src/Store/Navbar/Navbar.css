@@ -1,0 +1,367 @@
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 2;
+}
+.slide-cart-layout{
+    position: fixed;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-tap-highlight-color: transparent;
+    z-index: 2;
+}
+.navbar, .buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+.itemprofile{
+    text-decoration: none;
+    color: #000;
+ }
+
+.storelogo img{
+    
+    width: 170px;
+    margin: 0.4rem 0 0 2rem;
+    height: 58px;
+    object-fit: cover;
+}
+.brand:hover{
+    font-weight: bolder;
+    color: #428aff;
+}
+
+.buttonsnav{
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.btn{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    background: #428aff;
+    padding: 0.5em 1.3em;
+    border-radius: 16px;
+    color: #fff;
+}
+
+.btn:hover{
+    background: #3877db;
+}
+
+.menu-btn{
+    margin-left: 1em;
+    background: none;
+    display: inline-block;
+}
+.menu-container{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 95%;
+
+}
+
+.menu-btn span{
+    font-size: 2.3em;
+}
+
+.dropdown > div, .sub-dropdown > div {
+    cursor: pointer;
+}
+
+.dropdown .menu a:hover{
+    color: #9b9b9b;
+}
+
+.storeLinks{
+    display: flex;
+    width: 28%;
+    flex-direction: row;
+}
+#linksbar {
+    margin-left: 4.8rem;
+    display: flex;
+    gap: 3px;
+    margin-top: -0.4rem;
+    align-items: center;
+}
+
+
+.badgecart{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-top: -0.2rem;
+    margin-left: -1rem;
+    background-color: rgb(245, 91, 91);
+    color: white;
+  }
+.badgewishlits{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-top: -0.3rem;
+    margin-left: -0.9rem;
+    background-color: rgb(245, 91, 91);
+    color: white;
+  }
+
+  
+.sub-dropdown-img{
+    background-image: url("/public/store/men.webp");
+    background-position: top;
+    width: 460px;
+    height: 240px;
+    margin-left: 6rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sub-dropdown-imgwomen{
+    background-image: url("/public/store/women.webp");
+    background-position: top;
+    width: 460px;
+    height: 240px;
+    margin-left: 6rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ .material-symbols-outlined{
+    display: none;
+ }
+@media screen and (min-width: 800px) {
+    .navbar{
+        padding: 0 1.5em;
+    }
+    .dropdown > div{
+        padding: 1.5em 1em;
+    }
+    .mega-menu{
+        display: flex;
+        width: 49%;
+        justify-content: center;
+    }
+    .menu-btn{
+        display: none;
+    }
+    .menu{
+        background: #fff;
+        position: absolute;
+        top: 4.65em;
+        left: 0;
+        width: 100%;
+        overflow-y: scroll;
+        transition: 0.4s ease-in-out;
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+        gap: 4em;
+    }
+    
+    .menu > li:first-child{
+        font-size: 1.1em;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .sub-dropdown > div span:first-child{
+        font-weight: bold;
+    }
+    
+    .dropdown > div{
+        border-bottom: 3px #fff solid;
+        transition: 0.3s;
+    }
+
+    .dropdown:hover > div:not(:last-child){
+        border-color: #000;
+    }
+
+    .dropdown li{
+        margin-bottom: 1em;
+    }
+
+    .dropdown > div span:last-child, 
+    .sub-dropdown > div{
+        display: none;
+    }
+
+    /* Width */
+    .menu::-webkit-scrollbar{
+        width: 8px;
+    }
+    /* Track */
+    .menu::-webkit-scrollbar-track{
+        background: #f1f1f1;
+    }
+    /* Handle */
+    .menu::-webkit-scrollbar-thumb{
+        background: #888;
+    }
+
+    /* Handle on hover */
+    .menu::-webkit-scrollbar-thumb:hover{
+        background: #555;
+    }
+
+    /* Hide menu */
+    .menu{
+        height: 0;
+    }
+    .dropdown:hover .menu{
+        height: 45vh;
+        padding: 0.9rem 5rem;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 800px) {
+    .navbar{
+        padding: 1em 1.5em;
+    }
+    .menu-container{
+        background: #fff;
+        position: absolute;
+        top: 4.4em;
+        left: 0;
+        display: block;
+        width: 100%;
+        overflow-y: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    /* Width */
+    .mega-menu::-webkit-scrollbar{
+        width: 8px;
+    }
+    /* Track */
+    .mega-menu::-webkit-scrollbar-track{
+        background: #f1f1f1;
+    }
+    /* Handle */
+    .mega-menu::-webkit-scrollbar-thumb{
+        background: #888;
+    }
+    /* Handle on hover */
+    .mega-menu::-webkit-scrollbar-thumb:hover{
+        background: #555;
+    }
+
+    .buttonsnav{
+       font-size: 2.7rem;
+    }
+   
+    .mega-menu{
+        padding: 1em 1em 1em 1em;
+        height: 30%;
+        overflow-y: scroll;
+    }
+    .mega-menu li{
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+    .sub-dropdown-img,.sub-dropdown-imgwomen{
+        margin-left: 0;
+        
+        width: 380px;
+    }
+    #linksbar{
+        margin-left: 7rem;
+    }
+    .iconsbar i{
+       font-size: 2rem;
+    }
+    .storeLinks{
+        display: flex;
+        width: 88%;
+        flex-direction: row;
+    }
+    .mega-menu li > div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5em;
+    }
+    .menu li{
+        padding: 0 1em;
+        font-size: 1em;
+        font-weight: 400;
+    }
+    .menu a{
+        display: block;
+        margin: 0.8em 0;
+    }
+    .menu{
+        display: none;
+    }
+    /* Toggle class for Javascript */
+    .menu-show{
+        display: block;
+    }
+    .material-symbols-outlined{
+        display: block;
+        transition: 0.3s;
+    }
+    /* Toggle class for javascript */
+    .icon-rotated{
+        transform: rotate(90deg);
+    }
+    .dropdown>div, .sub-dropdown > div{
+        cursor: pointer;
+        padding: 0.5em;
+        margin-top: 0.9rem;
+
+    }
+    .sub-menu{
+        font-size: 0.9em;
+    }
+    /* Toggle class for Javascript */
+    .sub-menu-show{
+        display: block;
+    }
+    .dropdown:hover>div, .sub-dropdown:hover>div{
+        background: #dbdbdb;
+    }
+    /* Hide menu */
+    .menu-container{
+        height: 0;
+    }
+    /* Toggle class for javascript */
+    .mega-menu-show{
+        height: 100vh;
+    }
+}

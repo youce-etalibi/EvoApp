@@ -1,0 +1,1079 @@
+h1:empty, h2:empty, h3:empty, h4:empty, h5:empty, h6:empty, p:empty {
+    display: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0 0 10px;
+    padding-bottom: 0;
+}
+
+ins {
+    text-decoration: none;
+    background: none;
+    color: inherit;
+}
+
+.dtsl-hr-invisible {
+    height: 30px;
+    width: 100%;
+    float: left;
+}
+
+*[class*="dtsl-empty-space-"] {
+    width: 100%;
+    float: left;
+}
+
+.dtsl-empty-space-5 {
+    margin-bottom: 5px;
+}
+
+.dtsl-empty-space-10 {
+    margin-bottom: 10px;
+}
+
+.dtsl-empty-space-15 {
+    margin-bottom: 15px;
+}
+
+.dtsl-empty-space-20 {
+    margin-bottom: 20px;
+}
+
+.dtsl-empty-space-25 {
+    margin-bottom: 25px;
+}
+
+.dtsl-empty-space-30 {
+    margin-bottom: 30px;
+}
+
+.dtsl-empty-space-35 {
+    margin-bottom: 35px;
+}
+
+.dtsl-empty-space-40 {
+    margin-bottom: 40px;
+}
+
+.dtsl-empty-space-45 {
+    margin-bottom: 45px;
+}
+
+.dtsl-empty-space-50 {
+    margin-bottom: 50px;
+}
+
+/* 2021 Overwrite */
+
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) {
+    background: transparent;
+    text-decoration: none;
+}
+
+/* Transitions */
+
+.dtsl-pagination.dtsl-ajax-pagination .prev-post a span,
+.dtsl-pagination.dtsl-ajax-pagination .next-post a span,
+.dtsl-pagination.dtsl-ajax-pagination .prev-post a,
+.dtsl-pagination.dtsl-ajax-pagination .next-post a,
+.dtsl-packages-item-wrapper,
+.dtsl-packages-item-wrapper:before,
+.dtsl-packages-item-wrapper .dtsl-packagelist-features li:before,
+.dtsl-packages-item-wrapper.type1 .dtsl-packagelist-view-details-button span,
+.dtsl-packages-item-wrapper.type1 .dtsl-packagelist-view-details-button span *,
+.dtsl-packages-item-wrapper.type1 .dtsl-item-status-details .dtsl-proceed-button .custom-button-style span,
+.dtsl-packages-item-wrapper.type1 .dtsl-packagelist-view-details-button,
+.dtsl-packages-item-wrapper.type1 .dtsl-item-status-details .dtsl-proceed-button .custom-button-style,
+.dtsl-packages-item-wrapper.type1 .dtsl-item-status-details .dtsl-proceed-button .added_to_cart:before,
+.dtsl-packages-item-wrapper.type2 .dtsl-packagelist-view-details .custom-button-style span,
+.dtsl-packages-item-wrapper.type3 .dtsl-item-status-details .dtsl-purchased,
+.dtsl-listings-item-wrapper,
+.dtsl-listings-item-wrapper .dtsl-listings-taxonomy-container li a:before,
+.dtsl-listings-item-wrapper .dtsl-listings-item-bottom-section-content>div .dtsl-listings-price-container .dtsl-listings-price-label-holder ins,
+.dtsl-listings-item-wrapper.type4 .dtsl-listings-item-bottom-section>div.dtsl-listings-item-bottom-pricing-holder .custom-button-style:before,
+.dtsl-listings-item-wrapper.type5 .dtsl-listings-item-top-section div.dtsl-listings-taxonomy-container ul.dtsl-listings-taxonomy-list li>a span,
+.dtsl-listings-item-wrapper.type6 .dtsl-listings-item-bottom-section .dtsl-listings-taxonomy-list,
+.dtsl-listings-item-wrapper .dtsl-listings-item-top-section .dtsl-listings-feature-image-holder:before,
+.dtsl-listings-item-wrapper .dtsl-listings-item-top-section .dtsl-listings-image-gallery .swiper-slide:before,
+.dtsl-listings-item-wrapper .dtsl-listings-item-top-section .dtsl-listings-item-top-section-content>div,
+.dtsl-listings-item-wrapper.type6 .dtsl-listings-item-bottom-section>div,
+.dtsl-listings-item-wrapper.type8 .dtsl-listings-features-box-container>div,
+.dtsl-sf-orderby-field-holder ul.dtsl-sf-orderby-list li a,
+.dtsl-sf-others-field-holder div.dtsl-sf-others-list,
+.dtsl-sf-others-field-holder div.dtsl-sf-others-list div,
+.dtsl-user-list-item.type1,
+.dtsl-user-list-item.type1 .dtsl-user-item-meta-data,
+.dtsl-user-list-item.type1 .dtsl-user-sociallinks-list,
+.dtsl-user-list-item.type3 .dtsl-user-contactdetails-list li span,
+.dtsl-listings-item-wrapper .dtsl-listings-item-top-section .dtsl-listings-item-ad-section,
+.dtsl-listings-item-wrapper .dtsl-listings-item-top-section .dtsl-listings-featured-item-container,
+.dtsl-listings-item-wrapper.type1.has-post-thumbnail .dtsl-listings-item-top-section .dtsl-listings-item-top-section-content .dtsl-listings-utils-item-holder .dtsl-listings-utils-item:first-child>* span,
+.dtsl-listings-item-wrapper.type1:not(.has-post-thumbnail) .dtsl-listings-item-top-section .dtsl-listings-item-top-section-content .dtsl-listings-utils-item-holder .dtsl-listings-utils-item:first-child>* span,
+.dtsl-listings-item-wrapper.type2 .dtsl-listings-item-top-section div.dtsl-listings-item-ad-section:before,
+.dtsl-listings-item-wrapper.type2 .dtsl-listings-item-top-section div.dtsl-listings-item-ad-section:after,
+.dtsl-listings-item-wrapper.type2 .dtsl-listings-item-top-section .dtsl-listings-featured-item-container a:after,
+.dtsl-listings-item-wrapper.type2 .dtsl-listings-item-top-section .dtsl-listings-featured-item-container a:before,
+.dtsl-listings-item-wrapper.type3 .dtsl-listings-item-top-section div.dtsl-listings-item-ad-section:before,
+.dtsl-listings-item-wrapper.type3 .dtsl-listings-item-top-section div.dtsl-listings-featured-item-container a:before,
+.dtsl-listings-item-wrapper.type3.dtsl-list .dtsl-listings-item-top-section div.dtsl-listings-item-ad-section:after,
+.dtsl-listings-item-wrapper.type3.dtsl-list .dtsl-listings-item-top-section div.dtsl-listings-featured-item-container a:after,
+.dtsl-listings-item-wrapper.type3 .dtsl-listings-item-bottom-section-content ul.dtsl-listings-taxonomy-list li a span.dtsl-listings-taxonomy-image:before,
+.dtsl-listings-item-wrapper.type4 .dtsl-listings-item-top-section div.dtsl-listings-featured-item-container a:before,
+.dtsl-listings-item-wrapper.type4 .dtsl-listings-item-top-section .dtsl-listings-item-top-section-content>div:not(.dtsl-listings-taxonomy-container) a.dtsl-listings-utils-favourite-item span,
+.dtsl-listings-item-wrapper.type5 .dtsl-listings-item-top-section .dtsl-listings-featured-item-container a:before,
+.dtsl-listings-item-wrapper.type5 .dtsl-listings-item-top-section .dtsl-listings-featured-item-container a:after,
+.dtsl-listings-item-wrapper.type5 .dtsl-listings-item-top-section div.dtsl-listings-taxonomy-container ul.dtsl-listings-taxonomy-list li>a:before,
+.dtsl-listings-item-wrapper.type5 .dtsl-listings-item-bottom-section-content>div .dtsl-listings-utils-item-holder [class*="dtsl-listings-utils-"] a.dtsl-listings-utils-favourite-item span,
+.dtsl-listings-item-wrapper.type6 .dtsl-listings-item-bottom-section .dtsl-listings-utils-item-holder a.dtsl-listings-utils-favourite-item span,
+.dtsl-listings-item-wrapper.type6 .dtsl-listings-item-top-section div.dtsl-listings-item-ad-section,
+.dtsl-listings-item-wrapper.type6 .dtsl-listings-item-top-section div.dtsl-listings-featured-item-container,
+.dtsl-listings-item-wrapper.type6 .dtsl-listings-item-bottom-section .dtsl-listings-taxonomy-list li a span,
+.dtsl-listings-item-wrapper.type6 .dtsl-listings-item-bottom-section .dtsl-listings-taxonomy-list li a span:before,
+.dtsl-listings-item-wrapper.type6 .dtsl-listings-item-bottom-section .dtsl-listings-taxonomy-list li a span:after,
+.dtsl-listings-item-wrapper.type7 .dtsl-listings-item-bottom-section .dtsl-listings-item-title .dtsl-listings-taxonomy-container .dtsl-listings-taxonomy-list a:after,
+.dtsl-listings-item-wrapper.type7 .dtsl-listings-item-top-section .dtsl-listings-item-ad-section,
+.dtsl-listings-item-wrapper.type7 .dtsl-listings-item-top-section .dtsl-listings-featured-item-container,
+.dtsl-listings-item-wrapper.type8 .dtsl-listings-item-bottom-section ul.dtsl-listings-taxonomy-list li a:after,
+.dtsl-listings-floorplan-top-section .dtsl-listings-floorplan-expand-bottom-section,
+.dtsl-listing-taxonomy-item.type4,
+.dtsl-listing-taxonomy-item.type4 .dtsl-listing-taxonomy-starting-price,
+.dtsl-listing-taxonomy-item.type5 .dtsl-category-total-items a:before,
+.dtsl-listing-taxonomy-item.type7 .dtsl-category-total-items a:before,
+.dtsl-listing-taxonomy-item.type7 .dtsl-listing-taxonomy-starting-price:after,
+.dtsl-listings-utils-container .dtsl-listings-utils-item.dtsl-listings-utils-print .dtsl-listings-utils-print-item span,
+.comment-form .dtsl-comment-form-fields-holder .comment-form-media span:hover input#dtsl_media+label,
+.comment-form .dtsl-comment-form-fields-holder .comment-form-media span:hover input#dtsl_media+label:before,
+.dtsl-user-list-item.type3 .dtsl-user-item-meta-data .dtsl-listings-social-share-container .dtsl-listings-social-share-item-icon span,
+.dtsl-user-list-item.type3 .dtsl-user-item-meta-data .dtsl-listings-utils-favourite .dtsl-listings-utils-favourite-author span,
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-image,
+.dtsl-listings-social-share-container .dtsl-listings-social-share-list,
+.dtsl-user-list-item.type3 .dtsl-user-item-meta-data .dtsl-listings-social-share-container .dtsl-listings-social-share-list,
+[class*="dtsl-listings-utils-"] .dtsl-listings-taxonomy-container .dtsl-listings-taxonomy-list li a span,
+.dtsl-listings-contactdetails-container[class*="type"] .dtsl-listings-contactdetails-list>li>span,
+.dtsl-listings-social-share-container.type1 .dtsl-listings-social-share-list li a span,
+.dtsl-listings-item-wrapper.type11 .dtsl-listings-item-top-section .dtsl-listings-item-title a,
+.dtsl-listings-item-wrapper.type11 .dtsl-listings-item-bottom-section-content ul.dtsl-listings-contactdetails-list li a,
+.dtsl-listings-item-wrapper.type11 .dtsl-listings-item-top-section div.dtsl-listings-featured-item-container a,
+.dtsl-listings-item-wrapper.type11 .dtsl-listings-item-top-section div.dtsl-listings-featured-item-container a:before,
+.dtsl-listings-item-wrapper.type11 .dtsl-listings-item-bottom-section-content a.custom-button-style,
+.dtsl-listings-item-wrapper.type12 .dtsl-listings-item-top-section div.dtsl-listings-featured-item-container a,
+.dtsl-listings-item-wrapper.type12 .dtsl-listings-item-bottom-section-content ul.dtsl-listings-contactdetails-list li,
+.dtsl-listings-item-wrapper.type12 .dtsl-listings-item-bottom-section-content ul.dtsl-listings-contactdetails-list li span {
+    -moz-transition: all 0.3s linear 0s;
+    -webkit-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+}
+
+.dtsl-container input[type='submit'],
+.dtsl-container input[type='reset'],
+.dtsl-container input[type='button'],
+.dtsl-container button[type='button'],
+.dtsl-container button:not(.dismissButton),
+.dtsl-container .button,
+.dtsl-container a.button,
+form.lidd_mc_form .lidd_mc_input input[type="submit"],
+.custom-button-style,
+.dtsl-dashboard-container .woocommerce-button.view,
+.dtsl-dashbord-container .dtsl-packages-container .dtsl-packages-item-wrapper .dtsl-packagelist-details .dtsl-item-status-details .dtsl-proceed-button a.custom-button-style,
+.dtsl-packages-item-wrapper.type2 .dtsl-item-status-details .added_to_cart,
+.dtsl-packages-item-wrapper.type3 .dtsl-item-status-details .added_to_cart,
+.dtsl-dashbord-inbox-listing-conversation-wrapper ul.dtsl-dashbord-inbox-conversation-list li .dtsl-dashbord-inbox-conversation-reply-wrapper .dtsl-inbox-conversation-reply-submit,
+.single-dtsl_packages .dtsl-payment-details a.added_to_cart,
+.dtsl-listings-address-directions {
+    font-size: 16px;
+    padding: 15px 40px;
+    letter-spacing: normal;
+    font-weight: 600;
+    margin: 20px 5px 0 0;
+    text-transform: capitalize;
+    font-family: unset;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dtsl-container .mejs-button button { padding:  0; margin: 10px 6px; }
+
+.dtsl-dashboard-container .woocommerce-button.view {
+    margin: 0;
+    padding: 8px 14px;
+    font-size: 12px;
+    line-height: normal;
+}
+
+.dtsl-container {
+    margin: auto;
+}
+
+.dtsl-container .custom-button-style {
+    margin-top: 0;
+}
+
+.custom-button-style span {
+    margin-right: 10px;
+}
+
+.ui-selectable-helper,
+.ui-sortable-helper {
+    border: none !important;
+}
+
+.dtsl-no-margin-bottom p,
+.dtsl-no-margin-bottom .elementor-widget-dtsl-widget-sp-average-rating .dtsl-listings-average-rating-container,
+.dtsl-no-margin-bottom .elementor-widget-container {
+    margin-bottom: 0;
+    line-height: normal;
+    display: block;
+}
+
+/*--------------------------------------------------------------
+	2.0 - Columns
+--------------------------------------------------------------*/
+
+.dtsl-column {
+    margin: 0 0 0 2%;
+    float: left;
+    min-height: 1px;
+    position: relative;
+    clear: none;
+}
+
+.dtsl-column.first {
+    clear: both;
+    margin-left: 0;
+}
+
+.dtsl-one-column {
+    width: 100%;
+}
+
+.dtsl-one-half {
+    width: 49%;
+}
+
+.dtsl-one-third {
+    width: 32%;
+}
+
+.dtsl-two-third {
+    width: 66%;
+}
+
+.dtsl-one-fourth {
+    width: 23.5%;
+}
+
+.dtsl-three-fourth {
+    width: 74.5%;
+}
+
+.dtsl-one-fifth {
+    width: 18.4%;
+}
+
+.dtsl-two-fifth {
+    width: 38.8%;
+}
+
+.dtsl-three-fifth {
+    width: 59.2%;
+}
+
+.dtsl-four-fifth {
+    width: 79.6%;
+}
+
+.dtsl-one-sixth {
+    width: 15%;
+}
+
+.dtsl-two-sixth {
+    width: 32%;
+}
+
+.dtsl-three-sixth {
+    width: 49%;
+}
+
+.dtsl-four-sixth {
+    width: 66%;
+}
+
+.dtsl-five-sixth {
+    width: 83%;
+}
+
+.dtsl-column.wpb_column.dtsl-one-fifth {
+    width: 18.4%;
+}
+
+.wpb_column.dtsl-one-fifth {
+    width: 20%;
+}
+
+.wpb_column.dtsl-two-fifth {
+    width: 40%;
+}
+
+.wpb_column.dtsl-three-fifth {
+    width: 60%;
+}
+
+.dtsl-one-half iframe,
+.dtsl-one-third iframe,
+.dtsl-one-fourth iframe,
+.dtsl-three-fourth iframe,
+.dtsl-two-third iframe,
+iframe {
+    max-width: 100%;
+}
+
+.dtsl-column.no-space {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.dtsl-column.no-space.dtsl-one-fourth {
+    width: 24.982%;
+}
+
+.dtsl-column.no-space.dtsl-one-third {
+    width: 33.333333%;
+}
+
+.dtsl-column.no-space.dtsl-one-half {
+    width: 50%;
+}
+
+.dtsl-column.no-space.dtsl-one-fifth,
+.wpb_column.no-space.dtsl-one-fifth {
+    width: 20%;
+}
+
+.dtsl-column.no-space.dtsl-one-sixth {
+    width: 16.666%;
+}
+
+.dtsl-column.no-space.dtsl-three-fourth {
+    width: 75%;
+}
+
+.dtsl-column.no-space.dtsl-two-third {
+    width: 66.666666%;
+}
+
+.dtsl-column.no-space.dtsl-four-fifth,
+.wpb_column.no-space.dtsl-four-fifth {
+    width: 80%;
+}
+
+.dtsl-column.no-space.dtsl-three-fifth,
+.wpb_column.no-space.dtsl-three-fifth {
+    width: 60%;
+}
+
+.dtsl-column.no-space.dtsl-two-fifth,
+.wpb_column.no-space.dtsl-two-fifth {
+    width: 40%;
+}
+
+.dtsl-column.no-space.dtsl-two-sixth {
+    width: 33.2%;
+}
+
+.dtsl-column.no-space.dtsl-three-sixth {
+    width: 49.98%;
+}
+
+.dtsl-column.no-space.dtsl-four-sixth {
+    width: 66.4%;
+}
+
+.dtsl-column.no-space.dtsl-five-sixth {
+    width: 83%;
+}
+
+
+/*--------------------------------------------------------------
+	Miscellaneous
+--------------------------------------------------------------*/
+
+#dtsl-addlist-map-holder,
+.dtsl-listings-map-holder,
+.dtsl-listing-output-map {
+    width: 100%;
+    height: 400px;
+}
+
+.dtsl-hidden {
+    display: none;
+}
+
+
+/*--------------------------------------------------------------
+	Ajax Pagination
+--------------------------------------------------------------*/
+
+.dtsl-pagination.dtsl-ajax-pagination {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.dtsl-pagination.dtsl-ajax-pagination ul.page-numbers,
+.dtsl-pagination.dtsl-ajax-pagination ul.page-numbers li {
+    float: none;
+    display: inline-block;
+    margin: 0 0 2px;
+}
+
+.dtsl-pagination.dtsl-ajax-pagination .prev-post,
+.dtsl-pagination.dtsl-ajax-pagination .next-post {
+    width: auto;
+    float: none;
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.dtsl-pagination.dtsl-ajax-pagination .prev-post a,
+.dtsl-pagination.dtsl-ajax-pagination .next-post a,
+.dtsl-pagination.dtsl-ajax-pagination ul.page-numbers li span,
+.dtsl-pagination.dtsl-ajax-pagination ul.page-numbers li a {
+    border: 2px solid;
+    display: inline-block;
+    float: none;
+    font-size: 16px;
+    line-height: 36px;
+    padding: 0;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+}
+
+.dtsl-pagination.dtsl-ajax-pagination ul.page-numbers li span,
+.dtsl-pagination.dtsl-ajax-pagination ul.page-numbers li a:hover,
+.dtsl-pagination.dtsl-ajax-pagination .prev-post a:hover,
+.dtsl-pagination.dtsl-ajax-pagination .next-post a:hover {
+    background: none;
+}
+
+.dtsl-pagination.dtsl-ajax-pagination ul.page-numbers li:focus,
+.dtsl-pagination.dtsl-ajax-pagination ul.page-numbers li:hover {
+    outline: none;
+}
+
+.dtsl-pagination.dtsl-ajax-pagination .prev-post a,
+.dtsl-pagination.dtsl-ajax-pagination .next-post a {
+    font-size: 0;
+}
+
+.dtsl-pagination.dtsl-ajax-pagination .prev-post a span,
+.dtsl-pagination.dtsl-ajax-pagination .next-post a span {
+    font-size: 16px;
+    line-height: 36px;
+}
+
+
+/* Carousel Styles */
+
+div[class*="-output-data-container"] {
+    position: relative;
+}
+
+div[class*="-output-data-container"] .dtsl-ajax-load-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    background: rgba(255, 255, 255, .8);
+    z-index: 2;
+    padding: 100px 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+}
+
+div[class*="-output-data-container"].dtsl-content-scroll .dtsl-ajax-load-image,
+div[class*="-output-data-container"].dtsl-search-list-items .dtsl-ajax-load-image {
+    opacity: 0;
+}
+
+@-webkit-keyframes rotate-forever {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-forever {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes ping {
+    0% {
+        -webkit-transform: scale(0.8);
+                transform: scale(0.8);
+        opacity: 0.8;
+    }
+    80% {
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(2.2);
+                transform: scale(2.2);
+        opacity: 0;
+    }
+}
+@keyframes ping {
+    0% {
+        -webkit-transform: scale(0.8);
+                transform: scale(0.8);
+        opacity: 0.8;
+    }
+    80% {
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(2.2);
+                transform: scale(2.2);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes bounce-in-top {
+    0% {
+      -webkit-transform: translateY(-500px);
+              transform: translateY(-500px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      opacity: 0;
+    }
+    38% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+      opacity: 1;
+    }
+    55% {
+      -webkit-transform: translateY(-65px);
+              transform: translateY(-65px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    72% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    81% {
+      -webkit-transform: translateY(-28px);
+              transform: translateY(-28px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    90% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    95% {
+      -webkit-transform: translateY(-8px);
+              transform: translateY(-8px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes bounce-in-top {
+    0% {
+      -webkit-transform: translateY(-500px);
+              transform: translateY(-500px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      opacity: 0;
+    }
+    38% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+      opacity: 1;
+    }
+    55% {
+      -webkit-transform: translateY(-65px);
+              transform: translateY(-65px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    72% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    81% {
+      -webkit-transform: translateY(-28px);
+              transform: translateY(-28px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    90% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    95% {
+      -webkit-transform: translateY(-8px);
+              transform: translateY(-8px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+
+
+div[class*="-output-data-container"]:not(.dtsl-content-scroll) .dtsl-ajax-load-image .dtsl-loader-inner {
+    -webkit-animation-duration: .75s;
+    -moz-animation-duration: .75s;
+    animation-duration: .75s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: rotate-forever;
+    -moz-animation-name: rotate-forever;
+    animation-name: rotate-forever;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    animation-timing-function: linear;
+    height: 60px;
+    width: 60px;
+    border: 5px dashed currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right:0;
+    margin: auto;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+div[class*="-output-data-container"][data-enablecarousel*="true"] div[class*="package-output-data-holder"] {
+    margin: 0;
+}
+
+div[class*="-output-data-container"] div[data-type*="10"][data-applyisotope*="true"] { margin: 0; }
+
+div[class*="-output-data-container"] .swiper-slide.type1 .dtsl-listings-image-gallery-holder .swiper-wrapper,
+div[class*="-output-data-container"] .swiper-slide.type2 .dtsl-listings-image-gallery-holder .swiper-wrapper,
+div[class*="-output-data-container"] .swiper-slide.type4 .dtsl-listings-image-gallery-holder .swiper-wrapper,
+div[class*="-output-data-container"] .swiper-slide.type6 .dtsl-listings-image-gallery-holder .swiper-wrapper,
+div[class*="-output-data-container"] .swiper-slide.type8 .dtsl-listings-image-gallery-holder .swiper-wrapper {
+    height: auto !important;
+}
+
+div[class*="-output-data-container"] .swiper-slide.type3 .dtsl-listings-image-gallery-holder .swiper-wrapper,
+div[class*="-output-data-container"] .swiper-slide.type5 .dtsl-listings-image-gallery-holder .swiper-wrapper,
+div[class*="-output-data-container"] .swiper-slide.type7 .dtsl-listings-image-gallery-holder .swiper-wrapper,
+div[class*="-output-data-container"] .swiper-slide.type9 .dtsl-listings-image-gallery-holder .swiper-wrapper {
+    height: 100% !important;
+}
+
+div[class*="-output-data-container"] .swiper-slide .dtsl-listings-image-gallery-holder .swiper-slide {
+    width: 100%;
+    float: left;
+    margin-right: 0;
+}
+
+div[class*="-output-data-container"] div[data-applyisotope*="true"] .dtsl-one-column.dtsl-column {
+    padding: 0 15px;
+}
+
+div[class*="-output-data-container"] div[data-type*="10"][data-applyisotope*="true"] .dtsl-one-column.dtsl-column { padding: 0; }
+
+div[class*="-output-data-container"] div[class*="-output-data-holder"]>.swiper-container.swiper-container-fade .swiper-wrapper .swiper-slide {
+    opacity: 0 !important;
+}
+
+div[class*="-output-data-container"] div[class*="-output-data-holder"]>.swiper-container.swiper-container-fade .swiper-wrapper .swiper-slide.swiper-slide-active {
+    opacity: 1 !important;
+}
+
+div[class*="-output-data-container"] div[class*="-output-data-holder"]>.dtsl-listings-container.swiper-container {
+    margin: 0px 30px;
+    padding: 0 0 65px;
+}
+
+div[class*="-output-data-container"] div[class*="-output-data-holder"]>.swiper-container {
+    padding: 0 20px 65px;
+}
+
+div[class*="-output-data-container"] div[class*="-output-data-holder"]>.swiper-container .swiper-wrapper .dtsl-column {
+    margin-left: 0;
+}
+
+div[class*="-output-data-container"] div[class*="-output-data-holder"]>.dtsl-packages-container.swiper-container {
+    padding: 0 0 45px;
+    width: 100%;
+    float: left;
+    margin: 0 0 0 0;
+}
+
+div[class*="-output-data-container"] div[class*="-output-data-holder"]>.dtsl-packages-container.swiper-container .swiper-wrapper .dtsl-packages-item-wrapper {
+    box-shadow: none;
+}
+
+div[class*="-output-data-container"] div[class*="-output-data-holder"]>.dtsl-packages-container.swiper-container .swiper-wrapper .dtsl-column.type2,
+div[class*="-output-data-container"] div[class*="-output-data-holder"]>.dtsl-packages-container.swiper-container .swiper-wrapper .dtsl-column.type3 {
+    width: 100%;
+    float: left;
+}
+
+div[class*="-output-data-container"].dtsl-listings-sidebar-widget div[class*="-output-data-holder"]>.dtsl-listings-container {
+    margin: 0;
+    padding: 0;
+}
+
+div[class*="-output-data-container"].dtsl-listings-sidebar-widget div[class*="-output-data-holder"]>.dtsl-listings-container .dtsl-listings-item-wrapper {
+    box-shadow: none;
+}
+
+
+/* Bullet Pagination */
+
+div[class*="-output-data-container"] .dtsl-swiper-pagination-holder .dtsl-swiper-bullet-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+div[class*="-output-data-container"] .dtsl-swiper-pagination-holder {
+    margin: 0 auto;
+    float: left;
+    width: 100%;
+}
+
+div[class*="-output-data-container"] .dtsl-swiper-pagination-holder .dtsl-swiper-bullet-pagination {
+    margin: 0 0 15px;
+    position: static;
+    cursor: auto;
+    text-align: center;
+}
+
+div[class*="-output-data-container"] .dtsl-swiper-pagination-holder .dtsl-swiper-bullet-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+    height: 10px;
+    width: 10px;
+    margin: 0 4px;
+    padding: 0;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+div[class*="-output-data-container"] .dtsl-swiper-pagination-holder .dtsl-swiper-bullet-pagination.swiper-pagination-bullets .swiper-pagination-bullet:hover {
+    opacity: 1;
+}
+
+div[class*="-output-data-container"] .dtsl-swiper-pagination-holder .dtsl-swiper-bullet-pagination.swiper-pagination-bullets .swiper-pagination-bullet-active {
+    width: 25px;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+}
+
+
+/* Arrow Pagination */
+
+.dtsl-swiper-arrow-pagination {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dtsl-swiper-arrow-pagination a {
+    border-width: 1px;
+    border-style: solid;
+    font-size: 0;
+    margin: 0 2px;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+}
+
+.dtsl-swiper-arrow-pagination a:before {
+    position: relative;
+    content: "\f2ea";
+    display: block;
+    font-family: Material-Design-Iconic-Font;
+    font-size: 24px;
+}
+
+.dtsl-swiper-arrow-pagination a:last-child:before {
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+}
+
+
+/* Other Colors */
+
+.dtsl-container input[type='submit'],
+.dtsl-container input[type='reset'],
+.dtsl-container input[type='button'],
+.dtsl-container button[type='button'],
+.dtsl-container button:not(.dismissButton),
+.dtsl-container button.dismissButton:hover,
+.dtsl-container .button,
+.dtsl-container a.button,
+.custom-button-style,
+.custom-button-style:hover,
+.custom-button-style:focus,
+.dtsl-dashboard-container .woocommerce-button.view,
+.dtsl-dashbord-container .dtsl-packages-container .dtsl-packages-item-wrapper .dtsl-packagelist-details .dtsl-item-status-details .dtsl-proceed-button a.custom-button-style,
+.dtsl-packages-item-wrapper.type1 .dtsl-packagelist-view-details-button:hover span,
+.dtsl-packages-item-wrapper.type1 .dtsl-item-status-details .dtsl-proceed-button .custom-button-style:hover span,
+.dtsl-packages-item-wrapper.type1 .dtsl-item-status-details .dtsl-proceed-button .added_to_cart:hover:before,
+.dtsl-packages-item-wrapper.type2 .dtsl-packagelist-view-details .custom-button-style:hover span,
+.dtsl-packages-item-wrapper.type2 .dtsl-item-status-details .custom-button-style:hover,
+.dtsl-packages-item-wrapper.type2 .dtsl-item-status-details .added_to_cart:hover,
+.dtsl-packages-item-wrapper.type3 .dtsl-item-status-details .custom-button-style:hover,
+.dtsl-packages-item-wrapper.type3 .dtsl-item-status-details .added_to_cart:hover,
+.dtsl-packages-item-wrapper.type3 .dtsl-packagelist-view-details .custom-button-style:hover,
+.dtsl-packages-item-wrapper.type3 .dtsl-item-status-details .dtsl-purchased:hover,
+.dtsl-sf-orderby-field-holder ul.dtsl-sf-orderby-list li a:hover,
+.dtsl-sf-orderby-field-holder ul.dtsl-sf-orderby-list li a.active,
+.dtsl-user-list-item.type1 .dtsl-user-sociallinks-list li a:hover,
+.dtsl-sf-others-field-holder div.dtsl-sf-others-list div:hover,
+.dtsl-sf-others-field-holder div.dtsl-sf-others-list div.active,
+.dtsl-listings-item-wrapper .dtsl-listings-item-top-section .dtsl-listings-featured-item-container,
+.dtsl-listings-item-wrapper .dtsl-listings-item-top-section .dtsl-listings-item-ad-section,
+.dtsl-listings-item-wrapper.type1.has-post-thumbnail .dtsl-listings-item-top-section .dtsl-listings-item-top-section-content>div.dtsl-listings-utils-item-holder .dtsl-listings-utils-item>*>span,
+.dtsl-listings-item-wrapper.type4 .dtsl-listings-item-top-section .dtsl-listings-item-top-section-content>div:not(.dtsl-listings-taxonomy-container) a.dtsl-listings-utils-favourite-item:hover span,
+.dtsl-dashbord-inbox-listing-conversation-wrapper ul.dtsl-dashbord-inbox-conversation-list li .dtsl-dashbord-inbox-conversation-reply-wrapper .dtsl-inbox-conversation-reply-submit,
+.dtsl-listings-floorplan-top-section .dtsl-listings-floorplan-expand-bottom-section,
+.single-dtsl_packages .dtsl-payment-details a.added_to_cart,
+.dtsl-comment-form-fields-holder .comment-form-media span:hover input#dtsl_media+label,
+.dtsl-comment-form-fields-holder .comment-form-media span:hover input#dtsl_media+label:before,
+div[class*="-apply-isotope"] div[class*="-isotope-filter"] a,
+.dtsl-user-list-item.type3 .dtsl-user-item-meta-data .dtsl-listings-social-share-container.active .dtsl-listings-social-share-item-icon span,
+.dtsl-user-list-item.type3 .dtsl-user-item-meta-data .dtsl-listings-social-share-container .dtsl-listings-social-share-item-icon:hover span,
+.dtsl-user-list-item.type3 .dtsl-user-item-meta-data .dtsl-listings-utils-favourite .dtsl-listings-utils-favourite-author:hover span {
+    color: #fff;
+}
+
+.dtsl-listings-item-wrapper, .dtsl-listings-item-wrapper.type1 .dtsl-listings-item-bottom-section-content > div.dtsl-listings-item-bottom-right-content, .dtsl-packages-item-wrapper, .dtsl-listings-item-wrapper.type4 .dtsl-listings-item-bottom-section .dtsl-listings-item-bottom-section-content .dtsl-listings-item-title, .dtsl-packages-item-wrapper.type1 .dtsl-packagelist-view-details-button, .dtsl-packages-item-wrapper.type1 .dtsl-item-status-details .dtsl-proceed-button .custom-button-style, .dtsl-packages-item-wrapper.type2>ul.dtsl-packagelist-features, .dtsl-packages-item-wrapper.type3 .dtsl-packagelist-details,  .dtsl-packages-item-wrapper.type1 .dtsl-item-status-details .dtsl-proceed-button .added_to_cart, .dtsl-listings-item-wrapper.type4 .dtsl-listings-features-box-container>div:not(:last-child), .dtsl-listings-item-wrapper.type5 .dtsl-listings-item-bottom-section-content > div .dtsl-listings-utils-item .dtsl-listings-utils-totalimages-item a, .dtsl-listings-item-wrapper.type7 .dtsl-listings-item-bottom-section-content .dtsl-listings-item-bottom-right-content .dtsl-listings-utils-item-holder .dtsl-listings-utils-item .dtsl-listings-utils-totalimages-item a, .dtsl-listing-taxonomy-item.type4, .dtsl-user-list-item.type3, .dtsl-user-list-item.type3 .dtsl-user-contactdetails-list li span, .dtsl-swiper-arrow-pagination a, .dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type3 .dtsl-listings-item-bottom-section .dtsl-listings-item-title, .dtsl-listing-taxonomy-item.type4 .dtsl-listing-taxonomy-starting-price, .dtsl-listings-item-wrapper.type7 .dtsl-listings-item-bottom-section-content .dtsl-listings-item-bottom-left-content .dtsl-listings-post-dates-container, .dtsl-dashbord-recent-activites-holder .dtsl-dashbord-recent-activites-content p, .dtsl-listings-comment-list-holder .comment-body, .comment-form .dtsl-comment-form-fields-holder input, .comment-form .dtsl-comment-form-fields-holder textarea, .comment-form .dtsl-comment-form-fields-holder .dtsl-ratings-holder, .dtsl-listings-contactform input, .dtsl-listings-contactform textarea, .dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type3 .dtsl-listings-item-bottom-section .dtsl-listings-item-title, .logged-in .comment-form p>input:not(#dtsl_media), .logged-in .comment-form p>textarea, .dtsl-listings-floorplan-box-container .dtsl-listings-floorplan-box-item, .dtsl-listings-business-hours-container, .dtsl-listings-business-hours-container .dtsl-listings-business-hours-status, .dtsl-listings-business-hours-container .dtsl-listings-business-hours-list li, .dtsl-listings-dates-container.type1, .dtsl-listings-dates-container.type1 > div:not(:last-child), .dtsl-listings-dates-container.type1 .dtsl-listings-business-hours-list, .dtsl-listings-dates-container.type1 .dtsl-listings-business-hours-list li, .dtsl-listings-image-gallery-thumb-container .dtsl-listings-image-gallery-thumb .swiper-slide:hover:after, .dtsl-listings-media-videos-thumb-container .dtsl-listings-media-videos-thumb .swiper-slide:hover:after, .single-dtsl_packages .dtsl-payment-details .dtsl-item-status-details, .dtsl-dashbord-container .dtsl-my-listings-container .dtsl-listing-item-wrapper, .dtsl-sf-fields-holder .ui-widget-content .ui-state-default.ui-state-hover, .dtsl-listing-taxonomy-item.type6 .dtsl-category-total-items a:hover, .dtsl-user-list-item.type3 .dtsl-user-item-meta-data .dtsl-listings-utils-favourite, .dtsl-listings-features-box-container.type4 .dtsl-listings-features-box-item:not(:last-child), .dtsl-listings-features-box-container.type7 .dtsl-listings-features-box-item, .dtsl-listings-countdown-timer-container.type2 .dtsl-listings-countdown-timer-holder .dtsl-listings-countdown-timer-notice,  .dtsl-announcement-listing-holder.contactus, .dtsl-announcement-listing-holder.contactus:hover, .dtsl-dashbord-section-holder-content ul.dtsl-dashbord-inbox-listing-messages-wrapper li.active, .dtsl-dashbord-section-holder-content ul.dtsl-dashbord-inbox-listing-messages-wrapper li:hover, .dtsl-login-form-container p input, .comment-form .dtsl-comment-form-fields-holder .dtsl-ratings-holder { border-color:#d5d5d5; }
+
+.dtsl-listings-item-wrapper.type1 .dtsl-listings-item-bottom-section-content .custom-button-style.dtsl-listing-view-details, .dtsl-listings-item-wrapper.type2 .dtsl-listings-item-bottom-section-content > div.dtsl-listings-item-bottom-pricing-holder { border-top-color: #d5d5d5; }
+
+/* Box Shadows */
+
+.dtsl-listings-item-wrapper:hover, .dtsl-packages-item-wrapper:hover, .dtsl-packages-item-wrapper.type1:hover .dtsl-packagelist-view-details-button, .dtsl-packages-item-wrapper.type1:hover .dtsl-item-status-details .dtsl-proceed-button .custom-button-style, .dtsl-user-list-item.type1:hover, .dtsl-listings-taxonomy-container.type7 li a:hover, .dtsl-listings-author-container .dtsl-listings-author-details-holder:hover { box-shadow: 0 15px 30px 0 rgba(0,0,0,0.08); }
+
+.comment-form .dtsl-comment-form-fields-holder, .dtsl-listings-contactform, .logged-in .dtsl-listings-comment-list-holder .comment-form,
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-image, .dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-image, .dtsl-listings-taxonomy-container.type7 li a:hover { box-shadow: 0 0 30px 0 rgba(0,0,0,0.08); }
+
+.dtsl-packages-item-container.swiper-wrapper .dtsl-packages-item-wrapper:hover, .dtsl-packages-item-container.swiper-wrapper .dtsl-packages-item-wrapper.type1:hover .dtsl-item-status-details .dtsl-proceed-button .custom-button-style, .dtsl-packages-item-container.swiper-wrapper .dtsl-packages-item-wrapper.type1:hover .dtsl-packagelist-view-details-button { box-shadow: 0 0 20px 0 rgba(0,0,0,0.08); }
+
+.swiper-wrapper .dtsl-listings-item-wrapper:hover { box-shadow: 0 10px 20px 0 rgba(0,0,0,0.08); }
+
+
+/*--------------------------------------------------------------
+	Responsive
+--------------------------------------------------------------*/
+
+
+/*----*****---- << Small Monitor >> ----*****----*/
+
+
+/* Note: Design for a width of 1440px */
+
+@media only screen and (min-width:1281px) and (max-width:1440px) {
+    .dtsl-container {
+        width: 1080px;
+    }
+}
+
+
+/*----*****---- << Tablet (Landscape) >> ----*****----*/
+
+
+/* Note: Design for a width of 960px */
+
+@media only screen and (min-width:1025px) and (max-width:1280px) {
+    .dtsl-container {
+        width: 900px;
+    }
+
+    div[class*="-output-data-container"] div[data-applyisotope*="true"] { margin: 0; }
+
+    div[class*="-output-data-container"] div[data-applyisotope*="true"] .dtsl-one-column.dtsl-column { padding: 0; }
+
+    div[class*="-output-data-container"].dtsl-listings-sidebar-widget div[class*="-output-data-holder"]>.dtsl-listings-container,
+    div[class*="-output-data-container"].dtsl-direct-list-items div[class*="-output-data-holder"]>.dtsl-listings-container { margin: 0; }
+}
+
+
+/*----*****---- << Tablet (Portrait) >> ----*****----*/
+
+
+/* Note: Design for a width of 768px */
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .dtsl-container {
+        width: 710px;
+    }
+    .dtsl-custom-sidebar {
+        margin-top: 30px;
+    }
+
+    div[class*="-output-data-container"] div[data-applyisotope*="true"] { margin: 0; }
+
+    div[class*="-output-data-container"] div[data-applyisotope*="true"] .dtsl-one-column.dtsl-column { padding: 0; }
+
+    div[class*="-output-data-container"].dtsl-listings-sidebar-widget div[class*="-output-data-holder"]>.dtsl-listings-container,
+    div[class*="-output-data-container"].dtsl-direct-list-items div[class*="-output-data-holder"]>.dtsl-listings-container { margin: 0; }
+}
+
+@media only screen and (max-width: 767px) {
+    .dtsl-container {
+        width: 420px;
+    }
+    .dtsl-column {
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+    .dtsl-one-fourth,
+    .dtsl-one-half,
+    .dtsl-one-third,
+    .dtsl-three-fourth,
+    .dtsl-two-third,
+    .dtsl-one-fifth,
+    .dtsl-four-fifth,
+    .dtsl-three-fifth,
+    .dtsl-two-fifth,
+    .dtsl-one-sixth,
+    .dtsl-two-sixth,
+    .dtsl-three-sixth,
+    .dtsl-four-sixth,
+    .dtsl-five-sixth,
+    .column.no-space.dtsl-one-fourth,
+    .column.no-space.dtsl-one-third,
+    .column.no-space.dtsl-one-half,
+    .column.no-space.dtsl-one-fifth,
+    .column.no-space.dtsl-one-sixth,
+    .column.no-space.dtsl-three-fourth,
+    .column.no-space.dtsl-two-third,
+    .column.no-space.dtsl-four-fifth,
+    .column.no-space.dtsl-three-fifth,
+    .column.no-space.dtsl-two-fifth,
+    .column.no-space.dtsl-two-sixth,
+    .column.no-space.dtsl-three-sixth,
+    .column.no-space.dtsl-four-sixth,
+    .column.no-space.dtsl-five-sixth {
+        width: 100%;
+    }
+    .dtsl-custom-sidebar {
+        margin-top: 30px;
+    }
+
+    div[class*="-output-data-container"] div[data-applyisotope*="true"] { margin: 0; }
+
+    div[class*="-output-data-container"] div[data-applyisotope*="true"] .dtsl-one-column.dtsl-column { padding: 0; }
+
+    div[class*="-output-data-container"].dtsl-listings-sidebar-widget div[class*="-output-data-holder"]>.dtsl-listings-container,
+    div[class*="-output-data-container"].dtsl-direct-list-items div[class*="-output-data-holder"]>.dtsl-listings-container { margin: 0; }
+}
+
+
+/*Upload Items Container*/
+
+.dtsl-upload-media-items-container input[type="button"],
+input.dtsl-generate-mls-number {
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+
+/*----*****---- << Mobile (Landscape) >> ----*****----*/
+
+
+/* Note: Design for a width of 480px */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+@media only screen and (max-width: 479px) {
+    .dtsl-container {
+        max-width: 290px;
+    }
+    .dtsl-dashboard-container .woocommerce-button.view {
+        padding: 6px 10px;
+        font-size: 8px;
+    }
+    .dtsl-dashboard-container td,
+    .dtsl-dashboard-container tbody th {
+        padding: 10px 4px;
+    }
+}

@@ -1,0 +1,338 @@
+var dtStoreLocatorSinglePageUtils = {
+
+	dtStoreLocatorMapInitialize : function(this_item) {
+
+	    var listing_latitude = this_item.attr('data-latitude');
+	    var listing_longitude = this_item.attr('data-longitude');
+	    var map_color = this_item.attr('data-mapcolor');
+
+	    if(map_color == '') {
+	    	map_color = dtslmapobject.defaultMapColor;
+	    }
+
+	    var default_zoom_level = dtslmapobject.defaultZoomLevel;
+	    var default_map_type = dtslmapobject.defaultMapType;
+
+	    var enableMapTypeControl = dtslmapobject.enableMapTypeControl;
+	    var enableZoomControl = dtslmapobject.enableZoomControl;
+	    var enableScaleControl = dtslmapobject.enableScaleControl;
+	    var enableStreetViewControl = dtslmapobject.enableStreetViewControl;
+	    var enableFullscreenControl = dtslmapobject.enableFullscreenControl;
+
+	    var mapOptions = {
+							flat:false,
+							noClear:false,
+							zoom: parseInt(default_zoom_level, 10),
+							scrollwheel: false,
+							draggable: true,
+							disableDefaultUI:false,
+							center: new google.maps.LatLng(listing_latitude, listing_longitude),
+							mapTypeId: default_map_type.toLowerCase(),
+							styles: [
+								{stylers: [{hue: map_color}]},
+							],
+
+							mapTypeControl: enableMapTypeControl,
+							zoomControl: enableZoomControl,
+							scaleControl: enableScaleControl,
+							streetViewControl: enableStreetViewControl,
+							fullscreenControl: enableFullscreenControl
+						};
+
+
+	    var map_id = this_item.find('.dtsl-listings-map-holder').attr('id');
+	    if(document.getElementById(map_id)) {
+	        var map_sp = new google.maps.Map(document.getElementById(map_id), mapOptions);
+	    } else {
+	        return;
+	    }
+
+	    google.maps.visualRefresh = true;
+
+	    var point = new google.maps.LatLng(listing_latitude, listing_longitude);
+
+	    dtStoreLocatorSinglePageUtils.dtStoreLocatorMapLocationMarker(point, map_sp, this_item);
+
+	},
+
+	dtStoreLocatorMapLocationMarker : function(location, map_sp, this_item) {
+
+		var marker_image = this_item.attr('data-markerimage');
+
+    	var mapMarker = new dtStoreLocatorCustomMarker(
+			location,
+			map_sp,
+			{
+				map_icon: marker_image,
+				add_info: false,
+			},
+			''
+		);
+
+		return mapMarker;
+
+	},
+
+    dtStoreLocatorCheckReadyState :  function(printWindow) {
+
+		printWindow.focus(); // necessary for IE >= 10
+		printWindow.print();
+		printWindow.close();
+
+    },
+
+};
+
+var dtStoreLocatorSinglePage = {
+
+	dtInit : function() {
+
+		// Initialze Map
+
+			jQuery('.dtsl-listings-map-container').each(function() {
+				google.maps.event.addDomListener(window, 'load', dtStoreLocatorSinglePageUtils.dtStoreLocatorMapInitialize(jQuery(this)));
+			});
+
+
+		// Add to favourite list
+
+			jQuery( 'body' ).delegate( '.dtsl-listings-utils-favourite-item', 'click', function(e) {
+
+				if(!jQuery(this).hasClass('dtsl-login-link')) {
+
+					var this_item = jQuery(this);
+					var listing_id = this_item.attr('data-listingid');
+					var user_id = this_item.attr('data-userid');
+
+					if(jQuery(this).hasClass('addtofavourite')) {
+						var favourite_label = 'addtofavourite';
+					} else {
+						var favourite_label = 'removefavourite';
+					}
+
+					jQuery.ajax({
+						type: "POST",
+						url: dtslfrontendobject.ajaxurl,
+						data:
+						{
+							action: 'dtsl_listing_favourite_marker',
+							listing_id: listing_id,
+							user_id: user_id,
+						},
+						beforeSend: function(){
+							this_item.parents('.dtsl-listings-utils-favourite').prepend( '<span><i class="fa fa-spinner fa-spin"></i></span>' );
+						},
+						success: function (response) {
+							if(favourite_label == 'addtofavourite') {
+								this_item.html('<span class="fa fa-heart"></span>');
+								this_item.removeClass('addtofavourite');
+								this_item.addClass('removefavourite');
+							} else {
+								this_item.html('<span class="far fa-heart"></span>');
+								this_item.removeClass('removefavourite');
+								this_item.addClass('addtofavourite');
+							}
+						},
+						complete: function(){
+							this_item.parents('.dtsl-listings-utils-favourite').find("span:first").remove();
+						}
+					});
+
+				}
+
+				e.preventDefault();
+
+			});
+
+		// Print page
+
+			jQuery( 'body' ).delegate( '.dtsl-listings-utils-print-item', 'click', function(e) {
+
+				var data = jQuery('body').find('#main').html();
+
+				var printWindow = window.open('', dtslfrontendobject.printerTitle, 'height=600,width=1900');
+				printWindow.document.write('<html><head><title>'+dtslfrontendobject.printerTitle+'</title>');
+
+				// Store Locator Plugin CSS
+				jQuery('link[id$="-css"]').each(function () {
+					printWindow.document.write('<link rel="stylesheet" href="'+jQuery(this).attr('href')+'" type="text/css" media="all" />');
+				});
+
+				// Inline CSS
+				jQuery('style[id$="-css"]').each(function () {
+					printWindow.document.write('<style id="'+jQuery(this).attr('id')+'" type="text/css">'+jQuery(this).html()+'</style>');
+				});
+
+				printWindow.document.write('<link rel="stylesheet" href="'+dtslfrontendobject.pluginPath+'assets/css/print.css" type="text/css" media="all" />');
+
+				printWindow.document.write('</head><body>');
+				printWindow.document.write(data);
+				printWindow.document.write('</body></html>');
+				printWindow.document.close();
+
+				setTimeout(function() {
+					dtStoreLocatorSinglePageUtils.dtStoreLocatorCheckReadyState(printWindow);
+				}, 1200);
+
+				e.preventDefault();
+
+			});
+
+
+		// Contact form submit
+
+			jQuery( 'body' ).delegate( '.dtsl-contactform-submit-button', 'click', function(e) {
+
+				var this_item = jQuery(this);
+				var notification_box = this_item.parents('.dtsl-listings-contactform').find('.dtsl-contactform-notification-box');
+
+				var form = jQuery('.dtsl-listings-contactform')[0];
+				var data = new FormData(form);
+				data.append('action', 'dtsl_process_listing_contactform');
+
+				jQuery.ajax({
+					type: "POST",
+					url: dtslfrontendobject.ajaxurl,
+					data: data,
+					processData: false,
+					contentType: false,
+					cache: false,
+					dataType: "JSON",
+					beforeSend: function() {
+						this_item.prepend( '<span><i class="fa fa-spinner fa-spin"></i></span>' );
+					},
+					success: function (response) {
+						notification_box.removeClass('dtsl-success dtsl-failure');
+						if(response.success) {
+							notification_box.addClass('dtsl-success');
+							notification_box.html(response.message);
+						} else {
+							notification_box.addClass('dtsl-failure');
+							notification_box.html(response.message);
+						}
+					},
+					complete: function() {
+						this_item.find('span').remove();
+					}
+				});
+
+				e.preventDefault();
+
+			});
+
+
+		// Send request to view contact details
+
+			jQuery( 'body' ).delegate( '.dtsl-listings-contactdetails-request', 'click', function(e) {
+
+				var this_item = jQuery(this);
+				var listing_id = this_item.attr('data-listingid');
+
+				jQuery.ajax({
+					type: "POST",
+					url: dtslfrontendobject.ajaxurl,
+					data:
+					{
+						action: 'dtsl_listing_contactdetails_request',
+						listing_id: listing_id,
+					},
+					dataType: "JSON",
+					beforeSend: function() {
+						this_item.prepend( '<span><i class="fa fa-spinner fa-spin"></i></span>' );
+					},
+					success: function (response) {
+						if(response.success) {
+							location.reload();
+						} else {
+							this_item.parents('.dtsl-listings-contactdetails-request-container').append('<div class="dtsl-contactdetails-request-notification-box">'+response.message+'</div>');
+							window.setTimeout(function(){
+								this_item.parents('.dtsl-listings-contactdetails-request-container').find('.dtsl-contactdetails-request-notification-box').remove();
+							}, 2000);
+						}
+					},
+					complete: function() {
+						this_item.find('span').remove();
+					}
+				});
+
+				e.preventDefault();
+
+			});
+
+
+		// Activity Tracker - Website Visit, Phone & Mobile Click
+
+			jQuery( 'body' ).delegate( '.dtsl-listings-contactdetails-list a.web, .dtsl-listings-contactdetails-list a.phone, .dtsl-listings-contactdetails-list a.mobile', 'click', function(e) {
+
+				var this_item  = jQuery(this);
+				var listing_id = this_item.attr('data-listingid');
+				var user_id    = this_item.attr('data-userid');
+
+				var activity_type = '';
+				if(this_item.hasClass('web')) {
+					activity_type = 'website';
+				} else if(this_item.hasClass('phone')) {
+					activity_type = 'phone';
+				} else if(this_item.hasClass('mobile')) {
+					activity_type = 'mobile';
+				}
+
+				jQuery.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?').done(function(location) {
+
+					var country = location.country_name;
+					var city    = location.city;
+					var zip     = location.postal;
+
+					jQuery.ajax({
+						type: "POST",
+						url: dtslfrontendobject.ajaxurl,
+						data:
+						{
+							action       : 'dtsl_listing_activity_tracker_contactdetails',
+							activity_type: activity_type,
+							listing_id   : listing_id,
+							user_id      : user_id,
+							country      : country,
+							city         : city,
+							zip          : zip
+						},
+						dataType: "JSON",
+						success: function (response) {
+						}
+					});
+
+				});
+
+			});
+
+
+	}
+
+};
+
+jQuery(document).ready(function() {
+
+	"use strict";
+
+	if(!dtslfrontendobject.elementorPreviewMode) {
+		dtStoreLocatorSinglePage.dtInit();
+	}
+
+});
+
+
+( function( $ ) {
+
+	"use strict";
+
+	var dtStoreLocatorSinglePageJs = function($scope, $){
+		dtStoreLocatorSinglePage.dtInit();
+	};
+
+    $(window).on('elementor/frontend/init', function(){
+		if(dtslfrontendobject.elementorPreviewMode) {
+			elementorFrontend.hooks.addAction('frontend/element_ready/dtsl-widget-sp-map.default', dtStoreLocatorSinglePageJs);
+		}
+	});
+
+} )( jQuery );

@@ -1,0 +1,199 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+.parentWorkOutForm {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blueCity);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.parentWorkOutForm h2{
+    text-align: start;
+    width: 100%;
+    font-size: 1rem;
+}
+.parentWorkOutForm h4{
+    text-align: start;
+    width: 100%;
+    font-weight: 600;
+    font-size: 0.7rem;
+}
+.parentWorkOutForm p{
+    text-align: start;
+    width: 100%;
+    font-size: 0.5rem;
+    padding-left: 0.3rem;
+}
+
+.parentWorkOutForm #inputNameWO {
+    background-color: var(--blueCity);
+    border: 0.1rem solid white;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 600;
+    padding: 0.4rem ;
+    margin: 0.5rem;
+    width: 90%;
+}
+.parentWorkOutForm #inputNameWO::placeholder {
+    color: rgba(255, 255, 255, 0.886);
+}
+
+.parentWorkOutForm #inputNameWO:focus{ 
+    outline: 0.1rem solid var(--blueChelsea);
+}
+
+.parentWorkOutForm #Selectlevel {
+    background: none;
+}
+.parentBtnsLevelWO {
+    display: flex;
+    gap: 0.4rem;
+    width: 90%;
+}
+
+.parentWorkOutForm .parentBtnsLevelWO .btnLevelCWO {
+    background-color: white;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: start;
+    padding: 0.4rem;
+    margin: 0.3rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.7rem;
+}
+
+.parentWorkOutForm .parentBtnsLevelWO .btnLevelCWOActive {
+    background-color: white;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: start;
+    padding: 0.4rem;
+    margin: 0.3rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: 0.2rem solid black;
+}
+
+
+.parentWorkOutForm #inputDateWO {
+    background-color: var(--blueCity);
+    border: 0.1rem solid white;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 600;
+    padding: 0.4rem ;
+    margin: 0.5rem;
+    width: 90%;
+    letter-spacing: 0.2rem;
+}
+
+.parentWorkOutForm #inputDateWO:focus{ 
+    outline: 0.1rem solid var(--blueChelsea);
+}
+.parentWorkOutForm #inputDateWO::-webkit-calendar-picker-indicator{ 
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.parentTimeInputsCW {
+    display: flex;
+    width: 100%;
+}
+
+.parentTimeInputsCW span {
+    width: 50%;
+}
+
+.parentWorkOutForm #inputTimeWO {
+    background-color: var(--blueCity);
+    border: 0.1rem solid white;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 600;
+    padding: 0.4rem ;
+    margin: 0.5rem;
+    margin-left: 0.9rem;
+    width: 80%;
+    letter-spacing: 0.2rem;
+}
+
+.parentWorkOutForm #inputTimeWO:focus{ 
+    outline: 0.1rem solid var(--blueChelsea);
+}
+.parentWorkOutForm #inputTimeWO::-webkit-calendar-picker-indicator{ 
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.parentWorkOutForm #inputMsgWO {
+    background-color: var(--blueCity);
+    border: 0.1rem solid white;
+    border-radius: 5px;
+    font-size: .8rem;
+    color: white;
+    font-weight: 600;
+    padding: 0.4rem ;
+    margin: 0.5rem;
+    width: 90%;
+    height: 3rem;
+}
+
+.parentWorkOutForm #inputMsgWO:focus{ 
+    outline: 0.1rem solid var(--blueChelsea);
+}
+
+.parentWorkOutForm #inputMsgWO::placeholder {
+    color: rgba(255, 255, 255, 0.886);
+}
+
+.parentWorkOutForm #inputSubmitCW {
+    background-color: white;
+    border: 0.1rem solid white;
+    border-radius: 5px;
+    font-size: .8rem;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    padding: 0.4rem ;
+    margin: 0.5rem;
+    width: 90%;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.parentWorkOutForm #inputSubmitCW:hover {
+    background-color: rgb(239, 244, 249);
+}
+.parentWorkOutForm #inputSubmitCW:active {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.errorCW {
+    display: block;
+    background-color: white;
+    color: red;
+    font-weight: 500;
+    font-size: .7rem;
+    padding: .3rem;
+    border-radius: 5px;
+    width: 90%;
+    margin-bottom: .2rem;
+}

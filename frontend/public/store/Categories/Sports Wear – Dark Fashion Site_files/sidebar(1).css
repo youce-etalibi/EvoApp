@@ -1,0 +1,66 @@
+
+
+/*--------------------------------------------------------------
+	Sidebar Widget Area
+--------------------------------------------------------------*/
+
+    .secondary-sidebar .widget:last-child { margin-bottom: 0px; }
+
+    .secondary-sidebar .widgettitle { display: inline-block; float: none; margin-top: 0; width: 100%; }
+    .secondary-sidebar .widgettitle:before, .secondary-sidebar .widgettitle:after { content:""; }
+    .secondary-sidebar .widgettitle:empty { display:none; }
+    .secondary-sidebar .widgettitle > a { color: currentColor; }
+
+    .secondary-sidebar > div[class^="type"] { overflow:hidden; }
+
+
+/*--------------------------------------------------------------
+	Colors
+--------------------------------------------------------------*/
+
+    .secondary-sidebar .widgettitle,
+    .secondary-sidebar .widget ul li > a, .secondary-sidebar .tagcloud a { color: var(--wdtHeadAltColor); }
+    .secondary-sidebar .widgettitle a { color: inherit; }
+
+    .secondary-sidebar .tagcloud a:hover { color:var(--wdtAccentTxtColor); background: var(--wdtPrimaryColor);}
+
+
+/*--------------------------------------------------------------
+    Accents
+--------------------------------------------------------------*/
+
+    /* Primary Color */
+    .secondary-sidebar .widget ul li > a:hover { color: var(--wdtPrimaryColor); }
+
+
+/*--------------------------------------------------------------
+	Responsive
+--------------------------------------------------------------*/
+
+    @media only screen and (min-width:1281px) and (max-width:1540px) {
+
+        .secondary-sidebar .widget #wp-calendar th { font-size: 14px; }
+        .secondary-sidebar .widget #wp-calendar td { font-size: 14px; }
+
+    }
+
+
+    @media only screen and (min-width:1025px) and (max-width:1280px) {
+
+        .secondary-sidebar aside.widget { font-size: 14px; }
+
+        .secondary-sidebar .widget #wp-calendar td { font-size: 12px; }
+        .secondary-sidebar .widget #wp-calendar th { font-size: 12px; }
+
+        /* .secondary-sidebar .widget_tag_cloud .tagcloud a, .secondary-sidebar .widget .tagcloud a { font-size: 13px !important; padding: 5px 12px; } */
+
+        #select2-archives-dropdown--1-results, #select2-cat-results { font-size: 13px; }
+
+    }
+
+
+	@media only screen and (max-width: 767px) {
+
+		.secondary-sidebar .widget #wp-calendar th, .secondary-sidebar .widget #wp-calendar td { font-size: 14px; }
+
+	}
