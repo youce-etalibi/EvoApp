@@ -1,0 +1,155 @@
+.footerstore{
+    width: 100%;
+    margin-top: 6rem;
+    padding: 2rem 3rem 0rem 3rem;
+    background-color: black;
+    color: white;
+}
+.EvolutionLogoWhite{
+    width: 150px;
+}
+.footer-col{
+ width: 24%;
+}
+.footer-col:first-child{
+ width: 13%;
+}
+.footer-col:nth-child(2){
+ padding-left: 4rem;
+}
+.footer-col:nth-child(3){
+ width: 33%;
+ padding-left: 4rem;
+}
+.footer-col:last-child{
+ width: 33%;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  margin-left: 10px;
+  position: relative;
+}
+ul{
+  list-style: none;
+}
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    color: white;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+.copyright{
+    text-align: center;
+    padding: 0.9rem 0;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color:#0153DF;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.inputSubscribe {
+    max-width: 190px;
+    padding: 11px;
+    font-size: 17px;
+    color: black;
+    border-top-left-radius: .5em;
+    border-bottom-left-radius: .5em;
+    border: 2px solid #fff;
+    margin-right: -10px;
+  }
+  
+  .buttonSubscribe {
+    border: none;
+    background-color: #1363DF;
+    text-decoration: none;
+    padding: 13.5px;
+    font-size: 17px;
+    color: #fff;
+    border-top-right-radius: .5em;
+    border-bottom-right-radius: .5em;
+    cursor: pointer;
+  }
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  display: block;
+  transition: all 0.3s ease;
+  
+}
+.footer-col ul li a:hover{
+  color: white;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: block;
+  height: 40px;
+  width: 40px;
+  background-color:#0153DF;
+  margin:0 10px 10px 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: white;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 100%;
+    
+}
+.footer-content{
+    flex-direction: column;
+    gap: 22px;
+    padding-bottom: 2rem;
+}
+
+.EvolutionLogoWhite{
+    width: 200px;
+}
+.footer-col{
+    width:100%;
+   }
+   .footer-col:first-child{
+    width: 100%;
+   }
+   .footer-col:nth-child(2){
+    width: 100%;
+    padding-top: -2rem;
+}
+.footer-col:nth-child(3){
+    width: 100%;
+    padding-top: 2rem;
+    font-size: 2rem;
+}
+.footer-col:last-child{
+       padding-top: 2rem;
+    width: 100%;
+   }
+}
+
+
+

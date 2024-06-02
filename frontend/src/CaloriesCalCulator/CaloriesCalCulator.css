@@ -1,0 +1,415 @@
+.caloriesCalculatorQ1,
+.caloriesCalculatorQ2 {
+  background-color: #83aeff9d;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+}
+.caloriesCalculatorQ1Form,
+.caloriesCalculatorQ2Form {
+  width: 70vw;
+  height: 80vh;
+  background-color: white;
+  z-index: 2;
+  position: absolute;
+  margin: 10vh 15vw;
+  border-radius: 15px;
+  padding: 5%;
+  margin-bottom: 3vh;
+  box-shadow: 0 0 10px rgb(87, 87, 251);
+}
+
+.caloriesCalculatorText {
+  color:rgb(55, 55, 255);
+}
+.caloriesCalculatorContent,
+.caloriesCalculatorContent2 {
+  width: 80%;
+  margin: 10vh auto;
+  border-radius: 5px;
+  border-top: 0;
+  box-shadow: 0 0 10px grey;
+  height: 35vh;
+}
+.progress-bar {
+  width: 100%;
+  height: 1vh;
+  background-color: rgb(194, 194, 194);
+  border-radius: 20px;
+  margin-bottom: 3vh;
+}
+
+.progress {
+  height: 100%;
+  background-color: #007bff;
+  box-shadow: 0 0 3px var(--blueE);
+  position: relative;
+  border-radius: 5px;
+}
+.caloriesCalculatorContent input {
+  margin-right: 1vw;
+  width: 60%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  color: grey;
+  box-sizing: border-box;
+  border-color: rgb(210, 208, 208);
+}
+.caloriesCalculatorContent2 input {
+  margin-right: 1vw;
+  width: 52%;
+  height: 6.4vh;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  color: blue;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-sizing: border-box;
+  border-color: rgb(210, 208, 208);
+}
+
+.caloriesCalculatorContent input::-webkit-calendar-picker-indicator {
+  font-size: 1.7rem;
+  color: grey;
+}
+.caloriesCalculatorContent input:hover {
+  border: 1px solid blue;
+}
+.caloriesCalculatorContent input:focus {
+  border-color:blue;
+  color: blue;
+}
+.caloriesCalculatorContent .nexttt{
+  width: 12vw;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border: 1px solid rgba(128, 128, 128, 0);
+  padding: 0.8%;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  box-sizing: border-box;
+}
+.caloriesCalculatorContent2 .Back {
+  width: 8vw;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 0.8%;
+  border-radius: 5px;
+  background-color: rgb(174, 173, 173);
+  color: white;
+  box-sizing: border-box;
+  margin-right: 0.3vw;
+}
+.caloriesCalculatorContent2 .Back:hover {
+  background-color: white;
+  color: rgb(174, 173, 173);
+  cursor: pointer;
+}
+.caloriesCalculatorContent2 .Next {
+  width: 8vw;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border: 1px solid rgba(128, 128, 128, 0);
+  padding: 0.8%;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  box-sizing: border-box;
+}
+.caloriesCalculatorContent2 .Next:hover {
+  background-color: white;
+  color: blue;
+  border: 1px solid blue;
+  cursor: pointer;
+}
+.caloriesCalculatorContent .nexttt:hover {
+  background-color: white;
+  color: blue;
+  border: 1px solid blue;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.caloriesCalculatorActions {
+  display: inline;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.caloriesCalculatorContent form {
+  margin-bottom: 3vh;
+}
+.caloriesCalculatorContentHeader {
+  font-weight: bold;
+  color: black;
+  margin: 5vh 0;
+}
+.erreorCalculator {
+  color: red;
+  text-align: start;
+  margin-left: 3vw;
+  font-size: 0.8rem;
+}
+.erreorCalculator2 {
+  color: red;
+  text-align: start;
+  margin-left: 3vw;
+  font-size: 0.8rem;
+}
+
+.caloriesCalculatorQ4Form {
+  width: 70vw;
+  height: 90vh;
+  background-color: white;
+  z-index: 2;
+  position: absolute;
+  margin: 5vh 15vw;
+  border-radius: 15px;
+  padding: 1%;
+  margin-bottom: 3vh;
+  box-shadow: 0 0 20px blue;
+}
+
+.caloriesCalculatorContent4 {
+  width: 80%;
+  margin: 5vh auto;
+  border-radius: 5px;
+  border-top: 0;
+  box-shadow: 0 0 10px grey;
+  height: 60vh;
+}
+.optionQ4 {
+  border: 1px solid rgb(110, 110, 253);
+  margin: 1vh;
+  font-size: 1.3rem;
+  padding: 1%;
+  color: black;
+}
+.optionQ4.selectedQ4 {
+  border: 3px solid blue;
+  color: blue;
+}
+.caloriesCalculatorContentHeader4 {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: black;
+  margin: 0vh 0;
+}
+
+.erreorCalculator4 {
+  color: red;
+  text-align: start;
+  margin-left: 1vw;
+  font-size: 0.8rem;
+}
+
+.caloriesCalculatorContent4 .Back {
+  width: 12vw;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 0.3%;
+  border-radius: 5px;
+  background-color: rgb(174, 173, 173);
+  color: white;
+  box-sizing: border-box;
+  margin-right: 0.3vw;
+}
+.caloriesCalculatorContent4 .Back:hover {
+  background-color: white;
+  color: rgb(174, 173, 173);
+  cursor: pointer;
+}
+
+.caloriesCalculatorContent4 .Next {
+    width: 12vw;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border: 1px solid rgba(128, 128, 128, 0);
+    padding: 0.3%;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    box-sizing: border-box;
+  }
+  .caloriesCalculatorContent4 .Next:hover{
+    background-color: white;
+  color: blue;
+  border: 1px solid blue;
+  }
+  .optionQ4:hover{
+    cursor: pointer;
+    color: blue;
+  }
+
+
+ 
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .caloriesCalculatorContent{
+      height: 80%;
+    }
+    .caloriesCalculatorQ2 .inputQ2{
+      font-size: 1rem;
+   
+      width: 85%;
+      margin-bottom:2vh ;
+    }
+    .caloriesCalculatorQ1 button{
+      width:25%
+    }
+    .caloriesCalculatorQ2Form{
+      height: 90vh;
+      margin-top: 5vh;
+    }
+    .caloriesCalculatorContent2{
+      height: 60%;
+    }
+    .caloriesCalculatorContent4{
+      height: 60%;
+    }
+    .caloriesCalculatorQ1 input{
+      font-size: 1rem;
+    }
+    .caloriesCalculatorContent button{
+      font-size: 1rem;
+      width: 30%;
+      font-weight: 600;
+    }
+    .caloriesCalculatorActions .Back{
+      width: 35%;
+    }
+    .caloriesCalculatorActions .Next{
+      width: 35%;
+    }
+   
+    .caloriesCalculatorQ1Form{
+      height: 90vh;
+      margin-top: 5vh;
+    }
+    .caloriesCalculatorContent input::-webkit-calendar-picker-indicator {
+      font-size: 1rem;
+      color: grey;
+    }
+    
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .caloriesCalculatorQ2 .inputQ2{
+      font-size: 1rem;
+   
+      width: 85%;
+      margin-bottom:2vh ;
+    }
+    .caloriesCalculatorQ2Form{
+      height: 90vh;
+      margin-top: 5vh;
+    }
+    .caloriesCalculatorContent2{
+      height: 60%;
+    }
+    .caloriesCalculatorActions .Back{
+      width: 35%;
+    }
+    .caloriesCalculatorActions .Next{
+      width: 35%;
+    }
+    .caloriesCalculatorContent4{
+      height: 60%;
+    }
+  }
+  @media (max-width: 575.98px) {
+    .caloriesCalculatorQ2 .inputQ2{
+      font-size: 1rem;
+   
+      width: 85%;
+      margin-bottom:2vh ;
+    }
+    .caloriesCalculatorActions .Back{
+      width: 35%;
+    }
+    .caloriesCalculatorActions .Next{
+      width: 35%;
+    }
+    .caloriesCalculatorText h1{
+      font-size: 1.3rem;
+    }
+    .caloriesCalculatorQ2Form{
+      height: 90vh;
+      margin-top: 5vh;
+    }
+    .caloriesCalculatorContent2{
+      height: 60%;
+    }
+   
+    .caloriesCalculatorActions button{
+      font-size: 1rem;
+      font-weight: 200  ;
+      width:20vw ;
+    }
+    .caloriesCalculatorContent button{
+      font-size: 0.5rem;
+      font-weight: 600;
+      width: 20vw;
+    }
+    .caloriesCalculatorContent input::-webkit-calendar-picker-indicator {
+      font-size: 1rem;
+      color: grey;
+    }
+    .caloriesCalculatorContent input{
+      font-size: 0.7rem;
+    }
+    .caloriesCalculatorContentHeader{
+      font-size: 1rem;
+    }
+  }
+  /**calculator Home page **/
+  header{
+    display: flex;
+    height: 8vh;
+    justify-content: space-between;
+    padding: 3vh;
+  }
+  .EvolutionLogoCalculator{
+    height: 10vh;
+    padding: 0%;
+    margin: 0 1vw;
+  }
+  .calculaterHeaderLeft{
+    display: flex;
+    justify-content: space-between;
+  }
+  .menuIcon{
+    width: 14px;
+    height:5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .lignemenu1{
+    height: 1px;
+    width: 50%;
+    background-color: black;
+    padding: 0%;
+  }
+  .lignemenu2{
+    height: 1px;
+    width: 75%;
+    background-color: black;
+    padding: 0%;
+    
+  }
+  .lignemenu3{
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    
+  
+  }
+  

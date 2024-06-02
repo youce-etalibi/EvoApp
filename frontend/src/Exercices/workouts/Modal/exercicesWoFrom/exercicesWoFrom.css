@@ -1,0 +1,201 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+.parentModalAddWorkout {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+.parentWxercicesWOForm {
+    width: 70%;
+    background-color: var(--blueCity);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+    color: white;
+}
+
+.parentWxercicesWOForm .headerExercicesCW {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.parentWxercicesWOForm .headerExercicesCW h2 {
+    font-size: 1rem;
+}
+.parentWxercicesWOForm .headerExercicesCW p {
+    font-size: .7rem;
+}
+
+.parentLeftHeaderCEW {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+
+.parentSearchBarExCWO {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parentSearchBarExCWO {
+    background-color: white;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.parentSearchBarExCWO i {
+    color: var(--blueCity);
+    background-color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: .2rem .3rem;
+    border-right: .1rem solid var(--blueCity);
+}
+
+.parentSearchBarExCWO input {
+    background-color: white;
+    font-size: 1rem;
+    padding: .2rem;
+    border: none;
+    outline: none;
+    color: black;
+    font-weight: 600;
+}
+
+.parentSearchBarExCWO input::placeholder {
+    color: var(--blueCity);
+}
+
+.parentLeftHeaderCEW button {
+    background-color: var(--blueCity);
+    color: white;
+    border: 0.15rem solid white;
+    padding: .15rem .6rem;
+    cursor: pointer;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+}
+
+.parentLeftHeaderCEW button i {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+
+.bodyExercicesCW {
+    width: 100%;
+    margin: .5rem .1rem;
+}
+
+.ulBodyExercicesCW {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: .3rem;
+    width: 100%;
+}
+
+.ulBodyExercicesCW li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: .2rem;
+    border-radius: 5px;
+    color: black;
+}
+
+.ulBodyExercicesCW li .parentControlesAddEx {
+    display: flex;
+    gap: .3rem;
+    margin-right: 1rem;
+}
+
+.ulBodyExercicesCW li .parentControlesAddEx button {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.ulBodyExercicesCW li .parentControlesAddEx button:hover {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.053);
+}
+
+.ulBodyExercicesCW li .parentControlesAddEx button:active {
+    color: var(--blueCity);
+}
+
+.ulBodyExercicesCW li div {
+    width: 100%;
+    display: flex;
+    gap:.5rem;
+    justify-content: start;
+    align-items: center;
+}
+
+.ulBodyExercicesCW li div p {
+    color: var(--blueCity);
+    font-size: .9rem;
+    margin-top: -.3rem;
+}
+
+.ulBodyExercicesCW li .parnetImgExCW {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+} 
+
+.ulBodyExercicesCW li .parnetImgExCW img{
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+} 
+
+
+#btnFavoriteExwO {
+    background-color: white;
+    color: var(--blueCity);
+}
+
+#countArrayRed {
+    position: absolute;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: grid;
+    place-items: center;
+    margin-top: -1rem;
+    margin-right: -2.2rem;
+}
+
+
+
+@media (max-width:1045px){
+    .parentModalAddWorkout {
+        display: flex;
+        flex-direction: column;
+    }
+    .parentModalAddWorkout .parentWxercicesWOForm{
+        width: 100%;
+    }
+    .parentModalAddWorkout .parentWorkOutForm{
+        width: 100%;
+    }
+  }

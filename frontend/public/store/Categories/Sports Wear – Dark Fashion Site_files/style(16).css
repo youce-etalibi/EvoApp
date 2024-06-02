@@ -1,0 +1,14 @@
+
+.wdt-section-bgeffects-item
+{
+    width: 100%;
+    height: 100%;
+}
+
+.wdt-section-bgeffects-image
+{
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+}

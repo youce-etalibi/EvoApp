@@ -1,0 +1,144 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+
+.parentModalWeightTracking {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(37deg, rgba(31, 113, 255, 0.416),rgba(0, 60, 165, 0.265));    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(3px);
+    display: grid;
+    place-items: center;
+    z-index: 30;
+}
+
+
+.formWeightTracking {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+
+.formWeightTracking form {
+    width: 100%;
+    margin: 1rem;
+    display: grid;
+    place-items: center ;
+}
+
+.formWeightTracking table tbody tr {
+    padding-top: 0.4rem ;
+}
+
+.formWeightTracking table {
+    width: 100%;
+
+}
+.formWeightTracking table input {
+    width: 90%;
+    padding: 0.2rem;
+    border:0.09rem solid var(--blueChelsea);
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+#submitOfWeightTracking {
+    background-color: var(--blueChelsea);
+    color: white;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    width: 50%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+#submitOfWeightTracking:hover {
+    background-color: #00348e;
+}
+#submitOfWeightTracking:active {
+    background-color: #000a1c;
+}
+
+#tdOfSubmitButtonEWight {
+    display: flex;
+    justify-content: end;
+    width: 90%;
+}
+
+
+
+.formWeightTracking header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#btnCloseModalTracking {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;  
+    margin-top: -1.5rem;
+    margin-right: -1.5rem;
+    transition: all .2s ease-in-out;  
+}
+
+#btnCloseModalTracking i:hover {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.126);
+}
+
+#btnCloseModalTracking i:active {
+    color: var(--blueChelsea);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.381);
+}
+
+
+.errorModal {
+    color: red;
+}
+
+
+
+@keyframes square-in-hesitate {
+    0% {
+      clip-path: inset(100% 100% 100% 100%);
+    }
+    40% {
+      clip-path: inset(33% 33% 33% 33%);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  [transition-style="in:square:hesitate"] {
+    animation: 1.5s cubic-bezier(.25, 1, .30, 1) square-in-hesitate both;
+  }
+
+
+
+  @keyframes square-out-hesitate {
+    0% {
+      clip-path: inset(0 0 0 0);
+    }
+    40% {
+      clip-path: inset(33% 33% 33% 33%);
+    }
+    100% {
+      clip-path: inset(100% 100% 100% 100%);
+    }
+  }
+  
+  [transition-style="out:square:hesitate"] {
+    animation: 1.5s cubic-bezier(.25, 1, .30, 1) square-out-hesitate both;
+  }

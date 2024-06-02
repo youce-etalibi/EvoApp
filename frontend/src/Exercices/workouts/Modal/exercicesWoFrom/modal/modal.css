@@ -1,0 +1,233 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+
+.parentModalArrayExercicesDetail {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background: linear-gradient(105deg, #0020583f, #0152df85, #0b5eed8c);
+    backdrop-filter: blur(2px);
+    display: grid;
+    place-items: center;
+    z-index: 25;    
+}
+
+.ModalExercicesDetailCategories {
+    width: 80%;
+    height: 90vh;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    padding: 0.4rem;
+}
+
+
+.modalOpen {
+    animation: 1.5s cubic-bezier(.25, 1, .30, 1) square-in-hesitate both;
+  }
+  
+  .modalClose {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-out-hesitate both;
+  }
+
+.colImagesOfDetailExercices {
+    /* display: flex; */
+    /* align-items: center; */
+    width: 40%;
+    border-radius: 10px;
+}
+
+.colImagesOfDetailExercices img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.colInfoDetailExercices {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 60%;
+    padding: 0.5rem;
+    overflow-y: scroll;
+    --sb-track-color: #ffffff;
+    --sb-thumb-color: #0153df;
+    --sb-size: 2px;
+}
+
+.colInfoDetailExercices::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.colInfoDetailExercices::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+.colInfoDetailExercices::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .colInfoDetailExercices {
+      scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
+.colInfoDetailExercices .line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.3rem;
+    border-bottom: 0.1rem solid rgba(193, 193, 193, 0.441);
+    margin-bottom: 1rem;
+}
+
+.colInfoDetailExercices .line button {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    padding: 0.1rem 0.2rem;
+    border-radius: 5px;
+}
+
+.colInfoDetailExercices .line button:hover {
+    background-color: rgba(225, 225, 225, 0.623);
+    color: var(--blueChelsea);
+}
+
+.colInfoDetailExercices .line button:hover {
+    background-color: rgba(177, 177, 177, 0.623);
+    color: var(--blueChelsea);
+}
+
+.colInfoDetailExercices ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.colInfoDetailExercices ul li {
+    display: flex;
+    align-items: center;
+    gap:0.3rem;
+    width: 33%;
+}
+
+.colInfoDetailExercices ul li .parentIconDetailExercices {
+    background-color: var(--blueCity);
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.colInfoDetailExercices ul li .parentIconDetailExercices i {
+    color: white;
+    font-size: 2rem;
+}
+
+.colInfoDetailExercices ul li .parentInfoDetailExercices {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.colInfoDetailExercices ul li .parentInfoDetailExercices p{
+    color: var(--blueChelsea);
+    font-size: 0.7rem;
+    text-transform: capitalize;
+}
+.colInfoDetailExercices ul li .parentInfoDetailExercices h5{
+    text-transform: capitalize;
+}
+
+.parentUlOfInstructionsExercices {
+    margin-top: 1rem;
+}
+
+#ulOfInstructionsExercices {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    list-style-type: decimal;
+}
+
+
+
+
+.prevButton, .nextButton {
+    position: absolute;
+    top: 50%;
+    margin-left: 0.5rem;
+    background-color: var(--blueCity);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.prevButton:hover {
+    background-color: var(--blueChelsea);
+}
+.prevButton:active {
+    background-color: black;
+}
+
+
+@keyframes square-in-hesitate {
+    0% {
+      clip-path: inset(100% 100% 100% 100%);
+    }
+    40% {
+      clip-path: inset(33% 33% 33% 33%);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  [transition-style="in:square:hesitate"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-in-hesitate both;
+  }
+
+  @keyframes square-out-hesitate {
+    0% {
+      clip-path: inset(0 0 0 0);
+    }
+    40% {
+      clip-path: inset(33% 33% 33% 33%);
+    }
+    100% {
+      clip-path: inset(100% 100% 100% 100%);
+    }
+  }
+  
+  [transition-style="out:square:hesitate"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-out-hesitate both;
+  }

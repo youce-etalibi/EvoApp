@@ -1,0 +1,40 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+.parentFooter {
+    background-color: var(--blueChelsea);
+}
+.arraySocialMedia {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.arraySocialMedia a {
+    display: grid;
+    place-items: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    border: 0.1rem solid white;
+    transition: all .2s;
+}
+.arraySocialMedia a:hover {
+    background-color: white;
+    color: var(--blueCity);
+}
+.copyright h4{
+    color: white;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}

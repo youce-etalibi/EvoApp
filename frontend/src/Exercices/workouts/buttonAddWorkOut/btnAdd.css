@@ -1,0 +1,48 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+  }
+  
+
+  .LinkAdd {
+      color: white;
+      text-decoration: none;
+  }
+
+.parentbuttonAddwork {
+    background-image: linear-gradient(37deg, rgb(63,133,255),rgb(1,83,223));    background-position: 100%;
+    background-size: cover;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 0.5rem;
+    transition: all .2s ease-in-out;
+    color: white;
+    cursor: pointer;
+}
+
+.parentbuttonAddwork:hover {
+    background-image: linear-gradient(97deg, rgb(63,133,255),rgb(0, 60, 164));    background-position: 100%;
+}
+.parentbuttonAddwork:active {
+    background-image: linear-gradient(97deg, rgb(63,133,255),rgb(0, 12, 34));    background-position: 100%;
+
+}
+
+.parentbuttonAddwork i {
+    font-size: 2rem;
+}
+
+
+@media (max-width:1045px){
+    .parentbuttonAddwork {
+        width: 90%;
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}

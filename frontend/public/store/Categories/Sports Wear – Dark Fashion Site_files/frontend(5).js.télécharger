@@ -1,0 +1,275 @@
+var dtStoreLocatorFrontendLocationUtils = {
+
+	dtStoreLocatorMapInitialize : function(map_output_container, mapdata, mapdefaults) {
+
+		if(mapdefaults[0].zoom_level == '') {
+			var default_zoom_level = dtslmapobject.defaultZoomLevel;
+		} else {
+			var default_zoom_level = mapdefaults[0].zoom_level;
+		}
+
+		if(mapdefaults[0].map_type == '') {
+			var default_map_type = dtslmapobject.defaultMapType;
+		} else {
+			var default_map_type = mapdefaults[0].map_type;
+		}
+
+		if(mapdefaults[0].map_color == '') {
+			var default_map_color = dtslmapobject.defaultMapColor;
+		} else {
+			var default_map_color = mapdefaults[0].map_color;
+		}
+
+		var enableMapTypeControl = dtslmapobject.enableMapTypeControl;
+		var enableZoomControl = dtslmapobject.enableZoomControl;
+		var enableScaleControl = dtslmapobject.enableScaleControl;
+		var enableStreetViewControl = dtslmapobject.enableStreetViewControl;
+		var enableFullscreenControl = dtslmapobject.enableFullscreenControl;
+
+		var mapOptions = {
+							flat:false,
+							noClear:false,
+							zoom: parseInt(default_zoom_level, 10),
+							scrollwheel: false,
+							draggable: true,
+							disableDefaultUI:false,
+							center: new google.maps.LatLng(dtslmapobject.defaultLatitude, dtslmapobject.defaultLongitude),
+							mapTypeId: default_map_type.toLowerCase(),
+
+							mapTypeControl: enableMapTypeControl,
+							zoomControl: enableZoomControl,
+							scaleControl: enableScaleControl,
+							streetViewControl: enableStreetViewControl,
+							fullscreenControl: enableFullscreenControl
+						};
+
+		if(mapdefaults[0].map_style_type == 'style') {
+			var map_style_script = mapdefaults[0].map_style_script;
+			if(map_style_script != '') {
+				var map_style_script = JSON.parse(map_style_script);
+				mapOptions['styles'] = map_style_script;
+			}
+		} else {
+			mapOptions['styles'] = [ { stylers: [ { hue: default_map_color } ] } ];
+		}
+
+
+		var map_id = map_output_container.find('.dtsl-listing-output-map').attr('id');
+		if(document.getElementById(map_id)) {
+			var map_sf = new google.maps.Map(document.getElementById(map_id), mapOptions);
+		} else {
+			return;
+		}
+
+		var mapMarkers = new Array();
+		jQuery.each(mapdata, function(index, item) {
+			item['markeranimation'] = mapdefaults[0].marker_animation;
+			var mapMarker = dtStoreLocatorFrontendLocationUtils.dtStoreLocatorMapCustomMarker(item, map_sf);
+			mapMarkers.push( mapMarker );
+		});
+
+		// Add user location
+		if(mapdefaults[0].origin == 'user') {
+			dtStoreLocatorFrontendLocationUtils.dtStoreLocatorMapCustomMarker(mapdefaults[0], map_sf);
+		}
+
+		// Marker Cluster
+		new MarkerClusterer( map_sf, mapMarkers, {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'} );
+
+		// Clear All Info Boxes
+		google.maps.event.addListener(map_sf, 'click', function(){
+			dtStoreLocatorFrontendLocationUtils.dtStoreLocatorMapClearInfoWindow(mapMarkers);
+		});
+
+		google.maps.visualRefresh = true;
+
+		dtStoreLocatorFrontendLocationUtils.dtStoreLocatorMapPanTo(map_sf, mapdata);
+
+	},
+
+	dtStoreLocatorMapPanTo : function(map_sf, mapdata) {
+
+		jQuery('.dtsl-search-list-items .dtsl-listings-item-wrapper').on( 'click', function() {
+
+			var classes = jQuery(this).attr('class').split(' ');
+			for (var i = 0; i < classes.length; i++) {
+				if(classes[i].startsWith('post-')) {
+					var post_class = classes[i];
+					var post_class_id = post_class.replace('post-', '');
+				}
+			}
+
+			jQuery.each(mapdata, function(index, item) {
+				if(item.listingid == post_class_id) {
+					var location = new google.maps.LatLng(item.latitude, item.longitude);
+					map_sf.panTo(location);
+					map_sf.setZoom(16);
+				}
+			});
+
+		});
+
+	},
+
+	dtStoreLocatorMapClearInfoWindow : function(mapMarkers) {
+
+		for (var i = 0; i < mapMarkers.length; i++) {
+			if (typeof mapMarkers[i].infobox !== 'undefined') {
+				mapMarkers[i].infobox.setOptions({
+					boxClass: 'dtsl-marker-info-box',
+				});
+			}
+		}
+
+	},
+
+	dtStoreLocatorMapInfoBox : function(options) {
+
+		 var opts = jQuery.extend({}, {
+			content: '',
+			disableAutoPan: false,
+			maxWidth: 0,
+			pixelOffset: new google.maps.Size(50, -50),
+			zIndex: 500000000,
+			boxClass: 'dtsl-info-box',
+			boxStyle: {
+				/* width: '500px', */
+				zIndex: 5000000,
+			},
+			closeBoxURL: '',
+			infoBoxClearance: new google.maps.Size(20, 20),
+			isHidden: true,
+			pane: 'floatPane',
+			enableEventPropagation: true,
+		}, options);
+
+		return new InfoBox(opts);
+
+	},
+
+	dtStoreLocatorMapCustomMarker : function(item, map_sf) {
+
+		var location = new google.maps.LatLng(item.latitude, item.longitude);
+		var mapMarker = new dtStoreLocatorCustomMarker(
+			location,
+			map_sf,
+			{
+				listingid: item.listingid,
+				map_icon: item.image,
+				info_content: item.infocontent,
+				add_info: true,
+				additional_info_type: item.additionalinfotype,
+				additional_info: item.additionalinfo,
+				category_background_color: item.categorybackgroundcolor,
+				category_color: item.categorycolor,
+				marker_animation: item.markeranimation
+			},
+			dtStoreLocatorFrontendLocationUtils.dtStoreLocatorMapInfoBox()
+		);
+
+		return mapMarker;
+
+	},
+
+	dtStoreLocatorLoadMapOutput : function(itemids, map_output_container) {
+
+		var parent_item = map_output_container;
+
+		var map_output = map_output_container.find('.dtsl-listing-output-map-holder');
+		var user_latitude = jQuery('.dtsl-sf-location-latitude').val();
+		var user_longitude = jQuery('.dtsl-sf-location-longitude').val();
+		if(jQuery('.dtsl-sf-radius-unit').length) {
+			var radius_unit = jQuery('.dtsl-sf-radius-unit').val();
+		} else {
+			var radius_unit = jQuery('.dtsl-sf-location-radius-unit').val();
+		}
+
+		var type = map_output.attr('data-type');
+
+		var zoom_level = map_output.attr('data-zoomlevel');
+		var map_type = map_output.attr('data-maptype');
+		var additional_info = map_output.attr('data-additionalinfo');
+		var category_background_color = map_output.attr('data-categorybackgroundcolor');
+		var category_color = map_output.attr('data-categorycolor');
+		var map_style_type = map_output.attr('data-mapstyletype');
+		var map_color = map_output.attr('data-mapcolor');
+		var map_style_script = map_output.attr('data-mapstylescript');
+		var marker_animation = map_output.attr('data-markeranimation');
+
+		jQuery.ajax({
+			type: "POST",
+			url: dtslfrontendobject.ajaxurl,
+			dataType: "JSON",
+			data:
+			{
+				action: 'dtsl_generate_load_search_map_ouput',
+				type: type,
+				zoom_level: zoom_level,
+				map_type: map_type,
+				map_color: map_color,
+				user_latitude: user_latitude,
+				user_longitude: user_longitude,
+				radius_unit: radius_unit,
+				itemids: itemids,
+
+				additional_info: additional_info,
+				category_background_color: category_background_color,
+				category_color: category_color,
+			},
+			beforeSend: function(){
+				dtStoreLocatorCommonUtils.dtStoreLocatorAjaxBeforeSend(parent_item);
+			},
+			success: function (response) {
+
+				response.mapdefaults[0]['map_style_type'] = map_style_type;
+				response.mapdefaults[0]['map_style_script'] = map_style_script;
+				response.mapdefaults[0]['marker_animation'] = marker_animation;
+				dtStoreLocatorFrontendLocationUtils.dtStoreLocatorMapInitialize(map_output_container, response.mapdata, response.mapdefaults);
+
+			},
+			complete: function(){
+				dtStoreLocatorCommonUtils.dtStoreLocatorAjaxAfterSend(parent_item);
+			}
+		});
+
+	}
+
+}
+
+var dtStoreLocatorFrontendLocation = {
+
+	dtInit : function() {
+
+		dtStoreLocatorFrontendLocationUtils;
+
+	}
+
+};
+
+jQuery(document).ready(function() {
+
+	"use strict";
+
+	if(!dtslfrontendobject.elementorPreviewMode) {
+		dtStoreLocatorFrontendLocation.dtInit();
+	}
+
+});
+
+( function( $ ) {
+
+	"use strict";
+
+	var dtStoreLocatorFrontendLocationJs = function($scope, $){
+		dtStoreLocatorFrontendLocation.dtInit();
+		dtStoreLocatorFrontend.dtInit();
+	};
+
+    $(window).on('elementor/frontend/init', function(){
+		if(dtslfrontendobject.elementorPreviewMode) {
+			elementorFrontend.hooks.addAction('frontend/element_ready/dtsl-widget-df-listings-map.default', dtStoreLocatorFrontendLocationJs);
+			elementorFrontend.hooks.addAction('frontend/element_ready/dtsl-widget-sf-output-map-container.default', dtStoreLocatorFrontendLocationJs);
+		}
+	});
+
+} )( jQuery );

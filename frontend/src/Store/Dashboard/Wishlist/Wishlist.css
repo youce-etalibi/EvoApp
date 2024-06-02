@@ -1,0 +1,34 @@
+
+.headerwishlist{
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    gap: 110px;
+}
+
+.imgWishlist{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+
+}
+.image-title{
+    display: flex;
+    align-items: center;
+}
+
+#emptywishlist img{
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+}
+#wishlistsParent{
+    display: flex;
+    justify-content: space-evenly;
+    width: 92%;
+    gap: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}

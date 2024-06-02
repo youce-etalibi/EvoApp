@@ -1,0 +1,167 @@
+.dtsl-listings-attachment-holder .dtsl-listings-attachment-box-item,
+.dtsl-listings-attachment-holder .dtsl-listings-attachment-box-item span,
+.dtsl-listings-attachment-holder.type5 .dtsl-listings-attachment-box-item a,
+.dtsl-listings-attachment-holder.type5 .dtsl-listings-attachment-box-item a:before {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+
+/*----*****---- << Media Attachments >> ----*****----*/
+
+.dtsl-listings-attachment-holder {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.dtsl-listings-attachment-holder .dtsl-listings-attachment-box-item {
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.dtsl-listings-attachment-holder .dtsl-listings-attachment-box-item:not(:last-child) {
+    margin-right: 25px;
+}
+
+
+/* Type 1 */
+
+.dtsl-listings-attachment-holder.type1 .dtsl-listings-attachment-box-item {
+    color: #000;
+    font-size: 14px;
+    /* align-items: center; */
+    line-height: normal;
+}
+
+.dtsl-listings-attachment-holder.type1 .dtsl-listings-attachment-box-item span {
+    position: relative;
+    font-weight: 100;
+    margin: 0 10px 0 0;
+    font-family: "Font Awesome 5 Free";
+}
+
+
+/* Type 2 */
+
+.dtsl-listings-attachment-holder.type2 .dtsl-listings-attachment-box-item {
+    line-height: normal;
+    font-size: 14px;
+}
+
+.dtsl-listings-attachment-holder.type2 .dtsl-listings-attachment-box-item span {
+    min-width: 40px;
+    min-height: 40px;
+    position: relative;
+    margin-right: 10px;
+    font-family: "Font Awesome 5 Free";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.dtsl-listings-attachment-holder.type2 .dtsl-listings-attachment-box-item:not(:hover) span {
+    color: #fff;
+}
+
+
+/* Type 3 */
+
+.dtsl-listings-attachment-holder.type3 .dtsl-listings-attachment-box-item {
+    border-radius: 40px;
+    border-width: 2px;
+    border-style: solid;
+    position: relative;
+}
+
+.dtsl-listings-attachment-holder.type3 .dtsl-listings-attachment-box-item span {
+    position: absolute;
+    margin-right: 10px;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: "Font Awesome 5 Free";
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30px;
+    pointer-events: none;
+}
+
+.dtsl-listings-attachment-holder.type3 .dtsl-listings-attachment-box-item>a {
+    padding: 10px 30px 10px 50px;
+}
+
+.dtsl-listings-attachment-holder.type3 .dtsl-listings-attachment-box-item:hover,
+.dtsl-listings-attachment-holder.type3 .dtsl-listings-attachment-box-item:hover span,
+.dtsl-listings-attachment-holder.type3 .dtsl-listings-attachment-box-item:hover a {
+    color: #fff;
+}
+
+
+/* Type 4 */
+
+.dtsl-listings-attachment-holder.type4 .dtsl-listings-attachment-box-item {
+    position: relative;
+}
+
+.dtsl-listings-attachment-holder.type4 .dtsl-listings-attachment-box-item a {
+    padding: 15px 30px 15px 50px;
+}
+
+.dtsl-listings-attachment-holder.type4 .dtsl-listings-attachment-box-item span {
+    position: absolute;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: "Font Awesome 5 Free";
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30px;
+    pointer-events: none;
+}
+
+.dtsl-listings-attachment-holder.type4 .dtsl-listings-attachment-box-item span,
+.dtsl-listings-attachment-holder.type4 .dtsl-listings-attachment-box-item a {
+    color: #fff;
+}
+
+
+/* Type 5 */
+
+.dtsl-listings-attachment-holder.type5 .dtsl-listings-attachment-box-item {
+    line-height: normal;
+    font-size: 14px;
+}
+
+.dtsl-listings-attachment-holder.type5 .dtsl-listings-attachment-box-item a {
+    font-size: 0;
+    position: relative;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dtsl-listings-attachment-holder.type5 .dtsl-listings-attachment-box-item a span {
+    font-family: "Font Awesome 5 Free";
+    position: relative;
+    color: #000;
+    font-size: initial;
+    top: 0;
+    left: 0;
+}
+
+.dtsl-listings-attachment-holder.type5 .dtsl-listings-attachment-box-item a:hover span {
+    color: #fff;
+}

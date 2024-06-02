@@ -1,0 +1,246 @@
+.dtsl-announcement-listing-holder,
+.dtsl-announcement-listing-holder a,
+.dtsl-announcement-listing-holder span,
+.dtsl-announcement-listing-holder p {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.dtsl-announcement-listing-holder {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 5% 30% 50% 15%;
+    padding: 25px 15px;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+.dtsl-announcement-listing-holder * {
+    padding: 0 15px;
+}
+
+.dtsl-announcement-listing-holder h2 {
+    font-size: 22px;
+    margin: 0;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.dtsl-announcement-listing-holder p {
+    font-size: initial;
+    margin: 0;
+    color: initial;
+    font-weight: 300;
+}
+
+.dtsl-announcement-listing-holder span {
+    font-size: 30px;
+}
+
+.dtsl-announcement-listing-holder a {
+    padding: 15px 25px;
+    display: inline-block;
+    text-align: center;
+    line-height: normal;
+    background: #fff;
+    margin: auto;
+}
+
+/* Book Now */
+
+.dtsl-announcement-listing-holder.booknow {
+    border-left-width: 3px;
+    border-left-style: solid;
+    display: flex;
+    width: 100%;
+    padding: 25px 15px;
+    flex-wrap: wrap;
+}
+
+.dtsl-announcement-listing-holder.booknow * {
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.dtsl-announcement-listing-holder.booknow span {
+    position: absolute;
+    left: 0;
+    width: 65px;
+    height: 65px;
+    margin: auto;
+    text-align: center;
+    line-height: 65px;
+    font-size: 26px;
+    border-radius: 65px;
+    display: inline-block;
+}
+
+.dtsl-announcement-listing-holder.booknow .dtsl-announcement-listing-inner {
+    display: inline-block;
+    padding: 0 0 0 90px;
+    text-align: left;
+}
+
+.dtsl-announcement-listing-holder.booknow h2 {
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.dtsl-announcement-listing-holder.booknow p {
+    font-weight: 300;
+}
+
+.dtsl-announcement-listing-holder.booknow a {
+    padding: 15px 25px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.dtsl-announcement-listing-holder.booknow span,
+.dtsl-announcement-listing-holder.booknow a:hover {
+    background-color: #fff;
+}
+
+.dtsl-announcement-listing-holder.booknow a,
+.dtsl-announcement-listing-holder.booknow:hover span {
+    color: #fff;
+}
+
+
+/* Contact Us */
+
+.dtsl-announcement-listing-holder.contactus {
+    grid-template-columns: 100%;
+    padding: 60px 20px;
+    margin: 0 0 30px 0;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    background-color: transparent;
+}
+
+.dtsl-announcement-listing-holder.contactus * {
+    margin: 0 0 25px;
+}
+
+.dtsl-announcement-listing-holder.contactus span {
+    width: 65px;
+    height: 65px;
+    float: left;
+    margin: auto auto 30px;
+    text-align: center;
+    line-height: 65px;
+    font-size: 36px;
+    border-radius: 65px;
+    color: #fff;
+}
+
+.dtsl-announcement-listing-holder.contactus a {
+    margin: auto;
+    border-style: solid;
+    border-width: 2px;
+}
+
+
+/* Announcement */
+
+.dtsl-announcement-listing-holder.announcement {
+    display: flex;
+    text-align: left;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.dtsl-announcement-listing-holder.announcement * {
+    padding: 0;
+
+}
+
+.dtsl-announcement-listing-holder.announcement *:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.dtsl-announcement-listing-holder.announcement span {
+    margin-right: 20px;
+}
+
+.dtsl-announcement-listing-holder.announcement h2,
+.dtsl-announcement-listing-holder.announcement p {
+    width: 100%;
+}
+
+.dtsl-announcement-listing-holder.announcement h2:after {
+    position: relative;
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    margin-top: 30px;
+}
+
+.dtsl-announcement-listing-holder.contactus a:hover,
+.dtsl-announcement-listing-holder.announcement a {
+    color: #fff;
+}
+
+.dtsl-announcement-listing-holder.announcement a {
+    width: auto;
+    margin: 0;
+    padding: 15px 25px;
+}
+
+
+/*----*****---- << Tablet (Portrait) >> ----*****----*/
+
+
+/* Note: Design for a width of 768px */
+
+@media only screen and (max-width:1024px) {
+    .dtsl-announcement-listing-holder.booknow {
+        padding: 30px 25px;
+    }
+    .dtsl-announcement-listing-holder.booknow .column {
+        width: 100%;
+        margin: 0 0 20px;
+        align-items: unset;
+    }
+    .dtsl-announcement-listing-holder.booknow .column:last-child {
+        margin-bottom: 0;
+    }
+    .dtsl-announcement-listing-holder.booknow .column,
+    .dtsl-announcement-listing-holder.booknow * {
+        align-items: unset;
+        text-align: inherit;
+    }
+    .dtsl-announcement-listing-holder.booknow .column>a {
+        margin-left: 90px;
+    }
+}
+
+
+/*----*****---- << Mobile (Portrait) >> ----*****----*/
+
+
+/* Note: Design for a width of 479px */
+
+@media only screen and (max-width: 479px) {
+    .dtsl-announcement-listing-holder.announcement {
+        padding: 40px;
+    }
+    .dtsl-announcement-listing-holder.booknow .dtsl-announcement-listing-inner {
+        padding: 90px 0 0 0;
+    }
+    .dtsl-announcement-listing-holder.booknow .column>a {
+        margin-left: 0;
+        width: auto;
+    }
+    .dtsl-listings-business-hours-container .dtsl-listings-business-hours-currenttime {
+        font-size: 12px;
+    }
+}

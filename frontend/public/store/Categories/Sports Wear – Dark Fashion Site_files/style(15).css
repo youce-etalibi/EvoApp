@@ -1,0 +1,29 @@
+.wdt-animation-item { text-align: center; }
+.wdt-animation-item.text-item { display: inline-block; }
+.wdt-custom-animation .wdt-animation-text a {
+    font-weight: var(--wdtFontWeight_Ext); text-transform: capitalize; font-size: var(--wdtFontSize_H2); color: var(--wdtAccentTxtColor); transition: all 0.5s linear; line-height: 1.1; 
+}
+.wdt-custom-animation .wdt-animation-item a img {
+    height: 36px; object-fit: contain;
+    margin-top: clamp(0rem, -0.1154rem + 0.5128vw, 0.5rem);
+    margin-left: clamp(0.75rem, 0.9231rem + -0.7692vw, 0rem);
+    margin-right: clamp(0.75rem, 0.9231rem + -0.7692vw, 0rem);
+}
+.wdt-custom-animation .wdt-animation-text {
+    font-size: clamp(1.25rem, 1.1058rem + 0.641vw, 1.875rem); transition: var(--wdtBaseTransition);
+}
+.wdt-custom-animation .wdt-animation-text:hover a{ 
+    /* -webkit-text-stroke: 2px var(--wdtAccentTxtColor);
+    -webkit-text-fill-color: transparent; */
+    color: var(--wdtPrimaryColor);
+} 
+
+@media only screen and (max-width:1280px)
+{
+    .wdt-custom-animation .wdt-animation-item a img{margin-top: 8px;}
+}
+
+@media only screen and (max-width:1024px)
+{
+    .wdt-custom-animation .wdt-animation-item a img{margin-top: 8px;}
+}

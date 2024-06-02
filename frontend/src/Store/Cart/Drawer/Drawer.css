@@ -1,0 +1,167 @@
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutLeft {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(50%);
+        opacity: 6;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.cartSidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1rem 0.9rem;
+    bottom: 0;
+    color: black;
+    z-index: 1600;
+    max-width: 380px;
+    overflow-y: scroll;
+    width: 100%; 
+    background-color: #ffffff; 
+    animation: slideInRight 0.3s forwards; 
+}
+.cartSidebar .headdrawer{
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+
+    display: flex;
+    padding: 0rem 0.2rem 1rem 0.2rem;
+    border-bottom: 1px dashed #c7cbcf;
+}
+.headdrawer div:first-child{
+  display: flex;
+  gap: 5px;
+ align-items: center;
+}
+.svgemptycart{
+  display: flex;
+  width: auto;
+  margin: 2rem auto;
+}
+
+.headdrawer i{
+    align-items: center;
+    position: relative;
+    font-size: 1.6rem;
+    align-items: center;
+    font-weight: 600;
+}
+
+.cartSidebar .hidden {
+    animation: slideOutLeft 0.3s forwards;
+}
+
+.cartSidebar .itemsdrawer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 0.8rem 0;
+
+}
+.cartSidebar .itemsdrawer:not(:last-child){
+    border-bottom: 1px dashed #c7cbcf;
+
+}
+
+
+
+.imagedrawer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+ 
+  .imagedrawer img{
+   width: 80px;
+   height: 80px;
+   margin-left: 1rem;
+   object-fit: cover;
+  }
+  .descriptiondrawer{
+    width: 250px;
+    margin-left: 1.2rem;
+    display: flex;
+    margin-top: -0.4rem;
+    flex-direction: column;
+  }
+   
+  
+  .descriptiondrawer span {
+    display: block;
+    font-size: 14px;
+    color: #43484D;
+    font-weight: 400;
+  }
+   
+  .descriptiondrawer span:first-child {
+    font-weight: 650;
+    font-size: 14px;
+
+
+  }
+  .descriptiondrawer span:nth-child(2) {
+    opacity: 0.8;
+  }
+  .descriptiondrawer span:last-child {
+    color: #0153DF;
+
+
+  }
+  .quantitydrawer{
+   text-align: center;
+   font-size: 1rem;
+  }
+  .quantitydrawer button{
+    width: 32px;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0153DF;
+    text-align: center;
+    border: none;
+    outline: none;
+    height: 32px;
+  }
+ 
+  #supprimerdrawer{
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+.viewcartbtn{
+    padding: 6px 20px;
+    width: 70%;
+    border: none;
+    font-size: 0.9rem;
+    outline: none;
+    background-color: #0153DF;
+    color: white;
+    cursor: pointer;
+    margin-left: 3.3rem;
+    margin-top: 1.3rem;
+    font-weight: 500;
+    border-radius: 8px;
+    box-shadow: 0 2px 3px hsla(0, 0%, 0%, 0.2);
+    transition: 0.25s ease;
+}

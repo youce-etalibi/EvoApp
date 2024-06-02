@@ -1,0 +1,51 @@
+:root {
+  --blueChelsea : #0153DF;
+  --blueCity : #3F85FF;
+  --blackNewcastle : #000000;
+}
+.scroll-to-top {
+  background-color: var(--blueChelsea);
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    display: none;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.2s;
+    animation: fadeInUp 0.2s ease-out; 
+    z-index: 20;
+    border: .1rem solid white;
+  }
+
+  .scroll-to-top:active{
+    color: white;
+    background-color: var(--blackNewcastle);
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.094);
+    transform: scale(.9);
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  .scroll-to-top.visible {
+    display: block;
+  }
+  
+
+.bx-arrow-to-top {
+  font-size: 1.5rem;
+}

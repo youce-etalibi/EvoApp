@@ -1,0 +1,206 @@
+/*--------------------------------------------------------------
+    Grid Columns
+--------------------------------------------------------------*/
+
+.dt-col { float: left; margin: 0; min-height: 1px; padding: 0 15px; position: relative; }
+
+.elementor-section[class*="dt-section-wrap-col"] .elementor-row {flex-flow: row wrap;}
+
+.column img, .vc_column_container img, .wpb_column img, .elementor-column img, main img { max-width: 100%; height: auto; display: inherit; }
+
+/*--------------------------------------------------------------
+   Responsive
+--------------------------------------------------------------*/
+
+@media only screen and (min-width:1441px) and (max-width:1680px) {
+
+    /*----*****---- << Custom Columns >> ----*****----*/
+
+    .dt-col-hxlg-12, .elementor-section .elementor-row .elementor-column.dt-col-hxlg-12 { width: 100%; }
+    .dt-col-hxlg-11, .elementor-section .elementor-row .elementor-column.dt-col-hxlg-11 { width: 91.66666667%; }
+    .dt-col-hxlg-10, .elementor-section .elementor-row .elementor-column.dt-col-hxlg-10 { width: 83.33333333%; }
+    .dt-col-hxlg-9, .elementor-section .elementor-row .elementor-column.dt-col-hxlg-9 { width: 75%; }
+    .dt-col-hxlg-8, .elementor-section .elementor-row .elementor-column.dt-col-hxlg-8 { width: 66.66666667%; }
+    .dt-col-hxlg-7, .elementor-section .elementor-row .elementor-column.dt-col-hxlg-7 { width: 58.33333333%; }
+    .dt-col-hxlg-6, .elementor-section .elementor-row .elementor-column.dt-col-hxlg-6 { width: 50%; }
+    .dt-col-hxlg-5, .elementor-section .elementor-row .elementor-column.dt-col-hxlg-5 { width: 41.66666667%; }
+    .dt-col-hxlg-4, .elementor-section .elementor-row .elementor-column.dt-col-hxlg-4 { width: 33.33333333%; }
+    .dt-col-hxlg-3, .elementor-section .elementor-row .elementor-column.dt-col-hxlg-3 { width: 25%; }
+    .dt-col-hxlg-2, .elementor-section .elementor-row .elementor-column.dt-col-hxlg-2 { width: 16.66666667%; }
+    .dt-col-hxlg-1, .elementor-section .elementor-row .elementor-column.dt-col-hxlg-1 { width: 8.33333333%; }
+
+    .dt-col-hxlg-offset-12 { margin-left: 100% }
+    .dt-col-hxlg-offset-11 { margin-left: 91.66666667% }
+    .dt-col-hxlg-offset-10 { margin-left: 83.33333333% }
+    .dt-col-hxlg-offset-9 { margin-left: 75% }
+    .dt-col-hxlg-offset-8 { margin-left: 66.66666667% }
+    .dt-col-hxlg-offset-7 { margin-left: 58.33333333% }
+    .dt-col-hxlg-offset-6 { margin-left: 50% }
+    .dt-col-hxlg-offset-5 { margin-left: 41.66666667% }
+    .dt-col-hxlg-offset-4 { margin-left: 33.33333333% }
+    .dt-col-hxlg-offset-3 { margin-left: 25% }
+    .dt-col-hxlg-offset-2 { margin-left: 16.66666667% }
+    .dt-col-hxlg-offset-1 { margin-left: 8.33333333% }
+    .dt-col-hxlg-offset-0 { margin-left: 0 }
+
+}
+
+/*----*****---- << Laptop/Notebook >> ----*****----*/
+
+@media only screen and (min-width:1281px) and (max-width:1440px) {
+
+    /*----*****---- << Custom Columns >> ----*****----*/
+
+    .dt-col-qxlg-12, .elementor-section .elementor-row .elementor-column.dt-col-qxlg-12 { width: 100%; }
+    .dt-col-qxlg-11, .elementor-section .elementor-row .elementor-column.dt-col-qxlg-11 { width: 91.66666667%; }
+    .dt-col-qxlg-10, .elementor-section .elementor-row .elementor-column.dt-col-qxlg-10 { width: 83.33333333%; }
+    .dt-col-qxlg-9, .elementor-section .elementor-row .elementor-column.dt-col-qxlg-9 { width: 75%; }
+    .dt-col-qxlg-8, .elementor-section .elementor-row .elementor-column.dt-col-qxlg-8 { width: 66.66666667%; }
+    .dt-col-qxlg-7, .elementor-section .elementor-row .elementor-column.dt-col-qxlg-7 { width: 58.33333333%; }
+    .dt-col-qxlg-6, .elementor-section .elementor-row .elementor-column.dt-col-qxlg-6 { width: 50%; }
+    .dt-col-qxlg-5, .elementor-section .elementor-row .elementor-column.dt-col-qxlg-5 { width: 41.66666667%; }
+    .dt-col-qxlg-4, .elementor-section .elementor-row .elementor-column.dt-col-qxlg-4 { width: 33.33333333%; }
+    .dt-col-qxlg-3, .elementor-section .elementor-row .elementor-column.dt-col-qxlg-3 { width: 25%; }
+    .dt-col-qxlg-2, .elementor-section .elementor-row .elementor-column.dt-col-qxlg-2 { width: 16.66666667%; }
+    .dt-col-qxlg-1, .elementor-section .elementor-row .elementor-column.dt-col-qxlg-1 { width: 8.33333333%; }
+
+    .dt-col-qxlg-offset-12 { margin-left: 100% }
+    .dt-col-qxlg-offset-11 { margin-left: 91.66666667% }
+    .dt-col-qxlg-offset-10 { margin-left: 83.33333333% }
+    .dt-col-qxlg-offset-9 { margin-left: 75% }
+    .dt-col-qxlg-offset-8 { margin-left: 66.66666667% }
+    .dt-col-qxlg-offset-7 { margin-left: 58.33333333% }
+    .dt-col-qxlg-offset-6 { margin-left: 50% }
+    .dt-col-qxlg-offset-5 { margin-left: 41.66666667% }
+    .dt-col-qxlg-offset-4 { margin-left: 33.33333333% }
+    .dt-col-qxlg-offset-3 { margin-left: 25% }
+    .dt-col-qxlg-offset-2 { margin-left: 16.66666667% }
+    .dt-col-qxlg-offset-1 { margin-left: 8.33333333% }
+    .dt-col-qxlg-offset-0 { margin-left: 0 }
+
+}
+
+@media only screen and (min-width:1281px) {
+
+    /*----*****---- << Custom Columns >> ----*****----*/
+    .dt-col-lg-12, .elementor-section .elementor-row .elementor-column.dt-col-lg-12 { width: 100%; }
+    .dt-col-lg-11, .elementor-section .elementor-row .elementor-column.dt-col-lg-11 { width: 91.66666667%; }
+    .dt-col-lg-10, .elementor-section .elementor-row .elementor-column.dt-col-lg-10 { width: 83.33333333%; }
+    .dt-col-lg-9, .elementor-section .elementor-row .elementor-column.dt-col-lg-9 { width: 75%; }
+    .dt-col-lg-8, .elementor-section .elementor-row .elementor-column.dt-col-lg-8 { width: 66.66666667%; }
+    .dt-col-lg-7, .elementor-section .elementor-row .elementor-column.dt-col-lg-7 { width: 58.33333333%; }
+    .dt-col-lg-6, .elementor-section .elementor-row .elementor-column.dt-col-lg-6 { width: 50%; }
+    .dt-col-lg-5, .elementor-section .elementor-row .elementor-column.dt-col-lg-5 { width: 41.66666667%; }
+    .dt-col-lg-4, .elementor-section .elementor-row .elementor-column.dt-col-lg-4 { width: 33.33333333%; }
+    .dt-col-lg-3, .elementor-section .elementor-row .elementor-column.dt-col-lg-3 { width: 25%; }
+    .dt-col-lg-2, .elementor-section .elementor-row .elementor-column.dt-col-lg-2 { width: 16.66666667%; }
+    .dt-col-lg-1, .elementor-section .elementor-row .elementor-column.dt-col-lg-1 { width: 8.33333333%; }
+
+}
+
+/*----*****---- << Tablet (Landscape) >> ----*****----*/
+
+/* Note: Design for a width of 960px */
+@media only screen and (min-width:1025px) and (max-width:1280px) {
+
+    /*----*****---- << Custom Columns >> ----*****----*/
+    .dt-col-md-12, .elementor-section .elementor-row .elementor-column.dt-col-md-12 {width: 100%;}
+    .dt-col-md-11, .elementor-section .elementor-row .elementor-column.dt-col-md-11 { width: 91.66666667%; }
+    .dt-col-md-10, .elementor-section .elementor-row .elementor-column.dt-col-md-10 { width: 83.33333333%; }
+    .dt-col-md-9, .elementor-section .elementor-row .elementor-column.dt-col-md-9 { width: 75%; }
+    .dt-col-md-8, .elementor-section .elementor-row .elementor-column.dt-col-md-8 { width: 66.66666667%; }
+    .dt-col-md-7, .elementor-section .elementor-row .elementor-column.dt-col-md-7 { width: 58.33333333%; }
+    .dt-col-md-6, .elementor-section .elementor-row .elementor-column.dt-col-md-6 { width: 50%; }
+    .dt-col-md-5, .elementor-section .elementor-row .elementor-column.dt-col-md-5 { width: 41.66666667%; }
+    .dt-col-md-4, .elementor-section .elementor-row .elementor-column.dt-col-md-4 { width: 33.33333333%; }
+    .dt-col-md-3, .elementor-section .elementor-row .elementor-column.dt-col-md-3 { width: 25%; }
+    .dt-col-md-2, .elementor-section .elementor-row .elementor-column.dt-col-md-2 { width: 16.66666667%; }
+    .dt-col-md-1, .elementor-section .elementor-row .elementor-column.dt-col-md-1 { width: 8.33333333%; }
+
+    .dt-col-md-1b5, .elementor-section .elementor-row .elementor-column.dt-col-md-1b5 { width: 20%; }
+    .dt-col-md-2b5, .elementor-section .elementor-row .elementor-column.dt-col-md-2b5 { width: 40%; }
+    .dt-col-md-3b5, .elementor-section .elementor-row .elementor-column.dt-col-md-3b5 { width: 60%; }
+    .dt-col-md-4b5, .elementor-section .elementor-row .elementor-column.dt-col-md-4b5 { width: 80%; }
+
+    .dt-col-md-offset-12 { margin-left: 100% }
+    .dt-col-md-offset-11 { margin-left: 91.66666667% }
+    .dt-col-md-offset-10 { margin-left: 83.33333333% }
+    .dt-col-md-offset-9 { margin-left: 75% }
+    .dt-col-md-offset-8 { margin-left: 66.66666667% }
+    .dt-col-md-offset-7 { margin-left: 58.33333333% }
+    .dt-col-md-offset-6 { margin-left: 50% }
+    .dt-col-md-offset-5 { margin-left: 41.66666667% }
+    .dt-col-md-offset-4 { margin-left: 33.33333333% }
+    .dt-col-md-offset-3 { margin-left: 25% }
+    .dt-col-md-offset-2 { margin-left: 16.66666667% }
+    .dt-col-md-offset-1 { margin-left: 8.33333333% }
+    .dt-col-md-offset-0 { margin-left: 0 }
+
+}
+
+
+/*----*****---- << Tablet (Portrait) >> ----*****----*/
+
+/* Note: Design for a width of 768px */
+@media only screen and (min-width:768px) and (max-width:1024px) {
+
+    /*----*****---- << Custom Columns >> ----*****----*/
+    .dt-col-sm-12, .elementor-section .elementor-row .elementor-column.dt-col-sm-12 { width: 100%; }
+    .dt-col-sm-11, .elementor-section .elementor-row .elementor-column.dt-col-sm-11 { width: 91.66666667%; }
+    .dt-col-sm-10, .elementor-section .elementor-row .elementor-column.dt-col-sm-10 { width: 83.33333333%; }
+    .dt-col-sm-9, .elementor-section .elementor-row .elementor-column.dt-col-sm-9 { width: 75%; }
+    .dt-col-sm-8, .elementor-section .elementor-row .elementor-column.dt-col-sm-8 { width: 66.66666667%; }
+    .dt-col-sm-7, .elementor-section .elementor-row .elementor-column.dt-col-sm-7 { width: 58.33333333%; }
+    .dt-col-sm-6, .elementor-section .elementor-row .elementor-column.dt-col-sm-6 { width: 50%; }
+    .dt-col-sm-5, .elementor-section .elementor-row .elementor-column.dt-col-sm-5 { width: 41.66666667%; }
+    .dt-col-sm-4, .elementor-section .elementor-row .elementor-column.dt-col-sm-4 { width: 33.33333333%; }
+    .dt-col-sm-3, .elementor-section .elementor-row .elementor-column.dt-col-sm-3 { width: 25%; }
+    .dt-col-sm-2, .elementor-section .elementor-row .elementor-column.dt-col-sm-2 { width: 16.66666667%; }
+    .dt-col-sm-1, .elementor-section .elementor-row .elementor-column.dt-col-sm-1 { width: 8.33333333%; }
+
+    .dt-col-sm-offset-12 { margin-left: 100% }
+    .dt-col-sm-offset-11 { margin-left: 91.66666667% }
+    .dt-col-sm-offset-10 { margin-left: 83.33333333% }
+    .dt-col-sm-offset-9 { margin-left: 75% }
+    .dt-col-sm-offset-8 { margin-left: 66.66666667% }
+    .dt-col-sm-offset-7 { margin-left: 58.33333333% }
+    .dt-col-sm-offset-6 { margin-left: 50% }
+    .dt-col-sm-offset-5 { margin-left: 41.66666667% }
+    .dt-col-sm-offset-4 { margin-left: 33.33333333% }
+    .dt-col-sm-offset-3 { margin-left: 25% }
+    .dt-col-sm-offset-2 { margin-left: 16.66666667% }
+    .dt-col-sm-offset-1 { margin-left: 8.33333333% }
+    .dt-col-sm-offset-0 { margin-left: 0 }
+
+}
+
+
+/*----*****---- << Mobile (Landscape) >> ----*****----*/
+
+/* Common Styles for the devices below 767px width */
+@media only screen and (max-width: 767px) {
+
+   /*----*****---- << Column >> ----*****----*/
+   .column { margin-left: 0; }
+   .column { margin-bottom: 20px; }
+
+   .column, .column.no-space,
+
+   .dt-sc-one-half, .dt-sc-three-sixth, .column.no-space.dt-sc-one-half, .column.no-space.dt-sc-three-sixth,
+   .dt-sc-one-third, .dt-sc-two-sixth, .column.no-space.dt-sc-one-third, .column.no-space.dt-sc-two-sixth,
+   .dt-sc-two-third, .dt-sc-four-sixth, .column.no-space.dt-sc-two-third, .column.no-space.dt-sc-four-sixth,
+
+   .dt-sc-one-fourth, .column.no-space.dt-sc-one-fourth,
+   .dt-sc-three-fourth, .column.no-space.dt-sc-three-fourth,
+
+   .dt-sc-one-fifth, .column.no-space.dt-sc-one-fifth,
+   .dt-sc-two-fifth, .column.no-space.dt-sc-two-fifth,
+   .dt-sc-three-fifth, .column.no-space.dt-sc-three-fifth,
+   .dt-sc-four-fifth, .column.no-space.dt-sc-four-fifth,
+
+   .dt-sc-one-sixth, .column.no-space.dt-sc-one-sixth,
+   .dt-sc-five-sixth, .column.no-space.dt-sc-five-sixth
+
+   .dt-col, div[class*="dt-col"], section[class*="dt-col"], li[class*="dt-col"] { width: 100%; }
+
+}

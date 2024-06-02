@@ -1,0 +1,89 @@
+.seller-auth{
+    margin: 4rem auto;
+    width: 100%;
+    padding: 1rem;
+}
+.logoimage{
+  width: 150px;
+  position: absolute;
+  top: -0.3rem;
+  left: 3rem;
+}
+.formseller{
+    padding: 1.5rem;
+    width: 47%;
+    margin:  auto;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    }
+    .btn-authseller{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 58%;
+      max-width: 54%;
+      border: none;
+      font-size: 0.9rem;
+      outline: none;
+    background: #0153DF;
+      color: white;
+      margin-top: 2rem;
+      padding: 8px 17px;
+      font-weight: 500;
+      border-radius: 7px;
+      box-shadow: 0 2px 3px hsla(0, 0%, 0%, 0.2);
+      transition: 0.25s ease;
+    }
+   .formseller div{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+   }
+    .formseller .input {
+         border: 1px solid #ddd;
+        width: 25rem;
+        height: 2.8rem;
+        padding-left: 0.8em;
+        overflow: hidden;
+        margin-top: 1.4rem;
+        font-weight: 500;
+        border-radius: 7px;
+        transition: all 0.5s;
+      }
+    
+    .formseller .input::placeholder{
+        
+       color: #1e0825;
+      }
+      
+      .formseller .input:hover,
+      .formseller .input:focus {
+        border: 2px solid #4A9DEC;
+        box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+        background-color: white;
+      }
+
+
+       .msgalertlogin{
+        justify-content: center;
+        width: 300px;
+        margin: 2rem auto;
+        text-align: center;
+       }
+         
+@media (max-width : 767px){
+ .formseller{
+  width: 95%;
+
+  margin: 2rem auto;
+ }
+ .formseller .input{
+ width: 94%;
+ margin-left: 0.2rem;
+ }
+}

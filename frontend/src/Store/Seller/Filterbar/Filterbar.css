@@ -1,0 +1,32 @@
+.sidebar-shop-seller {
+   
+    width: 95%;
+     position: sticky;
+    top: 144px;
+    z-index: 1;
+    transition: top .2s linear;
+  padding-right: 0.6rem;
+  border-right: 1px dashed #ddd;
+    margin-top: 4rem;
+}
+.sallediv{
+    width: 300px;
+}
+.sidebar-shop-seller input[type=checkbox]{
+  width: 20px;
+  height: 20px;
+  margin: 0;
+    border-radius: 6px;
+    outline: none;
+    align-items: center;
+    margin-top: 0.7rem;
+   transition: all 0.5s;
+}
+.search-section-seller {
+    display: flex;
+    width: 98%;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }

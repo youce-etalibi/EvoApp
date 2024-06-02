@@ -1,0 +1,44 @@
+.NotFound{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+.notFoundImagee{
+    width: 90vw;
+    height: 60vh;
+}
+.notFoundTitle{
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 2vh;
+    color:var(--blueE);
+}
+.notFoundText{
+    text-align: center;
+    color: rgb(85, 85, 85);
+    margin-bottom: 3vh;
+}
+.notFoundToHome{
+    display: inline-block;
+    padding: 10px 20px; 
+    text-align: center; 
+    background-color: var(--blueE);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    width: 10VW;
+    margin: auto;
+}
+.button-containerr {
+    text-align: center;
+    margin: auto;
+    text-align: center;
+  } 
+  .notFoundToHome:hover{
+    background-color: white;
+    color: var(--blueE);
+    border: 1px solid  var(--blueE);
+  }

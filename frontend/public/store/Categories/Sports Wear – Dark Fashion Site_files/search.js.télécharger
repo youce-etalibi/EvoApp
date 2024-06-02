@@ -1,0 +1,230 @@
+var dtStoreLocatorSearchFormLocationUtils = {
+
+	dtStoreLocatorMapFillLocation : function(place) {
+
+	    jQuery('.dtsl-sf-location-latitude').val(place.geometry.location.lat());
+	    jQuery('.dtsl-sf-location-longitude').val(place.geometry.location.lng());
+
+	},
+
+	dtStoreLocatorLoadLocationData : function(position, locationItem) {
+
+		// Retrieving latitude and longitude
+
+		var latitude = position.coords.latitude;
+		var longitude = position.coords.longitude;
+
+		jQuery('.dtsl-sf-location-latitude').val(latitude);
+		jQuery('.dtsl-sf-location-longitude').val(longitude);
+
+
+		// Retrieving address
+
+		var latlng = new google.maps.LatLng(latitude, longitude);
+		var geocoder = new google.maps.Geocoder;
+
+		geocoder.geocode({'location': latlng}, function(results, status) {
+			if (status === 'OK') {
+				if (results[0]) {
+					jQuery('.dtsl-sf-location').val(results[0].formatted_address);
+				} else {
+					alert(dtslcommonobject.noResult);
+				}
+			} else {
+				alert(status);
+			}
+		});
+
+
+		// Load data
+
+		if(locationItem.hasClass('dtsl-with-ajax-load')) {
+			dtStoreLocatorFrontendUtils.dtStoreLocatorLoadDataOutput();
+		}
+
+	}
+
+}
+
+var dtStoreLocatorSearchFormLocation = {
+
+	dtInit : function() {
+
+		// Auto complete location
+
+			if( document.getElementById('dtsl-sf-location') ) {
+
+				var location_autocomplete = new google.maps.places.Autocomplete(( document.getElementById('dtsl-sf-location')), {
+					types: ['geocode'],
+					"partial_match" : true
+				});
+
+				var input = document.getElementById('dtsl-sf-location');
+
+				if(jQuery(input).hasClass('dtsl-with-ajax-load')) {
+
+					google.maps.event.addDomListener(input, 'keydown', function(e) {
+						if (e.keyCode == 13) {
+							e.stopPropagation();
+							e.preventDefault();
+						}
+					});
+
+					google.maps.event.addListener(location_autocomplete, 'place_changed', function(event) {
+
+						jQuery('#dtsl-sf-location').one("blur",function() {
+							if(jQuery(this).val() == '') {
+								jQuery('.dtsl-sf-location-latitude').val('');
+								jQuery('.dtsl-sf-location-longitude').val('');
+
+								// Load data
+								dtStoreLocatorFrontendUtils.dtStoreLocatorLoadDataOutput();
+							}
+						});
+
+						var place = location_autocomplete.getPlace();
+						dtStoreLocatorSearchFormLocationUtils.dtStoreLocatorMapFillLocation(place);
+
+						// Load data
+						dtStoreLocatorFrontendUtils.dtStoreLocatorLoadDataOutput();
+
+					});
+
+				}
+
+			}
+
+
+		// Location data is detected
+
+			jQuery('#dtsl-sf-location').one("blur",function() {
+
+				if(jQuery(this).val() == '') {
+					jQuery('.dtsl-sf-location-latitude').val('');
+					jQuery('.dtsl-sf-location-longitude').val('');
+
+					// Load data
+					if(jQuery(this).hasClass('dtsl-with-ajax-load')) {
+						dtStoreLocatorFrontendUtils.dtStoreLocatorLoadDataOutput();
+					}
+				}
+
+			});
+
+
+		// Detect user location
+
+			jQuery( 'body' ).delegate( '.dtsl-detect-location', 'click', function(e) {
+
+				var locationItem = jQuery(this);
+
+				if(navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(
+						function (position) {
+
+							if(!locationItem.hasClass('active')) {
+								locationItem.addClass('active');
+							}
+
+							dtStoreLocatorSearchFormLocationUtils.dtStoreLocatorLoadLocationData(position, locationItem);
+						},
+						function (error) {
+
+							if(locationItem.hasClass('active')) {
+								locationItem.removeClass('active');
+							}
+
+							jQuery('.dtsl-sf-location-latitude').val('');
+							jQuery('.dtsl-sf-location-longitude').val('');
+
+							dtStoreLocatorFrontendUtils.dtStoreLocatorLoadDataOutput();
+
+						}
+					);
+				} else {
+					alert(dtslfrontendobject.naviagtorAlert);
+				}
+
+				e.preventDefault();
+
+			});
+
+
+		// Radius field slider
+
+			jQuery('.dtsl-sf-radius-slider').each(function() {
+
+				var slider_handle = jQuery(this).find('.dtsl-sf-radius-slider-handle');
+				var handle = jQuery(this).parents('.dtsl-sf-radius-field-holder').find('.dtsl-sf-radius');
+
+				var radius_min = parseInt(jQuery(this).attr('data-min'), 10);
+				var radius_max = parseInt(jQuery(this).attr('data-max'), 10);
+				var radius_default = parseInt(jQuery(this).attr('data-default'), 10);
+				var radius_unit = jQuery(this).attr('data-unit');
+
+				jQuery(this).slider({
+					range: "min",
+					min: radius_min,
+					max: radius_max,
+					slide: function(event, ui) {
+						slider_handle.html(ui.value + radius_unit);
+						handle.val(ui.value);
+					},
+					stop: function(event, ui) {
+						if(jQuery(this).hasClass('dtsl-with-ajax-load')) {
+							window.setTimeout(function(){
+								dtStoreLocatorFrontendUtils.dtStoreLocatorLoadDataOutput();
+							}, 250);
+						}
+					},
+				});
+				jQuery(this).slider('option', 'value', radius_default);
+
+			});
+
+
+		// Ajax load on input change
+
+			jQuery( 'body' ).delegate( '.dtsl-sf-countries.dtsl-with-ajax-load, .dtsl-sf-cities.dtsl-with-ajax-load, .dtsl-sf-neighborhood.dtsl-with-ajax-load, .dtsl-sf-countystate.dtsl-with-ajax-load', 'change', function() {
+
+				window.setTimeout(function(){
+					dtStoreLocatorFrontendUtils.dtStoreLocatorLoadDataOutput();
+				}, 250);
+
+			});
+
+	},
+
+};
+
+jQuery(document).ready(function() {
+
+	"use strict";
+
+	if(!dtslfrontendobject.elementorPreviewMode) {
+		dtStoreLocatorSearchFormLocation.dtInit();
+	}
+
+});
+
+( function( $ ) {
+
+	"use strict";
+
+	var dtStoreLocatorSearchFormLocationJs = function($scope, $){
+		dtStoreLocatorSearchFormLocation.dtInit();
+	};
+
+    $(window).on('elementor/frontend/init', function(){
+		if(dtslfrontendobject.elementorPreviewMode) {
+			elementorFrontend.hooks.addAction('frontend/element_ready/dtsl-widget-sf-location.default', dtStoreLocatorSearchFormLocationJs);
+			elementorFrontend.hooks.addAction('frontend/element_ready/dtsl-widget-sf-radius.default', dtStoreLocatorSearchFormLocationJs);
+			elementorFrontend.hooks.addAction('frontend/element_ready/dtsl-widget-sf-cities.default', dtStoreLocatorSearchFormLocationJs);
+			elementorFrontend.hooks.addAction('frontend/element_ready/dtsl-widget-sf-countries.default', dtStoreLocatorSearchFormLocationJs);
+			elementorFrontend.hooks.addAction('frontend/element_ready/dtsl-widget-sf-countystate.default', dtStoreLocatorSearchFormLocationJs);
+			elementorFrontend.hooks.addAction('frontend/element_ready/dtsl-widget-sf-nearby.default', dtStoreLocatorSearchFormLocationJs);
+			elementorFrontend.hooks.addAction('frontend/element_ready/dtsl-widget-sf-neighborhood.default', dtStoreLocatorSearchFormLocationJs);
+		}
+	});
+
+} )( jQuery );

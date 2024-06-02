@@ -1,0 +1,242 @@
+.reviweitem{
+  width: 92%;
+  margin-left: 1.3rem;
+    display: flex;
+    align-items: center;
+    padding:0.7rem 3rem;
+    filter: drop-shadow(0 0 88px  #0153DF);
+    border:  1px solid #E1E8EE;
+    transition: all 0.5s;
+}
+.review-items-parent{
+    margin-bottom: 2rem;
+    width: 100%;
+    justify-content: center;
+   
+}
+.emptyorder{
+  width: 30%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+ margin: 0 auto;
+}
+.orderempty-text{
+  width: 100%;
+  text-align: center;
+}
+.orderempty-text h4{
+ font-size: 1.2rem;
+}
+.orderempty-text p{
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+.viewcartbtn-order{
+  padding: 6px 20px;
+  width: 70%;
+  border: none;
+  font-size: 0.9rem;
+  outline: none;
+  background-color: #0153DF;
+  color: white;
+  cursor: pointer;
+  margin-top: 1.3rem;
+  font-weight: 500;
+  border-radius: 8px;
+  box-shadow: 0 2px 3px hsla(0, 0%, 0%, 0.2);
+  transition: 0.25s ease;
+}
+.emptyorder img{
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+
+}
+.statu{
+    background-color: #fff;
+    padding: 0.3rem 1.4rem;
+    color: #1e0825;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    margin-right: 7rem;
+}
+
+  .reviweitem .dateExp{
+    margin-left: 4rem;
+    font-size: 0.9rem;
+  }
+  .reviweitem p{
+    width: 200px;
+    font-weight: 700;
+    margin-right: 4rem;
+    font-size: 0.9rem;
+  }
+  
+  .itemsOrder{
+    display: flex;
+    width: 90%;
+    margin-left: 1.7rem;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s;
+    animation: fadeUp 0.3s ease-out forwards;
+
+
+  }
+  .order-item{
+    align-items: center;
+    display: flex;
+    margin-top: 2rem;
+    width: 100%;
+    flex-direction: row;
+  }
+ 
+  .totalPrice{
+    justify-content: space-between;
+    width: 99%;
+    margin-top: 1rem;
+    align-items: center;
+    display: flex;
+    padding-top: 0.9rem;
+  }
+  .totalPrice div{
+font-weight: 600;
+  }
+  .collapse-order{
+   position: absolute;
+   right: 1rem;
+   cursor: pointer;
+  }
+ 
+  .totalPrice .price{
+    color: rgb(245, 91, 91);
+  font-weight: 700;
+  }
+
+  .order-content{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+  }
+  .detail-order-item{
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+  }
+  .detail-order-item span{
+    color: #1e0825;
+    font-weight: 600;
+  }
+  .detail-order-item p{
+    font-size: 0.85rem;
+    opacity: 0.8;
+    
+  }
+  .order-item .image {
+    align-items: center;
+    display: flex;
+    background-color: #f4f4f4;
+    flex-direction: row;
+    gap: 10px;
+    width: 80px;
+    border-radius: 7px;
+    height: 80px;
+   position: relative;
+
+    margin-right: 20px;
+  }
+  .order-item .image i{
+   font-size: 20px;
+   margin-bottom: -1rem;
+  }
+  .order-item{
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+
+  }
+  .order-item .image img{
+   width: 66px;
+   position: absolute;
+   left: 0.5rem;
+   height: 66px;
+   object-fit: cover;
+  }
+   
+  .order-item .price{
+    justify-content: end;
+    color: #0153DF;
+    margin-left: 24rem;
+  }
+
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  
+  .dateExp {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  
+  .dateExp .range {
+    position: relative;
+    background-color: #E5E7EB;
+    width: 92%;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    margin-left: 1.3rem;
+  }
+  
+  .dateExp .range .fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0153DF;
+    height: 100%;
+    border-radius: 0.25rem;
+  }
+
+  
+
+  @media (max-width : 767px){
+  
+    .reviweitem{
+      width: 100%;
+      padding: 0.8rem 0;
+      margin: 0;
+    }
+    .order-item .price{
+      position: absolute;
+      top: 2rem;
+      width: 100px;
+      right: -1rem;
+    }
+    .dateExp .range{
+      margin-left: 0;
+    }
+    .itemsOrder{
+
+      margin-left: 0;
+    }
+    .reviweitem p{
+     width: 100px;
+    }
+    .reviweitem .date{
+      display: none;
+    }
+    .emptyorder{
+      width: 90%;
+    }
+  
+  }

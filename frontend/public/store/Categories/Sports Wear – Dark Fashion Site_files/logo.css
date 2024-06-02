@@ -1,0 +1,27 @@
+
+/*--------------------------------------------------------------
+   Logo
+--------------------------------------------------------------*/
+
+.wdt-logo-container a {
+    color: inherit;
+}
+
+.wdt-logo-container a img {
+    display: inline-block;
+    vertical-align: middle;
+    vertical-align: middle;
+}
+
+.wdt-logo-container a .site-title {
+    color: var(--wdtHeadAltColor);
+    clear: both;
+    display: block;
+    font-family: var(--wdtFontTypo_Alt);
+    font-size: var(--wdtFontSize_H2);
+    font-weight: bold;
+    line-height: 1.1;
+    transition: inherit;
+}
+
+.wdt-logo-container a:hover .site-title { color: inherit; }

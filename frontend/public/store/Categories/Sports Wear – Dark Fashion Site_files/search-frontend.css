@@ -1,0 +1,257 @@
+/* Location Holder */
+
+.dtsl-sf-location-field-holder .dtsl-sf-location-field-inner-holder {
+    position: relative;
+}
+
+.dtsl-sf-location-field-holder .dtsl-sf-location-field-inner-holder .dtsl-sf-location {
+    margin-bottom: 0;
+    font-family: inherit;
+}
+
+.dtsl-sf-location-field-holder .dtsl-sf-location-field-inner-holder .dtsl-detect-location {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.dtsl-sf-location-field-holder .dtsl-sf-location-field-inner-holder:before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 1px;
+    height: calc(100% - 2px);
+    width: 30%;
+    pointer-events: none;
+    top: 1px;
+    background: rgba(246, 41, 12, 0);
+    background: -moz-linear-gradient(left, rgba(246, 41, 12, 0) 0%, rgba(240, 47, 23, 0) 0%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(246, 41, 12, 0)), color-stop(0%, rgba(240, 47, 23, 0)), color-stop(0%, rgba(255, 255, 255, 0)), color-stop(60%, rgba(255, 255, 255, 0.75)), color-stop(80%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
+    background: -webkit-linear-gradient(left, rgba(246, 41, 12, 0) 0%, rgba(240, 47, 23, 0) 0%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 1) 100%);
+    background: -o-linear-gradient(left, rgba(246, 41, 12, 0) 0%, rgba(240, 47, 23, 0) 0%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(246, 41, 12, 0) 0%, rgba(240, 47, 23, 0) 0%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to right, rgba(246, 41, 12, 0) 0%, rgba(240, 47, 23, 0) 0%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f6290c', endColorstr='#ffffff', GradientType=1);
+}
+
+
+/* Orderby Holder */
+
+.dtsl-sf-orderby-field-holder ul.dtsl-sf-orderby-list li,
+.dtsl-sf-others-field-holder div.dtsl-sf-others-list {
+    margin: 0 5px 5px 0;
+    padding: 0;
+    float: left;
+}
+
+.dtsl-sf-orderby-field-holder ul.dtsl-sf-orderby-list li a,
+.dtsl-sf-others-field-holder div.dtsl-sf-others-list div {
+    border: 1px solid;
+    padding: 6px 10px;
+    float: left;
+    font-size: 12px;
+    line-height: normal;
+    cursor: pointer;
+}
+
+
+/* Range Slider */
+
+.dtsl-sf-fields-holder .ui-widget.ui-widget-content {
+    height: 8px;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: inherit;
+}
+
+.dtsl-sf-fields-holder .ui-widget.ui-widget-content .dtsl-sf-radius-slider-handle {
+    width: auto;
+    float: none;
+    bottom: -20px;
+    text-align: center;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 0 10px;
+    position: relative;
+}
+
+.dtsl-sf-fields-holder .ui-state-default,
+.dtsl-sf-fields-holder .ui-widget-content .ui-state-default,
+.dtsl-sf-fields-holder .ui-widget-header .ui-state-default,
+.dtsl-sf-fields-holder .ui-button,
+html .dtsl-sf-fields-holder .ui-button.ui-state-disabled:hover,
+html .dtsl-sf-fields-holder .ui-button.ui-state-disabled:active {
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    border-width: 4px;
+    border-color: #fff;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, .3);
+}
+
+.dtsl-sf-fields-holder .dtsl-sf-radius-slider-ranges {
+    position: absolute;
+    bottom: 6px;
+}
+
+.dtsl-sf-fields-holder .dtsl-sf-radius-slider-ranges,
+.dtsl-sf-pricerange-field-holder .dtsl-sf-pricerange-slider-ranges,
+.dtsl-sf-pricerange-field-holder>div,
+.dtsl-sf-features-field-holder .dtsl-sf-features-slider-ranges
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.dtsl-sf-fields-holder .dtsl-sf-radius-slider-ranges>div,
+.dtsl-sf-pricerange-field-holder .dtsl-sf-pricerange-slider-ranges,
+.dtsl-sf-features-field-holder .dtsl-sf-features-slider-ranges {
+    flex: unset;
+}
+
+.dtsl-sf-pricerange-field-holder .ui-widget.ui-widget-content,
+.dtsl-sf-features-field-holder .ui-widget.ui-widget-content {
+    padding: 0;
+    width: calc(100% - 15px);
+    margin: 30px auto 40px;
+    display: block;
+    font-family: inherit;
+}
+
+.dtsl-sf-pricerange-field-holder .dtsl-sf-pricerange-slider-ranges,
+.dtsl-sf-features-field-holder .dtsl-sf-features-slider-ranges {
+    bottom: calc(100% + 8px);
+    position: absolute;
+    padding: 0;
+    left: -10px;
+    right: -10px;
+    margin: auto;
+    width: calc(100% - -15px);
+}
+
+.dtsl-sf-features-field-holder .dtsl-sf-features-slider-ranges div[class*="dtsl-sf-features-slider-range"]>label,
+div[class*="dtsl-sf-pricerange-slider-range"]>label {
+    position: relative;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.dtsl-sf-features-field-holder .dtsl-sf-features-slider-ranges div[class*="dtsl-sf-features-slider-range"]>label:before,
+div[class*="dtsl-sf-pricerange-slider-range"]>label:before {
+    position: relative;
+    content: "(";
+    left: 0;
+    display: block;
+}
+
+.dtsl-sf-features-field-holder .dtsl-sf-features-slider-ranges div[class*="dtsl-sf-features-slider-range"]>label:after,
+div[class*="dtsl-sf-pricerange-slider-range"]>label:after {
+    position: relative;
+    content: ")";
+    right: 0;
+    display: block;
+}
+
+.dtsl-sf-features-field-holder .dtsl-sf-features-slider-ranges div[class*="dtsl-sf-features-slider-range"]>label,
+.dtsl-sf-features-field-holder .dtsl-sf-features-slider-ranges div[class*="dtsl-sf-features-slider-range"]>div[class*="dtsl-sf-features-slider-range-"],
+div[class*="dtsl-sf-pricerange-slider-range"]>label {
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+}
+
+div[class*="dtsl-sf-pricerange-slider-range"]>div[class*="dtsl-sf-pricerange-slider-range"] {
+    line-height: normal;
+    justify-content: center;
+}
+
+.dtsl-sf-pricerange-field-holder>div>div[class*="-handle"],
+.dtsl-sf-features-field-holder>div>div[class*="-handle"] {
+    padding: 0 20px;
+    display: inline-table;
+    margin: 20px 5px 0;
+    border-radius: 20px;
+}
+
+.dtsl-sf-pricerange-field-holder .ui-widget.ui-widget-content>div[class*="-handle"]:first-child,
+.dtsl-sf-features-field-holder .ui-widget.ui-widget-content>div[class*="-handle"]:first-child {
+    margin-right: 20px;
+    position: relative;
+}
+
+.dtsl-sf-pricerange-field-holder .ui-widget.ui-widget-content>div[class*="-handle"]:first-child:after,
+.dtsl-sf-features-field-holder .ui-widget.ui-widget-content>div[class*="-handle"]:first-child:after {
+    position: absolute;
+    content: "-";
+    right: -15px;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.dtsl-sf-fields-holder .dtsl-sf-radius-slider-ranges div[class*="-holder"]>label {
+    position: relative;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.dtsl-sf-fields-holder .dtsl-sf-radius-slider-ranges div[class*="-holder"]>label,
+.dtsl-sf-fields-holder .dtsl-sf-radius-slider-ranges div[class*="-holder"]>div[class*="dtsl-sf-radius-slider-range-"] {
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+}
+
+.dt-sc-dark-bg .dtsl-sf-fields-holder .dtsl-sf-radius-slider-ranges div[class*="-holder"]>label,
+.dt-sc-dark-bg .dtsl-sf-fields-holder .dtsl-sf-radius-slider-ranges div[class*="-holder"]>div[class*="dtsl-sf-radius-slider-range-"] { color: #fff; }
+
+.dtsl-sf-fields-holder .dtsl-sf-radius-slider-ranges div[class*="-holder"]>label:before {
+    position: relative;
+    content: "(";
+    left: 0;
+    display: block;
+}
+
+.dtsl-sf-fields-holder .dtsl-sf-radius-slider-ranges div[class*="-holder"]>label:after {
+    position: relative;
+    content: ")";
+    right: 0;
+    display: block;
+}
+
+
+/* Custom location Near By and Open Now */
+
+.dtsl-custom-search-intra .elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated { margin: 0 0 20px; padding: 0; }
+
+.dtsl-custom-search-intra .elementor-column-gap-default>.elementor-row>.elementor-column:not(:last-child)>.elementor-element-populated { margin-right: 20px; }
+
+.dtsl-custom-search-intra .dtsl-sf-others-field-holder.dtsl-sf-nearby-field-holder .dtsl-sf-others-list,
+.dtsl-custom-search-intra .dtsl-sf-others-field-holder.dtsl-sf-opennow-field-holder .dtsl-sf-others-list { display: flex; align-items: center; position: relative; flex-wrap: wrap; width: 100%; margin: 0; }
+
+.dtsl-custom-search-intra .dtsl-sf-others-field-holder.dtsl-sf-nearby-field-holder .dtsl-sf-others-list div,
+.dtsl-custom-search-intra .dtsl-sf-others-field-holder.dtsl-sf-opennow-field-holder .dtsl-sf-others-list div { display: flex; align-items: center; justify-content: center;    position: relative; flex-wrap: wrap; width: 100%; }
+
+.dtsl-custom-search-intra .dtsl-sf-others-field-holder.dtsl-sf-nearby-field-holder .dtsl-sf-others-list .dtsl-sf-others-list-item,
+.dtsl-custom-search-intra .dtsl-sf-others-field-holder.dtsl-sf-opennow-field-holder .dtsl-sf-others-list .dtsl-sf-others-list-item { height: 58px; margin: 0; background: #fff;
+border: 1px solid; border-color: #e3e3e3; font-size: initial; padding: 10px; }
+
+.dtsl-custom-search-intra .dtsl-sf-others-field-holder.dtsl-sf-nearby-field-holder .dtsl-sf-others-list .dtsl-sf-others-list-item:focus, .dtsl-custom-search-intra .dtsl-sf-others-field-holder.dtsl-sf-opennow-field-holder .dtsl-sf-others-list .dtsl-sf-others-list-item:focus { outline: none; }
+
+/*----*****---- << Mobile (Landscape) >> ----*****----*/
+
+/* Common Styles for the devices below 767px width */
+@media only screen and (max-width: 767px) {
+
+ .dtsl-custom-search-intra .elementor-column-gap-default>.elementor-row>.elementor-column:not(:last-child)>.elementor-element-populated { margin-right: 0; }
+
+}

@@ -1,0 +1,581 @@
+.dtsl-marker-container {
+    width: 40px;
+    height: 40px;
+    margin-top: 0;
+    margin-left: -26px;
+    border-radius: 50%;
+    z-index: 9 !important;
+}
+
+.dtsl-marker-image {
+    width: 40px;
+    height: 40px;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: 50%;
+    -webkit-mask-size: 50%;
+    position: absolute;
+    background-color: #fff;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+}
+
+.dtsl-marker-image .dtsl-marker-container {
+    opacity: 1;
+    z-index: 9 !important;
+}
+
+.dtsl-marker-info-box {
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 10px;
+}
+
+.dtsl-marker-info-box.show {
+    opacity: 1;
+    visibility: visible !important;
+    margin-left: 0;
+}
+
+.dtsl-marker-info-box h1 {
+    font-size: 16px;
+}
+
+.dtsl-marker-info-box .dtsl-listings-item-bottom-section {
+    float: left;
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    position: relative;
+}
+
+.dtsl-marker-addition-info.dtsl-marker-addition-info-totalviews,
+.dtsl-marker-addition-info.dtsl-marker-addition-info-averageratings,
+.dtsl-marker-addition-info.dtsl-marker-addition-info-startdate,
+.dtsl-marker-addition-info.dtsl-marker-addition-info-distance,
+.dtsl-marker-addition-info.dtsl-marker-addition-info-categoryimage,
+.dtsl-marker-addition-info.dtsl-marker-addition-info-categoryicon {
+    top: -15px;
+    font-size: 10px;
+    text-align: center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-column-gap: 2px;
+    line-height: normal;
+    left: -15px;
+    font-weight: bold;
+}
+
+.dtsl-marker-addition-info.dtsl-marker-addition-info-distance {
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    left: -25px;
+    padding: 0 2px;
+}
+
+.dtsl-marker-addition-info.dtsl-marker-addition-info-totalviews:before,
+.dtsl-marker-addition-info.dtsl-marker-addition-info-averageratings:before,
+.dtsl-marker-addition-info.dtsl-marker-addition-info-startdate:before {
+    position: static;
+    content: "\f06e";
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 10px;
+    width: 100%;
+    margin-bottom: -8px;
+}
+
+.dtsl-marker-addition-info.dtsl-marker-addition-info-averageratings:before {
+    content: "\f5c0";
+}
+
+.dtsl-marker-addition-info.dtsl-marker-addition-info-categoryimage .dtsl-marker-addition-info-categoryimage {
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.dtsl-marker-addition-info.dtsl-marker-addition-info-categoryimage .dtsl-marker-addition-info-categoryimage-inner,
+.dtsl-marker-addition-info.dtsl-marker-addition-info-categoryicon>span {
+    width: 30px;
+    height: 30px;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: 50%;
+    -webkit-mask-size: 50%;
+    position: relative;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+.dtsl-marker-addition-info.dtsl-marker-addition-info-categoryimage span {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    line-height: 24px;
+    text-align: center;
+}
+
+.dtsl-marker-info-box .dtsl-listings-item-top-section .dtsl-listings-feature-image-holder img {
+    width: 100%;
+}
+
+.dtsl-marker-info-box .dtsl-listings-item-top-section {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.dtsl-marker-info-box .dtsl-listings-item-bottom-section .dtsl-listings-item-bottom-section-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container ul li { margin: 0; }
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container ul li:not(:last-child) { margin-bottom: 10px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper .dtsl-listings-item-top-section .dtsl-listings-item-top-section-content,
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper .dtsl-listings-item-top-section .dtsl-listings-item-title a,
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container *,
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper .dtsl-listings-item-bottom-section .dtsl-listings-item-title a,
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container ul li,
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container .dtsl-listing-view-details,
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper .dtsl-listing-view-details,
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container ul li:before,
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container ul li:after {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+/* Type 1 */
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 { width: 500px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 { display: grid; grid-template-columns: .8fr 1fr; background: #fff; padding: 10px; grid-column-gap: 15px;     font-family: var(--wdtFontTypo_Alt);}
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-top-section .dtsl-listings-item-top-section-content { position: absolute; left: 0; top: 0; height: 100%; width: 100%; z-index: 1; opacity: 0; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-top-section .dtsl-listings-item-top-section-content:before { position: absolute; content: ""; display: block; height: 100%; width: 100%; background-color: rgba(0, 0, 0, .75); z-index: -1; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-bottom-section { display: flex; align-items: center; justify-content: center; padding: 0; background-color: transparent; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container { line-height: 28px; font-size: initial; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container ul li { display: flex; align-items: baseline; position: relative; font-size: 13px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container ul li:not(:last-child) { padding: 0 0 5px; margin: 0 0 5px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container ul li:not(:last-child):before { content: ""; display: block; position: absolute; left: 0px; bottom: 0; height: 1px; width: 100%; background: #e7e7e7; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container ul li:not(:last-child):after { content: ""; display: inline-block; height: 3px; pointer-events: none; position: absolute; left: 4px; bottom: -1px; width: 3px; border-radius: 50%; background: #e7e7e7; box-shadow: 0 0 0px 4px #fff; -moz-box-shadow: 0 0 0px 4px #fff; -ms-box-shadow: 0 0 0px 4px #fff; -webkit-box-shadow: 0 0 0px 4px #fff; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container span { margin-right: 10px; display: flex; align-items: center; justify-content: center; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1:not(.has-post-thumbnail) .dtsl-listings-item-top-section .dtsl-listings-feature-image-holder img { opacity: 0; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1:not(.has-post-thumbnail) .dtsl-listings-item-top-section .dtsl-listings-item-top-section-content { opacity: 1; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-top-section .dtsl-listings-feature-image-holder img { object-fit: cover; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-top-section .dtsl-listings-item-top-section-content .dtsl-listings-utils-item-holder { position: absolute; top: 50%; left: 50%; display: flex; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); font-size: 18px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-top-section .dtsl-listings-item-top-section-content .dtsl-listings-utils-item-holder>div:first-child { margin-right: 10px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-top-section .dtsl-listings-item-top-section-content .dtsl-listings-utils-item-holder .dtsl-listings-utils-item span { margin-right: 0; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1:hover .dtsl-listings-item-top-section .dtsl-listings-item-top-section-content { opacity: 1; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-bottom-section .dtsl-listings-item-title { margin-bottom: 10px; font-size: 15px; font-weight: bold; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-top-section .dtsl-listing-view-details { font-weight: normal; font-size: 13px; margin: 10px 0 0 0;
+position: relative; width: 100%; padding: 12px 10px; text-align: center; }
+
+/* Type2 */
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2 { width: 300px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2 .dtsl-listings-item-bottom-section { position: absolute; height: 100%; width: 100%; padding:0; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2 .dtsl-listings-item-bottom-section .dtsl-listings-item-title { position: absolute; bottom: 20px; left: 20px; font-size: 20px; width: 85%; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2 .dtsl-listings-item-bottom-section .dtsl-listings-item-title a { background-size: 0 80%;
+background-repeat: no-repeat; background-position: left; box-shadow: inset 0px 1em 10px -5px #000; -moz-box-shadow: inset 0px 1em 10px -5px #000;
+-webkit-box-shadow: inset 0px 1em 10px -5px #000; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2 .dtsl-listings-item-bottom-section .dtsl-listings-item-title a:hover { background-size: 100% 80%; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2 .dtsl-listings-item-bottom-section .dtsl-listings-utils-item-holder { font-size: 18px; display: flex;
+justify-content: flex-end; width: 25%; position: absolute; right: 20px; top: 20px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2 .dtsl-listings-item-bottom-section .dtsl-listings-utils-item-holder>div:first-child { margin-right: 10px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2 .dtsl-listings-item-bottom-section .dtsl-listings-utils-item-holder .dtsl-listings-utils-totalimages-item > span {
+margin: 0; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2 .dtsl-listings-item-bottom-section .dtsl-listings-price-container { position: absolute; top: 20px; left: 20px;
+font-size: 18px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2 .dtsl-listings-item-bottom-section .dtsl-listings-price-container del { margin-right: 5px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2:not(.has-post-thumbnail) .dtsl-listings-item-top-section .dtsl-listings-feature-image-holder img { opacity: 0; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2:not(.has-post-thumbnail) .dtsl-listings-item-bottom-section,
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2:not(.has-post-thumbnail) .dtsl-listings-item-bottom-section .dtsl-listings-item-title,
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2:not(.has-post-thumbnail) .dtsl-listings-item-bottom-section .dtsl-listings-price-container { position: static; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2:not(.has-post-thumbnail) .dtsl-listings-item-bottom-section .dtsl-listings-item-title { margin-bottom: 15px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2 .dtsl-listings-item-bottom-section .dtsl-listings-item-title a {
+background-image: linear-gradient(to bottom, rgba(255,255,255,0.01), rgba(255,255,255,0.99) 100%); }
+
+/* Type3 */
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type3 { width: 300px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type3 { float: left; padding: 0; background: #fff; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type3 .dtsl-listings-item-top-section .dtsl-listings-feature-image-holder img { height: 150px; object-fit: cover;
+object-position: center; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type3 .dtsl-listings-item-bottom-section { padding: 15px 10px; background-color: transparent; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type3 .dtsl-listings-item-bottom-section .dtsl-listings-item-title { font-size: 15px; margin-bottom: 15px;
+border-bottom-width: 1px; border-bottom-style: solid; padding-bottom: 10px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type3 .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container { font-size: 12px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type3 .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container ul li { display: flex; align-items: baseline; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type3 .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container ul li:not(:last-child){ margin-bottom: 5px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type3 .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container span { font-size: 10px; margin-right: 10px; min-width: 30px; min-height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type3:not(.has-post-thumbnail) .dtsl-listings-item-top-section .dtsl-listings-feature-image-holder img { opacity: 0; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type3:not(.has-post-thumbnail) .dtsl-listings-price-container { position: static; background: none; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type3:not(.has-post-thumbnail) .dtsl-listings-price-container .dtsl-listings-price-label-holder { color: initial; position: static; padding: 10px 20px 0; margin-bottom: -5px; }
+
+/* Type4 */
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type4 { width: 300px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type4 { float: left; padding: 20px; background: #fff; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type4 .dtsl-listings-item-top-section .dtsl-listings-item-title { font-size: 15px; margin-bottom: 15px; border-bottom-width: 2px; border-bottom-style: solid; padding-bottom: 10px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type4 .dtsl-listings-item-top-section > .dtsl-listings-utils-item { margin-bottom: 10px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type4 .dtsl-listings-item-top-section .dtsl-listings-taxonomy-container ul { display: grid; width: 100%; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type4 .dtsl-listings-item-top-section .dtsl-listings-taxonomy-container ul li:last-child { margin-bottom: 0; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type4 .dtsl-listings-item-bottom-section { padding: 0; background-color: transparent; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type4 .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container ul li { display: flex; align-items: baseline;
+font-size: 13px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type4 .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container ul li:not(:last-child) { margin-bottom: 5px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type4 .dtsl-listings-item-top-section .dtsl-listings-average-rating-container .dtsl-listings-average-rating-overall > span {     margin: 0 10px 0 0; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type4 .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container span { margin-right: 10px; min-width: 30px; min-height: 30px; border: 2px solid; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 12px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type4 .dtsl-listings-item-bottom-section .dtsl-listing-view-details { background: transparent; padding: 0 0 5px 0; font-weight: normal; font-size: 12px; margin: 15px 0 0 0; position: relative; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type4 .dtsl-listings-item-bottom-section .dtsl-listing-view-details:before, .dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type4 .dtsl-listings-item-bottom-section .dtsl-listing-view-details:after { position: absolute; content: ""; display: block; left: 0; right: 0; height: 2px; bottom: -1px; -webkit-transition: all 0.3s linear; -moz-transition: all 0.3s linear; -o-transition: all 0.3s linear; -ms-transition: all 0.3s linear; transition: all 0.3s linear; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type4 .dtsl-listings-item-bottom-section .dtsl-listing-view-details:before { width: 100%; }
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type4 .dtsl-listings-item-bottom-section .dtsl-listing-view-details:after { width: 0; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type4 .dtsl-listings-item-bottom-section .dtsl-listing-view-details:hover:before { width: 0; }
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type4 .dtsl-listings-item-bottom-section .dtsl-listing-view-details:hover:after { width: 100%; }
+
+/* Type5 */
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type5 { width: 300px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type5 { float: left; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type5 .dtsl-listings-item-top-section .dtsl-listings-item-title { font-size: 14px; padding: 15px 10px; text-align: center; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type5 .dtsl-listings-item-top-section .dtsl-listings-item-title a { color: #fff; text-transform: uppercase; font-weight: 500; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type5 .dtsl-listings-item-top-section > .dtsl-listings-utils-item { margin-bottom: 10px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type5 .dtsl-listings-item-top-section .dtsl-listings-taxonomy-container ul { display: grid; width: 100%; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type5 .dtsl-listings-item-top-section .dtsl-listings-taxonomy-container ul li:last-child { margin-bottom: 0; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type5 .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container { font-size: 13px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type5 .dtsl-listings-item-bottom-section { padding: 20px 15px; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type5 .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container ul li { display: flex; align-items: baseline; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type5 .dtsl-listings-item-top-section .dtsl-listings-average-rating-container .dtsl-listings-average-rating-overall > span {     margin: 0 10px 0 0; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type5 .dtsl-listings-item-bottom-section .dtsl-listings-contactdetails-container span { margin-right: 10px; display: flex;
+align-items: center; justify-content: center; }
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type5 > .dtsl-listing-view-details { margin: 0; font-size: 14px; padding: 15px 10px; width: 100%; text-align: center;
+font-weight: normal; }
+
+/*----*****---- << Single Page Map Style >> ----*****----*/
+
+.dtsl-marker-container {
+    width: 40px;
+    height: 40px;
+    margin-top: 0;
+    margin-left: -26px;
+    border-radius: 50%;
+    z-index: 9;
+}
+
+.dtsl-marker-image {
+    width: 40px;
+    height: 40px;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: 50%;
+    -webkit-mask-size: 50%;
+    position: relative;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+}
+
+.dtsl-listings-address-directions {
+    text-align: center;
+    line-height: normal;
+    margin: 20px 0 0 0;
+    -webkit-appearance: none;
+    font-size: 16px;
+    padding: 19px 40px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.dtsl-listings-address-directions span {
+    font-family: "Font Awesome 5 Free";
+    position: relative;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+
+/*----*****---- << Single Page Near by Style >> ----*****----*/
+
+.dtsl-listings-nearby-places-container,
+.dtsl-yelp-places-container {
+    padding: 30px 20px 0;
+}
+
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item,
+.dtsl-yelp-places-container .dtsl-yelp-places-item {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+}
+
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item>*,
+.dtsl-yelp-places-container .dtsl-yelp-places-item>* {
+    margin-bottom: 30px;
+}
+
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item>div:not(:last-child),
+.dtsl-yelp-places-container .dtsl-yelp-places-item>div:not(:last-child) {
+    margin-right: 50px;
+}
+
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-image,
+.dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-image {
+    position: relative;
+    min-width: 160px;
+    min-height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-image .dtsl-listings-nearby-places-icon {
+    width: 100%;
+    height: 100%;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: 35%;
+    -webkit-mask-size: 35%;
+    position: absolute;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+}
+
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-image>img,
+.dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-image img {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    height: 30vw;
+    object-fit: none;
+}
+
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item:not(:last-child),
+.dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-image .dtsl-yelp-places-item:not(:last-child) {
+    border-bottom: 1px solid;
+    padding: 0 0 35px 0;
+}
+
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-content .dtsl-listings-nearby-places-title,
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-content .dtsl-listings-nearby-places-address,
+.dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-content>div[class="dtsl-yelp-places"] {
+    grid-column: 1 / span 4;
+}
+
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-content .dtsl-listings-nearby-places-title,
+.dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-content .dtsl-yelp-places-title {
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-content .dtsl-listings-nearby-places-address,
+.dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-content .dtsl-yelp-places-address {
+    line-height: 24px;
+}
+
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-content,
+.dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-content {
+    flex: 1 0 auto;
+    width: 40%;
+}
+
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-content .dtsl-listings-nearby-places-ratings,
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-content .dtsl-listings-nearby-places-distance,
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-content .dtsl-listings-nearby-places-address,
+.dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-content .dtsl-yelp-places-ratings,
+.dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-content .dtsl-yelp-places-distance,
+.dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-content .dtsl-yelp-places-address {
+    position: relative;
+    display: flex;
+    font-weight: 500;
+    font-size: initial;
+}
+
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-content .dtsl-listings-nearby-places-distance,
+.dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-content .dtsl-yelp-places-distance {
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-content .dtsl-listings-nearby-places-ratings,
+.dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-content .dtsl-yelp-places-ratings {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-content .dtsl-listings-nearby-places-ratings:before,
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-content .dtsl-listings-nearby-places-distance:before,
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-content .dtsl-listings-nearby-places-address:before,
+.dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-content .dtsl-yelp-places-ratings:before,
+.dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-content .dtsl-yelp-places-distance:before,
+.dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-content .dtsl-yelp-places-address:before {
+    position: relative;
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-content .dtsl-listings-nearby-places-ratings:before,
+.dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-content .dtsl-yelp-places-ratings:before {
+    content: "\f005";
+    font-size: 13px;
+}
+
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-content .dtsl-listings-nearby-places-distance:before,
+.dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-content .dtsl-yelp-places-distance:before {
+    content: "\f554";
+    font-size: 20px;
+}
+
+.dtsl-listings-nearby-places-container .dtsl-listings-nearby-places-item .dtsl-listings-nearby-places-content .dtsl-listings-nearby-places-address:before,
+.dtsl-yelp-places-container .dtsl-yelp-places-item .dtsl-yelp-places-content .dtsl-yelp-places-address:before {
+    content: "\f3c5";
+}
+
+
+/* Common Colors */
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-top-section .dtsl-listings-item-top-section-content:before,
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2 .dtsl-listings-item-bottom-section,
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type3 .dtsl-listings-price-container {
+    background-color: rgba(0, 0, 0, .75);
+}
+
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-top-section .dtsl-listings-item-top-section-content .dtsl-listings-utils-item-holder a,
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type1 .dtsl-listings-item-top-section .dtsl-listings-item-top-section-content .dtsl-listings-utils-item.dtsl-listings-utils-totalimages,
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2 .dtsl-listings-item-bottom-section,
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2 .dtsl-listings-item-bottom-section .dtsl-listings-utils-item-holder a,
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type2 .dtsl-listings-item-bottom-section .dtsl-listings-item-title a,
+.dtsl-marker-info-box .dtsl-listings-map-item-wrapper.type3 .dtsl-listings-price-container .dtsl-listings-price-label-holder,
+.dtsl-listings-contactdetails-container .dtsl-listings-contactdetails-list>li a.dtsl-listings-address-directions,
+.dtsl-listings-contactdetails-container .dtsl-listings-contactdetails-list>li a.dtsl-listings-address-directions:hover,
+.dtsl-listings-contactdetails-container .dtsl-listings-contactdetails-list>li a.dtsl-listings-address-directions span,
+.dtsl-listings-address-directions,
+.dtsl-listings-address-directions:hover {
+    color: #fff;
+}
+
+.dtsl-marker-image {
+    background-color: #fff;
+}
+
+
+/* Output Content Scroll */
+
+/*div[class*="-output-data-container"].dtsl-search-list-items.dtsl-content-scroll div[class*="-output-data-holder"] {
+    margin: 0 0 0 -30px;
+}*/
+
+
+/*----*****---- << Mobile (Portrait) >> ----*****----*/
+
+@media only screen and (max-width: 767px) {
+
+    div[class*="-output-data-container"].dtsl-search-list-items.dtsl-content-scroll div[class*="-output-data-holder"] { margin: 0; }
+
+}
+
+
+/* Note: Design for a width of 480px */
+
+@media only screen and (max-width: 479px) {
+    .dtsl-listings-address-directions {
+        font-size: 14px;
+        padding: 19px 30px;
+    }
+}

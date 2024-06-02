@@ -1,0 +1,362 @@
+
+/*--------------------------------------------------------------
+    Header
+--------------------------------------------------------------*/
+
+    #header-wrapper.header-top-relative #header {
+        position: relative;
+    }
+
+    .no-breadcrumb.page-with-slider #header-wrapper.header-top-absolute #header {
+        position: absolute;
+        z-index: 10;
+    }
+
+    .no-breadcrumb.page-with-slider #header-wrapper.bottom-header {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: -ms-flex;
+        display: flex;
+
+        -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+
+    #header .wdt-header-tpl .elementor-section-boxed.sticky-header-active:not(.elementor-section-stretched) { max-width: 1440px; }
+    .wdt-header-menu ul.wdt-primary-nav li.has-mega-menu > ul.sub-menu { min-width: 1440px; }
+
+
+
+/*--------------------------------------------------------------
+    Header Sticky
+--------------------------------------------------------------*/
+
+    #header .wdt-header-tpl .sticky-header-active {
+        -webkit-transition: .5s cubic-bezier(.25,.8,.25,1) 0.05s;
+        transition: .5s cubic-bezier(.25,.8,.25,1) 0.05s;
+    }
+
+    #header .wdt-header-tpl .sticky-header-active {
+        clear: both;
+        margin: auto;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+    #header .wdt-header-tpl .sticky-header-active {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    #header .wdt-header-tpl .sticky-header-active {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+
+    #header .wdt-header-tpl .sticky-header-active.wdt-header-top {
+        opacity: 1;
+        visibility: visible;
+
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    #header .wdt-header-tpl .sticky-header-active.wdt-header-top {
+        -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        z-index: 10;
+    }
+
+    .sticky-header-active {
+        background-color: rgba(var(--wdtSecondaryColorRgb), 0.9);
+    }
+
+    .logged-in.admin-bar #wp-admin-bar-wp-logo a span::before {
+        vertical-align: baseline;
+    }
+
+    .logged-in.admin-bar #header .wdt-header-tpl .sticky-header-active,
+    .logged-in.admin-bar #header .wdt-header-tpl .sticky-header-active.wdt-header-top {
+        top: 32px;
+    }
+
+    @media screen and (max-width: 782px) {
+        .logged-in.admin-bar #header .wdt-header-tpl .sticky-header-active,
+        .logged-in.admin-bar #header .wdt-header-tpl .sticky-header-active.wdt-header-top {
+            top: 46px;
+        }
+    }
+
+
+/*--------------------------------------------------------------
+    Header Modules
+--------------------------------------------------------------*/
+
+    /*--- Slide Menu ---*/
+
+    .wdt-simpler-slider {
+        background: transparent;
+        border: none;
+        display: block;
+        height: 32px;
+        right: 20px;
+        position: fixed;
+        top: 20px;
+        width: 32px;
+        z-index: 999;
+        cursor: pointer;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+    }
+
+    .wdt-simpler-slider:before {
+        transform: translate3d(0, 0, 0);
+        transition: all 0.35s ease-in-out;
+        -moz-transform: translate3d(0, 0, 0);
+        -moz-transition: all 0.35s ease-in-out;
+        -ms-transform: translate3d(0, 0, 0);
+        -ms-transition: all 0.35s ease-in-out;
+        -webkit-transform: translate3d(0, 0, 0);
+        -webkit-transition: all 0.35s ease-in-out;
+        background: var(--wdtBorderColor);
+        content: '';
+        display: block;
+        font-size: 14px;
+        line-height: 32px;
+        opacity: 1;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: -4px;
+        top: -5px;
+    }
+
+    .wdt-simpler-slider span {
+        width: 25px;
+        height: 3px;
+        background: #000;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -12.5px;
+        margin-top: -1.5px;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+    }
+
+    .wdt-simpler-slider span:first-child {
+        top: 5px;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+    }
+
+    .wdt-simpler-slider span:last-child {
+        bottom: 5px;
+        -webkit-transform: translate3d(0, 8px, 0);
+        transform: translate3d(0, 8px, 0);
+        -moz-transform: translate3d(0, 8px, 0);
+        -ms-transform: translate3d(0, 8px, 0);
+    }
+
+    .wdt-simpler-slider span:nth-child(2) {
+        margin-top: -2px;
+        top: 50%;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+    }
+
+    .wdt-simpler-slider span {
+        background: var(--wdtBodyBGColor);
+    }
+
+    .from-left .wdt-simpler-slider,
+    .overlay-header.from-left .wdt-simpler-slider {
+        left: 20px;
+        right: auto;
+    }
+
+    .from-left.boxed-header .wdt-simpler-slider {
+        left: 25px;
+        right: auto;
+    }
+
+
+/*--------------------------------------------------------------
+    Mobile Menu
+--------------------------------------------------------------*/
+
+    .mobile-menu ul.wdt-primary-nav li.has-mega-menu ul.sub-menu li.menu-item-object-wdt_mega_menus .elementor-section {
+        margin: 0;
+        left: auto !important;
+        width: auto !important;
+    }
+
+    .mobile-menu ul.wdt-primary-nav li.has-mega-menu ul.sub-menu li.menu-item-object-wdt_mega_menus .elementor-container .elementor-row {
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    .mobile-menu ul.wdt-primary-nav li.has-mega-menu ul.sub-menu li.menu-item-object-wdt_mega_menus .elementor-column {
+        width: 100%;
+    }
+
+    .mobile-menu ul.wdt-primary-nav li.has-mega-menu ul.sub-menu li.menu-item-object-wdt_mega_menus .elementor-container .elementor-row > .elementor-column > .elementor-column-wrap { padding: 15px !important; }
+
+    .mobile-menu ul.wdt-primary-nav li.has-mega-menu ul.sub-menu li.menu-item-object-wdt_mega_menus .elementor-column ul.wdt-primary-nav li:first-child a {
+        border-top-width: 0;
+    }
+
+
+/*--------------------------------------------------------------
+    Responsive
+--------------------------------------------------------------*/
+
+/*----*****---- << Laptop/Notebook >> ----*****----*/
+
+@media only screen and (min-width:1281px) and (max-width:1540px) {
+
+    #header .wdt-header-tpl .elementor-section-boxed.sticky-header-active:not(.elementor-section-stretched) { max-width: 1080px; }
+
+    .wdt-header-menu ul.wdt-primary-nav li.has-mega-menu > ul.sub-menu { min-width: 1080px; }
+
+}
+
+@media only screen and (max-width: 1280px) {
+
+    .elementor-widget-wp-widget-nav_menu .mobile-nav-container {
+        width: auto;
+        float: none;
+        margin: 20px 0;
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    body:not(.no-breadcrumb) #header-wrapper.header-top-absolute #header .wdt-header-tpl {
+        margin-top: 0;
+    }
+
+}
+
+
+/*----*****---- << Tablet (Landscape) >> ----*****----*/
+
+/* Note: Design for a width of 960px */
+@media only screen and (min-width:1025px) and (max-width:1280px) {
+
+    #header .wdt-header-tpl .elementor-section-boxed.sticky-header-active:not(.elementor-section-stretched) { max-width: 900px; }
+
+    .wdt-header-menu ul.wdt-primary-nav li.has-mega-menu > ul.sub-menu { min-width: 900px; }
+
+}
+
+
+@media only screen and (min-width:1025px) {
+
+    #header .wdt-header-tpl .elementor-section.sticky-header > .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-column-wrap,
+    #header .wdt-header-tpl .elementor-section.sticky-header-active > .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-column-wrap {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+/*----*****---- << Tablet (Landscape) >> ----*****----*/
+
+/* Note: Design for a width of 960px */
+
+@media only screen and (max-width:1024px) {
+    .elementor-widget-wp-widget-nav_menu .mobile-nav-container {
+        padding-right: 0;
+    }
+
+    #header .wdt-header-tpl .sticky-header-active { display: none; }
+}
+
+
+/*----*****---- << Tablet (Portrait) >> ----*****----*/
+
+/* Note: Design for a width of 768px */
+@media only screen and (min-width:768px) and (max-width:1024px) {
+
+    #header .wdt-header-tpl .elementor-section-boxed.sticky-header-active:not(.elementor-section-stretched) { max-width: 710px; }
+
+    .wdt-header-menu ul.wdt-primary-nav li.has-mega-menu > ul.sub-menu { min-width: 710px; }
+
+    .elementor-widget-wp-widget-nav_menu .mobile-nav-container {
+        padding-right: 20px;
+    }
+
+}
+
+/*----*****---- << Mobile (Landscape) >> ----*****----*/
+
+
+/* Common Styles for the devices below 767px width */
+
+@media only screen and (max-width: 767px) {
+
+
+    *[class*="elementor-"] .wdt-mobile-menu-section .elementor-widget-wrap *[class*="elementor-element-"].elementor-element {
+        width: auto;
+        margin: 0;
+    }
+    .elementor-widget-wdt-header-menu {
+        display: inline-block;
+        float: none;
+        margin: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+    .wdt-logo-container.elementor-widget-image .elementor-widget-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+/*----*****---- << Mobile (Landscape) >> ----*****----*/
+
+/* Note: Design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+    #header .wdt-header-tpl .elementor-section-boxed.sticky-header-active:not(.elementor-section-stretched) { max-width: 420px; }
+
+    .wdt-header-menu ul.wdt-primary-nav li.has-mega-menu > ul.sub-menu { min-width: 420px; }
+
+}
+
+
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+
+    #header .wdt-header-tpl .elementor-section-boxed.sticky-header-active:not(.elementor-section-stretched) { max-width: 290px; }
+
+    .wdt-header-menu ul.wdt-primary-nav li.has-mega-menu > ul.sub-menu { min-width: 290px; }
+
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 319px) {
+
+    #header .wdt-header-tpl .elementor-section-boxed.sticky-header-active:not(.elementor-section-stretched) { max-width: 200px; }
+
+    .wdt-header-menu ul.wdt-primary-nav li.has-mega-menu > ul.sub-menu { min-width: 200px; }
+
+}

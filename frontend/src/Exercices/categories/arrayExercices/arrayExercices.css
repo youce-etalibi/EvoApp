@@ -1,0 +1,93 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+
+#ulExercicesCategories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.parentComposantPersonalTraining h3 {
+    display: block;
+}
+
+.ulExercicesCategories {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.menuOfFilter {
+    background-color: var(--blueChelsea);
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+
+.ulArrayExercices {
+    position: relative;
+    bottom: 1rem;
+}
+
+.ulArrayExercices li {
+    width: 100%;
+    background-color: black;
+    padding: 0.2rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ulArrayExercices li .infoExercicesCategories {
+    display: flex;
+    gap:0.5rem;
+}
+
+.ulArrayExercices li .infoExercicesCategories img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.ulArrayExercices li .infoExercicesCategories span {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ulArrayExercices li .infoExercicesCategories span p{
+    color: white;
+    font-size: 0.6rem;
+}
+
+.ulArrayExercices li .infoExercicesCategories span h4{
+    color: var(--blueCity);
+    font-size: 1rem;
+}
+
+#buttonsExercicesCategories  li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttonsExercicesCategories  li button {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+#buttonsExercicesCategories  li button i {
+    color: white;
+    font-size: 1rem;
+}

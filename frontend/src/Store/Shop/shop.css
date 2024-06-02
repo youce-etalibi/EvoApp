@@ -1,0 +1,270 @@
+
+.search-section {
+  padding: 20px 30px;
+  display: flex;
+  width: 98%;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+.headsidebar{
+  display: flex;
+  width: 89%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.headtitle{
+  display: flex;
+  width: 94%;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px dashed #ddd;
+  padding: 0.4rem 0.6rem;
+  color: #0153DF;
+  border-radius: 7px;
+  justify-content: space-between;
+}
+.headtitle h3{
+  font-size: 0.9rem;
+  font-weight: 558;
+}
+
+.headsidebar span{
+ font-size: 0.9rem;
+}
+.headsidebar h3{
+font-size: 24px;
+}
+.gender{
+  display: flex;
+  flex-direction: row;
+ width: 90%;
+ margin-top: 1rem;
+}
+.slider-range{
+  margin: 1rem 0.6rem ;
+}
+
+.Topshop{
+   
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 1.5rem 9rem;
+    margin-top: 7rem;
+    opacity: 0.8;
+    color: white;
+    background-position: center;
+
+  background-image: linear-gradient(45deg, rgba(33,33,33, 0) 0%,transparent 73%),repeating-linear-gradient(90deg, rgba(255,255,255, 0.13) 0px, rgba(255,255,255, 0.13) 1px,transparent 1px, transparent 17px),repeating-linear-gradient(0deg, rgba(255,255,255, 0.13) 0px, rgba(255,255,255, 0.13) 1px,transparent 1px, transparent 17px),linear-gradient(0deg, rgba(33,33,33, 0),rgba(33,33,33, 0)), radial-gradient(circle at 82% 63%, rgba(183,183,183, 0) 0%, rgba(183,183,183, 0) 84%,transparent 84%, transparent 100%),radial-gradient(circle at 88% 98%, rgba(232,232,232, 0) 0%, rgba(232,232,232, 0) 15%,transparent 15%, transparent 100%),radial-gradient(circle at 77% 83%, rgba(252, 252, 252,0.05) 0%, rgba(252, 252, 252,0.05) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 64% 0%, rgba(140,140,140, 0.07) 0%, rgba(140,140,140, 0.07) 54%,transparent 54%, transparent 100%),radial-gradient(circle at 57% 86%, rgba(241,241,241, 0) 0%, rgba(241,241,241, 0) 80%,transparent 80%, transparent 100%),radial-gradient(circle at 17% 93%, rgba(68,68,68, 0) 0%, rgba(68,68,68, 0) 82%,transparent 82%, transparent 100%),radial-gradient(circle at 85% 70%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 13%,transparent 13%, transparent 100%),linear-gradient(398deg, rgba(23, 25, 27, 0.49),rgba(8, 8, 8, 0.49)), url(/public/store/covershop.png) ;
+
+}
+.topsearch .group {
+    display: flex;
+    margin-left: 2.3rem;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    width: 310px;
+    
+   }
+   .topsearch .input {
+    
+    border: 2px solid transparent;
+    width: 17rem;
+    height: 2.4rem;
+    padding-left: 3em;
+    padding-right: 1em;
+    outline: none;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    font-weight: 500;
+    border-radius: 7px;
+    transition: all 0.5s;
+  }
+
+.topsearch .input::placeholder{
+    
+   color: #1e0825;
+  }
+  
+  .topsearch .input:hover,
+  .topsearch .input:focus {
+    border: 2px solid #4A9DEC;
+    box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+    background-color: white;
+  }
+   
+   .topsearch .icon {
+    position: absolute;
+    left: 1rem;
+    fill: #0153DF;
+    width: 1rem;
+    height: 1rem;
+   }
+   .topsearch{
+    justify-content: space-between;
+    width: 88%;
+    display: flex;
+    flex-direction: row;
+    filter: drop-shadow(0 0 488px  #0153DF);
+    margin: 2rem auto 0 2rem;
+   }
+   
+.filter-header {
+  font-weight: bold;
+  font-size: 20px;
+}
+.sidebar-shop h4 {
+  margin: 1rem 0;
+  border-radius: 2px;
+}
+.sidebar-shop {
+   
+    width: 32%;
+     position: sticky;
+    top: 144px;
+    z-index: 1;
+    transition: top .2s linear;
+  padding-right: 0.6rem;
+  border-right: 1px dashed #ddd;
+    margin-top: 2rem;
+}
+.sidebar-shop input[type=checkbox]{
+  width: 20px;
+  height: 20px;
+  margin: 0;
+    border-radius: 6px;
+    outline: none;
+    align-items: center;
+    margin-top: 0.7rem;
+   transition: all 0.5s;
+}
+
+
+#arrowdown{
+    cursor: pointer;
+    font-size: 0.6rem;
+ 
+}
+
+#shopCollection{
+  display: flex;
+    justify-content: space-evenly;
+    width: 88%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 2rem auto 0 3rem;
+}
+.shopRight{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.btn-gender{
+  position: relative;
+  font: 500 16px / 110% ;
+  background: #fff;
+  max-width: 113px;
+  height: 38px;
+  color: #1e0825;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #1E242629;
+  border-radius: 7px;
+  padding: 12px 20px;
+}
+
+
+.filterlistCategory{
+  margin: 1rem 0;
+}
+#category-options{
+  margin-top: 0.4rem;
+}
+
+input:checked::before{
+  width: 20px;
+        height: 20px;
+        content: url(https://store.betterme.world/cdn/shop/files/checked.svg?v=1699361346);
+}
+
+#ck-button {
+  margin: 0.4rem 0 1.4rem 0;
+  overflow: auto;
+  float: left;
+  border-radius: 4px;
+cursor: pointer;
+
+  border: 1px solid white;
+}
+
+#ck-button:hover {
+cursor: pointer;
+}
+
+#ck-button label {
+  float: left;
+cursor: pointer;
+
+  margin-left: 1rem;
+}
+
+
+#ck-button label span {
+  text-align: center;
+  display: block;
+  width: auto;
+  padding: 2px 1rem;
+  overflow: hidden;
+  border-radius: 2px;
+  border: 1px solid #737373;
+}
+
+#ck-button label input {
+  position: absolute;
+  top: -20px;
+  display: none;
+}
+
+#ck-button input:checked + span {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+
+  
+@media (max-width : 767px){
+ 
+ 
+ .sidebar-shop{
+  width: 100%;
+  position: relative;
+  margin-bottom: 4rem;
+ }
+ .search-section{
+  flex-direction: column;
+  margin-top: -7rem;
+ }
+ .shopRight{
+  margin-top: 4rem;
+ }
+ #shopCollection{
+  width: 72%;
+  justify-content: center;
+ }
+ .topsearch{
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+ }
+ .Topshop{
+  margin-top: 7rem;
+ }
+}

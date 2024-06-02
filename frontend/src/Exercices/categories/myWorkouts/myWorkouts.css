@@ -1,0 +1,330 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+
+.headerWorkout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(183, 183, 183);
+    font-size: 0.7rem;
+}
+
+.headerWorkout span {
+    color: var(--blueCity);
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.parentRowWorkout {
+    display: flex;
+    font-size: 0.8rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    margin-top: -.5rem;
+}
+
+.parentRowWorkout span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--blueCity);
+    font-size: 0.7rem;
+}
+
+.parentRowWorkout {
+    margin-bottom: .3rem;
+}
+
+.parentRowWorkout span p:first-child {
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#levelWorkOut {
+    color: var(--blueChelsea);
+    font-size: 0.6rem;
+    margin-left: .4rem;
+    margin-top: -.2rem;
+}
+
+.RowExerciceWorkout {
+    display: flex;
+    align-items: center;  
+    justify-content: space-between;  
+    background-color: var(--blueCity);
+    margin-bottom: 0.3rem;
+    padding: 0.2rem;
+    border-radius: 5px;
+    
+}
+
+#parentImgExWorkout {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.RowExerciceWorkout img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.infoRowExercice p{
+    color: black;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-align: start;
+}
+
+.infoRowExercice h4{
+    color: white;
+    text-align: start;
+}
+
+.elementInfoImgExerciceWorkout {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.parentRowWorkoutSuccess {
+    background-color: rgb(61, 228, 19);
+    border-radius: 5px;
+    padding: 0.2rem;
+    margin-bottom: 0.2rem;
+    margin-top: 0.4rem;
+}
+
+.parentRowWorkoutSuccess header {
+    color: white;
+    margin-top: -1rem;
+}
+
+.parentRowWorkoutSuccess header span{
+    color: white;
+}
+
+
+.parentRowWorkoutSuccess .parentRowWorkout {
+    color: white;
+}
+
+.parentRowWorkoutSuccess .parentRowWorkout span p{
+    color: white;
+}
+
+.parentRowWorkoutSuccess .parentRowWorkout span #levelWorkOut{
+    color: white;
+}
+
+
+#successWorkout {
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: -.6rem;
+    font-size: 0.8rem;
+    background-color: white;
+    color: rgb(61, 228, 19);
+    border-radius: 5px;
+}
+
+#inputCheckExercice {
+    display: none;
+}
+
+#labelCheckExercice {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: -1.5rem;
+    margin-top: -.5rem;
+}
+
+
+#labelCheckExercice i {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+
+.bx-checkWhite {
+    color: white;
+}
+
+.parentRowWorkoutYellow  {
+    background-color: rgb(255, 217, 0);
+    color: black;
+}
+
+.parentRowWorkoutYellow header{
+    color: black;
+}
+.parentRowWorkoutYellow header span {
+    color: black;
+}
+.parentRowWorkoutYellow #successWorkout{
+    color: rgb(244, 187, 0) ;
+}
+.parentRowWorkoutYellow .parentRowWorkout{
+    color: black ;
+}
+.parentRowWorkoutYellow .parentRowWorkout span p{
+    color: black ;
+}
+.parentRowWorkoutYellow .parentRowWorkout span #levelWorkOut {
+    color: black ;
+}
+
+.parentRowWorkoutRed {
+    background-color: red;
+}
+
+.parentRowWorkoutRed #successWorkout{
+    color: red;
+}
+
+.spanHEaderWorkout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.spanHEaderWorkout button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--blueChelsea);
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+
+.spanHEaderWorkout button:hover {
+    background-color: rgb(243, 243, 243);
+}
+
+.spanHEaderWorkout button:active {
+    background-color: rgb(202, 202, 202);
+}
+
+.spanHEaderWorkout button i {
+    font-size: 1.5rem;
+}
+
+.noExercises {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.noExercises p {
+    color: white;
+    font-size: 0.8rem;
+}
+.noExercises button {
+    background:none;
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 0.1rem dashed white;
+    color: white;
+    cursor: pointer;
+}
+
+.addWorkoutNotExiste {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.addWorkoutNotExiste button{
+    background: none;
+    color: #3f85ffba;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.addWorkoutNotExiste button i {
+    font-size: 10rem;
+}
+
+#buttonMoreToolWO {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    margin-right: -.5rem;
+    width: 100%;
+    text-align: end;
+    padding: 0 .1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+#buttonMoreToolWO:hover {
+    text-shadow: 0 0 10px black;
+}
+
+.MenuButtonMoreToolWO {
+    background-color: var(--blueCity);
+    width: fit-content;
+    padding: .2rem ;
+    border-radius: 0 5px 5px 5px;
+    position: absolute;
+    margin-left: 15rem;
+    z-index: 10;
+    border: .1rem solid rgba(255, 255, 255, 0.322);
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.358);
+}
+.MenuButtonMoreToolWO ul {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.MenuButtonMoreToolWO ul li button {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 0;
+    width: 100%;
+    text-align: start;
+    border-bottom: .07rem solid rgba(255, 255, 255, 0.196);
+    transition: all .2s ease-in-out;
+}
+
+.MenuButtonMoreToolWO ul li button:hover {
+    transform: scale(1.1);
+}
+
+.MenuButtonMoreToolWO ul li button:active {
+    color: black;
+}
+
+
+@media (max-width:1045px){
+    .parentComposantPersonalTraining {
+        width: 100%;
+    }
+}

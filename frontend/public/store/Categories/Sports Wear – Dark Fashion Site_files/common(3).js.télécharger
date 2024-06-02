@@ -1,0 +1,45 @@
+
+var dtDirectorFeaturedCommentsCommon = {
+
+	dtInit : function() {
+
+		jQuery('.dtsl-ratings-holder span').mouseenter(function(e) {
+			if(!jQuery(this).parents('.dtsl-ratings-holder').hasClass('rated')) {
+				jQuery('.dtsl-ratings-holder span').removeClass('zmdi zmdi-star');
+				jQuery( this ).prevAll( 'span' ).andSelf().addClass('zmdi zmdi-star');
+				jQuery( this ).nextAll( 'span' ).addClass('zmdi zmdi-star-outline');
+			} else {
+				setTimeout(function() { jQuery('.dtsl-ratings-holder').removeClass('rated'); },100);
+			}
+			e.preventDefault;
+		}).mouseleave(function(e) {
+			if(!jQuery(this).parents('.dtsl-ratings-holder').hasClass('rated')) {
+				jQuery('.dtsl-ratings-holder span').removeClass('zmdi zmdi-star');
+				jQuery( this ).prevAll( 'span' ).andSelf().addClass('zmdi zmdi-star');
+				jQuery( this ).nextAll( 'span' ).addClass('zmdi zmdi-star-outline');
+			} else {
+				setTimeout(function() { jQuery('.dtsl-ratings-holder').removeClass('rated'); },100);
+			}
+			e.preventDefault;
+		});
+
+		jQuery('.dtsl-ratings-holder span').on('click', function(e) {
+			if(!jQuery(this).parents('.dtsl-ratings-holder').hasClass('rated')) {
+				jQuery(this).prevAll('span').andSelf().addClass('zmdi zmdi-star');
+				jQuery(this).parents('.dtsl-ratings-holder').find('#dtsl_rating').val(parseInt(jQuery(this).html(), 10));
+				jQuery(this).parents('.dtsl-ratings-holder').addClass('rated');
+			}
+			e.preventDefault;
+		});
+
+	},
+
+};
+
+jQuery(document).ready(function() {
+
+	"use strict";
+
+	dtDirectorFeaturedCommentsCommon.dtInit();
+
+});

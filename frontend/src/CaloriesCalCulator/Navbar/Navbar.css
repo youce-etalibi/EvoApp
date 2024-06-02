@@ -1,0 +1,85 @@
+.Calories-navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 3rem;
+    width: 93%;
+    height: 70px;
+    align-items: center;
+}
+.leftCalories-navbar{
+    width: 30%;
+}
+
+.rightCalories-navbar{
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+.leftCalories-navbar i{
+        font-size: 25px;
+        position: absolute;
+        top: 1.6rem;
+        left: 3rem;
+        cursor: pointer;
+        padding: 0.2%;
+        border: 0.5px solid rgba(129, 129, 129, 0.291);
+        border-radius: 50%;
+}
+.leftCalories-navbar i:hover{
+    background-color: rgba(128, 128, 128, 0.556);
+    border-radius: 50%;
+    padding: 0.2;
+}
+.rightCalories-navbar .user-image{
+width: 30px;
+height: 30px;
+border-radius: 50%;
+}
+.rightCalories-navbar .userName{
+    height: 35px;
+    align-items: center;
+    margin-right: 5px;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: rgb(76, 76, 76);
+}
+.rightCalories-navbar:hover{
+    box-shadow: 0 0 2px #0052E6;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.Calories-navbar .dropdown-menu{
+    position:absolute;
+    right: 0;
+    top:60px;
+    right: 8%;
+    box-sizing: border-box;
+    width:130px;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 10%;
+    border: 1px solid var(--cityE);
+    background-color: rgb(218, 232, 255);
+    text-align: center;
+}
+
+
+.Calories-navbar .dropdown-menu ul{
+    text-decoration: none;
+    list-style-type: none;
+}
+.Calories-navbar .dropdown-menu li{
+    color: grey;
+    display: flex;
+
+  
+}
+.Calories-navbar .dropdown-menu li:hover{
+  
+    color: rgb(72, 72, 72);
+    transform: scale(1.03);
+}

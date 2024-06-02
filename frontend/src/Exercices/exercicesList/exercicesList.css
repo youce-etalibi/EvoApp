@@ -1,0 +1,17 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+
+@media (max-width:1040px){
+    .parentCategoriresExercicesSecond {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-bottom: 4rem;
+    }
+    .parentCategoriresExercicesSecond .parentFilterExercicesSection{
+        width: 100%;
+    }
+}

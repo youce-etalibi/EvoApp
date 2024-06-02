@@ -1,0 +1,165 @@
+.essentiel{
+    margin-top: 10rem;
+    background-image: url(/public/store/section3.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 88vh;
+    width: 100%;
+    margin-bottom: 5rem;
+
+}
+
+.left-essentiel div{
+    color: #1e0825;
+    width: 60%;
+   padding-top: 9rem;
+   padding-left: 4rem;
+}
+.left-essentiel h1{
+    font-size: 42px;
+   text-align: left;
+    width: 55%;
+
+}
+.left-essentiel div > p{
+     margin-top: 0.6rem;
+   text-align: left;
+    width: 66%;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+.btnEssentiel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    border: none;
+    font-size: 0.9rem;
+    margin: 2rem 0.3rem;
+    outline: none;
+    padding: 7px 18px;
+    background-color: #0153DF;
+    color: white;
+    font-weight: 500;
+    border-radius: 7px;
+    box-shadow: 0 2px 3px hsla(0, 0%, 0%, 0.2);
+    transition: 0.25s ease;
+}
+
+.section3-title{
+    text-align: center;
+}
+.section3-title h1{
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    position: absolute;
+    left: 33.6rem;
+    
+}
+.section3-title .rectangle{
+    width: 60px;
+    margin-top: -3rem;
+    margin-right: -7rem;
+}
+.countdown-message{
+    background-color: #1e0825;
+    color: white;
+    margin-left:0.6rem;
+
+    padding: 1rem 1.2rem;
+}
+    
+    #timers {
+        margin: auto;
+        justify-content: space-evenly;
+        width: 50%;
+        margin-top: 3rem;
+      display: flex;
+filter: drop-shadow(0 0 288px  #0153DF);
+
+     }
+
+     .counter{
+        display: block;
+        width: 17%;
+        justify-content: space-evenly;
+     }
+     .counter div{
+        display: flex;
+       justify-content: space-evenly;
+     }
+
+     .counter-text{
+        font-size: 0.9rem;
+        text-align: left;
+        margin-left: -2rem;
+        display: block;
+     }
+  
+@media (max-width : 767px){
+.essentiel{
+    margin-top: 2rem;
+    height: 50vh;
+}
+.left-essentiel div{
+    width: auto;
+}
+.section3-title{
+    width: auto;
+    text-align: center;
+}
+.section3-title h1{
+  left: 6rem;
+}
+.left-essentiel h1{
+    width: auto;
+    max-width: 270px;
+    font-size: 1.7rem;
+    padding: 0;
+}
+.left-essentiel div{
+    padding: 3rem 1rem;
+}
+.left-essentiel div > p{
+    font-size: 0.7rem;
+    max-width: 220px;
+    width: auto;
+}
+.btnEssentiel{
+    padding: 0.6rem;
+    width: auto;
+    font-size: 0.9rem;
+    max-width: 230px;
+    margin-top: 0.6rem;
+}
+#timers{
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+.counter{
+    width: 60%;
+    margin-left: 2rem;
+}
+.counter div{
+    gap: 2px;
+    text-align: center;
+}
+
+}
+@media (max-width : 1025px){
+    .essentiel{
+        height: 44vh;
+    }
+    .left-essentiel div {
+        padding-top: 2rem;
+    }
+    .btnEssentiel {
+        width: auto;
+    }
+    .section3-title h1{
+        left: 20rem;
+        text-align: center;
+      }
+}

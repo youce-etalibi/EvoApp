@@ -1,0 +1,60 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+.parentCheckWorkouts {
+    background-color: var(--blueCity);
+    color: white;   
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    border: 0.05rem solid var(--blueCity);
+    
+}
+
+.parentCheckWorkouts .ulKeysChecks {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: 0.7rem;
+    border-radius: 5px 0 0 5px;
+    background-color: white;
+    color: var(--blueChelsea);
+}
+
+
+.parentCheckWorkouts .ulKeysChecks i {
+    font-size: 0.7rem;
+}
+
+.parentCheckWorkouts ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    padding: 1rem;
+}
+.parentCheckWorkouts ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.parentCheckWorkouts ul li span i {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+
+
+@media (max-width:1045px){
+    .parentCheckWorkouts {
+        width: 90%;
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}

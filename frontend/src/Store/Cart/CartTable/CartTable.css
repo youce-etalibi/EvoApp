@@ -1,0 +1,137 @@
+
+.cart-table{
+    width: 78%;
+    margin-top: 2rem;
+}
+.cart-total-1{
+  margin-top: 4rem;
+  padding: 1rem 2rem 0 2rem;
+  width: 33%;
+  height: 23vh;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 38px 70px 0px;
+  filter: drop-shadow(0 0 138px  #0153DF);
+border-radius: 7px;
+
+}
+.emptycarttable{
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+ justify-content: center;
+ text-align: center;
+  margin: 9rem auto;
+  gap: 30px;
+}
+.emptycarttable svg{
+  margin: 0 auto;
+}
+.cart-total-1 .cart-total-head{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+margin-bottom: 2rem;
+  width: 97%;
+
+}
+.shopping-cart {
+    width: 94%;
+    padding-left: 0.4rem;
+    background: #FFFFFF;
+    border-radius: 6px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headercart{
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    gap: 50px;
+    margin-left: 2.4rem;
+    margin-bottom: 0.8rem;
+   text-transform: capitalize;
+  }
+ 
+  
+ 
+  .headercart p:nth-child(2){
+  margin-left: 9rem;
+  }
+ 
+  .headercart p:nth-child(3){
+  margin-left: 3rem;
+  }
+  .headercart p:last-child{
+  margin-left: 2.9rem;
+  }
+
+   
+  
+  .item {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom:1.5rem;
+
+    border:  1px solid #E1E8EE;
+}
+
+
+  .item .image {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-right: 20px;
+  }
+  .item .image i{
+   font-size: 20px;
+   margin-bottom: -1rem;
+  }
+  .item .image img{
+    padding-top: 1.4rem;
+   width: 100px;
+   height: 100px;
+   object-fit: cover;
+  }
+   
+  .description {
+    padding-top: 10px;
+    margin-right: 60px;
+    width: 115px;
+  }
+   
+  .description span {
+    display: block;
+    font-size: 14px;
+    color: #43484D;
+    font-weight: 400;
+  }
+   
+  .description span:first-child {
+    margin-bottom: 5px;
+    font-weight: 600;
+    width: 300px;
+  }
+  .description span:last-child {
+    font-weight: 600;
+    margin-top: 8px;
+    color: #0153DF;
+  }
+
+  .total-price,.price {
+    width: 100px;
+    margin-left:4rem;
+    text-align: end;
+    font-size: 18px;
+    color: #43484D;
+    font-weight: 600;
+  }
+
+  #supprimer{
+    margin-left: 3rem;
+    font-size: 1.4rem;
+  }
+ 

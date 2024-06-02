@@ -1,0 +1,223 @@
+
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+.parentNavbar {
+    width: 80%;
+}
+
+.profileHome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+
+}   
+.profileHome span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    color: rgb(0, 0, 0);
+    text-decoration: underline #0152df00;
+}   
+
+.profileHome img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.1rem solid white;
+}
+
+.parentCircleHome {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.circleHome {
+    position: absolute;
+    right: -10%;
+    top: -40%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    }
+.profileHome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+    padding: .2rem;
+    background-color: #000000;
+    border-radius: 5px;
+}   
+.profileHome span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    color: white;
+    text-decoration: underline #0152df00;
+}   
+
+.profileHome img {
+    width: 35px;
+    border-radius: 50%;
+    border: 0.1rem solid white;
+}
+.profileHome h4 {
+    font-size: 1rem;
+    color: white;
+    color: white;
+}
+
+.parentCircleHome {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.circleHome {
+    position: absolute;
+    right: -10%;
+    top: -40%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-image:  linear-gradient(37deg, rgba(0, 41, 102, 0.507), rgba(0, 41, 102, 0.507), rgb(0, 140, 255)), url('/public/homeReferences/circle.jpeg');
+}
+
+
+.ULprofileHome {
+    background-color: white;
+    color: var(--blueCity);
+    position: absolute;
+    z-index: 10;
+    width: 133px;
+    border-radius: 5px;
+    margin-top: .3rem;
+    overflow: hidden;
+    animation: .5s cubic-bezier(.25, 1, .30, 1) wipe-in-down both;
+    border: .01rem solid black;
+}
+
+.ULprofileHome li {
+    padding: .5rem;
+    width: 100%;
+    border-bottom: .05rem solid #3f85ff1d;
+    padding-bottom: .3rem;
+    transition: all .2s ease-in-out;
+
+}
+
+.ULprofileHome li:hover {
+    background-color: rgba(201, 232, 255, 0.532);
+    color: var(--blueChelsea);
+    transform: scale(1.02);
+}
+
+.ULprofileHome li button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+
+.ULprofileHome li button:hover {
+    color: var(--blueChelsea);
+}
+
+.ULprofileHome li button:active {
+    color: var(--blackNewcastle);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.42);
+}
+
+.profileHomeActive {
+    background-color: var(--blueChelsea);
+    border-radius: 5px;
+    backdrop-filter: blur(4px);
+}
+
+.profileHomeActive ULprofileHome{
+    transform: rotate(180deg);
+    animation: .5s cubic-bezier(.25, 1, .30, 1) wipe-out-up both;
+
+}
+
+@keyframes wipe-in-down {
+    from {
+      clip-path: inset(0 0 100% 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  [transition-style="in:wipe:down"] {
+    animation: .5s cubic-bezier(.25, 1, .30, 1) wipe-in-down both;
+  }
+
+  @keyframes wipe-out-up {
+    from {
+      clip-path: inset(0 0 0 0);
+    }
+    to {
+      clip-path: inset(0 0 100% 0);
+    }
+  }
+  
+  [transition-style="out:wipe:up"] {
+    animation: .5s cubic-bezier(.25, 1, .30, 1) wipe-out-up both;
+  }
+
+@media (max-width:790px){
+    .circleHome {
+        top: -30%;
+        right: -25%;
+    }
+}
+@media (max-width:530px){
+    .circleHome {
+        top: -30%;
+        right: -55%;
+    }
+}
+@media (max-width:420px){
+    .circleHome {
+        top: -30%;
+        right: -75%;
+    }
+}
+@media (max-width:375px){
+    .circleHome {
+        top: -30%;
+        right: -95%;
+    }
+}

@@ -1,0 +1,183 @@
+.change-goal{
+    padding:  0;
+}
+
+.chage-goal-header{
+display: flex;
+width: 95%;
+justify-content: space-between;
+margin: auto;
+}
+
+.chage-goal-header img{
+    margin-left: 2vw;
+    margin-top: 1vh;
+}
+.change-goal-content{
+    padding: 4vh 5vw;
+    display: flex;
+    justify-content: space-between;
+}
+ .chage-goal-title{
+    color: var(--blueE);
+    margin: 5vh 5vw 2vh 5vw;
+}
+.change-goal-image-container{
+    text-align: center;
+    margin-top: 8vh;
+}
+.change-goal-main-picture{
+width: 90%;
+height: 32vh;
+border-radius: 10px;
+}
+.chage-goal-user img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 2vh 0;
+}
+.chage-goal-user img:hover{
+    border: 2px solid var(--cityE);
+}
+.nutrition-goals .Daily-goals-title{
+    margin-top: 3vh ;
+    
+}
+.nutrition-goals{
+    width: 45%;
+}
+.nutrition-goals-table{
+    width: 100%;
+}
+.nutrition-goals-ligne{
+    display: flex;
+    justify-content: space-between;
+    height: 35px;
+    background-color: rgb(227, 227, 227);
+    border: 0.5px solid rgb(172, 172, 172);
+    padding: 0.5vh 1vw;
+    margin-top: 0.5vh;
+}
+.Objective-goals{
+    width: 45%;
+}
+.Objective-goals .Daily-goals-title{
+    margin-top: 2vh ;
+}
+
+.change-goal-edit-container{
+text-align: end;
+color: var(--cityE);
+font-weight: bold;
+box-sizing: border-box;
+height: 30px;
+}
+.change-goal-edit-container:hover{
+    color: var(--blueE);
+    cursor: pointer;
+    font-size: 1.05rem;
+}
+@media (max-width: 650px)  {
+    .editModeBackground .editedModeContainer{
+        width: 80vw;
+    }
+    .change-goal-content{
+        flex-direction: column;
+        
+    }
+    .chage-goal-title{
+        margin-left: 12%;
+    }
+    .change-goal-main-picture{
+        display: none;
+    }
+    .nutrition-goals{
+        width: 80%;
+        margin-left: 10%;
+    }.Objective-goals{
+      width: 80%;
+      margin-left: 10%;  
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+    }
+
+   
+
+}
+
+@keyframes slideInFromRight {
+    from {
+      right: -35%;
+    }
+    to {
+      right: 0;
+    }
+  }
+  
+  .editModeBackground {
+    background-color: rgba(83, 83, 83, 0.511);
+    position: absolute;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  
+  .editedModeContainer {
+    height: 100vh;
+    width: 35vw;
+    right: 0;
+    background-color: white;
+    position: absolute;
+    z-index: 5;
+    box-sizing: border-box;
+    padding: 3vh 2vw;
+    border-radius: 10px 0 0 10px;
+    animation: slideInFromRight 0.6s ease forwards; /* Apply animation */
+    box-shadow: 0 0 2px var(--cityE);
+  }
+  
+
+.editedModeContainer .editHeader{
+display: flex;
+justify-content: space-between;
+
+}
+.editHeader .editModeTitle{
+    color: var(--blueE);
+}
+.editForm {
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+  }
+  
+  .editInput,
+  .editSelect {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .editButtons {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .editButton {
+    padding: 8px 16px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .editButton:hover {
+    background-color: #0056b3;
+  }

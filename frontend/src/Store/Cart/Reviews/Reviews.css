@@ -1,0 +1,76 @@
+ .reviewscontent{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 70%;
+ }
+
+.cd-icon {
+  --size: 1em;
+  font-size: var(--size);
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  color: inherit;
+  fill: currentColor;
+  line-height: 1;
+  flex-shrink: 0;
+  max-width: initial;
+}
+
+.thank-you__icon {
+  --size: 96px;
+  color: #0153DF;
+}
+
+.thank-you__paragraph {
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: hsl(225, 4%, 47%);
+
+}
+
+.cd-position-relative {
+  position: relative;
+}
+
+.cd-z-index-1 {
+  z-index: 1;
+}
+
+.cd-margin-bottom-xs {
+  margin-bottom: 1rem;
+}
+
+.cd-padding-y-2xl {
+  padding-top: 8rem;
+}
+
+.cd-container {
+  width: calc(100% - 3rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cd-max-width-adaptive-sm {
+  max-width: 32rem;
+}
+
+.cd-text-center {
+  text-align: center;
+}
+
+.cd-link {
+  color: #0153DF;
+
+  text-decoration: none;
+  background-image: linear-gradient(to right, hsl(250, 84%, 54%) 50%, hsla(250, 84%, 54%, 0.2) 50%);
+  background-size: 200% 1px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  transition: background-position 0.2s;
+}
+
+.cd-link:hover {
+  background-position: 0% 100%;
+}

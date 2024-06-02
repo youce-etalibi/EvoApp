@@ -1,0 +1,194 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+
+.parentSettingsProfile {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}
+
+
+.parentSettingsProfile .NavbarSettingsBar {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.parentSettingsProfile .NavbarSettingsBar .brandLogo img{
+    width: 150px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.parentSettingsProfile .NavbarSettingsBar .buttonLoginSettings button{
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: .8rem;
+    font-weight: 500;
+    padding: .3rem .7rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.parentSettingsProfile .NavbarSettingsBar .buttonLoginSettings button:hover {
+    background-color: rgb(46, 46, 46);
+}
+
+.parentSettingsProfile .NavbarSettingsBar .buttonLoginSettings button:active {
+    background-color: white;
+    border: .05rem solid #3F85FF;
+    color: black;
+}
+
+.headerSettingsProfile {
+    width: 75%;
+    margin: auto;
+}
+
+.headerSettingsProfile p {
+    color: rgb(64, 64, 64);
+    font-size: .8rem;
+    padding-left: 3rem;
+}
+
+.parentFormProfileSettings {
+    background-color: var(--blackNewcastle);
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    margin-top: .5rem;
+    padding-top: 1rem;
+}
+
+.parentFormProfileSettings .headerFormSettings {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding: .5rem 0rem;
+    border-bottom: .1rem solid rgba(255, 255, 255, 0.518);
+}
+
+.parentFormProfileSettings .headerFormSettings div {
+    display: flex;
+    align-items: center;
+}
+
+.parentFormProfileSettings .headerFormSettings #imgProfile{
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: .3rem solid white;
+}
+
+.parentFormProfileSettings .headerFormSettings #buttonProfileChange{
+    background-color: var(--blueCity);
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 50%;    
+    cursor: pointer;
+    border: .2rem solid white;
+    color: white;
+    position: relative;
+    right: 1.5rem;
+    top: 2rem;
+}
+
+
+.parentFormProfileSettings .headerFormSettings #parentButtonsProfileChangePoto {
+    display: flex; 
+    gap:1rem ;
+}
+
+#parentButtonsProfileChangePoto #btnUpload {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+#parentButtonsProfileChangePoto #btnRemove {
+    background:transparent;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border: .1rem solid white;
+    transition: all .2s ease-in-out;
+}
+
+#parentButtonsProfileChangePoto #btnRemove:hover {
+    background-color: rgba(255, 255, 255, 0.123);
+}
+#parentButtonsProfileChangePoto #btnUpload:hover {
+    background-color:rgb(234, 234, 234);
+}
+#parentButtonsProfileChangePoto #btnRemove:active {
+    background-color: white;
+    color: black;
+}
+#parentButtonsProfileChangePoto #btnUpload:active {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.parentDateCreateUpdate {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+
+.parentDateCreateUpdate  h5 span {
+    display: block;
+    color: rgba(232, 235, 244, 0.92);
+    font-size: .8rem;
+    font-weight: 500;
+}
+.parentDateCreateUpdate  h5 span i{
+    font-size: 1rem;
+}
+.parentDateCreateUpdate  h5 strong {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+
+.parentContentProfile {
+    display: flex;
+    align-items: start;
+}
+
+
+@media (mxa-width:870px){
+    .parentSettingsProfile {
+        flex-direction: column;
+    }
+    
+    .parentSettingsProfile .parentFormProfileSettings .headerFormSettings div{
+        display: flex;
+        flex-direction: column;
+
+    }
+}

@@ -1,0 +1,969 @@
+input[type="submit"],
+button,
+input[type="button"],
+input[type="reset"],
+.dtsl-sf-fields-holder .ui-state-default,
+.dtsl-sf-fields-holder input[type='text']~span:not(.dtsl-detect-location):after {
+    -moz-transition: all 0.3s linear 0s;
+    -webkit-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+}
+
+a {
+    text-decoration: none;
+}
+
+fieldset {
+    border: 1px solid;
+    margin: 0 0 20px 0;
+    padding: 15px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='url'],
+input[type='tel'],
+input[type='number'],
+input[type='range'],
+input[type='date'],
+textarea,
+input.text,
+input[type='search'],
+select {
+    font-size: 16px;
+    outline: none;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='url'],
+input[type='tel'],
+input[type='number'],
+input[type='range'],
+input[type='date'],
+textarea,
+.site textarea,
+input.text,
+input[type='search'],
+.lidd_mc_input_light input[type="text"] {
+    border: none;
+    border-bottom: 1px solid var(--wdtBorderColor);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    display: block;
+    margin: 0 0 20px;
+    padding: var(--wdtInputPadding);
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    line-height: normal;
+    outline: none;
+    color: inherit;
+    /* background-color: #fff; */
+    height: auto;
+    backface-visibility: hidden;
+}
+
+textarea {
+    height: 115px;
+    overflow: auto;
+    resize: none;
+    margin: 0 0 20px;
+    color: inherit;
+}
+
+select {
+    border: 1px solid;
+    cursor: pointer;
+    height: 49px;
+    margin: 0;
+    padding: 10px 0;
+    text-indent: .01px;
+    text-overflow: '';
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* input[type='submit'],
+button,
+input[type='button'],
+input[type='reset'] {
+    border: none;
+    float: left;
+    text-transform: uppercase;
+    -webkit-appearance: none;
+    font-size: 16px;
+    padding: 15px 40px;
+    letter-spacing: normal;
+    font-weight: 600;
+    font-family: unset;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+} */
+
+input[type='submit']:hover,
+button:hover,
+input[type='button']:hover,
+input[type='reset']:hover {
+    text-decoration: none;
+}
+
+input[type='submit']:focus,
+button:focus,
+input[type='button']:focus,
+input[type='reset']:focus {
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.wp-core-ui .media-modal-close {
+    background: none;
+    padding: 0;
+}
+
+.aligncenter input[type='submit'] {
+    float: none;
+}
+
+pre {
+    border: 1px solid #e2e4e7;
+    font-family: monospace;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1.6em;
+    white-space: pre;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+em,
+i,
+dfn,
+cite {
+    font-style: italic;
+}
+
+address {
+    display: block;
+    margin: 0 0 1.5em;
+}
+
+code,
+kbd,
+tt,
+var {
+    font-family: monospace;
+    font-size: 15px;
+    font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+    border-bottom: 1px dotted #666;
+    cursor: help;
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline;
+}
+
+mark,
+ins {
+    background: none;
+    text-decoration: none;
+}
+
+big {
+    font-size: 125%;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.3em;
+}
+
+hr {
+    background-color: #eaeaea;
+    border: 0;
+    height: 1px;
+    margin-bottom: 1.5em;
+}
+
+label {
+    font-size: initial;
+    cursor: auto;
+}
+
+.vc_admin_label label,
+.postbox-container label {
+    font-size: inherit;
+}
+
+.postbox-container ul[class*="form-no-clear"] {
+    margin: 10px 0 20px;
+}
+
+.dt_ajax_subscribe_msg .success-msg {
+    color: #15d401;
+}
+
+.dt_ajax_subscribe_msg .error-msg {
+    color: #bd0404;
+}
+
+table {
+    text-align: center;
+    margin: 0;
+}
+
+table td {
+    vertical-align: middle;
+}
+
+table td a,
+table td a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+table.dtsl-custom-table tbody tr:not(:first-child) td:first-child {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+table.dtsl-custom-table tbody tr:not(:first-child) td {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+table.dtsl-custom-table tbody tr:nth-child(2n+1) {
+    background: none;
+}
+
+table.wp-list-table {
+    text-align: inherit;
+}
+
+.dtsl-dashboard-container h1,
+.dtsl-dashboard-container h2,
+.dtsl-dashboard-container h3,
+.dtsl-dashboard-container h4,
+.dtsl-dashboard-container h5,
+.dtsl-dashboard-container h6 {
+    margin: 0;
+}
+
+.dtsl-dashboard-container ul,
+.dtsl-dashboard-container li {
+    list-style: none;
+}
+
+.dtsl-dashboard-container ul {
+    margin: 0;
+    padding: 0;
+}
+
+.dtsl-dashboard-container li {
+    margin: 0 0 10px;
+}
+
+.dtsl-dashbord-load-favourite-listings-content table tr td a.dtsl-remove-favourite-listing {
+    margin-right: 5px;
+}
+
+
+/*----*****---- << Moz Reset >> --****--*/
+
+input[type='submit']::-moz-focus-inner {
+    border: 0;
+    margin-bottom: -1px;
+    margin-top: -1px;
+    padding: 0;
+}
+
+#searchform {
+    clear: both;
+}
+
+.selection-box {
+    clear: both;
+    position: relative;
+}
+
+.selection-box:before,
+.selection-box:after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    border: none;
+    background: none;
+}
+
+.selection-box select {
+    margin-top: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Custom Checkbox */
+
+.dtsl-sf-fields-holder ul li { line-height: normal; }
+
+.dtsl-sf-fields-holder input[type="checkbox"].dtsl-sf-field {
+    opacity: 0;
+    margin: 0;
+    width: auto;
+    height: auto;
+}
+
+.dtsl-sf-fields-holder input[type="checkbox"].dtsl-sf-field~label {
+    display: inline;
+    position: relative;
+    margin-left: 10px;
+    cursor: default;
+    padding:0;
+}
+
+.dtsl-sf-fields-holder input[type="checkbox"].dtsl-sf-field~label:before {
+    border: 2px solid currentcolor;
+    border-radius: 1px;
+    content: "";
+    height: 12px;
+    left: -22px;
+    margin-top: 0;
+    position: absolute;
+    top: 5px;
+    transition: .2s;
+    -webkit-transition: .2s;
+    width: 12px;
+    z-index: 0;
+}
+
+.dtsl-sf-fields-holder input[type="checkbox"].dtsl-sf-field:checked~label:before {
+    backface-visibility: hidden;
+    border-bottom: 2px solid currentcolor;
+    border-left: 2px solid transparent;
+    border-right: 2px solid currentcolor;
+    border-top: 2px solid transparent;
+    height: 16px;
+    left: -25px;
+    top: 1px;
+    transform: rotate(40deg);
+    -webkit-transform: rotate(40deg);
+    transform-origin: 100% 100%;
+    -webkit-transform-origin: 100% 100%;
+    width: 8px;
+    -webkit-backface-visibility: hidden;
+    background: none;
+}
+
+.dtsl-sf-fields-holder.dtsl-list-inline, .dtsl-sf-fields-holder.dtsl-list-inline ul {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.dtsl-sf-fields-holder.dtsl-list-inline ul li {
+    margin: 0 20px 10px 0;
+}
+
+
+/* Custom Chosen JS */
+
+.dtsl-sf-fields-holder .selection-box .chosen-container {
+    margin-bottom: 0;
+    background: #fff;
+}
+
+.dtsl-sf-fields-holder .selection-box .chosen-single {
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    height: auto;
+    border-width: 1px;
+    border-style: solid;
+    padding: 18px;
+    font-size: 16px;
+    position: relative;
+    color: inherit;
+    line-height: normal;
+}
+
+.dtsl-sf-fields-holder .selection-box .chosen-single:before,
+.dtsl-sf-fields-holder .selection-box .chosen-single:after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 1px;
+    background-color: currentColor;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+    top: 50%;
+}
+
+.dtsl-sf-fields-holder .selection-box .chosen-single:before {
+    -webkit-transform: rotate(45deg) translateY(-50%);
+    transform: rotate(45deg) translateY(-50%);
+    right: 27px;
+}
+
+.dtsl-sf-fields-holder .selection-box .chosen-single:after {
+    -webkit-transform: rotate(-45deg) translateY(-50%);
+    transform: rotate(-45deg) translateY(-50%);
+    right: 18px;
+}
+
+.dtsl-sf-fields-holder .selection-box .chosen-container-single.chosen-container-active .chosen-single:before {
+    right: 18px;
+}
+
+.dtsl-sf-fields-holder .selection-box .chosen-container-single.chosen-container-active .chosen-single:after {
+    right: 26px;
+}
+
+.dtsl-sf-fields-holder .selection-box .chosen-drop {
+    border-radius: 0;
+    padding: 0 15px 25px;
+    box-shadow: none;
+    background-clip: unset;
+}
+
+.dtsl-sf-fields-holder .selection-box .chosen-drop, .dtsl-sf-fields-holder .selection-box .chosen-container-single.chosen-container-active {
+    background-color: #fff;
+}
+
+.dtsl-sf-fields-holder .selection-box .chosen-search,
+.dtsl-sf-fields-holder .selection-box .chosen-results {
+    padding: 0;
+}
+
+.dtsl-sf-fields-holder .selection-box .chosen-search {
+    margin: 0 0 10px;
+}
+
+.dtsl-sf-fields-holder .selection-box .chosen-results {
+    margin: 0;
+}
+
+.dtsl-sf-fields-holder .selection-box .chosen-results li {
+    line-height: normal;
+    padding: 10px 6px;
+    font-size: 16px;
+}
+
+.dtsl-sf-fields-holder .selection-box .chosen-search input[type="text"] {
+    padding: 15px;
+    background: none;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.dtsl-sf-fields-holder .selection-box .chosen-single div {
+    display: none;
+}
+
+.dtsl-sf-fields-holder .selection-box .chosen-container-multi .chosen-choices {
+    padding: 15px;
+    border-width: 1px;
+    border-style: solid;
+    background: none;
+    font-size: 16px;
+    box-shadow: none;
+}
+
+.dtsl-sf-fields-holder .selection-box .chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+    margin: 0;
+}
+
+.dtsl-sf-fields-holder .selection-box .chosen-container.chosen-container-multi .chosen-choices li.search-choice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 3px 8px 5px;
+    background: transparent;
+    border-color: #000;
+    color: #000;
+    border-radius: 0;
+    line-height: normal;
+    margin: 0 5px 0 0;
+}
+
+.dtsl-sf-fields-holder .selection-box .chosen-container.chosen-container-multi .chosen-choices li.search-choice span { margin: 0 5px 0 0; }
+
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close { position: relative;
+    top: auto;
+    right: auto;
+    width: 15px;
+    height: 15px;
+    font-size: 0;
+    line-height: 17px; }
+
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close:before {
+    content: "\f057";
+    color: #000;
+    font-family: 'Font Awesome 5 Free';
+    font-size: 14px;
+    right: 0;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close:hover:before { color: #f00; }
+
+.dtsl-sf-fields-holder.dtsl-sf-submitbutton-field-holder .custom-button-style {
+    margin: 0;
+    width: 100%;
+    padding: 0 30px;
+    text-align: center;
+    font-style: normal;
+    font-weight: calc(var(--wdtFontWeight_Base) + 100);
+    font-size: var(--wdtFontSize_Ext);
+    text-transform: uppercase;
+    height: 100%;
+    line-height: 52px;
+}
+.dtsl-sf-fields-holder.dtsl-sf-submitbutton-field-holder .custom-button-style:hover { color: var(--wdtSecondaryColor); background-color: var(--wdtAccentTxtColor);}
+
+.dtsl-sf-fields-holder input,
+.dtsl-comment-form-fields-holder p input,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item input {
+    margin-bottom: 0;
+}
+
+.dtsl-comment-form-fields-holder p,
+.commentlist li.comment .comment-respond .dtsl-comment-form-fields-holder p:last-child,
+.dtsl-rmc-field-wrap,
+#loginform .dtsl-login-field-item,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item,
+.comment-form>p {
+    position: relative;
+    margin-bottom: 22px;
+}
+
+.dtsl-sf-fields-holder input[type='text']~span:not(.dtsl-detect-location),
+form.lidd_mc_form .lidd_mc_input input[type='text']~span:not(#lidd_mc_total_amount-error),
+.dtsl-comment-form-fields-holder p input[type='text']~span,
+.dtsl-comment-form-fields-holder p input[type='email']~span,
+.dtsl-comment-form-fields-holder p textarea~span,
+.dtsl-listings-contactform .dtsl-column input~span,
+.dtsl-listings-contactform .dtsl-column textarea~span,
+#loginform .dtsl-login-field-item input~span,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item input~span,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item textarea~span,
+.comment-form>p input~span,
+.comment-form>p textarea~span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transition: 0.3s;
+    pointer-events: none;
+    border-width: 1px 0;
+    border-style: solid;
+    margin: 0 auto;
+    right: 0;
+}
+
+#loginform .login-password .dtsl-login-field-item input~span:before {
+    left: -1px;
+}
+
+.dtsl-listings-contactform input~span,
+.dtsl-listings-contactform textarea~span,
+.dtsl-listings-contactform .dtsl-column input~span,
+.dtsl-listings-contactform .dtsl-column textarea~span,
+.comment-form .dtsl-comment-form-fields-holder>p.comment-form-comment span,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item textarea~span,
+.comment-form>p input~span,
+.comment-form>p textarea~span {
+    height: calc(100% - 22px);
+}
+
+.dtsl-sf-fields-holder input[type='text']~span:not(.dtsl-detect-location):before,
+.dtsl-sf-fields-holder input[type='text']~span:not(.dtsl-detect-location):after,
+.dtsl-listings-contactform input~span:before,
+.dtsl-listings-contactform input~span:after,
+.dtsl-listings-contactform textarea~span:before,
+.dtsl-listings-contactform textarea~span:after,
+form.lidd_mc_form .lidd_mc_input input[type='text']~span:not(#lidd_mc_total_amount-error):before,
+form.lidd_mc_form .lidd_mc_input input[type='text']~span:not(#lidd_mc_total_amount-error):after,
+.dtsl-comment-form-fields-holder p input[type='text']~span:before,
+.dtsl-comment-form-fields-holder p input[type='text']~span:after,
+.dtsl-comment-form-fields-holder p input[type='email']~span:after,
+.dtsl-comment-form-fields-holder p textarea~span:after,
+.dtsl-comment-form-fields-holder p input[type='email']~span:before,
+.dtsl-comment-form-fields-holder p textarea~span:before,
+#loginform .dtsl-login-field-item input~span:before,
+#loginform .dtsl-login-field-item input~span:after,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item input~span:before,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item input~span:after,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item textarea~span:before,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item textarea~span:after,
+.comment-form>p input~span:before,
+.comment-form>p textarea~span:before,
+.comment-form>p input~span:after,
+.comment-form>p textarea~span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 0;
+    transition: 0.3s;
+    pointer-events: none;
+    background: currentColor;
+    opacity: 0;
+}
+
+.dtsl-sf-fields-holder input[type='text']~span:not(.dtsl-detect-location):before,
+.dtsl-listings-contactform input~span:before,
+.dtsl-listings-contactform textarea~span:before,
+form.lidd_mc_form .lidd_mc_input input[type='text']~span:not(#lidd_mc_total_amount-error):before,
+.dtsl-comment-form-fields-holder p input[type='text']~span:before,
+.dtsl-comment-form-fields-holder p input[type='email']~span:before,
+.dtsl-comment-form-fields-holder p textarea~span:before,
+#loginform .dtsl-login-field-item input~span:before,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item input~span:before,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item textarea~span:before,
+.comment-form>p input~span:before,
+.comment-form>p textarea~span:before {
+    left: 0;
+    top: 0;
+}
+
+.dtsl-sf-fields-holder input[type='text']~span:not(.dtsl-detect-location):after,
+.dtsl-listings-contactform input~span:after,
+.dtsl-listings-contactform textarea~span:after,
+form.lidd_mc_form .lidd_mc_input input[type='text']~span:not(#lidd_mc_total_amount-error):after,
+.dtsl-comment-form-fields-holder p input[type='text']~span:after,
+.dtsl-comment-form-fields-holder p input[type='email']~span:after,
+.dtsl-comment-form-fields-holder p textarea~span:after,
+#loginform .dtsl-login-field-item input~span:after,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item input~span:after,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item textarea~span:after,
+.comment-form>p input~span:after,
+.comment-form>p textarea~span:after {
+    right: 0;
+    bottom: 0;
+}
+
+.dtsl-sf-fields-holder input[type='text']:focus,
+.dtsl-listings-contactform input:focus,
+.dtsl-listings-contactform textarea:focus,
+form.lidd_mc_form .lidd_mc_input input[type='text']:focus,
+.dtsl-comment-form-fields-holder p input[type='text']:focus,
+.dtsl-comment-form-fields-holder p input[type='email']:focus,
+.dtsl-comment-form-fields-holder p textarea:focus,
+.dtsl-listings-contactform .dtsl-column input:focus,
+.dtsl-listings-contactform .dtsl-column textarea:focus,
+#loginform .dtsl-login-field-item input:focus,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item input:focus,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item textarea:focus,
+.comment-form>p input:focus,
+.comment-form>p textarea:focus {
+    border-color: transparent !important;
+    transition-delay: .3s;
+}
+
+.dtsl-sf-fields-holder input[type='text']~span:not(.dtsl-detect-location),
+.dtsl-listings-contactform input~span,
+.dtsl-listings-contactform textarea~span,
+form.lidd_mc_form .lidd_mc_input input[type='text']~span:not(#lidd_mc_total_amount-error),
+.dtsl-comment-form-fields-holder p input[type='text']~span,
+.dtsl-comment-form-fields-holder p input[type='email']~span,
+.dtsl-comment-form-fields-holder p textarea~span,
+.dtsl-comment-form-fields-holder p input[type='text']:focus~span,
+.dtsl-comment-form-fields-holder p input[type='text']:focus~span,
+.dtsl-comment-form-fields-holder p input[type='email']:focus~span,
+.dtsl-comment-form-fields-holder p textarea:focus~span,
+.dtsl-comment-form-fields-holder p input[type='email']:focus~span,
+.dtsl-comment-form-fields-holder p textarea:focus~span,
+.dtsl-listings-contactform .dtsl-column input~span,
+.dtsl-listings-contactform .dtsl-column textarea~span,
+#loginform .dtsl-login-field-item input~span,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item input~span,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item textarea~span,
+.comment-form>p input~span,
+.comment-form>p textarea~span {
+    transition-delay: .3s;
+}
+
+.dtsl-sf-fields-holder input[type='text']:focus~span:not(.dtsl-detect-location),
+.dtsl-listings-contactform input:focus~span,
+.dtsl-listings-contactform textarea:focus~span,
+form.lidd_mc_form .lidd_mc_input input[type='text']:focus~span:not(#lidd_mc_total_amount-error),
+.dtsl-comment-form-fields-holder p input[type='text']:focus~span,
+.dtsl-comment-form-fields-holder p input[type='email']:focus~span,
+.dtsl-comment-form-fields-holder p textarea:focus~span,
+.dtsl-listings-contactform .dtsl-column input:focus~span,
+.dtsl-listings-contactform .dtsl-column textarea:focus~span,
+#loginform .dtsl-login-field-item input:focus~span,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item input:focus~span,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item textarea:focus~span,
+.comment-form>p input:focus~span,
+.comment-form>p textarea:focus~span {
+    width: 100%;
+}
+
+.dtsl-sf-fields-holder input[type='text']:focus~span:not(.dtsl-detect-location):before,
+.dtsl-sf-fields-holder input[type='text']:focus~span:not(.dtsl-detect-location):after,
+.dtsl-listings-contactform input:focus~span:before,
+.dtsl-listings-contactform input:focus~span:after,
+.dtsl-listings-contactform textarea:focus~span:before,
+.dtsl-listings-contactform textarea:focus~span:after,
+form.lidd_mc_form .lidd_mc_input input[type='text']:focus~span:not(#lidd_mc_total_amount-error):before,
+form.lidd_mc_form .lidd_mc_input input[type='text']:focus~span:not(#lidd_mc_total_amount-error):after,
+.dtsl-comment-form-fields-holder p input[type='text']:focus~span:before,
+.dtsl-comment-form-fields-holder p input[type='text']:focus~span:after,
+.dtsl-comment-form-fields-holder p input[type='email']:focus~span:before,
+.dtsl-comment-form-fields-holder p textarea:focus~span:before,
+.dtsl-comment-form-fields-holder p input[type='email']:focus~span:after,
+.dtsl-comment-form-fields-holder p textarea:focus~span:after,
+.dtsl-listings-contactform .dtsl-column input:focus~span:after,
+.dtsl-listings-contactform .dtsl-column textarea:focus~span:after,
+.dtsl-listings-contactform .dtsl-column input:focus~span:before,
+.dtsl-listings-contactform .dtsl-column textarea:focus~span:before,
+#loginform .dtsl-login-field-item input:focus~span:before,
+#loginform .dtsl-login-field-item input:focus~span:after,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item input:focus~span:before,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item input:focus~span:after,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item textarea:focus~span:before,
+.dtsl-listings-claim-form>.dtsl-listings-claim-form-item textarea:focus~span:after,
+.comment-form>p input:focus~span:before,
+.comment-form>p textarea:focus~span:before,
+.comment-form>p input:focus~span:after,
+.comment-form>p textarea:focus~span:after {
+    opacity: 1;
+    transition-delay: .6s;
+    height: 100%;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='url'],
+input[type='tel'],
+input[type='number'],
+input[type='range'],
+input[type='date'],
+textarea,
+input.text,
+input[type='search'],
+select,
+fieldset,
+table *,
+input[type=checkbox]:focus,
+input[type=color]:focus,
+input[type=date]:focus,
+input[type=datetime-local]:focus,
+input[type=datetime]:focus,
+input[type=email]:focus,
+input[type=month]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=radio]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=text]:focus,
+input[type=time]:focus,
+input[type=url]:focus,
+input[type=week]:focus,
+select:focus,
+textarea:focus,
+.wp-core-ui select,
+.wp-core-ui select:focus,
+.dtsl-sf-fields-holder .selection-box .chosen-single,
+.dtsl-sf-fields-holder .selection-box .chosen-search input[type="text"],
+.dtsl-sf-fields-holder .selection-box .chosen-drop,
+.dtsl-sf-location-field-holder .dtsl-sf-location-field-inner-holder .dtsl-sf-location,
+.dtsl-sf-orderby-field-holder ul.dtsl-sf-orderby-list li a,
+.dtsl-sf-fields-holder .selection-box .chosen-container-multi .chosen-choices,
+.lidd_mc_input_light input[type="text"] {
+    border-color: var(--wdtBorderColor);
+    outline: none;
+}
+
+.secondary-sidebar #searchform input[type="text"] {
+    margin-bottom: 0;
+}
+
+input[type=checkbox]:focus,
+input[type=color]:focus,
+input[type=date]:focus,
+input[type=datetime-local]:focus,
+input[type=datetime]:focus,
+input[type=email]:focus,
+input[type=month]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=radio]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=text]:focus,
+input[type=time]:focus,
+input[type=url]:focus,
+input[type=week]:focus,
+select:focus,
+textarea:focus,
+.meta-box-sortables select:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: #000;
+}
+
+input[type="submit"],
+button,
+input[type="button"],
+input[type="reset"] {
+    color: #fff;
+}
+
+
+/* WP Design Overwrite */
+
+.wp-core-ui .media-modal-content button.media-modal-close {
+    background: none;
+    padding: 0;
+}
+
+.wp-core-ui .media-modal-content button.button-hero {
+    float: none;
+}
+
+p.search-box {
+    display: flex;
+}
+
+#post-visibility-select {
+    line-height: 24px;
+}
+
+.meta-box-sortables #misc-publishing-actions .misc-pub-post-status select {
+    margin-bottom: 10px;
+}
+
+.meta-box-sortables #misc-publishing-actions .misc-pub-curtime #timestampdiv {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.meta-box-sortables #misc-publishing-actions .misc-pub-curtime label {
+    margin-right: 5px;
+}
+
+.meta-box-sortables #misc-publishing-actions .misc-pub-curtime select,
+.meta-box-sortables #misc-publishing-actions .misc-pub-curtime input {
+    height: auto;
+    margin: 0;
+}
+
+.meta-box-sortables #misc-publishing-actions .misc-pub-curtime .timestamp-wrap {
+    display: flex;
+}
+
+.meta-box-sortables #misc-publishing-actions .misc-pub-curtime .timestamp-wrap label:nth-last-child(-n+3) {
+    margin-left: 5px;
+}
+
+*[id*="__wp-uploader-id-"].supports-drag-drop .media-router .media-menu-item,
+*[id*="__wp-uploader-id-"].supports-drag-drop .wp-core-ui .media-modal-content button.button-hero {
+    text-transform: inherit;
+    color: inherit;
+}
+
+*[id*="__wp-uploader-id-"].supports-drag-drop .wp-core-ui .button-primary,
+*[id*="__wp-uploader-id-"].supports-drag-drop .attachment-info .delete-attachment,
+*[id*="__wp-uploader-id-"].supports-drag-drop .attachment-info .edit-attachment,
+*[id*="__wp-uploader-id-"].supports-drag-drop .attachment-info .trash-attachment,
+*[id*="__wp-uploader-id-"].supports-drag-drop .attachment-info .untrash-attachment {
+    text-transform: inherit;
+    font-size: inherit;
+}
+
+*[id*="__wp-uploader-id-"].supports-drag-drop .attachment-details .setting+.description {
+    line-height: normal;
+}
+
+*[id*="__wp-uploader-id-"].supports-drag-drop .attachment-details .setting+.description a {
+    text-decoration: underline;
+}
+
+*[id*="__wp-uploader-id-"].supports-drag-drop .media-frame select.attachment-filters:last-of-type {
+    padding: 0 24px 0 8px;
+    height: auto;
+}
+
+*[id*="__wp-uploader-id-"].supports-drag-drop .media-modal-close:active,
+*[id*="__wp-uploader-id-"].supports-drag-drop .media-modal-close:hover {
+    color: #00a0d2;
+}
+
+*[id*="__wp-uploader-id-"].supports-drag-drop .wp-core-ui select {
+    font-size: 14px;
+    line-height: 2;
+    color: #32373c;
+    border-color: #7e8993;
+    box-shadow: none;
+    border-radius: 3px;
+    padding: 0 24px 0 8px;
+    min-height: 30px;
+    max-width: 25rem;
+    -webkit-appearance: none;
+    background: #fff url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%206l5%205%205-5%202%201-7%207-7-7%202-1z%22%20fill%3D%22%23555%22%2F%3E%3C%2Fsvg%3E) no-repeat right 5px top 55%;
+    background-size: 16px 16px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+*[id*="__wp-uploader-id-"].supports-drag-drop .compat-item table>tbody:first-child>tr>th,
+*[id*="__wp-uploader-id-"].supports-drag-drop .compat-item table tr,
+*[id*="__wp-uploader-id-"].supports-drag-drop .compat-item table th,
+*[id*="__wp-uploader-id-"].supports-drag-drop .compat-item .field {
+    background: none;
+    border: none;
+}
+
+.wp-core-ui .quicktags-toolbar input.button.button-small {
+    text-transform: inherit;
+}

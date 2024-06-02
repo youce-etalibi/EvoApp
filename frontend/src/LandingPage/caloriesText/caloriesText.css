@@ -1,0 +1,130 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+.parentCaloriesText {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 7rem;
+}
+
+.rightCalories {
+    width: 50%;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+.rightCalories img {
+    width: 400px;
+}
+
+.leftCalories {
+    width: 50%;
+}
+
+.leftCalories h1 {
+    text-align: start;
+}
+
+.leftCalories p {
+    text-align: start;
+    padding: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+    bottom: 1.8rem;
+}
+
+.vector1 {
+    width: 30px;
+    margin-left: -2rem;
+}
+.vector0 {
+    width: 80px;
+}
+
+.vector2 {
+    width: 140px;
+    margin-left: 0rem;
+    position: relative;
+    bottom: 1rem;
+}
+
+
+@media (max-width:1230px){
+    .vector2 {
+        margin-left: -17rem;
+    }
+}
+@media (max-width:1050px){
+    .vector1 {
+        width: 30px;
+        margin-left: -20rem;
+    }
+    .vector2 {
+        margin-left: -14rem;
+    }
+}
+
+
+@media (max-width:925px){
+    .parentCaloriesText {
+        flex-direction: column-reverse;
+    }
+    .rightCalories {
+        width: 100%;
+    }
+    .leftCalories {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    .leftCalories h1 {
+        text-align: center;
+    }
+    .leftCalories p {
+        text-align: center;
+    }
+    .vector2 {
+        margin-left: -6rem;
+    }
+    .vector1 {
+        width: 30px;
+        margin-left: -24rem;
+    }
+}
+
+@media (max-width: 534px) {
+    .vector1 {
+        width: 30px;
+        margin-left: -20rem;
+    }
+}
+@media (max-width: 434px) {
+    .vector1 {
+        width: 30px;
+        margin-left: -14rem;
+    }
+}
+
+
+@media (max-width:470px){
+    .leftCalories {
+        width: 100%;
+    }
+    .leftCalories h1 {
+        font-size: 2rem;
+        width: 100%;
+    }
+    .leftCalories p {
+        font-size: 0.7rem;
+    }
+    .rightCalories img {
+        width: 300px;
+    }
+}

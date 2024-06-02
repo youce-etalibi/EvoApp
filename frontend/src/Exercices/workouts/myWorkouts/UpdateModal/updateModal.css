@@ -1,0 +1,210 @@
+:root {
+    --blueChelsea : #0153DF;
+    --blueCity : #3F85FF;
+    --blackNewcastle : #000000;
+}
+
+.parentModalUpdateWO {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(37deg, rgba(63,133,255, 0.83),rgba(0, 74, 203, 0.187));   
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(3px);
+    z-index: 10;
+    animation: 1.5s cubic-bezier(.25, 1, .30, 1) square-in-hesitate both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.parentModalUpdateWO .modalupdateContent {
+    background-color: white;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 1rem;
+    height: 400px;
+}
+
+.modalupdateContent span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modalupdateContent span button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.modalupdateContent span button:hover {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.313);
+}
+
+.modalupdateContent span button:active {
+    color: var(--blueChelsea);
+}
+
+.parentModalUpdateWO .modalupdateContent form{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.parentModalUpdateWO .modalupdateContent form td {
+    width: 50%;
+}
+.parentModalUpdateWO .modalupdateContent form td input{
+    width: 100%;
+    padding: 0.3rem;
+    border: .1rem solid var(--blueChelsea);
+    border-radius: 3px;
+}
+.parentModalUpdateWO .modalupdateContent form td select{
+    width: 100%;
+    padding: 0.3rem;
+    border: .1rem solid var(--blueChelsea);
+    border-radius: 3px;
+}
+.parentModalUpdateWO .modalupdateContent form td textarea{
+    width: 100%;
+    padding: 0.3rem;
+    border: .1rem solid var(--blueChelsea);
+    border-radius: 3px;
+}
+
+#updateBtnWO {
+    background-color: var(--blueChelsea);
+    color: white;
+    padding: 0.3rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: .3rem;
+    transition: all .2s ease-in-out;
+}
+
+#updateBtnWO:hover {
+    background-color: #1261eb;
+}
+#updateBtnWO:active {
+    background-color: #003a9d;
+}
+
+#cancelBtnWO {
+    background-color: white;
+    color: var(--blueChelsea);
+    padding: 0.3rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: .3rem;
+    transition: all .2s ease-in-out;
+}
+
+#cancelBtnWO:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+#cancelBtnWO:hover {
+    background-color: rgb(203, 203, 203);
+}
+
+
+@keyframes square-in-hesitate {
+    0% {
+      clip-path: inset(100% 100% 100% 100%);
+    }
+    40% {
+      clip-path: inset(33% 33% 33% 33%);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  [transition-style="in:square:hesitate"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-in-hesitate both;
+  }
+
+
+.ExerciceUpdate {
+    background-color: white;
+    padding: 1rem ;
+    border-radius: 5px;
+    height: 400px;
+}
+
+.ExerciceUpdate img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.ExerciceUpdate .headerExercisesCW {
+    display: flex;
+}
+
+.ExerciceUpdate .headerExercisesCW h2{
+    font-size: 1rem;
+}
+.ExerciceUpdate .headerExercisesCW p{
+    font-size: .7rem;
+}
+.ExerciceUpdate .headerExercisesCW input {
+    font-size: .7rem;
+}
+
+.ExerciceUpdate .ulBodyExercisesCW {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: 1rem;
+}
+
+.ExerciceUpdate .ulBodyExercisesCW li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.ExerciceUpdate .ulBodyExercisesCW .parentImgExCW{
+    width: 50px;
+    height: 50px;
+}
+.ExerciceUpdate .ulBodyExercisesCW li{
+    background-color: var(--blueCity);
+    padding: .2rem;
+    border-radius: 5px;
+}
+.ExerciceUpdate .ulBodyExercisesCW li div{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.ExerciceUpdate .ulBodyExercisesCW  .parentControlsAddEx button{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+.ExerciceUpdate .ulBodyExercisesCW li div .infoExerciseCWR h3{
+    color: white;
+    font-size: 1rem;
+}
+.ExerciceUpdate .ulBodyExercisesCW li div .infoExerciseCWR p{
+    color: rgb(0, 0, 0);
+    font-size: .8rem;
+}

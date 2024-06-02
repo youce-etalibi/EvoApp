@@ -1,0 +1,482 @@
+/*----*****---- << Transition >> ----*****----*/
+
+.dtsl-listings-dates-container.type3 [class*="date-container"]>span,
+.dtsl-listings-dates-container.type4 [class*="date-container"],
+.dtsl-listings-dates-container.type4 [class*="date-container"]>span,
+.dtsl-listings-dates-container.type4 [class*="date-container"] label,
+.dtsl-listings-dates-container.type5 [class*="date-container"] {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+
+/*----*****---- << Events Date Style >> ----*****----*/
+
+.dtsl-listings-dates-container .dtsl-listings-start-date-container span:before {
+    content: "\f254";
+    font-weight: 400;
+}
+
+.dtsl-listings-dates-container .dtsl-listings-end-date-container span:before {
+    content: "\f254";
+    font-weight: 900;
+}
+
+.dtsl-listings-dates-container .dtsl-listings-post-date-container span:before,
+.dtsl-listings-dates-container .dtsl-listings-date-icon:before {
+    content: "\f073";
+}
+
+.dtsl-listings-dates-container [class*="-container"] span:before {
+    font-family: "Font Awesome 5 Free";
+    position: relative;
+    margin: 0;
+}
+
+.dtsl-listings-dates-container [class*="-container"] [class*="-label"] {
+    font-weight: 600;
+}
+
+.dtsl-listings-dates-container.type1 {
+    padding: 30px 35px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.dtsl-listings-dates-container.type1 .dtsl-listings-start-date-container,
+.dtsl-listings-dates-container.type1 .dtsl-listings-end-date-container,
+.dtsl-listings-dates-container.type1 .dtsl-listings-post-date-container,
+.dtsl-listings-dates-container.type1 .dtsl-listings-date-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    /* line-height: normal; */
+    align-items: center;
+}
+
+.dtsl-listings-dates-container.type1 .dtsl-listings-date-container {
+    justify-content: flex-start;
+}
+
+.dtsl-listings-dates-container.type1>div:not(:last-child) {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.dtsl-listings-dates-container.type1 [class*="-container"] [class*="-datetime-holder"] {
+    text-transform: capitalize;
+    font-weight: 400;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dtsl-listings-dates-container.type1 [class*="-container"] [class*="-datetime-holder"]>div:not(:last-child) {
+    margin-right: 10px;
+}
+
+.dtsl-listings-dates-container.type1 [class*="-container"] span {
+    position: relative;
+    margin: 0 10px 0 0;
+}
+
+
+/* Type 2 */
+
+.dtsl-listings-dates-container.type2 {
+    display: inline-table;
+    flex-wrap: wrap;
+    grid-column-gap: 25px;
+    grid-row-gap: 15px;
+}
+
+.dtsl-listings-dates-container.type2 [class*="date-container"] {
+    display: flex;
+    /* align-items: center;
+    line-height: normal; */
+    font-weight: 400;
+    flex-wrap: wrap;
+}
+
+.dtsl-listings-dates-container.type2 [class*="date-container"]:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.dtsl-listings-dates-container [class*="date-container"]>*:not(:last-child),
+.dtsl-listings-dates-container [class*="date-container"]>div:not(:last-child)>*:not(:last-child) {
+    position: relative;
+    margin: 0 10px 0 0;
+}
+
+.dtsl-listings-dates-container.type2 [class*="-container"] [class*="-datetime-holder"] {
+    display: flex;
+    text-transform: capitalize;
+    flex-wrap: wrap;
+}
+
+.dtsl-listings-dates-container.type2 [class*="-container"] [class*="-datetime-holder"]>div:not(:last-child) {
+    margin: 0 10px 0 0;
+}
+
+.dtsl-listings-dates-container.type2 .dtsl-listings-event-dates-container span {
+    position: relative;
+    font-weight: 100;
+    margin: 0 10px 0 0;
+    font-family: "Font Awesome 5 Free";
+}
+
+
+/* Type 3 */
+
+.dtsl-listings-dates-container.type3 {
+    display: inline-table;
+    flex-wrap: wrap;
+    grid-column-gap: 25px;
+    grid-row-gap: 15px;
+}
+
+.dtsl-listings-dates-container.type3 [class*="date-container"] {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    line-height: inherit;
+    font-weight: 400;
+    flex-wrap: wrap;
+}
+
+.dtsl-listings-dates-container.type3 [class*="date-container"]:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.dtsl-listings-dates-container.type3 [class*="-container"] [class*="-datetime-holder"] {
+    display: flex;
+    text-transform: capitalize;
+    flex-wrap: wrap;
+}
+
+.dtsl-listings-dates-container.type3 [class*="-container"] [class*="-datetime-holder"]>div:not(:last-child) {
+    margin: 0 10px 0 0;
+}
+
+.dtsl-listings-dates-container.type3 [class*="date-container"] span {
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Font Awesome 5 Free";
+}
+
+.dtsl-listings-dates-container.type3 [class*="date-container"] span {
+    color: #fff;
+}
+
+
+/* Type 4 */
+
+.dtsl-listings-dates-container.type4 {
+    display: inline-table;
+    flex-wrap: wrap;
+    grid-column-gap: 25px;
+    grid-row-gap: 15px;
+}
+
+.dtsl-listings-dates-container.type4 [class*="date-container"] {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    line-height: inherit;
+    font-weight: 400;
+}
+
+.dtsl-listings-dates-container.type4 [class*="date-container"]:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.dtsl-listings-dates-container.type4 [class*="-container"] [class*="-datetime-holder"] {
+    display: flex;
+    text-transform: capitalize;
+    flex-wrap: wrap;
+}
+
+.dtsl-listings-dates-container.type4 [class*="-container"] [class*="-datetime-holder"]>div:not(:last-child) {
+    margin: 0 10px 0 0;
+}
+
+.dtsl-listings-dates-container.type4 [class*="date-container"] {
+    line-height: inherit;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    border: 2px solid;
+    flex-wrap: wrap;
+    padding: 15px 30px;
+    border-radius: 10em;
+}
+
+.dtsl-listings-dates-container.type4 [class*="date-container"] span {
+    position: relative;
+    margin-right: 10px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: "Font Awesome 5 Free";
+}
+
+.dtsl-listings-dates-container.type4 [class*="date-container"]:hover label,
+.dtsl-listings-dates-container.type4 [class*="date-container"]:hover,
+.dtsl-listings-dates-container.type4 [class*="date-container"]:hover span,
+.dtsl-listings-dates-container.type4 [class*="date-container"]:hover a {
+    color: #fff;
+}
+
+
+/* Type 5 */
+
+.dtsl-listings-dates-container.type5 {
+    display: inline-table;
+    flex-wrap: wrap;
+    grid-column-gap: 25px;
+    grid-row-gap: 15px;
+}
+
+.dtsl-listings-dates-container.type5 [class*="date-container"] {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    line-height: normal;
+    font-weight: 400;
+}
+
+.dtsl-listings-dates-container.type5 [class*="date-container"]:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.dtsl-listings-dates-container.type5 [class*="-container"] [class*="-datetime-holder"] {
+    display: flex;
+    text-transform: capitalize;
+}
+
+.dtsl-listings-dates-container.type5 [class*="-container"] [class*="-datetime-holder"]>div:not(:last-child) {
+    margin: 0 10px 0 0;
+}
+
+.dtsl-listings-dates-container.type5 [class*="date-container"] {
+    line-height: inherit;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.dtsl-listings-dates-container.type5 [class*="date-container"] span {
+    position: relative;
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+.dtsl-listings-dates-container.type5 [class*="date-container"] span,
+.dtsl-listings-dates-container.type5 [class*="date-container"] label,
+.dtsl-listings-dates-container.type5 [class*="date-container"] {
+    color: #fff;
+}
+
+
+/*----*****---- << Count-Down Style >> ----*****----*/
+
+
+/* Type 1 */
+
+.dtsl-listings-countdown-timer-container.type1 {
+    display: inline-block;
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.dtsl-listings-countdown-timer-container.type1 .dtsl-countdown-wrapper {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+.dtsl-listings-countdown-timer-container.type1 .dtsl-countdown-wrapper:not(:last-child) {
+    margin-right: 15px;
+}
+
+.dtsl-listings-countdown-timer-container.type1 .dtsl-countdown-wrapper .dtsl-countdown-icon-wrapper {
+    color: #fff;
+}
+
+.dtsl-listings-countdown-timer-container.type1 .dtsl-countdown-wrapper .dtsl-countdown-icon-wrapper {
+    position: relative;
+    line-height: normal;
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.dtsl-listings-countdown-timer-container.type1 .dtsl-countdown-wrapper .dtsl-countdown-icon-wrapper .dtsl-countdown-number {
+    font-size: 30px;
+}
+
+.dtsl-listings-countdown-timer-container.type1 .dtsl-countdown-wrapper .dtsl-countdown-title {
+    font-size: initial;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    text-transform: lowercase;
+    margin: 0;
+}
+
+.dtsl-listings-countdown-timer-container.type1 .dtsl-listings-countdown-timer-holder .dtsl-listings-countdown-timer-notice {
+    color: #fff;
+    padding: 15px 25px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.8) 0px 15px 20px -15px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 15px 20px -15px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 15px 20px -15px;
+}
+
+
+/* Type 2 */
+
+.dtsl-listings-countdown-timer-container.type2 {
+    display: inline-block;
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.dtsl-listings-countdown-timer-container.type2 .dtsl-countdown-wrapper {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 100px;
+}
+
+.dtsl-listings-countdown-timer-container.type2 .dtsl-countdown-wrapper:not(:last-child) .dtsl-countdown-icon-wrapper:before {
+    content: ":";
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    margin: auto;
+    transform: translateY(-50%);
+    font-size: 50px;
+}
+
+.dtsl-listings-countdown-timer-container.type2 .dtsl-countdown-wrapper .dtsl-countdown-icon-wrapper {
+    position: relative;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.dtsl-listings-countdown-timer-container.type2 .dtsl-countdown-wrapper .dtsl-countdown-icon-wrapper .dtsl-countdown-number {
+    font-size: 50px;
+}
+
+.dtsl-listings-countdown-timer-container.type2 .dtsl-countdown-wrapper .dtsl-countdown-title {
+    font-size: initial;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    text-transform: lowercase;
+    margin: 0;
+}
+
+.dtsl-listings-countdown-timer-container.type2 .dtsl-listings-countdown-timer-holder .dtsl-listings-countdown-timer-notice {
+    border: 1px solid;
+    padding: 15px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+.dtsl-listings-countdown-timer-container.type2 .dtsl-listings-countdown-timer-holder .dtsl-listings-countdown-timer-notice span {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    float: left;
+    justify-content: space-around;
+    padding: 15px;
+    line-height: normal;
+    align-items: center;
+}
+
+
+/*----*****---- << Tablet (Landscape) >> ----*****----*/
+
+
+/* Note: Design for a width of 960px */
+
+@media only screen and (min-width:1025px) and (max-width:1280px) {
+    .dtsl-listings-dates-container.type1 {
+        padding: 15px 20px;
+    }
+    .dtsl-listings-dates-container.type1 .dtsl-listings-start-date-container,
+    .dtsl-listings-dates-container.type1 .dtsl-listings-end-date-container,
+    .dtsl-listings-dates-container.type1 .dtsl-listings-post-date-container,
+    .dtsl-listings-dates-container.type1 .dtsl-listings-date-container {
+        display: grid;
+    }
+}
+
+
+/*----*****---- << Tablet (Portrait) >> ----*****----*/
+
+
+/* Note: Design for a width of 768px */
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .dtsl-listings-dates-container.type3 [class*="date-container"],
+    .dtsl-listings-dates-container.type4 [class*="date-container"],
+    .dtsl-listings-dates-container.type5 [class*="date-container"] {
+        line-height: inherit;
+    }
+    .dtsl-listings-dates-container.type5 [class*="-container"] [class*="-datetime-holder"] {
+        flex-wrap: wrap;
+    }
+}
+
+
+/*----*****---- << Mobile (Portrait) >> ----*****----*/
+
+
+/* Note: Design for a width of 480px */
+
+@media only screen and (max-width: 479px) {
+    .dtsl-listings-dates-container.type4 [class*="date-container"] {
+        font-size: 12px;
+        padding: 15px 20px;
+        line-height: 24px;
+        justify-content: center;
+    }
+    .dtsl-listings-dates-container.type4 [class*="-container"] [class*="-datetime-holder"] {
+        justify-content: center;
+    }
+    .dtsl-listings-dates-container.type5 [class*="date-container"],
+    .dtsl-listings-dates-container.type5 [class*="-container"] [class*="-datetime-holder"] {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
