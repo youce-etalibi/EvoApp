@@ -11,7 +11,6 @@ export const Chartex = ({ salleproducts }) => {
     const productNames = sortedProducts.map(product => product.product.title);
     const quantities = sortedProducts.map(product => product.count);
 
-    // Generate an array of colors for the bars
     const backgroundColors = sortedProducts.map((_, index) => {
         const colors = [
             'rgba(75, 192, 192, 0.6)',
