@@ -11,7 +11,7 @@ export const Profile = () => {
   const {count} =useContext(CartContext)
   const {orderssCount,addedorder,setaddedorder} =useContext(OrderContext)
   const {client,setclient,user_db, setuser_db} =useContext(AuthContext)
-  
+  const [srcImg, setSrcImg] = useState(null);
   const id = localStorage.getItem('id_active');
 
 
@@ -38,6 +38,7 @@ const getClients = () => {
          console.error(error);
      });
 };
+
 
 useEffect(()=>{
   getClients()
@@ -66,7 +67,9 @@ console.log(clientData)
 {clientData ? 
   <div class="cardprofile">
     <div class="infos">
-        <div class="image">{clientData && clientData.firstname.charAt(0).toUpperCase()}</div>
+        <div class="image">
+          <img src={`http://localhost:8000/api/profile-image/?id=${id}`}  />
+        </div>
         <div class="info">
        <div className='infotop'>
        <p class="infonameclient">

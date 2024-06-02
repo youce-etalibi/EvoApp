@@ -10,13 +10,21 @@
     margin: 0;
     box-sizing: border-box;
   }
+<<<<<<< HEAD
   
   
+=======
+
+>>>>>>> 909c89092a4fc33319d2f6ef5a613989f0991801
   ::selection {
     background-color: black;
     color: var(--blueCity);
   }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 909c89092a4fc33319d2f6ef5a613989f0991801
   
   .parentLoader {
     width: 200px;

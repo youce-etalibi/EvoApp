@@ -8,7 +8,9 @@ import { AuthContext } from "../../Context/AuthContext";
 export default function Login() {
   const navigate = useNavigate();
   const { setProfile } = useContext(AuthContext);
-  const [user, setUser] = useState(null); // Define user in the state
+  const [user, setUser] = useState(null); 
+
+  const [messageInvalide, setMsgInvalide] = useState('');
 
   const [formData, setFormData] = useState({
     email: "",
@@ -77,6 +79,7 @@ export default function Login() {
       const token = response.data.token;
       const userid = response.data.userid;
       const user = response.data.user;
+      const adminCheck = response.data.user.idAdmin;
       const idseller = response.data.idseller;
 
       // Convert user data to a JSON string
@@ -89,9 +92,12 @@ export default function Login() {
       localStorage.setItem('seller_id', idseller);
 
       // Navigate to the store page
-      navigate('/home');
+      adminCheck ? navigate('/store/admin') : navigate('/home')
+      ;
     } catch (error) {
       console.log(error.response.data);
+      setMsgInvalide(error.response.data.message)
+      
     }
   };
 
@@ -240,6 +246,7 @@ export default function Login() {
                 <button type="button" onClick={() => login()} id="submitBtnLogin">
                   <i className="bx bxl-google"></i> Connect with Google
                 </button>
+                <center><p>{messageInvalide && <><i className='bx bxs-error' ></i> {messageInvalide} </>}</p></center>
               </div>
             </div>
           </form>

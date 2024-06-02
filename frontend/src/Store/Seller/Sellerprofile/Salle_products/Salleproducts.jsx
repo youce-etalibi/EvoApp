@@ -2,6 +2,7 @@ import { IconButton } from '@mui/material';
 import React from 'react';
 import './Salleproducts.css'
 export const Salleproducts = ({ salleproducts }) => {
+  console.log(salleproducts)
   return (
     <div className="prod-table">
         <div className='header-table'>
@@ -33,7 +34,7 @@ export const Salleproducts = ({ salleproducts }) => {
               </td>
               <td>${prod.product.price}</td>
               <td>{prod.total_quantity}</td>
-              <td>{prod.total_earnings}</td>
+              <td>${prod.total_earnings}</td>
             </tr>
           ))}
          

@@ -1,45 +1,65 @@
-import React, { useEffect } from 'react';
-import Chart from 'chart.js/auto'; // Import Chart.js
+import React from 'react';
 import './Chart.css';
+import { Bar } from 'react-chartjs-2';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 
-export const Chartex = ({salleproducts}) => {
-    useEffect(()=>{
-        var bar = document.getElementById('bar');
-        bar.height = 400;
-        var barConfig = new Chart(bar, {
-            type: 'bar', // Use "bar" for horizontal bar charts in Chart.js 3.x
-            data: {
-                labels: ['Product1', 'Product2', 'Product3'],
-                datasets: [{
-                    label: '# of data',
-                    data: [30, 25, 20, 15, 11, 4, 2],
-                    backgroundColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(225, 50, 64, 1)', 'rgba(64, 159, 64, 1)'],
-                    borderWidth: 1
-                }]
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+
+export const Chartex = ({ salleproducts }) => {
+    const sortedProducts = [...salleproducts].sort((a, b) => b.count - a.count);
+
+    const productNames = sortedProducts.map(product => product.product.title);
+    const quantities = sortedProducts.map(product => product.count);
+
+    const backgroundColors = sortedProducts.map((_, index) => {
+        const colors = [
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(153, 102, 255, 0.6)',
+            'rgba(255, 159, 64, 0.6)',
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(153, 102, 255, 0.6)',
+            'rgba(255, 159, 64, 0.6)',
+            'rgba(255, 99, 132, 0.6)',
+        ];
+        return colors[index % colors.length]; // Repeat colors if there are more than the available colors
+    });
+
+    const data = {
+        labels: productNames,
+        datasets: [
+            {
+                label: 'Top Product',
+                data: quantities,
+                backgroundColor: backgroundColors,
             },
-            options: {
-                indexAxis: 'y', // Set indexAxis to 'y' for horizontal bar charts
-                scales: {
-                    y: {
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }
-                },
-                responsive: true, // Instruct chart js to respond nicely.
-                maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
-            }
-        });
-    }, []);
+        ],
+    };
+
+    const options = {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Sales Data by Count',
+            },
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 10,
+            },
+        },
+    };
 
     return (
-                        <div className="card-5">
-                            <div className="divider">
-                            </div>
-                            <div className="bar-chart-container">
-                                <canvas className="bar-chart" id="bar">
-                                </canvas>
-                            </div>
-                        </div> 
+        <div className='card-5'>
+            <Bar data={data} options={options} />
+        </div>
     );
 };

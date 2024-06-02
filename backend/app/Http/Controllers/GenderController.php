@@ -10,11 +10,11 @@ class GenderController extends Controller
     public function create()
     {
         $gender = new Gender();
-    
-        $gender->name = 'Men'; 
-    
+
+        $gender->name = 'Men';
+
         $gender->save();
-    
+
         return $gender;
     }
 }

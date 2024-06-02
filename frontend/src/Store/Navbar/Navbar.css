@@ -151,6 +151,15 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.sub-dropdown-imgshop{
+    background-image: url("/public/store/shopimage.jpg");
+    background-position: top;
+    width: 460px;
+    height: 240px;
+    margin-left: 6rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .sub-dropdown-imgwomen{
     background-image: url("/public/store/women.webp");
     background-position: top;
@@ -163,6 +172,7 @@ a{
  .material-symbols-outlined{
     display: none;
  }
+
 @media screen and (min-width: 800px) {
     .navbar{
         padding: 0 1.5em;

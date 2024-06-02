@@ -78,6 +78,8 @@ export default function Signup() {
         });
         const googleUser = res.data;
 
+        console.log(googleUser)
+
         const response = await axios.post('http://127.0.0.1:8000/api/google-signup', {
           name: googleUser.name,
           email: googleUser.email

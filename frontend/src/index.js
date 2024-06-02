@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import {  MenuProvider } from './Context/MenuContext';
+import {  MenuContext, MenuProvider } from './Context/MenuContext';
 import { StepsProvider } from './Context/StepCheckoutcontext';
 import { CartProvider } from './Context/CartContext';
 import { WishlistProvider } from './Context/WishlistContext';
@@ -12,7 +12,7 @@ import { OrderProvider } from './Context/OrderContext';
 import { SellerProvider } from './Context/Sellercontext';
 import { CaloriesProvider } from './Context/CaloriesContext';
 import { AdminProvider } from './Context/AdminContext';
-import { NotificationProvider } from './Context/NotificationContext';
+import { Menu } from './Components/Menu/Menu';
 
 
 
@@ -28,9 +28,7 @@ root.render(
   <WishlistProvider>
   <SellerProvider>
   <AdminProvider >
-  <NotificationProvider>
     <App />
-  </NotificationProvider>
   </ AdminProvider >
   </SellerProvider>
   </WishlistProvider>

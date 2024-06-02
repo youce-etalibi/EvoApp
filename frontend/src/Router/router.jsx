@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LandingPage from "../LandingPage/LandingPage";
 import { Storeparent } from "../Store/Storeparent";
@@ -22,11 +22,6 @@ import { HomeSeller } from "../Store/Seller/Homeseller/Homeseller";
 import Sellersidebar from "../Store/Seller/Sellerprofile/Sidebarseller/Sidebaseller";
 import { Sellerprofile } from "../Store/Seller/Sellerprofile/SellerProfile/Sellerprofile";
 import { Sellerproducts } from "../Store/Seller/Sellerprofile/Sellerproducts/Sellerproducts";
-
-// import CaloriesCalculatorMain from "../CaloriesCalCulator/Home/CaloriesCalculatorMain";
-// import ChangeGoal from "../CaloriesCalCulator/ChangeGoal/ChangeGoal";
-// import CaloriesCalCulator from "../CaloriesCalCulator/CaloriesCalCulator";
-
 import Home from "../Home/home";
 
 import Categories from "../Exercices/categories/categories";
@@ -40,39 +35,23 @@ import Login from "../Auth/login/login";
 import Signup from "../Auth/signup/signup";
 import Unfounded from "../Unfounded/Unfounded";
 import { Admin } from "../Store/Admin/Admin";
-import ScrollToTopButton from "../Components/ScrollTopButton/scrolTopBtn";
-import SettingsProfile from "../SettingsProfile/settingsProfile";
+import SellerHome from "../Store/Seller/SellerHome/SellerHome";
+import { Footer } from "../Store/Footer/Footer";
+import { Header } from "../Store/Seller/SellerHome/Header";
+
+
+
+import CaloriesCalculatorMain from "../CaloriesCalCulator/Home/CaloriesCalculatorMain";
 import ChangeGoal from "../CaloriesCalCulator/ChangeGoal/ChangeGoal";
 import CaloriesCalCulator from "../CaloriesCalCulator/CaloriesCalCulator";
-import CaloriesCalculatorMain from "../CaloriesCalCulator/Home/CaloriesCalculatorMain";
-import axios from "axios";
-// import SellerHome from "../SellerHome/SellerHome";
+import SettingsProfile from "../SettingsProfile/settingsProfile";
 
 export default function RouterApp() {
   const token = localStorage.getItem("token");
-  const idAuth = localStorage.getItem("id_active");
-
-
-
-  const [caloriesUser, setcaloriesUser] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`http://localhost:8000/api/calories-users/?id=${idAuth}`);
-        setcaloriesUser(response.data.macros_consumed);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, [idAuth]); 
 
   return (
     <Fragment>
       <BrowserRouter>
-        <ScrollToTopButton />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/auth" element={<Auth />}>
@@ -81,7 +60,6 @@ export default function RouterApp() {
           </Route>
 
           <Route element={<RequiredAuth />}>
-
             <Route path="/home" element={<Home />} />
             <Route path="/settings" element={<SettingsProfile />} />
             <Route path="/exercices" element={<Exercices />}>
@@ -91,10 +69,10 @@ export default function RouterApp() {
               <Route path="my-workouts" element={<Workouts />} />
             </Route>
 
-
-            <Route path="/CaloriesCalculator" element={<CaloriesCalCulator />} />
-            <Route path="/CaloriesCalculator/change-goal" element={<ChangeGoal />} />
-            <Route path="/CaloriesCalculator/Home" element={<CaloriesCalculatorMain />} />
+                        <Route path="/CaloriesCalculator" element={<CaloriesCalCulator />} />
+                        <Route path="/CaloriesCalculator/change-goal" element={<ChangeGoal />} />
+                        <Route path="/CaloriesCalculator/Home" element={<CaloriesCalculatorMain />} />
+                        <Route path="/sellerHome" element={<SellerHome />} />
 
             <Route path="/store/seller-auth" element={<SellerAuth />}>
               <Route path="register" element={<Register />} />
@@ -116,6 +94,8 @@ export default function RouterApp() {
                 <Fragment>
                   <Navbar />
                   <Productdetail />
+                  <Footer />
+
                 </Fragment>
               }
             />
@@ -125,6 +105,8 @@ export default function RouterApp() {
                 <Fragment>
                   <Navbar />
                   <ProductsShop />
+                  <Footer />
+
                 </Fragment>
               }
             />
@@ -134,6 +116,8 @@ export default function RouterApp() {
                 <Fragment>
                   <Navbar />
                   <ProductsShop gender="Men" />
+                  <Footer />
+
                 </Fragment>
               }
             />
@@ -143,6 +127,8 @@ export default function RouterApp() {
                 <Fragment>
                   <Navbar />
                   <ProductsShop gender="Women" />
+                  <Footer />
+
                 </Fragment>
               }
             />
@@ -152,6 +138,8 @@ export default function RouterApp() {
                 <Fragment>
                   <Navbar />
                   <CartTable />
+                  <Footer />
+
                 </Fragment>
               }
             />
@@ -161,6 +149,8 @@ export default function RouterApp() {
                 <Fragment>
                   <Navbar />
                   <Infoclient />
+                  <Footer />
+
                 </Fragment>
               }
             />
@@ -201,8 +191,9 @@ export default function RouterApp() {
                 path="/store/seller"
                 element={
                   <Fragment>
-                    <Navbar />
-                    <HomeSeller />
+                <Header />
+                    <SellerHome />
+                    <Footer />
                   </Fragment>
                 }
               />
@@ -210,7 +201,7 @@ export default function RouterApp() {
                 path="/store/seller/profileseller"
                 element={
                   <Fragment>
-                    <Navbar />
+                    <Header />
                     <Sellerprofile />
                   </Fragment>
                 }
@@ -219,7 +210,7 @@ export default function RouterApp() {
                 path="/store/seller/products"
                 element={
                   <Fragment>
-                    <Navbar />
+                    <Header />
                     <Sellerproducts />
                   </Fragment>
                 }
@@ -235,10 +226,7 @@ export default function RouterApp() {
               }
             />
 
-            {/* <Route path="/CaloriesCalculator" element={<CaloriesCalCulator />} />
-                        <Route path="/CaloriesCalculator/change-goal" element={<ChangeGoal />} />
-                        <Route path="/CaloriesCalculator/Home" element={<CaloriesCalculatorMain />} />
-                        <Route path="/sellerHome" element={<SellerHome />} /> */}
+          
           </Route>
 
           <Route path="*" element={<Unfounded />} />

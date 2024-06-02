@@ -10,7 +10,7 @@ class Cart extends Model
 {
     protected $fillable = ['product_id', 'quantity', 'price'];
 
-    public function product(): BelongsTo
+    public function product()
     {
         return $this->belongsTo(Product::class);
     }

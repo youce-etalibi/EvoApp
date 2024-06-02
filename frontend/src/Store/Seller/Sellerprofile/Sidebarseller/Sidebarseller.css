@@ -56,14 +56,14 @@
     color: black;
 }
 
-#btnSideBarActive {
+#btnSideBarActiveProfile {
     background-color: black;
     padding: 0.6rem 0 0.6rem 1rem;
     width: 88%;
 
     color: white;
 }
-#btnSideBarActive #arrowSideBarSeller{
+#btnSideBarActiveProfile #arrowSideBarSeller{
     display: none;
 }
 
@@ -94,7 +94,7 @@
         display: none;
     }
 
-    #btnSideBarActive i{
+    #btnSideBarActiveProfile i{
   color: white;
   padding-left: 0.6rem;
  

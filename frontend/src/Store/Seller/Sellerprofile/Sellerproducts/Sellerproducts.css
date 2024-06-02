@@ -126,5 +126,14 @@ border-radius: 7px;
     outline: none;
   }
    
+    
 
- 
+@media (max-width : 767px){
+
+
+
+  
+  .leftsideseller{
+    width: 93%;
+  }
+}

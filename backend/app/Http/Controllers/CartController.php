@@ -21,18 +21,18 @@ class CartController extends Controller
         $quantity = $request->quantity;
         $sizeId = $request->size;
         $colorId = $request->color;
-    
+
         $cartItem = Cart::where('user_id', $userId)
                         ->where('product_id', $productId)
                         ->first();
-    
+
         if ($cartItem) {
-            $cartItem->quantity = $quantity; 
+            $cartItem->quantity = $quantity;
             $cartItem->save();
             return response()->json(['message' => 'Item quantity has been updated in your bag']);
         } else {
             $product = Product::findOrFail($productId);
-    
+
             $cartItem = new Cart();
             $cartItem->user_id = $userId;
             $cartItem->product_id = $productId;
@@ -46,10 +46,10 @@ class CartController extends Controller
             $prod->color_id = $colorId;
             $prod->save();
         }
-    
+
         return response()->json(['message' => 'Item added to cart successfully'], 200);
     }
-    
+
     public function getCartItem(Request $request)
     {
         $userId = $request->query('id');
@@ -59,7 +59,7 @@ class CartController extends Controller
         }
         $cartItems = Cart::with('product')->where('user_id',$userId)->get();
         $cartCount = $cartItems->count();
-        
+
         $totalPrice = 0;
         $cartItemsWithPrices = $cartItems->map(function ($cartItem) use (&$totalPrice) {
             $ProdItems = ProductVariant::with('product','size','color')->where("product_id",$cartItem->product_id)->get();
@@ -68,41 +68,42 @@ class CartController extends Controller
             return [
                 'cart_id' => $cartItem->id,
                 'product_id' => $cartItem->product_id,
+                'seller_id' => $cartItem->product->seller_id,
                 'quantity' => $cartItem->quantity,
                 'price' => $cartItem->price,
-                'title' => $cartItem->product->title, 
-                'image' => $cartItem->product->image, 
+                'title' => $cartItem->product->title,
+                'image' => $cartItem->product->image,
                 'total_price' => $itemPrice,
                 'ProdItems' => $ProdItems,
             ];
         });
 
         $totalCartPrice = $cartItemsWithPrices->sum('total_price');
-    
+
                 return response()->json(['cartItems' => $cartItemsWithPrices, 'totalPrice' => $totalPrice,'totalCartPrice'=>$totalCartPrice,'cartCount' => $cartCount,], 200);
     }
 
     public function DeleteCart($id)
     {
         $cart = Cart::find($id);
-    
+
         if ($cart) {
             $productId = $cart->product_id;
             $cart->delete();
-    
+
             ProductVariant::where('product_id', $productId)->delete();
         }
     }
-    
+
     public function updateCart(Request $request)
     {
         $Cart = $request->Cart;
-    
+
         foreach ($Cart as $cartItem) {
-            $cart = Cart::findOrFail($cartItem['cart_id']); 
+            $cart = Cart::findOrFail($cartItem['cart_id']);
             $cart->quantity = $cartItem['quantity'];
             $cart->save();
-    
+
             // Get the associated OrderItem for the current cart item
             $orderItem = OrderItem::where('product_id', $cartItem['product_id'])->first();
             if ($orderItem) {
@@ -110,9 +111,9 @@ class CartController extends Controller
                 $orderItem->save();
             }
         }
-    
+
         return response()->json(['message' => 'Cart updated successfully'], 200);
     }
-    
-    
+
+
 }

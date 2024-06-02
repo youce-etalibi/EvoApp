@@ -39,7 +39,10 @@ export const Productdetail = () => {
   
     useEffect(() => {
         fetchData();
-    }, [addedreview,addedtowishlist]);
+    }, [addedtowishlist]);
+    useEffect(() => {
+        fetchreviews();
+    }, [addedreview]);
 
     const fetchData = async () => {
         try {
@@ -49,14 +52,23 @@ export const Productdetail = () => {
             setRes(response.data.product);
             setIsShow(response.data.product.length <=0 ? false : true)
             setinwishlist(response.data.inwishlist);
-            setreviews(response.data.reviews)
-
             const CatId = response.data.product.category_id;
             const products = response.data.allProducts;
             const filteredCat = products.filter((prod) => prod.category_id === CatId);
         
             setRelatedCategory(filteredCat);
             setRelatedProduct(response.data.related_products.data);
+        } catch (error) {
+            console.log("Error:", error);
+        }
+    };
+
+    const fetchreviews = async () => {
+        try {
+            
+            const response = await axios.get(`http://127.0.0.1:8000/api/reviews`);
+            setreviews(response.data.reviews)
+            console.log(reviews)
         } catch (error) {
             console.log("Error:", error);
         }
@@ -127,13 +139,13 @@ export const Productdetail = () => {
         }
       };
 
-      console.log(res)
+      console.log(reviews)
     return (
         <div className="productdetailParent">
             {!IsShow? <SimpleBackdrop /> :
             <div className='productdetail'>
                 <div className="product-banner">
-                <img src={`/store/Collections/${res.image}`} width={600} height={600} className="img-cover"  />
+                <img src={res.seller_id ? `http://127.0.0.1:8000/storage/store/collections/${res.image}`: `/store/Collections/${res.image}`} width={600} height={600} className="img-cover"  />
                         <span className="stockstatu">{res.stock === 0 ? "Stock out" : 'In stock'}</span>
                 
                 </div>

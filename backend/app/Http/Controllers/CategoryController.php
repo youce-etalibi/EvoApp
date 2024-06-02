@@ -12,7 +12,7 @@ class CategoryController extends Controller
     public function create()
     {
         $category = new Category();
-        $category->name = 'Shoes'; 
+        $category->name = 'Clothes';
         $category->save();
         return $category;
     }
@@ -25,14 +25,14 @@ class CategoryController extends Controller
             ->leftJoin('types', 'categorytypes.type_id', '=', 'types.id')
             ->select('categories.id as category_id', 'categories.name as category_name', 'types.id as type_id', 'types.name as type_name')
             ->get();
-    
+
         // Initialize an empty array to structure the data
         $categories = [];
-    
+
         // Organize the data
         foreach ($categoriesWithTypes as $item) {
             $categoryId = $item->category_id;
-    
+
             // Check if the category already exists in the $categories array
             if (!isset($categories[$categoryId])) {
                 $categories[$categoryId] = [
@@ -41,7 +41,7 @@ class CategoryController extends Controller
                     'types' => [],
                 ];
             }
-    
+
             // Check if the type exists (not null)
             if (!is_null($item->type_id)) {
                 $categories[$categoryId]['types'][] = [
@@ -50,14 +50,14 @@ class CategoryController extends Controller
                 ];
             }
         }
-    
+
         // Reset keys to ensure JSON response is an array of categories
         $categories = array_values($categories);
-    
+
         return response()->json([
             'categorys' => $categories,
         ], 200);
     }
-    
-    
+
+
 }

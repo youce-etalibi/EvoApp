@@ -42,7 +42,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Routes Store
 
-
 Route::get('/getcollections', [ProductController::class, 'getProductsHome']);
 Route::get('/getProductsShop', [ProductController::class, 'getProductsShop']);
 Route::get('/getCategoriesTypes', [CategoryController::class, 'getCategoriesTypes']);
@@ -78,6 +77,7 @@ Route::get('/getuser', [AuthController::class, 'getuser']);
 
 route::post('/AddSeller',[SellerController::class,'AddSeller']);
 route::post('/LoginSeller',[SellerController::class,'LoginSeller']);
+route::post('/logoutseller',[SellerController::class,'logoutseller']);
 
 Route::post('/selectedplan', [PlanController::class, 'selectedplan']);
 Route::get('/getplans', [PlanController::class, 'getplans']);
@@ -102,6 +102,7 @@ Route::delete('/product/{id}', [AdminController::class, 'deleteprod']);
 Route::post('/addproducts', [AdminController::class, 'addproducts']);
 Route::put('/product/{id}', [AdminController::class, 'updateProduct']);
 Route::delete('/productreview/{id}', [AdminController::class, 'deleteproductreview']);
+Route::get('/reviews', [ReviewController::class, 'getReviews']);
 
 
 Route::get('/editcategory/{id}', [AdminController::class, 'editcategory']);
@@ -122,8 +123,15 @@ Route::get('/editclient/{id}', [AdminController::class, 'editclient']);
 Route::put('/client/{id}', [AdminController::class, 'updateclient']);
 Route::delete('/client/{id}', [AdminController::class, 'deleteclient']);
 
+Route::get('/getOrderrsAdmin', [AdminController::class, 'getOrderrs']);
+Route::delete('/deleteorder/{id}', [AdminController::class, 'deleteorder']);
 
+Route::post('/toggle-publish', [ReviewController::class, 'togglePublish']);
+Route::post('/toggle-publish', [SellerController::class, 'togglePublish']);
+Route::post('/toggle-wishlist', [WishlistController::class, 'toggleWishlist']);
 
+Route::get('/getSellers', [AdminController::class, 'getSellers']);
+Route::delete('/deleteSeller/{id}', [AdminController::class, 'deleteSeller']);
 
 
 

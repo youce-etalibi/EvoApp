@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -22,20 +23,19 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     public function reviews()
-{
-    return $this->hasMany(Review::class);
-}
+    {
+        return $this->hasMany(Review::class);
+    }
 
-public function client()
-{
-    return $this->hasOne(Client::class);
-}
+    public function client()
+    {
+        return $this->hasOne(Client::class);
+    }
 
-public function seller()
-{
-    return $this->hasOne(Seller::class);
-}
-
+    public function seller()
+    {
+        return $this->hasOne(Seller::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.

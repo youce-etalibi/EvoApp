@@ -1,37 +1,50 @@
-import React, { useContext } from 'react';
-import './Menu.css';
-import { MenuContext } from '../../Context/MenuContext';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-
+import React, { useContext } from 'react'
+import './Menu.css'
+import { MenuContext } from '../../Context/MenuContext'
+import { Link } from 'react-router-dom'
+import { IconButton } from '@mui/material'
 export const Menu = () => {
-    const { isactive } = useContext(MenuContext);
+    const {isactive,setisactive} =useContext(MenuContext)
+    
+    const handleactive = () => {
+      setisactive(!isactive);
+  };
 
-    return (
-        <div className='menuu'>
-            {isactive &&
-                <ul className='listIcons'>
-                    <li>
-                        <Link to="/CaloriesCalculator">
-                            <img src="/Icons/icon1.svg" alt="" />
-                            <span className="tooltip">Calories Calculator</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/store">
-                            <img src="/Icons/icon2.svg" alt="" />
-                            <span className="tooltip">Store</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/exercices">
-                            <img src="/Icons/icon3.svg" alt="" />
-                            <span className="tooltip">Exercises</span>
-                        </Link>
-                    </li>
-                </ul>
-            }
+  return (
+    <div className='menuParent'>
+   <IconButton  id='menuDrop'>
+    <i onClick={handleactive} class='bx bx-menu' ></i>
+   </IconButton>
+    
+       {isactive &&
+       <ul className='listIcons'>
+        <Link to="/home">
+        <li>
+            <img src="/Icons/icon4.svg" alt="" />
+            <p>Home</p>
+        </li>
+        </Link>
+        <Link to="/CaloriesCalculator">
+        <li>
+            <img src="/Icons/icon1.svg" alt="" />
+            <p>Calculatore</p>
+        </li>
+        </Link>
+        <Link to="/Store">
+        <li>
+            <img src="/Icons/icon2.svg" alt="" />
+            <p>Store</p>
+        </li>
+        </Link>
+        <Link to="/exercices/overview">
+        <li>
+            <img src="/Icons/icon3.svg" alt="" />
+            <p>Exercises</p>
+        </li>
+        </Link>
+      
+       </ul>
+       }
         </div>
-    );
-};
-
-
+  )
+}

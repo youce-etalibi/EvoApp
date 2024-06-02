@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 
 class SellerController extends Controller
 {
-      
+
     public function AddSeller(Request $request){
 
         $name = $request->input('name');
@@ -37,7 +37,13 @@ class SellerController extends Controller
         $seller->phoneseller =$phone;
         $seller->usr_id =$userid;
         $seller->save();
-        return response()->json(['message' => 'seller registered successfully',"seller_id" => $seller->id, 'seller' => $seller], 201);
+
+
+        $token = Str::random(60);
+        $seller->api_token = hash('sha256', $token);
+        $seller->save();
+
+        return response()->json(['message' => 'seller registered successfully',"seller_id" => $seller->id, 'seller' => $seller,'token'=>$token], 201);
 
     }
 
@@ -49,18 +55,21 @@ class SellerController extends Controller
             'emailseller' => 'required|email',
             'nameseller' => 'required|string'
         ]);
-    
+
         // Retrieve the seller based on the given credentials
         $seller = Seller::where('emailseller', $validatedData['emailseller'])
                         ->where('nameseller', $validatedData['nameseller'])
                         ->first();
-    
+
         // Check if the seller exists
         if ($seller) {
+            $token = Str::random(60);
+            $seller->api_token = hash('sha256', $token);
             return response()->json([
                 'status' => 200,
                 'valid' => true,
                 'seller' => $seller,
+                'token' => $token,
                 'seller_id' => $seller->id,
             ], 200);
         } else {
@@ -71,7 +80,7 @@ class SellerController extends Controller
             ], 401);
         }
     }
-    
+
 public function getseller(Request $request)
 {
     $sellerId = $request->query('id');
@@ -102,5 +111,35 @@ public function update(Request $request)
     return response()->json(['seller' => $seller], 200);
 }
 
+
+
+public function togglePublish(Request $request)
+{
+    $seller = Seller::find($request->id);
+
+    if ($seller) {
+        $seller->show_publish = !$seller->show_publish;
+        $seller->save();
+
+        return response()->json(['success' => true, 'show_publish' => $seller->show_publish]);
+    }
+
+    return response()->json(['success' => false], 404);
+   }
+
+
+   public function logoutseller(Request $request)
+   {
+    $seller = Seller::find($request->seller_id);
+       if ($seller) {
+           $seller->api_token = null;
+       }
+       return response()->json([], 204);
+
+               }
+
 }
+
+
+
 

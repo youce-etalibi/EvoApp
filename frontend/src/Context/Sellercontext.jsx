@@ -11,12 +11,13 @@ export const SellerContext = createContext()
      const [addprod,setaddprod]=useState(false)
      const [editprod,seteditprod]=useState(false)
      const [deleteprod,setdeletprod]=useState(false)
+     const [sellerisauth, setsellerisauth] = useState(false);
 
 
      useEffect(() => {
 
         getseller();
-    }, []);
+    }, [sellerisauth]);
     
     
     const getseller = () => {
@@ -29,6 +30,8 @@ export const SellerContext = createContext()
                 console.error(error);
             });
     };
+    console.log(seller)
+    console.log(seller_id)
      return (
 
     <SellerContext.Provider value={{seller,Setseller,addprod,setaddprod,editprod,seteditprod,deleteprod,setdeletprod}}>

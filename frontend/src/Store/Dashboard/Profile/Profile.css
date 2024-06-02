@@ -217,7 +217,13 @@ width: 92%;
         align-content: center;
         font-size: 3rem;
         border-radius: 50%;
-        background-color: #0153DF;
+        overflow: hidden;
+      }
+      .cardprofile .image img{
+        height: 5.7rem;
+        width: 5.7rem;
+        object-fit: cover;
+
       }
       
       .cardprofile .name {

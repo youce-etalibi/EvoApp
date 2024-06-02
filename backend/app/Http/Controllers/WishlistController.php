@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use App\Models\Wishlist;
 use Illuminate\Http\Request;
 
@@ -11,22 +12,22 @@ class WishlistController extends Controller
     {
         $userId = $request->userId;
         $productId = $request->productId;
-    
+
         $existingWishlistItem = Wishlist::where('user_id', $userId)
                                          ->where('product_id', $productId)
                                          ->first();
-    
+
         if ($existingWishlistItem) {
             $existingWishlistItem->delete();
 
             return response()->json(['message' => 'Product already exists in wishlist'], 400);
         }
-    
+
         $wishlistItem = new Wishlist();
         $wishlistItem->user_id = $userId;
         $wishlistItem->product_id = $productId;
         $wishlistItem->save();
-    
+
         return response()->json(['message' => 'Item added to wishlist successfully'], 200);
     }
 
@@ -41,7 +42,7 @@ class WishlistController extends Controller
         $count = $wishlist->count();
         return response()->json(['wishlist' => $wishlist,'count'=>$count]);
     }
-    
+
     public function DeleteWishlist($id){
         $idWish =  Wishlist::where('id', $id)->first();
 
@@ -51,11 +52,31 @@ class WishlistController extends Controller
             }
     }
 
-    
+
     public function wishlistCount(){
         $wishlistcount = Wishlist::count();
         return response()->json(['wishlistcount'=>$wishlistcount], 200);
 
     }
-    
+
+    public function toggleWishlist(Request $request)
+    {
+        $productId = $request->id;
+        $userId = $request->query('id');
+
+        if (!$userId) {
+            return response()->json(['error' => 'User ID is required'], 400);
+        }
+
+        $product = Product::find($productId);
+        if (!$product) {
+            return response()->json(['success' => false, 'message' => 'Product not found'], 404);
+        }
+
+        $inWishlist = !$product->in_wishlist;
+
+        $product->update(['in_wishlist' => $inWishlist]);
+
+        return response()->json(['success' => true, 'in_wishlist' => $inWishlist]);
+    }
 }

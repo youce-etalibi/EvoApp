@@ -12,7 +12,7 @@ const Sellersidebar = () => {
         <ul>
             <li>
                 <Link to='/store/seller/profileseller' className="linkseller">
-                    <button id={location.pathname == '/store/seller/profileseller' ? "btnSideBarActive" : null}>
+                    <button id={location.pathname == '/store/seller/profileseller' ? "btnSideBarActiveProfile" : null}>
                         <span>
                         <span className='profiletext'>Profile</span>
                         <span className='profileicon'><i class='bx bxs-user-circle'></i></span>
@@ -23,7 +23,7 @@ const Sellersidebar = () => {
             </li>
             <li>
                 <Link to='/store/seller/products' className="linkseller">
-                    <button id={location.pathname == '/store/seller/products' ? "btnSideBarActive" : null}>
+                    <button id={location.pathname == '/store/seller/products' ? "btnSideBarActiveProfile" : null}>
                         <span>
                         <span  className='profiletext'>Products</span>
                         <span><i class='bx bxs-cart-add'></i></span>

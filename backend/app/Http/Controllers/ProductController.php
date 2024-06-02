@@ -27,8 +27,8 @@ class ProductController extends Controller
     {
         $productsData = [
             [
-                'title' => "Cap",
-                'sub_description' => "High performance road cap ",
+                'title' => "Slim",
+                'sub_description' => "High performance road slim ",
                 'description' => "These custom road cap offer the best in comfort, performance, and style. Featuring a lightweight design and breathable materials, they are perfect for long rides and races.",
                 'price' => 120,
                 'stock' => 40
@@ -36,15 +36,18 @@ class ProductController extends Controller
 
         ];
           $images = [
-        'cap1.png',
-        'cap2.png',
-        'cap3.png',
-        'cap4.png',
-        'cap5.png',
-        'cap6.png',
+        'jersey1.png',
+        'jersey2.png',
+        'jersey3.png',
+        'jersey4.png',
+        'jersey5.png',
+        'jersey6.png',
+        'jersey7.png',
+        'jersey8.png',
+        'jersey9.png',
     ];
 
-        for ($i = 0; $i < 18; $i++) {
+        for ($i = 0; $i < 24; $i++) {
             $productData = $productsData[array_rand($productsData)];
             $product = new Product();
 
@@ -56,7 +59,7 @@ class ProductController extends Controller
             $product->stock = $productData['stock'];
             $product->gender_id = 1;
             $product->category_id = 1;
-            $product->type_id = 1;
+            $product->type_id = 9;
 
             $product->save();
         }
@@ -64,13 +67,13 @@ class ProductController extends Controller
         return response()->json(['message' => '50 products created successfully.']);
     }
 
-
     public function updating()
     {
-        $products = Product::where('image', "cap1.png")->get();
+        $products = Product::where('category_id', 1)->get();
 
         foreach ($products as $product) {
-            $product->image = 'cap6.png';
+            $product->title = 'Shoes';
+            $product->sub_description = 'High performance road Shoes ';
             $product->save();
         }
     }
@@ -111,26 +114,25 @@ public function getProductsShop()
     $types = Type::all();
 
     // Fetching products with colors, sizes, and a flag indicating whether they are in the wishlist
+
+
     $allProducts = Product::select('products.*', DB::raw('(CASE WHEN wishlists.product_id IS NOT NULL THEN true ELSE false END) as in_wishlist'))
-                    ->leftJoin('wishlists', 'products.id', '=', 'wishlists.product_id')
-                    ->with('color', 'size','category','type')
-                    ->paginate($productCount);
+    ->leftJoin('wishlists', 'products.id', '=', 'wishlists.product_id')
+    ->leftJoin('sellers', 'products.seller_id', '=', 'sellers.id')
+    ->with('color', 'size','category','type')
+    ->where(function ($query) {
+        // Products with sellers and show_publish is true
+        $query->whereNotNull('products.seller_id')->where('sellers.show_publish', true);
+    })
+    ->orWhere(function ($query) {
+        // Products without sellers
+        $query->whereNull('products.seller_id');
+    })
+    ->paginate($productCount);
 
-                    // $filteredProducts = [];
-                    // foreach($allProducts as $product) {
-                    //     if($product->seller_id) {
-                    //         $seller = Seller::find($product->seller_id);
-
-                    //         if($seller->show_publish === 1) {
-                    //             $filteredProducts[] = $product;
-                    //         }
-                    //     }
-                    // }
-                    // $allProducts->setCollection(collect($filteredProducts));
 
     return response()->json([
         'products' => $allProducts,
-        // 'filteredProducts' => $filteredProducts,
         'genders' => $genders,
         'categories' => $categories,
         'productSizes' => $productSizes,
@@ -145,7 +147,7 @@ public function getProductsShop()
 public function show($id) {
     $productsizes = Size::all();
     $productcolors = Color::all();
-    $product = Product::with('reviews','category','type')->find($id);
+    $product = Product::with('category','type')->find($id);
 
     if (!$product) {
         return response()->json(['error' => 'Product not found'], 404);
