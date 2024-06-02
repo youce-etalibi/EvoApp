@@ -145,7 +145,7 @@ export const Productdetail = () => {
             {!IsShow? <SimpleBackdrop /> :
             <div className='productdetail'>
                 <div className="product-banner">
-                <img src={`/store/Collections/${res.image}`} width={600} height={600} className="img-cover"  />
+                <img src={res.seller_id ? `http://127.0.0.1:8000/storage/store/collections/${res.image}`: `/store/Collections/${res.image}`} width={600} height={600} className="img-cover"  />
                         <span className="stockstatu">{res.stock === 0 ? "Stock out" : 'In stock'}</span>
                 
                 </div>

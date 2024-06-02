@@ -101,7 +101,7 @@ export const Orders = () => {
                 <div key={index} className='order-item'>
                   <Link to={`/store/productdetail/${item.product.id}`}>
                     <div className="image">
-                      <img src={`/store/Collections/${item.product.image}`} alt='' />
+                <img src={item.product.seller_id ? `http://127.0.0.1:8000/storage/store/collections/${item.product.image}`:`/store/Collections/${item.product.image}`} />
                     </div>
                   </Link>
                   <div className='order-content'>

@@ -62,6 +62,8 @@ export const DrawerCart = (props) => {
 
     };
 
+    console.log(Cart)
+
    
     return (
         <div className={`cartSidebar ${!props.isCartOpen ? 'hidden' : ''}`}>

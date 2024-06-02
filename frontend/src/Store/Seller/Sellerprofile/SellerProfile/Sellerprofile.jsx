@@ -2,11 +2,9 @@ import React, { useContext, useEffect, useState } from 'react'
 import "./Sellerprofile.css"
 import Sellersidebar from '../Sidebarseller/Sidebaseller'
 import axios from 'axios'
+import {Chartex} from '../Chart/Chart'
 import { Salleproducts } from '../Salle_products/Salleproducts'
 import { SellerContext } from '../../../../Context/Sellercontext'
-import { Chartex } from '../Chart/Chart'
-import WeightTracking from '../../../../Exercices/Profile/weightTracking/weightTracking'
-
 export const Sellerprofile = () => {
     const {seller,Setseller}=useContext(SellerContext)
   const [sale_percentage,setsale_percentage]=useState()

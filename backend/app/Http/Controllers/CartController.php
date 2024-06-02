@@ -68,6 +68,7 @@ class CartController extends Controller
             return [
                 'cart_id' => $cartItem->id,
                 'product_id' => $cartItem->product_id,
+                'seller_id' => $cartItem->product->seller_id,
                 'quantity' => $cartItem->quantity,
                 'price' => $cartItem->price,
                 'title' => $cartItem->product->title, 
