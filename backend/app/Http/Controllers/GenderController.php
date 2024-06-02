@@ -11,7 +11,7 @@ class GenderController extends Controller
     {
         $gender = new Gender();
     
-        $gender->name = 'Men'; 
+        $gender->name = 'Women'; 
     
         $gender->save();
     

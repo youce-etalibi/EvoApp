@@ -63,8 +63,8 @@ export default function Profile() {
 
   return (
     <React.Fragment>
- {user ?
-
+ {user_db.client ?
+<>
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
               <IconButton
               onClick={handleClick}
@@ -74,11 +74,6 @@ export default function Profile() {
                 <Avatar sx={{ width: 30, height: 30 }}>M</Avatar>
             </IconButton>
       </Box>
-        :  
-        <MenuItem  onClick={handleLogout}>
-        Logout
-       </MenuItem>} 
-
       <Menu
         anchorEl={anchorEl}
         id="account-menu"
@@ -91,17 +86,18 @@ export default function Profile() {
           <Link to='/store/profile' className='itemprofile'>
         <MenuItem onClick={handleClose}>
   <>
-
-   <Avatar sx={{ width: 35, height: 35, mr: 1 }}>M</Avatar>
+   <Avatar sx={{ width: 35, height: 35, mr: 1 }}>{user_db.client.firstname.charAt(0).toUpperCase()}</Avatar>
     {user_db.client && user_db.client.firstname}
   </>
         
         </MenuItem>
         </Link>
-        <MenuItem onClick={handleLogout}>
-         Logout
-        </MenuItem>
       </Menu>
+</>
+
+      :''
+       } 
+
     </React.Fragment>
   );
 }

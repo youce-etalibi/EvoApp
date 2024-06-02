@@ -1,0 +1,7 @@
+/* #afterMenuClicked {
+    position: relative;
+ 
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-tap-highlight-color: transparent;
+  z-index: 99; 
+  } */

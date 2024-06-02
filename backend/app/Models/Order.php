@@ -9,9 +9,9 @@ class Order extends Model
 {
     protected $fillable = ['client_id', 'total_amount', 'status'];
 
-    public function user()
+    public function client()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Client::class);
     }
     
     public function delivery()

@@ -6,11 +6,13 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
-        Schema::table('sellers', function (Blueprint $table) {
-            $table->boolean('show_publish')->default(false);
-
+        Schema::table('reviews', function (Blueprint $table) {
+            $table->boolean('show_publish')->default(true);
 
         });
     }
@@ -20,7 +22,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('sellers', function (Blueprint $table) {
+        Schema::table('reviews', function (Blueprint $table) {
             //
         });
     }

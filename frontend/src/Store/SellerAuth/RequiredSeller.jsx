@@ -5,6 +5,7 @@
 
        const seller_id = localStorage.getItem('seller_id');
        const isSeller =  localStorage.getItem('isSeller', true);
+       const seller_token =  localStorage.getItem('seller_token');
 
-    return isSeller ?  <Outlet /> :  <Navigate to='/store/seller-auth/login' />;
+    return seller_token ?  <Outlet /> :  <Navigate to='/store/seller-auth/login' />;
     }

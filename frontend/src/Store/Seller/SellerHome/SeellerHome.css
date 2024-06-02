@@ -1,0 +1,494 @@
+header.sellerHeader {
+display: flex;
+width: 100%;
+padding: 0 4rem;
+align-items: center;
+height: 80px;
+flex-direction: row;  
+
+justify-content: space-between;
+  padding-left: 3vw;
+}
+.seller .topSection {
+  filter: drop-shadow(0 0 218px  #0153DF);
+
+  height:   80vh;
+
+}
+
+.seller .topSectionContent{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    line-height: 70px;
+    padding: 0 2rem;
+    margin-top: 4rem;
+
+}
+.sellerHeader img{
+  width: 150px;
+  height: 98px;
+
+  margin: 4.9rem 0 2rem 3rem;
+  object-fit: cover;
+}
+.topSectionContent .topSectionPicture{
+width: 32%;
+margin-left: 7rem;
+height: 42vh;
+margin-top: -0.6rem;
+position: relative;
+border-radius: 10px;
+background-color: rgb(57, 57, 57);
+text-align: center;
+}
+.topSectionContent .topSectionPicture img.imm{
+    width: 520px;
+position: absolute;
+left: -5rem;
+top: -2.5rem;
+    border-radius: 10px;
+    animation: moveUpDown 2s infinite;
+
+}
+.TopSectionTitle{
+  width: 60%;
+}
+.topSectionContent .topSectionPicture img.moooney{
+    position:relative;
+    height:10vh ;
+    width: 10vh;
+    left: -13vh;
+    bottom: 28vh;
+}
+.topSectionContent .topSectionPicture img.jewerly{
+    position:relative;
+    height:10vh ;
+    top: -26rem;
+}
+.topSectionContent .topSectionPicture img.shoppingCart-seller{
+  position: relative;
+  height:150px;
+  bottom: 62vh;
+  animation: moveUpDown2 2s infinite;
+
+}
+@keyframes moveUpDown {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-25px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+@keyframes moveUpDown2 {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+.TopSectionTitle .TitleText{
+  font-size: 3.5rem;
+  margin-top: -1.6rem;
+  font-weight: bolder;
+  color: rgb(59, 59, 59);
+}
+.TopSectionTitle .titleAction{
+  background-color: rgb(57, 57, 57);
+  color: white;
+  width: 200px;
+  height: 50px;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.arrowIcon {
+  padding-top: 5px;
+  transition: transform 0.2s ease;
+}
+.titleAction:hover .arrowIcon {
+  transform: translateX(5px) scale(1.1);
+ 
+}
+.SecondSection{
+  width: 80vw;
+  position: relative;
+  margin: 10vw auto;
+  background-color: rgb(57, 57, 57);
+  height: 50vh;
+  top: -35vh;
+  
+  display: flex;
+  margin-bottom: 0%;
+}
+
+.stats{
+  width: 70%;
+  margin-right: 10%;
+  padding: 10vh 7vw;
+
+}
+.buisinessWoman{
+  position: absolute;
+  left: 58vw;
+  bottom: 0vh;
+  height: 70vh;
+
+}
+.firstStat{
+  width: 50%;
+  text-align: center;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.secondStat{
+  width: 50%;
+  text-align: center;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+
+
+
+}
+ .thirdStat{
+  width: 50%;
+  text-align: center;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+ .fourthStat{
+  width:50%;
+  text-align: center;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.desss{
+  color: rgb(166, 166, 166);
+  font-size: 1rem;
+  font-weight: 300;
+  margin-left: 15px;
+}
+.firstline{
+  display: flex;
+  margin-bottom: 5vh;
+}
+.secondLine{
+  display: flex;
+}
+.thirdSection{
+
+  padding: 0 10vw;
+  margin-top: 3%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  bottom: 25vh;
+}
+.textt .textTitle{
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-bottom: 3vh;
+  filter: drop-shadow(0 0 118px  #0153DF);
+
+  color: rgb(59, 59, 59);
+}
+.textt .textDesc{
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgb(108, 108, 108);
+  margin-bottom: 3vh;
+}
+
+.textt .titleAction{
+  background-color: rgb(57, 57, 57);
+  color: white;
+  width: 200px;
+  height: 50px;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.textt .titleAction:hover{
+  font-size: 1.05rem;
+}
+.TopSectionTitle .titleAction:hover{
+  font-size: 1.05rem;
+}
+.thirdSection .chartt{
+  width: 28vw;
+  border: 1px solid black;
+  margin-top: 3vh;
+  height: 36vh;
+  padding: 1vh 1vw;
+}
+.dashAdd{
+  display: flex;
+  justify-content: space-between;
+  width: 230px;
+  padding: 1vh 2vw;
+  background-color: #0153DF;
+  position: relative;
+  bottom: 45vh;
+  left: 12vw;
+}
+.dashAdd .dashhText{
+  display: flex;
+  filter: drop-shadow(0 0 118px  #0153DF);
+
+  flex-direction: column;
+}
+.dashtextTitle{
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: white;
+}
+.dashtextDesc{
+
+  font-size: 0.9rem;
+  color: rgb(237, 237, 237);
+}
+.fourthSection{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10vw 5vh;
+
+}
+.fourthRight .fourthTitle{
+  font-size: 3rem;
+  font-weight: bolder;
+  filter: drop-shadow(0 0 178px  #0153DF);
+
+  margin-bottom: 4vh;
+  color: rgb(59, 59, 59);}
+
+.fourthSection .fourthDesc{
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgb(108, 108, 108);
+  margin-bottom: 3vh;
+}
+.fourthSection .titleAction{
+  background-color: rgb(57, 57, 57);
+  color: white;
+  width: 200px;
+  height: 50px;
+  filter: drop-shadow(0 0 198px  #0153DF);
+
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.fourthSection .titleAction:hover{
+  font-size: 1.05rem;
+}
+.fourthLeft .fourthCadre{
+  height: 22vh;
+  width: 33vw;
+  filter: drop-shadow(0 0 188px  #0153DF);
+
+  border: 1px solid black;
+  padding: 2vh 2vw;
+}
+.fourthLeft{
+  display: flex;
+  flex-direction: column;
+  height:50vh ;
+  justify-content: space-between;
+}
+.cadreImg .whey , .cadreImg .vans{
+  height: 12vh;
+}
+.fourthCadre{
+  display: flex;
+  flex-direction: column;
+}
+.cadreContent{
+  display: flex;
+  gap: 20px;
+}
+.cadreTextt{
+  display: flex;
+  flex-direction: column;
+}
+.cadreTextTitle{
+  font-weight: bolder;
+}
+.cadreTextState{
+  color: grey;
+  font-size: smaller;
+}
+.cadrfeTextPrice{
+  font-weight: bold;
+}
+.cadreAlert{
+  color: grey;
+  font-size: smaller;
+  font-weight: 400;
+}
+
+.linksseller{
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  gap: 40px;
+  li{
+    list-style-type: none;
+  }
+}
+.sellerlinkTele{
+  display: none;
+}
+
+.menuItem{
+  margin-top: -0.4rem !important;
+  background-color:  rgb(57, 57, 57) !important;
+  color: white !important;
+}
+  
+@media (max-width : 800px){
+  .thirdSection {
+    flex-direction: column-reverse;
+    margin-top: 19rem;
+    gap: 30px;
+  }
+  .sellerlinkTele{
+    display: block;
+  }
+  .fourthSection{
+    flex-direction: column-reverse;
+  margin-top: -8rem;
+  }
+  .topSectionContent .topSectionPicture{
+    margin-left: 0;
+    width: 93%;
+    height: 33vh;
+  }
+  .topSectionContent .topSectionPicture img.imm{
+    top: 0rem;
+    left: -3rem;
+    width: 460px;
+  }
+  .seller .topSectionContent{
+    flex-direction: column;
+    padding: 2rem;
+
+  }
+  .linksseller{
+    display: none;
+  }
+ 
+  .buisinessWoman{
+    left: 7rem;
+    width: 280px;
+    height: 370px;
+    object-fit: cover;
+  }
+  .TopSectionTitle .TitleText{
+    margin: 0;
+    width: 360px;
+    font-size: 3rem;
+
+  }
+  .SecondSection{
+    margin-top: 11rem;
+    flex-direction: column;
+    top: 0;
+  }
+  .secondLine{
+    flex-direction: column;
+    gap: 25px;
+  }
+  .stats{
+    width: 100%;
+    padding: 2rem 0;
+  }
+  .thirdSection .chartt{
+    width: 100%;
+    height: auto;
+  }
+
+  .fourthLeft{
+    margin-top: 5rem;
+    width: 100%;
+  }
+  .fourthLeft .fourthCadre{
+    width:100%;
+  }
+}
+
+
+  
+@media (min-width: 600px) and (max-width: 900px) {
+  .topSectionContent .topSectionPicture{
+    width: 60%;
+    height: 33vh;
+  }
+  .buisinessWoman{
+    left: 25rem;
+    width: 484px;
+    height: 554px;
+    object-fit: cover;
+  }
+  .thirdSection{
+    gap: 50px;
+    justify-content: left;
+  }
+  .thirdSection .chartt{
+    width: 45%;
+    height: 18vh;
+  }
+  .thirdSection .textt{
+    width: 55%;
+  }
+  .fourthSection{
+    gap: 140px;
+    justify-content: left;
+    margin-top: -10rem;
+    flex-direction: column-reverse;
+  }
+  .fourthSection .fourthRight{
+    width: 60%;
+    margin: 0 auto;
+  }
+  .fourthRight .fourthTitle{
+    margin-bottom: 1rem;
+  }
+  .fourthLeft{
+    flex-direction: row;
+    justify-content: left;
+    gap: 30px;
+    height: 20vh;
+  }
+  .fourthLeft .fourthCadre{
+    width: 80%;
+  }
+
+  .topSectionContent .topSectionPicture img.imm{
+    top: 3rem;
+    left: -4rem;
+    width: 530px;
+  }
+ 
+}

@@ -33,7 +33,7 @@ export const Salleproducts = ({ salleproducts }) => {
               </td>
               <td>${prod.product.price}</td>
               <td>{prod.total_quantity}</td>
-              <td>{prod.total_earnings}</td>
+              <td>${prod.total_earnings}</td>
             </tr>
           ))}
          

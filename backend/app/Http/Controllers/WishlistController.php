@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use App\Models\Wishlist;
 use Illuminate\Http\Request;
 
@@ -58,4 +59,24 @@ class WishlistController extends Controller
 
     }
     
+    public function toggleWishlist(Request $request)
+    {
+        $productId = $request->id;
+        $userId = $request->query('id');
+
+        if (!$userId) {
+            return response()->json(['error' => 'User ID is required'], 400);
+        }
+        
+        $product = Product::find($productId);
+        if (!$product) {
+            return response()->json(['success' => false, 'message' => 'Product not found'], 404);
+        }
+
+        $inWishlist = !$product->in_wishlist;
+
+        $product->update(['in_wishlist' => $inWishlist]);
+
+        return response()->json(['success' => true, 'in_wishlist' => $inWishlist]);
+    }
 }

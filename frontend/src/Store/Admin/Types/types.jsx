@@ -75,12 +75,13 @@ function closeopenAddProducts() {
         </div>
     </div>
         </div>
-<section className="containertable">
+<section className="containertable" >
   <table className="order-table">
     <thead>
       <tr>
         <th>Id</th>
         <th>Name</th>
+
       </tr>
     </thead>
     <tbody>

@@ -11,6 +11,7 @@ export const Collection = () => {
 
 
 const [collections,setcollections] = useState([])
+const [inwishlist,setinwishlist] = useState({})
 const {setaddedtocart,addedtocart,setIsaddedtocart} = useContext(CartContext)
 const {addedtowishlist,setaddedtowishlist,setdeletedItem,deletedItem} = useContext(WishlistContext)
 const iduser = localStorage.getItem('id_active');
@@ -53,18 +54,29 @@ const handlecart = async (id) => {
 
 const handleWishlist = async (id) => {
   const WishlistData = {
-      userId: iduser,
-      productId: id,
+    userId: iduser,
+    productId: id,
   };
   try {
-      const response = await axios.post('http://127.0.0.1:8000/api/wishlist', WishlistData);
-      console.log("wishlist response:", response.data);
-      setaddedtowishlist(!addedtowishlist)
+    const res = await axios.post('http://127.0.0.1:8000/api/wishlist', WishlistData);
+    console.log("wishlist response:", res.data);
+    setaddedtowishlist(!addedtowishlist);
+
+    const toggleRes = await axios.post(`http://127.0.0.1:8000/api/toggle-wishlist?id=${iduser}`, { id: id });
+    if (toggleRes.data.success) {
+      setinwishlist(prevStatus => ({
+        ...prevStatus,
+        [id]: toggleRes.data.in_wishlist
+      }));
+      console.log(toggleRes)
+    } else {
+      console.error('Failed to toggle wishlist');
+    }
   } catch (error) {
-      console.error("Error adding to WISHLIST:", error);
+    console.error("Error adding to WISHLIST:", error);
   }
 };
-console.log(collections)
+
  
   return (
     <div id='collectionStore'>
@@ -100,19 +112,8 @@ console.log(collections)
               }
                 </Link>
                 <span className="Heart"> 
-                {item.in_wishlist === 1 ? (
-     <IconButton  aria-label="show cart">
-
-                  <i id='addedtowishlist' onClick={()=>handleWishlist(item.id)} class='bx bxs-heart'></i>
-                  </IconButton>
-
-                ) : (
-     <IconButton  aria-label="show cart">
-                  
-                  < i  onClick={()=>handleWishlist(item.id)} className='bx bx-heart'></i>
-                  </IconButton>
-                )}
-                                </span>
+                <i id={item.in_wishlist ? 'addedtowishlist' : ''} onClick={() => handleWishlist(item.id)} className={item.in_wishlist ? 'bx bxs-heart' : 'bx bx-heart'}></i>
+              </span>
                <div className='buttonsHover'>
                 <button onClick={()=>handlecart(item.id)}>Add to cart</button>
                <Link to={`/store/productdetail/${item.id}`}>

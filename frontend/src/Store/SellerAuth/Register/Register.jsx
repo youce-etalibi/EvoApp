@@ -57,8 +57,10 @@ export const Register = () => {
       axios.post('http://127.0.0.1:8000/api/AddSeller', formData)
           .then(response => {
               console.log(response);
+              const token = response.data.token;
               const  sellerid = response.data.seller_id
               localStorage.setItem('seller_id', sellerid);
+              localStorage.setItem('seller_token', token);
               localStorage.setItem('isSeller', true);
                nav('/store/package')
   

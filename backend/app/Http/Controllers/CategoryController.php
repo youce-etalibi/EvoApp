@@ -12,7 +12,7 @@ class CategoryController extends Controller
     public function create()
     {
         $category = new Category();
-        $category->name = 'Shoes'; 
+        $category->name = 'Clothes'; 
         $category->save();
         return $category;
     }

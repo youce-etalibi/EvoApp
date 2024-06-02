@@ -5,6 +5,10 @@ import {  Products } from './Products/Products';
 import { Categories } from './Categories/categories';
 import { Types } from './Types/types';
 import { ProductsReview } from './Products/ProductsReview';
+import { Orderss } from './Orderss/Orderss';
+import { Sellers } from './Sellers/Sellers';
+import { Package } from './Sellers/Package';
+import { Clients } from './Clients/Clients';
 export const Admin = () => {
     useEffect(()=>{
         let menuButton = document.querySelector(".button-menu");
@@ -64,6 +68,9 @@ window.addEventListener("resize", function () {
        <Categories />
        <Types />
        <ProductsReview />
+       <Orderss />
+       <Sellers />
+       <Clients />
       </div>
     </div>
   </div>

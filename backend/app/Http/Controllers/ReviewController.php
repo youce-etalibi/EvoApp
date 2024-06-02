@@ -27,5 +27,28 @@ class ReviewController extends Controller
     return response()->json(['message' => 'review added successfully'], 200);
 
    }
- 
+
+   public function togglePublish(Request $request)
+{
+    $review = Review::find($request->id);
+
+    if ($review) {
+        $review->show_publish = !$review->show_publish;
+        $review->save();
+
+        return response()->json(['success' => true, 'show_publish' => $review->show_publish]);
+    }
+
+    return response()->json(['success' => false], 404);
+   }
+   
+   
+   
+   public function getReviews()
+   {
+      $reviews = Review::where('show_publish',true)->get();
+      return response()->json(['reviews' => $reviews], 201);
+    
+
+}
 }

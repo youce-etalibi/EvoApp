@@ -11,6 +11,7 @@ export const LoginSeller = () => {
     const userId = localStorage.getItem('id_active');
    const {seller}= useContext(SellerContext)
    const {userisauth, setuserisauth}= useContext(AuthContext)
+   const {sellerisauth, setsellerisauth}= useContext(SellerContext)
   
    const [messageError,setmessageError]=useState('')
     const nav = useNavigate()
@@ -62,15 +63,18 @@ export const LoginSeller = () => {
       axios.post('http://127.0.0.1:8000/api/LoginSeller', SellerData)
           .then(response => {
             const  sellerid = response.data.seller_id;
+            const token = response.data.token;
+
             console.log(response.data.seller)
               localStorage.setItem('seller_id', sellerid);
               localStorage.setItem('isSeller', true);
+              localStorage.setItem('seller_token', token);
+
               setuserisauth(true)
               nav('/store/seller')
           })
           .catch(error => {
               console.error(error.message);
-              setmessageError(error.response.data.message);
             });
     };
    

@@ -36,15 +36,13 @@ class ProductController extends Controller
 
         ];
           $images = [
-        'cap1.png',
-        'cap2.png',
-        'cap3.png',
-        'cap4.png',
-        'cap5.png',
-        'cap6.png',
+        'jersy1.png',
+        'jersy2.png',
+        'jersy3.png',
+        'jersy4.png',
     ];
 
-        for ($i = 0; $i < 18; $i++) {
+        for ($i = 0; $i < 4; $i++) {
             $productData = $productsData[array_rand($productsData)];
             $product = new Product();
 
@@ -54,9 +52,9 @@ class ProductController extends Controller
             $product->price = $productData['price'];
             $product->image =$images[array_rand($images)];;
             $product->stock = $productData['stock'];
-            $product->gender_id = 1;
-            $product->category_id = 1;
-            $product->type_id = 1;
+            $product->gender_id = 2;
+            $product->category_id = 2;
+            $product->type_id = 3;
 
             $product->save();
         }
@@ -67,10 +65,11 @@ class ProductController extends Controller
 
     public function updating()
     {
-        $products = Product::where('image', "cap1.png")->get();
+        $products = Product::where('category_id', 1)->get();
 
         foreach ($products as $product) {
-            $product->image = 'cap6.png';
+            $product->title = 'Shoes';
+            $product->sub_description = 'High performance road Shoes ';
             $product->save();
         }
     }
@@ -111,26 +110,25 @@ public function getProductsShop()
     $types = Type::all();
 
     // Fetching products with colors, sizes, and a flag indicating whether they are in the wishlist
+ 
+
     $allProducts = Product::select('products.*', DB::raw('(CASE WHEN wishlists.product_id IS NOT NULL THEN true ELSE false END) as in_wishlist'))
-                    ->leftJoin('wishlists', 'products.id', '=', 'wishlists.product_id')
-                    ->with('color', 'size','category','type')
-                    ->paginate($productCount);
+    ->leftJoin('wishlists', 'products.id', '=', 'wishlists.product_id')
+    ->leftJoin('sellers', 'products.seller_id', '=', 'sellers.id')
+    ->with('color', 'size','category','type')
+    ->where(function ($query) {
+        // Products with sellers and show_publish is true
+        $query->whereNotNull('products.seller_id')->where('sellers.show_publish', true);
+    })
+    ->orWhere(function ($query) {
+        // Products without sellers
+        $query->whereNull('products.seller_id');
+    })
+    ->paginate($productCount);
 
-                    // $filteredProducts = [];
-                    // foreach($allProducts as $product) {
-                    //     if($product->seller_id) {
-                    //         $seller = Seller::find($product->seller_id);
-
-                    //         if($seller->show_publish === 1) {
-                    //             $filteredProducts[] = $product;
-                    //         }
-                    //     }
-                    // }
-                    // $allProducts->setCollection(collect($filteredProducts));
 
     return response()->json([
         'products' => $allProducts,
-        // 'filteredProducts' => $filteredProducts,
         'genders' => $genders,
         'categories' => $categories,
         'productSizes' => $productSizes,
@@ -145,7 +143,7 @@ public function getProductsShop()
 public function show($id) {
     $productsizes = Size::all();
     $productcolors = Color::all();
-    $product = Product::with('reviews','category','type')->find($id);
+    $product = Product::with('category','type')->find($id);
 
     if (!$product) {
         return response()->json(['error' => 'Product not found'], 404);

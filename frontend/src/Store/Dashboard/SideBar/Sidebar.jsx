@@ -20,10 +20,10 @@ export const Sidebar = () => {
     <Fragment>
       <div className="parentSideBar">
         <ul>
-        {user && 
+        {user_db.client && 
             <li>
                 <Link to='/store/profile' className="linksidebar">
-                    <button id={location.pathname == '/store/profile' ? "btnSideBarActive" : null}>
+                    <button id={location.pathname == '/store/profile' ? "btnSideBarActiveProfile" : null}>
                         <span>
                         <span className='profiletext'>Profile</span>
                         <span className='profileicon'><i class='bx bxs-user-circle'></i></span>
@@ -35,7 +35,7 @@ export const Sidebar = () => {
 }
             <li>
                 <Link to='/store/profile/orders' className="linksidebar">
-                    <button id={location.pathname == '/store/profile/orders' ? "btnSideBarActive" : null}>
+                    <button id={location.pathname == '/store/profile/orders' ? "btnSideBarActiveProfile" : null}>
                         <span>
                         <span className='profiletext'>Orderss</span>
                         <span><i class='bx bxs-cart-add'></i></span>
@@ -46,7 +46,7 @@ export const Sidebar = () => {
             </li>
             <li>
                 <Link to='/store/profile/wishlists' className="linksidebar">
-                    <button id={location.pathname == '/store/profile/wishlists' ? "btnSideBarActive" : null}>
+                    <button id={location.pathname == '/store/profile/wishlists' ? "btnSideBarActiveProfile" : null}>
                         <span>
                         <span className='profiletext'>wishlists</span>
                         <span ><i class='bx bx-heart' ></i></span>

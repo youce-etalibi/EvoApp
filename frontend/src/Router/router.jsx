@@ -22,11 +22,6 @@ import { HomeSeller } from "../Store/Seller/Homeseller/Homeseller";
 import Sellersidebar from "../Store/Seller/Sellerprofile/Sidebarseller/Sidebaseller";
 import { Sellerprofile } from "../Store/Seller/Sellerprofile/SellerProfile/Sellerprofile";
 import { Sellerproducts } from "../Store/Seller/Sellerprofile/Sellerproducts/Sellerproducts";
-
-// import CaloriesCalculatorMain from "../CaloriesCalCulator/Home/CaloriesCalculatorMain";
-// import ChangeGoal from "../CaloriesCalCulator/ChangeGoal/ChangeGoal";
-// import CaloriesCalCulator from "../CaloriesCalCulator/CaloriesCalCulator";
-
 import Home from "../Home/home";
 
 import Categories from "../Exercices/categories/categories";
@@ -40,7 +35,9 @@ import Login from "../Auth/login/login";
 import Signup from "../Auth/signup/signup";
 import Unfounded from "../Unfounded/Unfounded";
 import { Admin } from "../Store/Admin/Admin";
-// import SellerHome from "../SellerHome/SellerHome";
+import SellerHome from "../Store/Seller/SellerHome/SellerHome";
+import { Footer } from "../Store/Footer/Footer";
+import { Header } from "../Store/Seller/SellerHome/Header";
 
 export default function RouterApp() {
   const token = localStorage.getItem("token");
@@ -84,6 +81,8 @@ export default function RouterApp() {
                 <Fragment>
                   <Navbar />
                   <Productdetail />
+                  <Footer />
+
                 </Fragment>
               }
             />
@@ -93,6 +92,8 @@ export default function RouterApp() {
                 <Fragment>
                   <Navbar />
                   <ProductsShop />
+                  <Footer />
+
                 </Fragment>
               }
             />
@@ -102,6 +103,8 @@ export default function RouterApp() {
                 <Fragment>
                   <Navbar />
                   <ProductsShop gender="Men" />
+                  <Footer />
+
                 </Fragment>
               }
             />
@@ -111,6 +114,8 @@ export default function RouterApp() {
                 <Fragment>
                   <Navbar />
                   <ProductsShop gender="Women" />
+                  <Footer />
+
                 </Fragment>
               }
             />
@@ -120,6 +125,8 @@ export default function RouterApp() {
                 <Fragment>
                   <Navbar />
                   <CartTable />
+                  <Footer />
+
                 </Fragment>
               }
             />
@@ -129,6 +136,8 @@ export default function RouterApp() {
                 <Fragment>
                   <Navbar />
                   <Infoclient />
+                  <Footer />
+
                 </Fragment>
               }
             />
@@ -169,8 +178,9 @@ export default function RouterApp() {
                 path="/store/seller"
                 element={
                   <Fragment>
-                    <Navbar />
-                    <HomeSeller />
+                <Header />
+                    <SellerHome />
+                    <Footer />
                   </Fragment>
                 }
               />
@@ -178,7 +188,7 @@ export default function RouterApp() {
                 path="/store/seller/profileseller"
                 element={
                   <Fragment>
-                    <Navbar />
+                    <Header />
                     <Sellerprofile />
                   </Fragment>
                 }
@@ -187,7 +197,7 @@ export default function RouterApp() {
                 path="/store/seller/products"
                 element={
                   <Fragment>
-                    <Navbar />
+                    <Header />
                     <Sellerproducts />
                   </Fragment>
                 }
@@ -203,10 +213,7 @@ export default function RouterApp() {
               }
             />
 
-            {/* <Route path="/CaloriesCalculator" element={<CaloriesCalCulator />} />
-                        <Route path="/CaloriesCalculator/change-goal" element={<ChangeGoal />} />
-                        <Route path="/CaloriesCalculator/Home" element={<CaloriesCalculatorMain />} />
-                        <Route path="/sellerHome" element={<SellerHome />} /> */}
+          
           </Route>
 
           <Route path="*" element={<Unfounded />} />

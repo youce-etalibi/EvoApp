@@ -20,6 +20,7 @@ class OrderController extends Controller
     $orderss = Order::where('client_id', $clientData->id)->with('items.product.type','delivery')->get();
     $orderssCount = $orderss->count();
    
+    
      return response()->json([
         'orderssCount' => $orderssCount,
         'orderss' => $orderss,
@@ -91,10 +92,10 @@ class OrderController extends Controller
                $product->is_sale = true;
                $product->stock -= $item['quantity'];
                $product->save();
-    
            }
-
        }
+   
+       Cart::where('user_id', $userId)->delete();
    
        return response()->json(['message' => 'Order added successfully'], 200);
    }

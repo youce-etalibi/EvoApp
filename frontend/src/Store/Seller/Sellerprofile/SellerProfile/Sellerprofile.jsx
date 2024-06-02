@@ -5,6 +5,7 @@ import axios from 'axios'
 import { Salleproducts } from '../Salle_products/Salleproducts'
 import { SellerContext } from '../../../../Context/Sellercontext'
 import { Chartex } from '../Chart/Chart'
+import WeightTracking from '../../../../Exercices/Profile/weightTracking/weightTracking'
 
 export const Sellerprofile = () => {
     const {seller,Setseller}=useContext(SellerContext)
@@ -33,7 +34,8 @@ const getproductseller = () => {
 
 useEffect(()=>{
 getproductseller()
-},[])
+},[seller])
+
 
 
   return (
@@ -68,7 +70,7 @@ getproductseller()
     </div>
     <div class="data">
         <p>
-        {sale_percentage && sale_percentage.toFixed(2)}% 
+        {sale_percentage && sale_percentage.toFixed(0)}% 
         </p>
         
         <div class="range">

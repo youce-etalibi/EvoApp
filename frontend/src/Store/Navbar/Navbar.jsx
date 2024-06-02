@@ -10,16 +10,13 @@ import axios from 'axios'
 import { WishlistContext } from '../../Context/WishlistContext'
 import { IconButton } from '@mui/material'
 import Profile from '../../Components/Profile/Profile'
+import { Menu } from '../../Components/Menu/Menu'
 export const Navbar = () => {
    const { isactive, setisactive } = useContext(MenuContext);
    const { deletedItem,addedtocart,count  } = useContext(CartContext);
    const {addedtowishlist,setcountwishlist,countwishlist,deletedItemwishlist,setdeletedItemwishlist} = useContext(WishlistContext);
     const [categorys, setcategorys] = useState([]);
     const [isCartOpen, setIsCartOpen] = useState(false);
-
-    const handleMenu = () => {
-        setisactive(!isactive);
-    };
 
     const toggleCart = () => {
         setIsCartOpen(!isCartOpen);
@@ -106,15 +103,15 @@ export const Navbar = () => {
   return (
 
 <nav className="navbar">
+  <Menu />
 <div className="storelogo">
- <Link to='/home'>
+ <Link to='/store'>
           <img src="/Evolution.png" alt="Evolution" title="Evolution" />
       </Link>
   </div>
   <div className="menu-container" ref={menuRef}>
     <ul className="mega-menu">
-   
-      {/* Mens */}
+     
       <li className="dropdown">
       <div ref={(el) => dropdownRefs.current.push(el)}>
           <span> <Link to='/store/shop-mens'>Mens   </Link></span>
@@ -329,7 +326,10 @@ export const Navbar = () => {
               </li>
             </ul>
           </li>
-       
+          <li className="sub-dropdown-imgshop">
+           
+            
+           </li>
         </ul>
       </li>
       <li className="dropdown">
@@ -340,6 +340,7 @@ export const Navbar = () => {
           </span>
         </div>
       </li>
+     
     </ul>
   
 <div className="storeLinks">
@@ -365,7 +366,7 @@ export const Navbar = () => {
           <Profile />
         
         </li>
-   
+       
  </ul>
 </div>
 

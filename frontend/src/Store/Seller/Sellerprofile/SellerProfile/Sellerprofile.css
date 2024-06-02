@@ -1,7 +1,7 @@
 .sellerprofile{
     display: flex;
     flex-direction: row;
-    margin: 7.5rem auto 0 auto;
+    margin: 1.5rem auto 0 auto;
     gap: 20px;
     width: 95%;
 }
@@ -10,6 +10,7 @@
     text-align: center;
    
 }
+
 .leftprofilebar{
   display: flex;
   flex-direction: column;
@@ -173,6 +174,10 @@
     width: 300px;
  
  }
+ .leftsideseller{
+   width: 100%;
+ }
+
   .sellerdashboard {
    width: 100%;
 
@@ -212,7 +217,6 @@
     display: block;
   }
   .leftsideseller2{
-    height: 17vh;
     display: flex;
     width: 90%;
   }

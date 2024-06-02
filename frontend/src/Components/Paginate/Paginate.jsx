@@ -11,7 +11,7 @@ export default function Paginate({ currentPage, totalPages, handlePageChange }) 
       };
     
     return (
-        <div className="pagination">
+        <div className="paginationstore">
            <Stack spacing={2}>
       <Pagination
         count={totalPages}

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Carbon\Carbon;
 
 use App\Models\Category;
 use App\Models\Categorytype;
@@ -8,6 +9,7 @@ use App\Models\Client;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\Review;
+use App\Models\Seller;
 use App\Models\Type;
 use FontLib\Table\Type\name;
 use Illuminate\Http\Request;
@@ -237,4 +239,73 @@ public function deleteclient($id){
     
 }
 
+public function getOrderrs()
+{
+    $orders = Order::with('items.product.type', 'delivery', 'client')->get();
+    $ordersCount = $orders->count();
+
+    // Function to add business days to a date
+    function addBusinessDays($date, $days)
+    {
+        $currentDate = clone $date;
+        while ($days > 0) {
+            $currentDate->addDay();
+            // Skip weekends
+            if (!$currentDate->isWeekend()) {
+                $days--;
+            }
+        }
+        return $currentDate;
+    }
+
+    // Format the orders with expected delivery date
+    $formattedOrders = $orders->map(function ($order) {
+        $deliveryTime = $order->delivery->delivery_time;
+        // Parse the delivery time (e.g., "1-2 business days")
+        [$minDays, $maxDays] = explode('-', str_replace(' business days', '', $deliveryTime));
+
+        $currentDate = Carbon::now();
+
+        // Calculate the maximum expected delivery date
+        $maxDeliveryDate = addBusinessDays($currentDate, (int)$maxDays);
+
+        return [
+            'id' => $order->id,
+            'expected_delivery_date' => $maxDeliveryDate->toDateString(),
+            'items' => $order->items,
+            'total_amount' => $order->total_amount,
+            'delivery' => $order->delivery,
+            'client' => $order->client,
+        ];
+    });
+
+    // Return the response as JSON
+    return response()->json([
+        'ordersCount' => $ordersCount,
+        'orderss' => $formattedOrders,
+    ]);
+}
+
+public function deleteorder($id){
+    $ord = Order::findOrFail($id); 
+    if($ord){
+        $ord->delete();
+    }
+    return response()->json(["message" =>'order deleted avec success'], 200);
+    
+}
+
+public function getSellers(){
+    $sellers = Seller::with('plan.planType')->get();
+    return response()->json(["sellers" =>$sellers], 200);
+
+}
+public function deleteSeller($id){
+    $seller = Seller::findOrFail($id); 
+    if($seller){
+        $seller->delete();
+    }
+    return response()->json(["message" =>'seller deleted avec success'], 200);
+    
+}
 }
