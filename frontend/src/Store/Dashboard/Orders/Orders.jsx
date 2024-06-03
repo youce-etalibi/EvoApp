@@ -31,9 +31,9 @@ export const Orders = () => {
     if (hoursPassed >= 0) {
       if (deliveryTime === 1) {
         return Math.min(20 + (hoursPassed * (70 / 24)), 100); // Increase by 70% every 24 hours, capped at 100%
-      } else if (deliveryTime === 2) {
-        return Math.min(40 + (hoursPassed * (60 / 24)), 100); // Increase by 60% every 24 hours, capped at 100%
       } else if (deliveryTime === 3) {
+        return Math.min(40 + (hoursPassed * (60 / 24)), 100); // Increase by 60% every 24 hours, capped at 100%
+      } else if (deliveryTime === 2) {
         return Math.min(70 + (hoursPassed * (30 / 24)), 100); // Increase by 30% every 24 hours, capped at 100%
       }
     }

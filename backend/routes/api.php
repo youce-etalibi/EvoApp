@@ -129,10 +129,13 @@ Route::delete('/deleteorder/{id}', [AdminController::class, 'deleteorder']);
 Route::post('/toggle-publish', [ReviewController::class, 'togglePublish']);
 Route::post('/toggle-publish', [SellerController::class, 'togglePublish']);
 Route::post('/toggle-wishlist', [WishlistController::class, 'toggleWishlist']);
+Route::post('/toggle-admin', [AdminController::class, 'toggleAdmin']);
 
 Route::get('/getSellers', [AdminController::class, 'getSellers']);
 Route::delete('/deleteSeller/{id}', [AdminController::class, 'deleteSeller']);
 
+Route::get('/getusers', [AdminController::class, 'getusers']);
+Route::delete('/deleteUser/{id}', [AdminController::class, 'deleteUser']);
 
 
 

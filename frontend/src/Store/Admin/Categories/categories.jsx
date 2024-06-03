@@ -7,7 +7,7 @@ import Addcat from './Addcategory'
 import Paginate from '../../../Components/Paginate/Paginate'
 import Editcategories from './Editcategories'
 
-export const Categories = () => {
+export const CategoriesAdmin = () => {
 
 
     const [ToggleAddCat,setToggleAddCat] =useState(false)

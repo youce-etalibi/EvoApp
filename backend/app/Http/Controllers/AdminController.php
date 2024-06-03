@@ -11,6 +11,7 @@ use App\Models\Product;
 use App\Models\Review;
 use App\Models\Seller;
 use App\Models\Type;
+use App\Models\User;
 use FontLib\Table\Type\name;
 use Illuminate\Http\Request;
 
@@ -308,4 +309,34 @@ public function deleteSeller($id){
     return response()->json(["message" =>'seller deleted avec success'], 200);
 
 }
+
+public function getusers(){
+    $users = User::all();
+    return response()->json(["users" =>$users], 200);
+    
+}
+
+public function toggleAdmin(Request $request)
+{
+    $user = User::find($request->id);
+    
+    if ($user) {
+        $user->idAdmin = !$user->idAdmin;
+        $user->save();
+        
+        return response()->json(['success' => true, 'is_admin' => $user->idAdmin]);
+    }
+    
+    return response()->json(['success' => false], 404);
+}
+
+public function deleteUser($id){
+    $user = User::findOrFail($id);
+    if($user){
+        $user->delete();
+    }
+    return response()->json(["message" =>'user deleted avec success'], 200);
+
+}
+
 }

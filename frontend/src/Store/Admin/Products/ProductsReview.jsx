@@ -57,7 +57,7 @@ export const ProductsReview = () => {
 
   return (
     <div id='productStoreseller'>
-      <table className='tablecrudseller'>
+      <table className='containertable'>
         <thead className='theadseller'>
           <tr className='trseller'>
             <th>Picture</th>

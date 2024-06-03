@@ -64,6 +64,21 @@ export const Products = () => {
 },[])
 
 
+
+useEffect(() => {
+  filteredProductsFunct();
+}, [productName]);
+
+const filteredProductsFunct = () => {
+  let filtered = [...products];
+
+  if (productName !== '') {
+    filtered = filtered.filter(product => product.title.toLowerCase().includes(productName.toLowerCase()));
+  }
+  setFilteredProducts(filtered);
+};
+
+
   function openAddProducts() {
     setToggleAddProduct(true);
 }
@@ -115,7 +130,7 @@ function closeopenAddProducts() {
   const totalPages = Math.ceil(count / itemsPerPage);
 
     return (
-        <div id='productStoreseller'>
+        <div id='containertable'>
    
         <div className='searchheader'>
         <div className='topsearch'>
@@ -135,7 +150,7 @@ function closeopenAddProducts() {
     </div>
         </div>
     
-    <table className='tablecrudseller'>
+    <table className='containertable'>
         <thead className='theadseller'>
             <tr className='trseller'>
                 <th>Picture </th>

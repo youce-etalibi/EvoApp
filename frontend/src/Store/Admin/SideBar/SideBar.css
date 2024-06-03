@@ -1,0 +1,297 @@
+.logoMenu {
+  align-items: center;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  color: #aa22d9;
+  width: 3vw;
+  position: relative;
+}
+hr {
+  padding: 0%;
+  margin: 0%;
+}
+.logoMenu-expand {
+  align-items: center;
+  text-align: center;
+  padding: 1vh 4vw;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #aa22d9;
+  width: 3vw;
+}
+.sideBar {
+  top: 0px;
+  position: fixed;
+  flex: 0 0 auto;
+  background-color: #ffffff;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.routerposition {
+  display: flex;
+}
+.contentt {
+  margin-left: 19vw;
+  width: 75vw;
+}
+
+.active {
+  background-color: blue;
+  color: white; /* Optionally change text color */
+}
+
+
+
+.sideBar a {
+  text-decoration: none;
+  color: #575757;
+}
+.sideBar a:hover {
+  font-size: 1.1rem;
+  text-decoration: none !important;
+}
+
+.sideBar {
+  background-color: #ffffff; /* Background color */
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.2);
+  transition: 0ms;
+}
+
+.logoMenu {
+  height: 40px; /* Height of the logo/menu container */
+  font-weight: bold;
+  font-size: 2.1rem;
+  color: #aa22d9; /* Logo/menu color */
+  margin-left: 7.5vw;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+}
+
+.logoMenu-collapsed {
+  height: 40px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #aa22d9;
+  margin-left: 0.5vw;
+  margin-top: 1vh;
+  padding: 2vh 0;
+}
+.sideBar a:hover {
+  text-decoration: none;
+}
+.logoMenu a:hover {
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+.logoMenu-collapsed a:hover {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.ant-menu {
+  background-color: white;
+  padding: 0%;
+  margin: 0%;
+  transition: 0ms;
+}
+.ant-menu-inline {
+  background-color: white;
+  padding: 0%;
+  margin: 0%;
+}
+
+.sideBar ul li {
+  background-color: white;
+  padding: 0%;
+  margin: 0%;
+}
+.sideBar ul {
+  background-color: white !important;
+}
+
+/* Adjustments for menu items */
+.sideBar .ant-menu-item {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555555 !important;
+  width: 95% !important;
+  padding-left: 20px !important ;
+  left: 0%;
+  height: 50px !important;
+  box-sizing: border-box;
+}
+.sideBar .ant-menu-item a {
+  text-decoration: none;
+}
+
+
+.sideBar .ant-menu-item:hover {
+  background-color: #eff5ff !important; /* Background color on hover */
+  color: #0062ff !important;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transform: none;
+  box-sizing: border-box;
+}
+.sideBar .ant-menu-item a:hover {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+} 
+.ant-menu-item-selected a {
+  color: #4089FF !important; /* Change text color of selected menu item */
+}
+
+
+li .ant-menu-submenu {
+  background-color: white;
+}
+/* Adjustments for submenu items */
+.ant-menu-submenu-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-left: 1vw;
+  padding-left: 20px !important;
+  color: #555555 !important;
+  height: 50px !important;
+}
+
+.ant-menu-submenu-title:hover {
+  background-color: #eff5ff !important; /* Background color on hover */
+  color: #0062ff !important;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Adjustments for selected menu item */
+.ant-menu-item-selected {
+  background-color: #4089FF; /* Background color of selected menu item */
+}
+
+.buttonCollapsed:hover {
+  background-color: #40a9ff; /* Button background color on hover */
+}
+
+.buttonCollapsed:focus {
+  outline: none;
+}
+
+.ant-layout-sider-trigger {
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2d99ff; /* Button background color */
+  color: #ffffff; /* Button text color */
+  border: none;
+  width: 40px; /* Set width and height to the same value for a perfect circle */
+  height: 40px; /* Set width and height to the same value for a perfect circle */
+  border-radius: auto; /* Make it a perfect circle */
+  font-size: 1.5rem; /* Button font size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+.sideBar.ant-layout-sider:not(.ant-layout-sider-collapsed)
+  .ant-layout-sider-trigger {
+  width: 20vw !important; /* Largeur lorsque la barre latérale est étendue */
+  max-width: 20vw !important; /* Assurer qu'elle ne dépasse pas 20vw */
+}
+.ant-layout-sider-trigger:hover {
+  background-color: #4089ff;
+}
+
+.ant-layout-sider-light {
+  width: 20vw !important;
+  max-width: 20vw !important;
+}
+.sideBar.ant-layout-sider-collapsed {
+  width: 80px !important;
+}
+.buttonCollapsed:hover {
+  background-color: #40a9ff; /* Button background color on hover */
+}
+
+.buttonCollapsed:focus {
+  outline: none;
+}
+
+/* Adjustments for collapsed mode */
+
+.sideBar a {
+  text-decoration: none;
+}
+.content {
+  width: 91vw;
+  margin-left: 3vw;
+}
+.menuLignePiece {
+  width: 1.5vw;
+  box-shadow: 0 0 25px rgba(128, 128, 128, 0.84);
+}
+
+.submenuDivLigne {
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3.5vh 0;
+}
+.submenuDivLigne-hide {
+  display: none;
+}
+.menuTextPiece {
+  width: 17.5vw;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #4089ff;
+}
+.sideBar .svg-inline--fa {
+  color: #d9d9d9;
+  padding-right: 1vw;
+}
+.ant-menu-item:hover .svg-inline--fa {
+  color: #0062ff;
+  text-decoration: none;
+}
+.ant-menu-submenu a {
+  text-decoration: none;
+}
+.ant-menu-submenu a:hover {
+  text-decoration: none;
+  color: #0062ff;
+}
+img.AdminSidebar-logo{
+  width: 120px;
+}
+.logoContainer{
+  padding:0vh 4vw;
+}
+
+
+.custom-scrollbar {
+  --sb-track-color: #f7f8f8;
+  --sb-thumb-color: #4876ec;
+  --sb-size: 10px;
+
+  /* WebKit-based browsers */
+  scrollbar-width: var(--sb-size);
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 8px;
+}

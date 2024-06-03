@@ -1,71 +1,4 @@
 
-  .containeradmin {
-    display: flex;
-    width: 100vw;
-    flex-wrap: wrap;
-    overflow: hidden;
-  }
-  .mainadmin {
-    height: calc(100% - 50px);
-    display: flex;
-    flex: 1;
-  }
-  .sidebaradmin {
-    height: 100%;
-    width: 220px;
-    box-sizing: border-box;
-    box-shadow: 0 0 2rem 0 rgb(0 0 0 / 5%);
-    overflow: hidden;
-    padding-top:0.6rem;
-
-    transition: width 0.5s ease;
-  }
-  .containeradmin.nav-closed .sidebaradmin,
-  .containeradmin.nav-closed .headeradmin-logo {
-    width: 0;
-  }
-  .sidebaradmin .uladmin {
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-  }
-  .sidebaradmin .uladmin .liadmin {
-    display: flex;
-    align-items: center;
-  }
-  .sidebaradmin .uladmin .liadmin a {
-    color: #000;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 10px;
-    white-space: nowrap;
-  }
-  .sidebaradmin .uladmin .liadmin a.active,
-  .sidebaradmin .uladmin .liadmin a:hover {
-    background: #e8ecef;
-  }
-  .sidebaradmin .uladmin .liadmin span {
-    margin-left: 16px;
-    font-size: 16px;
-  }
-  .sidebaradmin .uladmin .liadmin i {
-    font-size: 18px;
-    color: #111;
-    font-weight: normal;
-  }
-  .logoadmin{
-    width: 160px;
-  }
-  .headeradmin {
-    height: 78px;
-    background: #0153DF;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
-  }
   .sidebaradmin .uladmin .liadmin a.active i {
     color: #0153DF;
   }
@@ -162,10 +95,20 @@ h2 {
 .containertable {
   text-align: center;
   overflow: hidden;
-  width: 800px;
-  margin: 0 auto;
+  width: 820px;
+  margin-left: 18rem;
+}
+.searchheader{
+  width: 80%;
+  justify-content: end;
+  text-align: center;
 }
 
+.topsearch{
+  margin-left: 16rem;
+  width: 74%;
+  margin-bottom: 3rem;
+}
 .containertable table {
   width: 100%;
 }

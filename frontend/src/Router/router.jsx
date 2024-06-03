@@ -45,6 +45,15 @@ import CaloriesCalculatorMain from "../CaloriesCalCulator/Home/CaloriesCalculato
 import ChangeGoal from "../CaloriesCalCulator/ChangeGoal/ChangeGoal";
 import CaloriesCalCulator from "../CaloriesCalCulator/CaloriesCalCulator";
 import SettingsProfile from "../SettingsProfile/settingsProfile";
+import { Products } from "../Store/Admin/Products/Products";
+import { ProductsReview } from "../Store/Admin/Products/ProductsReview";
+import { Types } from "../Store/Admin/Types/types";
+import { Orderss } from "../Store/Admin/Orderss/Orderss";
+import { Clients } from "../Store/Admin/Clients/Clients";
+import { Sellers } from "../Store/Admin/Sellers/Sellers";
+import { Users } from "../Store/Admin/Users/Users";
+import { CategoriesAdmin } from "../Store/Admin/Categories/categories";
+import { NavbarAdmin } from "../Store/Admin/Navbar";
 
 export default function RouterApp() {
   const token = localStorage.getItem("token");
@@ -217,16 +226,21 @@ export default function RouterApp() {
               />
             </Route>
 
-            <Route
-              path="/store/admin"
-              element={
-                <Fragment>
-                  <Admin />
-                </Fragment>
-              }
-            />
+            <Route path="/store/admin" element={
+              <Fragment>
+            <Admin />
+              </Fragment>
+            }>
+                    <Route path="products" element={<Products />} />
+                    <Route path="productsReviews" element={<ProductsReview />} />
+                    <Route path="categories" element={<CategoriesAdmin />} />
+                    <Route path="categoryTypes" element={<Types />} />
+                    <Route path="orders" element={<Orderss />} />
+                    <Route path="Customers" element={<Clients />} />
+                    <Route path="sellers" element={<Sellers />} />
+                    <Route path="users" element={<Users />} />
+                </Route>
 
-          
           </Route>
 
           <Route path="*" element={<Unfounded />} />

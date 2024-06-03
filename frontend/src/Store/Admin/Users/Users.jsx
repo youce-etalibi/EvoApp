@@ -3,31 +3,22 @@ import axios from 'axios';
 import { Avatar, IconButton } from '@mui/material';
 import { AdminContext } from '../../../Context/AdminContext';
 
-export const Sellers = () => {
+export const Users = () => {
 
-  const [sellers, setsellers] = useState([]);
-  const [publishStatus, setPublishStatus] = useState({});
+  const [users, setusers] = useState([]);
+  const [isadmin, setisadmin] = useState({});
 
   const { isdelete, setisdelete } = useContext(AdminContext);
 
-  const getSellers = () => {
-    axios.get(`http://127.0.0.1:8000/api/getSellers`)
+  const getusers = () => {
+    axios.get(`http://127.0.0.1:8000/api/getusers`)
       .then(response => {
-          const initialStatus = {};
-          response.data.sellers.forEach(seller => {
-              initialStatus[seller.id] = seller.show_publish;
-            });
-
-            const formattedSellers = response.data.sellers.map(seller => ({
-                ...seller,
-                plan_start_date: new Date(seller.plan_start_date).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                })
-            }));
-            setsellers(formattedSellers);
-        setPublishStatus(initialStatus);
+        const initialStatus = {};
+        response.data.users.forEach(user => {
+            initialStatus[user.id] = user.idAdmin;
+          });
+         setusers(response.data.users)
+        setisadmin(initialStatus);
         console.log(response)
       })
       .catch(error => {
@@ -36,12 +27,12 @@ export const Sellers = () => {
   };
 
   useEffect(() => {
-    getSellers();
+    getusers();
   }, [isdelete]);
 
-  const deleteSeller = async (id) => {
+  const deleteUser = async (id) => {
     try {
-      const res = await axios.delete(`http://127.0.0.1:8000/api/deleteSeller/${id}`);
+      const res = await axios.delete(`http://127.0.0.1:8000/api/deleteUser/${id}`);
       console.log(res);
       setisdelete(!isdelete);
     } catch (error) {
@@ -49,14 +40,15 @@ export const Sellers = () => {
     }
   };
 
-  const handleToggle = async (seller_id) => {
+  const handleToggle = async (user_id) => {
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/toggle-publish', { id: seller_id });
+      const response = await axios.post('http://127.0.0.1:8000/api/toggle-admin', { id: user_id });
       if (response.data.success) {
-        setPublishStatus(prevStatus => ({
+        setisadmin(prevStatus => ({
           ...prevStatus,
-          [seller_id]: response.data.show_publish
+          [user_id]: response.data.idAdmin
         }));
+        console.log(response)
       } else {
         console.error('Failed to toggle publish status');
       }
@@ -70,39 +62,24 @@ export const Sellers = () => {
       <table className='containertable'>
         <thead className='theadseller'>
           <tr className='trseller'>
-            <th>Seller</th>
-            <th>Package Name</th>
-            <th>Package start_at</th>
-            <th>Shop Publish</th>
+            <th>username</th>
+            <th>Email</th>
+            <th>Is admin</th>
             <th>Action</th>
           </tr>
         </thead>
         <tbody className='tbody'>
-          {sellers.map((res, index) => (
+          {users.map((res, index) => (
             <tr className='trseller' key={index}>
               <td>
-                <div  className='avatarseller'>
-
-                <div>
-                <Avatar sx={{ width: 40, height: 40 }}>
-                    {res.nameseller.charAt(0).toUpperCase()}
-                </Avatar>
-                </div>
-<div>
-<p>{res.nameseller}</p>
-<p>{res.phoneseller}</p>
-</div>
-                </div>
+              {res.name}
               </td>
               <td>
-                {res.plan.plan_type.name}
-              </td>
-              <td>
-                {res.plan_start_date}
+              {res.email}
               </td>
               <td>
                 <label className="switch">
-                  <input type="checkbox" checked={publishStatus[res.id] || false} onChange={() => handleToggle(res.id)} />
+                  <input type="checkbox" checked={isadmin[res.id] || false} onChange={() => handleToggle(res.id)} />
                   <div className="slider">
                     <div className="circle">
                       <svg className="cross" xmlSpace="preserve" viewBox="0 0 365.696 365.696" height={6} width={6} xmlns="http://www.w3.org/2000/svg">
@@ -122,7 +99,7 @@ export const Sellers = () => {
              
               <td>
                 <div className='quantityseller'>
-                  <button onClick={() => deleteSeller(res.id)}>
+                  <button onClick={() => deleteUser(res.id)}>
                     <IconButton aria-label="hide">
                       <span className="span"><i className='bx bx-trash'></i></span>
                     </IconButton>
@@ -134,5 +111,6 @@ export const Sellers = () => {
         </tbody>
       </table>
     </div>
+
   );
 };
