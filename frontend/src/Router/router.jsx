@@ -55,6 +55,7 @@ import { Clients } from "../Store/Admin/Clients/Clients";
 import { Sellers } from "../Store/Admin/Sellers/Sellers";
 import { Users } from "../Store/Admin/Users/Users";
 import ProtectedRoute from "./ProtectedRoute";
+import ScrollToTopButton from "../Components/ScrollTopButton/scrolTopBtn";
 
 export default function RouterApp() {
   const token = localStorage.getItem("token");
@@ -62,6 +63,7 @@ export default function RouterApp() {
   return (
     <Fragment>
       <BrowserRouter>
+      <ScrollToTopButton />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/auth" element={<Auth />}>

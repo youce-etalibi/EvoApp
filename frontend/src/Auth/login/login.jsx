@@ -92,7 +92,7 @@ export default function Login() {
       localStorage.setItem('seller_id', idseller);
 
       // Navigate to the store page
-      adminCheck ? navigate('/store/admin') : navigate('/home')
+      adminCheck ? navigate('/store/admin/products') : navigate('/home')
       ;
     } catch (error) {
       console.log(error.response.data);

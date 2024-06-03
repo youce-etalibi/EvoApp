@@ -57,6 +57,8 @@
     border-radius: 20px;
 }
 
+
+
 .toolsImg2 {
     position: relative;
     z-index: 10;
@@ -187,7 +189,9 @@
     margin-top: -3rem;
     margin-left: 20rem;
     animation: float 12s alternate infinite;
-    filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.379)) ;
+    /* filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.379)) hue-rotate(10deg); */
+    filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.379)) hue-rotate(220deg);
+    
 }
 
 .illustrator2Tool {
@@ -197,6 +201,7 @@
     left: 8rem;
     animation: floatLeft 15s alternate infinite;
     filter: drop-shadow(10px 15px 10px rgba(0, 0, 0, 0.379)) ;
+    filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.379)) hue-rotate(220deg);
 }
 
 .illustrator3Tool {
@@ -206,6 +211,7 @@
     margin-left: 20rem;
     animation: float 14s alternate infinite;
     filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.379)) ;
+    filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.379)) hue-rotate(220deg);
 }
 
 
