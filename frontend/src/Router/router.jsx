@@ -45,6 +45,7 @@ import CaloriesCalculatorMain from "../CaloriesCalCulator/Home/CaloriesCalculato
 import ChangeGoal from "../CaloriesCalCulator/ChangeGoal/ChangeGoal";
 import CaloriesCalCulator from "../CaloriesCalCulator/CaloriesCalCulator";
 import SettingsProfile from "../SettingsProfile/settingsProfile";
+import AddExercices from "../Exercices/categories/myWorkouts/AddExercices/addExercices";
 
 export default function RouterApp() {
   const token = localStorage.getItem("token");
@@ -62,6 +63,7 @@ export default function RouterApp() {
           <Route element={<RequiredAuth />}>
             <Route path="/home" element={<Home />} />
             <Route path="/settings" element={<SettingsProfile />} />
+            <Route path="/add-exercices/:id" element={<AddExercices />} />
             <Route path="/exercices" element={<Exercices />}>
               <Route path="overview" element={<Categories />} />
               <Route path="profile" element={<Profile />} />

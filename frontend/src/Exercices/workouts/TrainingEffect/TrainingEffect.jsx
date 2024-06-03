@@ -1,25 +1,16 @@
 import React, { useState, useEffect, Fragment } from "react";
 import "./TrainingEffect.css";
+import { useWorkouts } from "../../../Context/WorkoutsContext";
 
 export default function TrainingEffect() {
-  const [workouts, setWorkouts] = useState([]);
+  const { workouts } = useWorkouts();
   const [progressZone, setProgressZone] = useState(null);
   const [noActivity, setNoActivity] = useState(false);
-  const [showPopup, setShowPopup] = useState(false); // State to manage pop-up visibility
-  const idAuth = localStorage.getItem("id_active");
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
-    async function fetchWorkouts() {
-      const response = await fetch(
-        `http://localhost:8000/api/workouts/?id=${idAuth}`
-      );
-      const data = await response.json();
-      setWorkouts(data);
-      determineProgressZone(data);
-    }
-
-    fetchWorkouts();
-  }, []);
+    determineProgressZone(workouts);
+  }, [workouts]);
 
   const determineProgressZone = (workouts) => {
     const currentWeek = getCurrentWeek();
@@ -27,8 +18,6 @@ export default function TrainingEffect() {
       const workoutDate = new Date(workout.date);
       return isDateInCurrentWeek(workoutDate, currentWeek);
     });
-
-    console.log("Workouts this week:", workoutsThisWeek);
 
     if (workoutsThisWeek.length === 0) {
       setNoActivity(true);
@@ -48,9 +37,6 @@ export default function TrainingEffect() {
       }
     });
 
-    console.log("Days with workouts:", daysWithWorkouts.size);
-    console.log("Completed exercises count:", completedExercisesCount);
-
     const numberOfDaysWithWorkouts = daysWithWorkouts.size;
     let zone = "RecoveryPart";
 
@@ -67,13 +53,12 @@ export default function TrainingEffect() {
     }
 
     setProgressZone(zone);
-    console.log("Progress zone set to:", zone); // Moved inside to reflect the new state value
   };
 
   const getCurrentWeek = () => {
     const now = new Date();
-    const startOfWeek = new Date(now.setDate(now.getDate() - now.getDay() + 1)); // Monday
-    const endOfWeek = new Date(now.setDate(now.getDate() + 6)); // Sunday
+    const startOfWeek = new Date(now.setDate(now.getDate() - now.getDay() + 1));
+    const endOfWeek = new Date(now.setDate(now.getDate() + 6));
     return { startOfWeek, endOfWeek };
   };
 
@@ -82,60 +67,64 @@ export default function TrainingEffect() {
   };
 
   const togglePopup = () => {
-    setShowPopup(!showPopup); // Toggle pop-up visibility
+    setShowPopup(!showPopup);
   };
 
   return (
     <Fragment>
       <div className="parenttrainingEffect">
-        <h3><span>Training Effect</span><button id="DetailKeys" onClick={togglePopup}>
-          <i class="bx bxs-info-circle"></i>
-        </button></h3>
+        <h3>
+          <span>Training Effect</span>
+          <button id="DetailKeys" onClick={togglePopup}>
+            <i className="bx bxs-info-circle"></i>
+          </button>
+        </h3>
         <h5>Recovery</h5>
         <div className="progressBarTrainingEffect">
-          {noActivity && (
-            <div className="NoActivity">
-              <span className="pointofPosistion">.</span>
-              <i className="bx bxs-down-arrow"></i>
-            </div>
-          )}
-          <div className="MinorPart">
-            <span className="pointofPosistion">.</span>
-            {progressZone === "MinorPart" && (
-              <i className="bx bxs-down-arrow"></i>
-            )}
-          </div>
-          <div className="MaintainingPart">
-            <span className="pointofPosistion">.</span>
-            {progressZone === "MaintainingPart" && (
-              <i className="bx bxs-down-arrow"></i>
-            )}
-          </div>
-          <div className="HighlyImporovingPart">
-            <span className="pointofPosistion">.</span>
-            {progressZone === "HighlyImporovingPart" && (
-              <i className="bx bxs-down-arrow"></i>
-            )}
-          </div>
-          <div className="RecoveryPart">
-            <span className="pointofPosistion">.</span>
-            {progressZone === "RecoveryPart" && (
-              <i className="bx bxs-down-arrow"></i>
-            )}
-          </div>
-          <div className="ImprovingPart">
-            <span className="pointofPosistion">.</span>
-            {progressZone === "ImprovingPart" && (
-              <i className="bx bxs-down-arrow"></i>
-            )}
-          </div>
-          <div className="OverreachingPart">
-            <span className="pointofPosistion">.</span>
-            {progressZone === "OverreachingPart" && (
-              <i className="bx bxs-down-arrow"></i>
-            )}
-          </div>
-        </div>
+  {noActivity && (
+    <div className="NoActivity">
+      <span className="pointofPosistion">.</span>
+      {/* <i className="bx bxs-down-arrow"></i> */}
+    </div>
+  )}
+  <div className="MinorPart">
+    <span className="pointofPosistion">.</span>
+    {progressZone === "MinorPart" && (
+      <i className="bx bxs-down-arrow"></i>
+    )}
+  </div>
+  <div className="MaintainingPart">
+    <span className="pointofPosistion">.</span>
+    {progressZone === "MaintainingPart" && (
+      <i className="bx bxs-down-arrow"></i>
+    )}
+  </div>
+  <div className="HighlyImporovingPart">
+    <span className="pointofPosistion">.</span>
+    {progressZone === "HighlyImporovingPart" && (
+      <i className="bx bxs-down-arrow"></i>
+    )}
+  </div>
+  <div className="RecoveryPart">
+    <span className="pointofPosistion">.</span>
+    {progressZone === "RecoveryPart" && (
+      <i className="bx bxs-down-arrow"></i>
+    )}
+  </div>
+  <div className="ImprovingPart">
+    <span className="pointofPosistion">.</span>
+    {progressZone === "ImprovingPart" && (
+      <i className="bx bxs-down-arrow"></i>
+    )}
+  </div>
+  <div className="OverreachingPart">
+    <span className="pointofPosistion">.</span>
+    {progressZone === "OverreachingPart" && (
+      <i className="bx bxs-down-arrow"></i>
+    )}
+  </div>
+</div>
+
         <div className="keysOfTrainingEffect">
           <ul>
             <li>

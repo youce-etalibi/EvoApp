@@ -1,70 +1,12 @@
-import React, { Fragment, useState, useEffect } from "react";
-import axios from 'axios';
+import React, { Fragment, useContext, useState } from 'react';
+import { ExerciseContext } from '../../../Context/ExerciseContext';
 import './personalTraining.css';
-import { usePerformance } from "../categories";
 
 export default function PersonalTraining() {
-  const [exercises, setExercises] = useState([]);
-  const [favoriteExerciseIds, setFavoriteExerciseIds] = useState([]);
+  const { exercises, favoriteExerciseIds, loading, toggleFavorite } = useContext(ExerciseContext);
   const [currentPage, setCurrentPage] = useState(1);
   const [currentLevel, setCurrentLevel] = useState("");
-  const [loading, setLoading] = useState(true);
-  const [updatingFavorites, setUpdatingFavorites] = useState(false);
-  const memberId = 1;
   const itemsPerPage = 8;
-  const { Changed, setChanged } = usePerformance();
-
-
-  const idAuth = localStorage.getItem('id_active');
-
-  useEffect(() => {
-    const fetchFavorites = async () => {
-      try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/favorite-exercice/?id=${idAuth}`);
-        const exerciseIds = response.data.map(fav => fav.exercice_id);
-        setFavoriteExerciseIds(exerciseIds);
-      } catch (error) {
-        console.error('Error fetching favorite exercises:', error);
-      }
-    };
-
-    fetchFavorites();
-  }, [memberId, Changed]);
-
-  useEffect(() => {
-    const fetchExercises = async () => {
-      try {
-        const response = await axios.get('https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/dist/exercises.json');
-        setExercises(response.data);
-      } catch (error) {
-        console.error('Error fetching exercises:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchExercises();
-  }, []);
-
-  const handleToggleFavorite = async (exerciseId) => {
-    const isFavorite = favoriteExerciseIds.includes(exerciseId);
-
-    try {
-      setUpdatingFavorites(true);
-      if (isFavorite) {
-        await axios.delete(`http://127.0.0.1:8000/api/favorite-exercice/${idAuth}/${exerciseId}`);
-        setFavoriteExerciseIds(prevIds => prevIds.filter(id => id !== exerciseId));
-      } else {
-        await axios.post(`http://127.0.0.1:8000/api/favorite-exercice`, { user_id: idAuth, exercice_id: exerciseId });
-        setFavoriteExerciseIds(prevIds => [...prevIds, exerciseId]);
-      }
-      setChanged(prev => !prev);
-    } catch (error) {
-      console.error('Error updating favorite exercise:', error);
-    } finally {
-      setUpdatingFavorites(false);
-    }
-  };
 
   const filteredData = exercises.filter(exercise => favoriteExerciseIds.includes(exercise.id));
   const filteredByLevel = currentLevel ? filteredData.filter(item => item.level === currentLevel) : filteredData;
@@ -155,8 +97,7 @@ export default function PersonalTraining() {
                               />
                               <button
                                 className="btnFavoriteEx"
-                                onClick={() => handleToggleFavorite(item.id)}
-                                disabled={updatingFavorites}
+                                onClick={() => toggleFavorite(item.id)}
                               >
                                 <i className={favoriteExerciseIds.includes(item.id) ? 'bx bxs-heart' : 'bx bx-heart'}></i>
                               </button>
@@ -178,8 +119,7 @@ export default function PersonalTraining() {
                                 />
                                 <button
                                   className="btnFavoriteEx"
-                                  onClick={() => handleToggleFavorite(currentItems[index + 1].id)}
-                                  disabled={updatingFavorites}
+                                  onClick={() => toggleFavorite(currentItems[index + 1].id)}
                                 >
                                   <i className={favoriteExerciseIds.includes(currentItems[index + 1].id) ? 'bx bxs-heart' : 'bx bx-heart'}></i>
                                 </button>

@@ -208,3 +208,11 @@
     color: rgb(0, 0, 0);
     font-size: .8rem;
 }
+
+#AddExercicesLInk {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: var(--blueChelsea);
+    text-decoration: underline;
+}

@@ -163,10 +163,11 @@ export default function ExercicesWOForm({ close }) {
                         ))}
                     </ul>
                     <br />
-                    <div className="pagination">
+                    <div id="paginationPersonalTraining">
                         <button 
                             onClick={() => handlePageChange(currentPage - 1)} 
                             disabled={currentPage === 1}
+                            id="btnPaginate"
                         >
                             &lt;
                         </button>
@@ -174,6 +175,7 @@ export default function ExercicesWOForm({ close }) {
                         <button 
                             onClick={() => handlePageChange(currentPage + 1)} 
                             disabled={currentPage === Math.ceil(filteredExercises.length / exercisesPerPage)}
+                            id="btnPaginate"
                         >
                             &gt;
                         </button>

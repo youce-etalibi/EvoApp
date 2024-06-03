@@ -16,8 +16,8 @@ class WorkoutController extends Controller
         $id = $request->query('id');
 
         $workouts = Workout::whereHas('user', function ($query) use ($id) {
-                $query->where('id', $id);
-            })
+            $query->where('id', $id);
+        })
             ->with(['level', 'workoutExercices.exerciceWorkOutApi'])
             ->get();
 
@@ -98,6 +98,31 @@ class WorkoutController extends Controller
         return response()->json(['message' => 'Workout created successfully', 'workout' => $workout], 201);
     }
 
+    public function addExercisesToWorkout(Request $request, $workoutId)
+    {
+        $workout = Workout::findOrFail($workoutId);
+
+        $data = $request->all();
+
+        if (isset($data['exercises']) && is_array($data['exercises'])) {
+            foreach ($data['exercises'] as $exerciseData) {
+                $exerciceWorkOutApi = ExerciceWorkOutApi::create([
+                    'api_id' => $exerciseData['id']
+                ]);
+
+                WorkoutExercice::create([
+                    'workout_id' => $workout->id,
+                    'exercice_work_out_api_id' => $exerciceWorkOutApi->id,
+                    'done' => $exerciseData['done'] ?? false,
+                ]);
+            }
+        }
+
+        // Return a success response
+        return response()->json(['message' => 'Exercises added to workout successfully', 'workout' => $workout]);
+    }
+
+
     public function update(Request $request, $id)
     {
         $workout = Workout::find($id);
@@ -132,19 +157,15 @@ class WorkoutController extends Controller
 
 
     public function getWorkoutExercises($id)
-{
-    $workoutExercises = WorkoutExercice::where('workout_id', $id)
-        ->with('exerciceWorkOutApi')
-        ->get();
+    {
+        $workoutExercises = WorkoutExercice::where('workout_id', $id)
+            ->with('exerciceWorkOutApi')
+            ->get();
 
-    if ($workoutExercises->isEmpty()) {
-        return response()->json(['message' => 'No exercises found for the workout'], 404);
+        if ($workoutExercises->isEmpty()) {
+            return response()->json(['message' => 'No exercises found for the workout'], 404);
+        }
+
+        return response()->json($workoutExercises);
     }
-
-    return response()->json($workoutExercises);
-}
-
-
-
-
 }
