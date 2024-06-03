@@ -323,10 +323,19 @@
 }
 
 
-@media (max-width:1045px){
-    .parentComposantPersonalTrainingX {
-        width: 90%;
-    }
+.showMoreExercisesButton {
+    background: white;
+    color: black;
+    font-size: .8rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-
+@media (max-width:1045px){
+    .parentComposantPersonalTraining {
+        width: 100%;
+    }
+}

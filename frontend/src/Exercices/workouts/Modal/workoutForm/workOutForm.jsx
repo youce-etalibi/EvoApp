@@ -1,17 +1,15 @@
 import React, { Fragment, useState } from "react";
 import axios from "axios";
 import "./workOutForm.css";
+import { useWorkouts } from "../../../../Context/WorkoutsContext";
 
 export default function WorkOutForm({ cartExercises, onClose }) {
-
-
     const idAuth = localStorage.getItem('id_active');
-
+    const { refreshWorkouts } = useWorkouts();
 
     const [workoutName, setWorkoutName] = useState("");
     const [level, setLevel] = useState("");
     const [date, setDate] = useState("");
-    const [time, setTime] = useState("");
     const [alarm, setAlarm] = useState("");
     const [message, setMessage] = useState("");
     const [loading, setLoading] = useState(false);
@@ -31,15 +29,10 @@ export default function WorkOutForm({ cartExercises, onClose }) {
         } else if (new Date(date) <= new Date()) {
             errors.date = "Date must be in the future";
         }
-        if (!time) {
-            errors.time = "Time is required";
-        }
         if (!alarm) {
             errors.alarm = "Alarm is required";
         } else if (new Date(`${date}T${alarm}`) <= new Date()) {
             errors.alarm = "Alarm must be in the future";
-        } else if (new Date(`${date}T${alarm}`) <= new Date(`${date}T${time}`)) {
-            errors.alarm = "Alarm must be after the workout time";
         }
         return errors;
     };
@@ -58,7 +51,7 @@ export default function WorkOutForm({ cartExercises, onClose }) {
                 level_id: level,
                 user_id: idAuth,
                 date: date,
-                time: time,
+                time: "00:00", // Set a default value for time
                 alarm: alarm,
                 message: message,
                 exercises: cartExercises
@@ -66,6 +59,7 @@ export default function WorkOutForm({ cartExercises, onClose }) {
 
             if (response.status === 201) {
                 onClose();
+                refreshWorkouts(); // Refresh workouts after adding a new one
                 console.log("Workout added successfully");
             } else {
                 console.error("Failed to add workout");
@@ -122,16 +116,6 @@ export default function WorkOutForm({ cartExercises, onClose }) {
                 {errors.date && <span className="errorCW"><i className='bx bxs-error' ></i> {errors.date}</span>}
                 <div className="parentTimeInputsCW">
                     <span>
-                        <h4><i className='bx bxs-square-rounded'></i> Choose Time</h4>
-                        <input
-                            type="time"
-                            value={time}
-                            onChange={(e) => setTime(e.target.value)}
-                            id="inputTimeWO"
-                        />
-                        {errors.time && <span className="errorCW"><i className='bx bxs-error' ></i> {errors.time}</span>}
-                    </span>
-                    <span>
                         <h4><i className='bx bxs-square-rounded'></i> Choose Alarm</h4>
                         <input
                             type="time"
@@ -139,7 +123,7 @@ export default function WorkOutForm({ cartExercises, onClose }) {
                             onChange={(e) => setAlarm(e.target.value)}
                             id="inputTimeWO"
                         />
-                {errors.alarm && <span className="errorCW"><i className='bx bxs-error' ></i> {errors.alarm}</span>}
+                        {errors.alarm && <span className="errorCW"><i className='bx bxs-error' ></i> {errors.alarm}</span>}
                     </span>
                 </div>
                 <h4><i className='bx bxs-square-rounded'></i> Message</h4>

@@ -199,8 +199,6 @@ function closeopenAddProducts() {
             ))}
         </tbody>
     </table>
-    <Paginate currentPage={currentPage} totalPages={totalPages} handlePageChange={handlePageChange} />
-    
     {ToggleAddProduct && <AddProduct onClose={closeopenAddProducts} />}
         {ToggleEditproduct && <EditProduct productId={productId} onClose={closeEditproduct} />}
 

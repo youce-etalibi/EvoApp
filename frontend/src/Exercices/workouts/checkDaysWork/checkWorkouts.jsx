@@ -2,18 +2,19 @@ import { Fragment, useState, useEffect } from "react";
 import axios from "axios";
 import './checkWorkouts.css';
 import BtnAdd from "../buttonAddWorkOut/btnAdd";
+import { useWorkouts } from "../../../Context/WorkoutsContext"; // Import the context hook
 
 export default function CheckWorkouts(){
     const [workouts, setWorkouts] = useState([]);
     const idAuth = localStorage.getItem('id_active');
-
+    const { refreshWorkouts } = useWorkouts(); // Get the refreshWorkouts function from context
 
     useEffect(() => {
         axios
             .get(`http://localhost:8000/api/workouts/?id=${idAuth}`)
             .then((response) => setWorkouts(response.data))
             .catch((error) => console.error("Error fetching workouts:", error));
-    }, []);
+    }, [refreshWorkouts]); // Include refreshWorkouts in the dependency array
 
     const getFirstDayOfWeek = () => {
         const today = new Date();

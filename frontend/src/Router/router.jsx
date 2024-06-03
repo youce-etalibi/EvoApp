@@ -45,15 +45,16 @@ import CaloriesCalculatorMain from "../CaloriesCalCulator/Home/CaloriesCalculato
 import ChangeGoal from "../CaloriesCalCulator/ChangeGoal/ChangeGoal";
 import CaloriesCalCulator from "../CaloriesCalCulator/CaloriesCalCulator";
 import SettingsProfile from "../SettingsProfile/settingsProfile";
+import AddExercices from "../Exercices/categories/myWorkouts/AddExercices/addExercices";
 import { Products } from "../Store/Admin/Products/Products";
 import { ProductsReview } from "../Store/Admin/Products/ProductsReview";
+import { CategoriesAdmin } from "../Store/Admin/Categories/categories";
 import { Types } from "../Store/Admin/Types/types";
 import { Orderss } from "../Store/Admin/Orderss/Orderss";
 import { Clients } from "../Store/Admin/Clients/Clients";
 import { Sellers } from "../Store/Admin/Sellers/Sellers";
 import { Users } from "../Store/Admin/Users/Users";
-import { CategoriesAdmin } from "../Store/Admin/Categories/categories";
-import { NavbarAdmin } from "../Store/Admin/Navbar";
+import ProtectedRoute from "./ProtectedRoute";
 
 export default function RouterApp() {
   const token = localStorage.getItem("token");
@@ -64,13 +65,14 @@ export default function RouterApp() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/auth" element={<Auth />}>
-            <Route path="login" element={<Login />} />
-            <Route path="signup" element={<Signup />} />
+            <Route path="login" element={<ProtectedRoute element={<Login />} />} />
+            <Route path="signup" element={<ProtectedRoute element={<Signup />} />} />
           </Route>
 
           <Route element={<RequiredAuth />}>
             <Route path="/home" element={<Home />} />
             <Route path="/settings" element={<SettingsProfile />} />
+            <Route path="/add-exercices/:id" element={<AddExercices />} />
             <Route path="/exercices" element={<Exercices />}>
               <Route path="overview" element={<Categories />} />
               <Route path="profile" element={<Profile />} />

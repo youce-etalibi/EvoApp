@@ -13,6 +13,9 @@ import { SellerProvider } from './Context/Sellercontext';
 import { CaloriesProvider } from './Context/CaloriesContext';
 import { AdminProvider } from './Context/AdminContext';
 import { Menu } from './Components/Menu/Menu';
+import { FavoriteProvider } from './Context/FavoriteContext';
+import { ExerciseProvider } from './Context/ExerciseContext';
+import { WorkoutsProvider } from './Context/WorkoutsContext';
 
 
 
@@ -28,7 +31,13 @@ root.render(
   <WishlistProvider>
   <SellerProvider>
   <AdminProvider >
+  <FavoriteProvider>
+  <ExerciseProvider>
+  <WorkoutsProvider>
     <App />
+  </WorkoutsProvider>
+  </ExerciseProvider>
+  </FavoriteProvider>
   </ AdminProvider >
   </SellerProvider>
   </WishlistProvider>

@@ -1,0 +1,80 @@
+.parenAddExercices {
+    display: grid;
+    place-items: center;
+    width: 90vw;
+    height: 100vh;
+    margin: auto;
+}
+
+
+.parenAddExercices .header h2{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+#LinkBack{
+    color: white;
+}
+
+.AddExercicesChild {
+    position: fixed;
+    width: 40%;
+    margin: auto;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    height: 80vh;
+    color: white;
+    padding: 1rem;
+    
+}
+.AddExercicesChild img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.ulAddExercices {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.ulAddExercices li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .3rem .4rem;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+.ulAddExercices li .parentInfoAddExercices{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+#btnIndoAddExercices {
+    color: black;
+    font-size: 2em;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#SubmitAddEX {
+    background-color: white;
+    border: .05rem solid black;
+    font-size: 1rem;
+    padding: .3rem .6rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: -4rem;
+    position: relative;
+    bottom: 2rem;
+}

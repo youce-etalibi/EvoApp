@@ -1,61 +1,34 @@
-import React, { Fragment, useState, useEffect } from "react";
-import axios from 'axios';
-import './arrayExercices.css';
+import React, { Fragment, useContext, useState, useEffect } from 'react';
+import { ExerciseContext } from '../../../Context/ExerciseContext';
 import Modal from './modal/modal';
 import { toast } from 'react-toastify';
+import './arrayExercices.css';
 import 'react-toastify/dist/ReactToastify.css';
-import { usePerformance } from "../categories";
+import axios from 'axios';
 
 export default function ArrayExercices() {
-
-  const idAuth = localStorage.getItem('id_active');
-
-  const muscles = ['abdominals', 'shoulders', 'glutes', 'quadriceps', 'biceps', 'forearms', 'triceps', 'chest', 'lower back', 'traps', 'lats', 'middle back', 'calves'];
-  const [exercises, setExercises] = useState([]);
+  const { exercises, favoriteExerciseIds, loading, toggleFavorite } = useContext(ExerciseContext);
   const [selectedMuscle, setSelectedMuscle] = useState('All');
-  const [filterMenuOpen, setFilterMenuOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const [filterMenuOpen, setFilterMenuOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [selectedExercise, setSelectedExercise] = useState(null);
-  const [memberId] = useState(1); // Assume the member ID is 1 for this example
+  const [muscles, setMuscles] = useState(['All']);
   const exercisesPerPage = filterMenuOpen ? 5 : 7;
-  const [loading, setLoading] = useState(true); // Loading state
-  const { Changed } = usePerformance();
-
-  // Fetch exercises
-  const fetchData = async () => {
-    try {
-      const response = await axios.get('https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/dist/exercises.json');
-      setExercises(response.data);
-      setLoading(false); // Set loading to false once data is fetched
-    } catch (error) {
-      console.error('Error fetching data:', error);
-      setLoading(false); // Set loading to false in case of error
-    }
-  };
-
-  // Fetch favorites
-  const fetchFavorites = async () => {
-    try {
-      const response = await axios.get(`http://127.0.0.1:8000/api/favorite-exercice/?id=${idAuth}`);
-      const favorites = response.data.map(favorite => favorite.exercice_id);
-      setExercises(prevExercises => prevExercises.map(exercise => ({
-        ...exercise,
-        isFavorite: favorites.includes(exercise.id)
-      })));
-    } catch (error) {
-      console.error('Error fetching favorites:', error);
-    }
-  };
 
   useEffect(() => {
-    fetchData();
-    fetchFavorites();
+    const fetchMuscles = async () => {
+      try {
+        const response = await axios.get('https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/dist/exercises.json'); // Replace with your API endpoint
+        const muscleGroups = response.data.map(muscle => muscle.primaryMuscles).flat();
+        setMuscles(['All', ...new Set(muscleGroups)]);
+      } catch (error) {
+        console.error('Error fetching muscle groups:', error);
+      }
+    };
+
+    fetchMuscles();
   }, []);
-
-  useEffect(() => {
-    fetchFavorites();
-  }, [Changed]);
 
   const handleFilterClick = () => {
     setFilterMenuOpen(!filterMenuOpen);
@@ -64,7 +37,7 @@ export default function ArrayExercices() {
   const handleMuscleClick = (muscle) => {
     setSelectedMuscle(muscle);
     setFilterMenuOpen(false);
-    setCurrentPage(1); 
+    setCurrentPage(1);
   };
 
   const handlePageChange = (direction) => {
@@ -82,37 +55,11 @@ export default function ArrayExercices() {
   };
 
   const handleAddRemoveFavorite = async (exerciseId) => {
-    try {
-      const exerciseIndex = exercises.findIndex(exercise => exercise.id === exerciseId);
-      const isFavorite = exercises[exerciseIndex].isFavorite;
-
-      if (isFavorite) {
-        await axios.delete(`http://127.0.0.1:8000/api/favorite-exercice/${idAuth}/${exerciseId}`);
-        toast.success('Exercise removed from favorites', {
-          position: "bottom-center"
-        });
-      } else {
-        await axios.post('http://127.0.0.1:8000/api/favorite-exercice', {
-          user_id: idAuth,
-          exercice_id: exerciseId
-        });
-        toast.success('Exercise added to favorites', {
-          position: "bottom-center"
-        });
-      }
-
-      await fetchData();
-      await fetchFavorites();
-    } catch (error) {
-      console.error('Error adding/removing favorite:', error);
-      toast.error('Failed to add/remove exercise from favorites', {
-        position: "bottom-center"
-      });
-    }
+    await toggleFavorite(exerciseId);
   };
 
-  const filteredExercises = selectedMuscle === 'All' 
-    ? exercises 
+  const filteredExercises = selectedMuscle === 'All'
+    ? exercises
     : exercises.filter(exercise => exercise.primaryMuscles.includes(selectedMuscle));
 
   const indexOfLastExercise = currentPage * exercisesPerPage;
@@ -167,7 +114,7 @@ export default function ArrayExercices() {
                       <ul id="buttonsExercicesCategories">
                         <li>
                           <button onClick={() => handleAddRemoveFavorite(exercise.id)}>
-                            {exercise.isFavorite ? 
+                            {favoriteExerciseIds.includes(exercise.id) ? 
                               <i className='bx bxs-heart'></i> :
                               <i className='bx bx-heart'></i>
                             }

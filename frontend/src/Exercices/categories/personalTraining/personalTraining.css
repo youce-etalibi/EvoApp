@@ -147,6 +147,15 @@
     border: none;
     border-radius: 50%;
     margin: .3rem;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+#btnPaginate:hover{
+    background-color: #3F85FF;
+}
+#btnPaginate:active{
+    background-color: #000000;
 }
 
 .btnFavoriteEx {

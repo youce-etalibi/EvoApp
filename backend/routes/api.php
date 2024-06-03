@@ -110,7 +110,6 @@ Route::put('/category/{id}', [AdminController::class, 'updatecategory']);
 Route::post('/addcategory', [AdminController::class, 'addcategory']);
 Route::delete('/category/{id}', [AdminController::class, 'deletecategory']);
 
-
 Route::get('/gettypes', [AdminController::class, 'gettypes']);
 Route::get('/showformtypes', [AdminController::class, 'showformtypes']);
 Route::post('/addtype', [AdminController::class, 'addtype']);
@@ -138,7 +137,6 @@ Route::get('/getusers', [AdminController::class, 'getusers']);
 Route::delete('/deleteUser/{id}', [AdminController::class, 'deleteUser']);
 
 
-
 // Routes Calories
 Route::post('/calories-users', [CaloriesUserController::class, 'store']);
 Route::put('/macros/{id}', [MacrosConsumedController::class, 'update']);
@@ -146,12 +144,6 @@ Route::put('/calories-users/{user_id}', [CaloriesUserController::class, 'update'
 Route::get('/calories-users', [CaloriesUserController::class, 'show']);
 Route::get('/macros-consumeds/{id}', [MacrosConsumedController::class, 'show']);
 Route::delete('/calories-users', [CaloriesUserController::class, 'destroy']);
-
-
-
-
-
-
 
 // Routes Profile
 
@@ -164,12 +156,7 @@ Route::post('/update-user-info', [ProfileController::class, 'updateUserInfo']);
 Route::get('/get-user-info', [ProfileController::class, 'getUserInfo']);
 
 
-
-
-
-
 // Routes Exercices
-
 
 Route::controller(FavoriteExerciceController::class)->group(function () {
     Route::get('/favorite-exercice', 'index');
@@ -192,5 +179,6 @@ Route::controller(WorkoutController::class)->group(function () {
     Route::put('/workouts/{id}', 'update');
     Route::delete('/workouts/{id}', 'destroy');
     Route::get('/workouts/{id}/exercises', 'getWorkoutExercises');
+    Route::post('/workouts/{id}/add-exercises', 'addExercisesToWorkout');
 });
 

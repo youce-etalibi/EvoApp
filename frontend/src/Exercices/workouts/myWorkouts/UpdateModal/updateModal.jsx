@@ -1,28 +1,29 @@
-import React, { useState, useEffect, Fragment } from "react";
-import axios from "axios";
-import "./updateModal.css";
+import React, { useState, useEffect, Fragment } from 'react';
+import axios from 'axios';
+import './updateModal.css';
+import { useWorkouts } from '../../../../Context/WorkoutsContext';
 
-export default function UpdateModal({ workout, closeModal, refreshWorkouts }) {
+export default function UpdateModal({ workout, closeModal }) {
   const [name, setName] = useState(workout.name);
   const [level, setLevel] = useState(workout.level.id);
   const [alarm, setAlarm] = useState(workout.alarm);
   const [date, setDate] = useState(workout.date);
-  const [time, setTime] = useState(workout.time);
   const [message, setMessage] = useState(workout.message);
   const [loading, setLoading] = useState(false);
   const [exercises, setExercises] = useState([]);
   const [woExercises, setWoExercises] = useState([]);
+  const { refreshWorkouts } = useWorkouts();
 
   useEffect(() => {
     const fetchExercises = async () => {
       try {
         const response = await axios.get(
-          "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/dist/exercises.json"
+          'https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/dist/exercises.json'
         );
         setExercises(response.data);
         setLoading(false);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error('Error fetching data:', error);
         setLoading(false);
       }
     };
@@ -37,7 +38,7 @@ export default function UpdateModal({ workout, closeModal, refreshWorkouts }) {
         setWoExercises(response.data);
         setLoading(false);
       } catch (error) {
-        console.error("Error fetching workout exercises:", error);
+        console.error('Error fetching workout exercises:', error);
         setLoading(false);
       }
     };
@@ -54,14 +55,14 @@ export default function UpdateModal({ workout, closeModal, refreshWorkouts }) {
         level_id: level,
         alarm,
         date,
-        time,
+        time: '00:00',
         message,
       });
 
       closeModal();
       refreshWorkouts();
     } catch (error) {
-      console.error("Error updating workout:", error);
+      console.error('Error updating workout:', error);
     }
   };
 
@@ -69,18 +70,17 @@ export default function UpdateModal({ workout, closeModal, refreshWorkouts }) {
     try {
       await axios.patch(`http://localhost:8000/api/workouts/${workout.id}/exercises`, {
         workoutId: workout.id,
-        memberId: workout.memberId, // Assuming memberId is part of the workout data
+        memberId: workout.memberId,
         exercises: woExercises,
       });
     } catch (error) {
-      console.error("Error updating workout exercises:", error);
+      console.error('Error updating workout exercises:', error);
     }
   };
 
   const handleExerciseChange = (updatedExercises) => {
     setWoExercises(updatedExercises);
   };
-
 
   return (
     <Fragment>
@@ -94,7 +94,7 @@ export default function UpdateModal({ workout, closeModal, refreshWorkouts }) {
           </span>
           <form onSubmit={handleSubmit}>
             <table>
-            <tbody>
+              <tbody>
                 <tr>
                   <td>
                     <label htmlFor="name">Name:</label>
@@ -150,20 +150,6 @@ export default function UpdateModal({ workout, closeModal, refreshWorkouts }) {
                       type="date"
                       value={date}
                       onChange={(e) => setDate(e.target.value)}
-                      required
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label htmlFor="time">Time:</label>
-                  </td>
-                  <td>
-                    <input
-                      id="time"
-                      type="time"
-                      value={time}
-                      onChange={(e) => setTime(e.target.value)}
                       required
                     />
                   </td>
